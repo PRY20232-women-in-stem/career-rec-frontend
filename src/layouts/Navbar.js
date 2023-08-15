@@ -1,4 +1,3 @@
-import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box,
   Flex,
@@ -17,6 +16,7 @@ import {
   Image,
   Link
 } from '@chakra-ui/react';
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { Link as ReactRouterLink, NavLink } from 'react-router-dom';
 
 
