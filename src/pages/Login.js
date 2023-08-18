@@ -1,7 +1,7 @@
 function Login() {
     return (
       <div>
-        Este es el Login
+        Este es el LOGIN
       </div>
     );
   }

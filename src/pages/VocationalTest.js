@@ -1,7 +1,7 @@
 function VocationalTest() {
   return (
     <div>
-      Este es el VocationalTest
+      Este es el VOCATIONAL TEST
     </div>
   );
 }
