@@ -1,11 +1,12 @@
+import { useState } from "react";
 import { Button } from "@chakra-ui/button";
 import { FormControl, FormErrorMessage, FormLabel } from "@chakra-ui/form-control";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
 import { Box, Flex, HStack, Heading, Stack, Text } from "@chakra-ui/layout";
 import { Link, Image } from "@chakra-ui/react";
-import { useState } from "react";
 import { Formik, Form, Field } from "formik";
+import { Link as ReactRouterLink } from 'react-router-dom';
 
 function Register() {
   const [showPassword, setShowPassword] = useState(false);
@@ -86,7 +87,7 @@ function Register() {
                   <Field name="password" validate={validationSchema.password}>
                     {({ field, form }) => (
                       <FormControl id="password" isInvalid={form.errors.password && form.touched.password}>
-                        <FormLabel> Contraseña</FormLabel>
+                        <FormLabel>Contraseña</FormLabel>
                         <InputGroup>
                           <Input {...field} type={showPassword ? "text" : "password"} />
                           <InputRightElement h={"full"}>
@@ -106,7 +107,7 @@ function Register() {
                   </Stack>
                   <Stack pt={6}>
                     <Text align={"center"}>
-                      ¿Ya tienes una cuenta? <Link color={"blue.400"}>Inicia sesión</Link>
+                      ¿Ya tienes una cuenta? <Link as={ReactRouterLink} to='/login' color={"blue.400"}>Inicia sesión</Link>
                     </Text>
                   </Stack>
                 </Stack>
