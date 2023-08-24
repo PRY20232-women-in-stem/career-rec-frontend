@@ -5,6 +5,8 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import ErrorNotFound from './pages/ErrorNotFound';
 import VocationalTest from './pages/VocationalTest';
+import AboutUs from './pages/AboutUs';
+import LearnSTEM from './pages/LearnSTEM';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -14,11 +16,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorNotFound />,
     children: [
       { path: "", element: <Home /> },
-      { path: "about-us", element: <Home /> },
-      { path: "vocational-test", element: <VocationalTest /> },
-      { path: "learn", element: <Home /> },
       { path: "register", element: <Register /> },
       { path: "login", element: <Login /> },
+      { path: "about-us", element: <AboutUs /> },
+      { path: "vocational-test", element: <VocationalTest /> },
+      { path: "learn", element: <LearnSTEM /> },
     ],
   },
 ]);
