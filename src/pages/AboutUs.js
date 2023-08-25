@@ -11,7 +11,7 @@ function AboutUs() {
           </Heading>
           <Box p={[4, 6, 8]} maxW={"600px"} bg={"white"} rounded={"md"} shadow={"md"}>
             <Stack spacing={[4, 6]}>
-              <Image src='womenInStem.png' borderRadius='md' />
+              <Image src='WomenInStem1.png' borderRadius='md' />
               <Text fontSize={["md", "lg"]} textAlign={"center"}>
                 Te acompañamos a dar el primer paso hacia el cambio, te mostraremos las áreas más innovadores que contribuyen a la mejora económica del país. Rinde nuestro test vocacional y comienza la aventura.
               </Text>

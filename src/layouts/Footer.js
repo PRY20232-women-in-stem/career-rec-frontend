@@ -18,7 +18,7 @@ function Footer() {
           <SimpleGrid templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }} spacing={8}>
             <Stack spacing={6}>
               <Box display='flex' alignItems='center'>
-                <Image borderRadius='full' boxSize='35px' src='womenInStem.png' />
+                <Image borderRadius='full' boxSize='35px' src='WomenInStem1.png' />
                 <Text fontWeight={'500'} fontSize={'lg'} ml={2}>
                   Women in STEM
                 </Text>

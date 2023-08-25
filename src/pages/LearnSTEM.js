@@ -9,6 +9,7 @@ function LearnSTEM() {
           <Heading fontSize={"4xl"} textAlign={"center"} color={"purple.700"}>
             ¡Aprendamos de STEM!
           </Heading>
+          <Image objectFit='cover' src='WomenInStem2.png' />
           <Heading textAlign={"center"} color={"purple.700"}>
             ¿Qué son las carreras STEM?
           </Heading>
@@ -18,51 +19,51 @@ function LearnSTEM() {
           </Heading>
           <SimpleGrid spacing={8} templateColumns='repeat(auto-fill, minmax(300px, 1fr))'>
             <Card overflow='hidden'>
-              <Image objectFit='cover' src='womenInStem.png' />
+              <Image objectFit='cover' src='WomenInStem1.png' />
               <CardHeader>
-                <Heading size='md'> Customer dashboard</Heading>
+                <Heading size='md'>Ciencia (Science)</Heading>
               </CardHeader>
               <CardBody>
-                <Text>View a summary of all your customers over the last month.</Text>
+                <Text>La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.</Text>
               </CardBody>
               <CardFooter>
-                <Button>View here</Button>
+                <Button>Ver más</Button>
               </CardFooter>
             </Card>
             <Card overflow='hidden'>
-              <Image objectFit='cover' src='womenInStem.png' />
+              <Image objectFit='cover' src='WomenInStem1.png' />
               <CardHeader>
-                <Heading size='md'> Customer dashboard</Heading>
+                <Heading size='md'>Tecnología (Technology)</Heading>
               </CardHeader>
               <CardBody>
-                <Text>View a summary of all your customers over the last month.</Text>
+                <Text>La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.</Text>
               </CardBody>
               <CardFooter>
-                <Button>View here</Button>
+                <Button>Ver más</Button>
               </CardFooter>
             </Card>
             <Card overflow='hidden'>
-              <Image objectFit='cover' src='womenInStem.png' />
+              <Image objectFit='cover' src='WomenInStem1.png' />
               <CardHeader>
-                <Heading size='md'> Customer dashboard</Heading>
+                <Heading size='md'>Ingeniería (Engineering)</Heading>
               </CardHeader>
               <CardBody>
-                <Text>View a summary of all your customers over the last month.</Text>
+                <Text>La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.</Text>
               </CardBody>
               <CardFooter>
-                <Button>View here</Button>
+                <Button>Ver más</Button>
               </CardFooter>
             </Card>
             <Card overflow='hidden'>
-              <Image objectFit='cover' src='womenInStem.png' />
+              <Image objectFit='cover' src='WomenInStem1.png' />
               <CardHeader>
-                <Heading size='md'> Customer dashboard</Heading>
+                <Heading size='md'>Matemáticas (Mathematics)</Heading>
               </CardHeader>
               <CardBody>
-                <Text>View a summary of all your customers over the last month.</Text>
+                <Text>La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.</Text>
               </CardBody>
               <CardFooter>
-                <Button>View here</Button>
+                <Button>Ver más</Button>
               </CardFooter>
             </Card>
           </SimpleGrid>

@@ -1,3 +1,5 @@
+import '@fontsource/raleway/400.css'
+import '@fontsource/open-sans/700.css'
 import './App.css';
 import Home from './pages/Home';
 import Root from './pages/Root';
@@ -7,7 +9,9 @@ import ErrorNotFound from './pages/ErrorNotFound';
 import VocationalTest from './pages/VocationalTest';
 import AboutUs from './pages/AboutUs';
 import LearnSTEM from './pages/LearnSTEM';
+import { ChakraProvider } from '@chakra-ui/react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import theme from './theme'
 
 const router = createBrowserRouter([
   {
@@ -28,7 +32,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <ChakraProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ChakraProvider>
     </div>
   );
 }
