@@ -9,6 +9,7 @@ import ErrorNotFound from './pages/ErrorNotFound';
 import VocationalTest from './pages/VocationalTest';
 import AboutUs from './pages/AboutUs';
 import LearnSTEM from './pages/LearnSTEM';
+import Content from './pages/Content';
 import { ChakraProvider } from '@chakra-ui/react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import theme from './theme'
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: "login", element: <Login /> },
       { path: "about-us", element: <AboutUs /> },
       { path: "vocational-test", element: <VocationalTest /> },
+      { path: "content", element: <Content /> },
       { path: "learn", element: <LearnSTEM /> },
     ],
   },
