@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box,
@@ -13,6 +14,7 @@ import {
   useDisclosure
 } from '@chakra-ui/react';
 import { Link as ReactRouterLink } from 'react-router-dom';
+import LogoutAlert from '../components/LogoutAlert';
 
 const NavLink = ({ to, children, onClose }) => (
   <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white'>
@@ -22,6 +24,20 @@ const NavLink = ({ to, children, onClose }) => (
 
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [showLogoutAlert, setShowLogoutAlert] = useState(false);
+
+  const handleLogoutClick = () => {
+    setShowLogoutAlert(true);
+    onClose(); // Cerrar el Collapse
+  };
+
+  const handleLogoutAlertConfirm = () => {
+    setShowLogoutAlert(false); // Cerrar el modal de alerta
+  };
+
+  const handleLogoutAlertCancel = () => {
+    setShowLogoutAlert(false); // Cerrar el modal de alerta
+  };
 
   return (
     <>
@@ -51,9 +67,12 @@ function Navbar() {
             <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
             <NavLink to='/learn' onClose={onClose}>Aprendamos de STEM</NavLink>
             <Divider />
-            <NavLink to='/login'>Cerrar sesión</NavLink>
+            <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>
+              Cerrar sesión
+            </Box>
           </Stack>
-        </Collapse >
+        </Collapse>
+        <LogoutAlert isOpen={showLogoutAlert} onConfirm={handleLogoutAlertConfirm} onCancel={handleLogoutAlertCancel} />
       </Box>
     </>
   )
