@@ -6,10 +6,11 @@ import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
 import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/layout";
 import { Link, Image } from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
-import { Link as ReactRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink, useNavigate } from 'react-router-dom';
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const validationSchema = {
     email: (value) => (!value ? "Campo requerido" : !/^\S+@\S+\.\S+$/.test(value) ? "Formato de correo inválido" : ""),
@@ -20,6 +21,7 @@ function Login() {
     // COLOCAR LLAMADA AL BACKEND
     setTimeout(() => { // QUITAR TIMEOUT LUEGO
       console.log(values);
+      navigate('/'); // Redirecciona al home principal (Mover si es necesario)
       actions.setSubmitting(false)
     }, 1000)
   };

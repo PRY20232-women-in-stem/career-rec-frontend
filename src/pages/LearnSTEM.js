@@ -13,7 +13,7 @@ function LearnSTEM() {
           <Heading textAlign={"center"} color={"purple.700"}>
             ¿Qué son las carreras STEM?
           </Heading>
-          <Text color={'purple.700'}>Las carreras STEM están relacionadas con la innovación, el desarrollo de tecnologías y el crecimiento de las empresas, lo que contribuye a la mejora de la economía. Los profesionales que se dedican a estas áreas ayudan a mejorar la competitividad de las empresas y a impulsar la creación de empleos de alta calidad.</Text>
+          <Text fontSize={["md", "lg"]} textAlign={"center"} color={'purple.700'}>Las carreras STEM están relacionadas con la innovación, el desarrollo de tecnologías y el crecimiento de las empresas, lo que contribuye a la mejora de la economía. Los profesionales que se dedican a estas áreas ayudan a mejorar la competitividad de las empresas y a impulsar la creación de empleos de alta calidad.</Text>
           <Heading textAlign={"center"} color={"purple.700"}>
             ¿Cuáles son las áreas de STEM?
           </Heading>
