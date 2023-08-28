@@ -10,13 +10,17 @@ function VocationalTest() {
   survey.applyTheme(surveyTheme); // Aplica el estilo personalizado
 
   survey.onComplete.add((sender) => {
-    handleSurveyOnComplete(sender)
+    handleSurveyOnComplete(sender.data)
   });
 
   const handleSurveyOnComplete = (answers) => {
     console.log(answers);
     // Envia data al backend
   };
+
+  const SurveyContainer = ({ children }) => ( // Con el propósito de alinear el contenido a la izquierda
+    <div style={{ textAlign: "left" }}>{children}</div>
+  );
 
   return (
     <>
@@ -33,7 +37,9 @@ function VocationalTest() {
               Los valores de la encuesta van del 1 al 5 donde 1 significa Muy en desacuerdo y 5 significa Muy de acuerdo.
             </Highlight>
           </Text>
-          <Survey model={survey} />
+          <SurveyContainer>
+            <Survey model={survey} />
+          </SurveyContainer>
         </Stack>
       </Flex >
     </>

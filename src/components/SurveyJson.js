@@ -95,11 +95,9 @@ export const surveyJson = {
           "rateMin": 0,
           "minRateDescription": {
             "default": "Muy en desacuerdo",
-            "fr": "Très improbable"
           },
           "maxRateDescription": {
             "default": "Muy de acuerdo",
-            "fr": "Très probable"
           }
         }
       ],
@@ -112,7 +110,6 @@ export const surveyJson = {
           "name": "question14",
           "title": {
             "default": "No disfruto de los juegos que involucran lógica o matemáticas.",
-            "fr": "Sur une échelle de 0 à 10, quelle est la probabilité que vous recommandiez notre produit à un ami ou à un collègue?"
           },
           "isRequired": true,
           "autoGenerate": false,
@@ -141,11 +138,9 @@ export const surveyJson = {
           "rateMin": 0,
           "minRateDescription": {
             "default": "Muy en desacuerdo",
-            "fr": "Très improbable"
           },
           "maxRateDescription": {
             "default": "Muy de acuerdo",
-            "fr": "Très probable"
           }
         }
       ],
@@ -159,7 +154,6 @@ export const surveyJson = {
           "name": "question24",
           "title": {
             "default": "No disfruto de los juegos que involucran lógica o matemáticas.",
-            "fr": "Sur une échelle de 0 à 10, quelle est la probabilité que vous recommandiez notre produit à un ami ou à un collègue?"
           },
           "isRequired": true,
           "autoGenerate": false,
@@ -188,11 +182,9 @@ export const surveyJson = {
           "rateMin": 0,
           "minRateDescription": {
             "default": "Muy en desacuerdo",
-            "fr": "Très improbable"
           },
           "maxRateDescription": {
             "default": "Muy de acuerdo",
-            "fr": "Très probable"
           }
         }
       ],
