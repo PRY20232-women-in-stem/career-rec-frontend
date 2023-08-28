@@ -10,6 +10,7 @@ import VocationalTest from './pages/VocationalTest';
 // import AboutUs from './pages/AboutUs';
 import LearnSTEM from './pages/LearnSTEM';
 import Content from './pages/Content';
+import ScrollToTopOnNavigate from './util/ScrollToTopOnNavigate';
 import { ChakraProvider } from '@chakra-ui/react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import theme from './theme'
@@ -17,7 +18,12 @@ import theme from './theme'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: (
+      <>
+        <Root />
+        <ScrollToTopOnNavigate />
+      </>
+    ),
     errorElement: <ErrorNotFound />,
     children: [
       { path: "", element: <LearnSTEM /> }, // Componente Home no se está usando, se reemplazó por LearnSTEM
