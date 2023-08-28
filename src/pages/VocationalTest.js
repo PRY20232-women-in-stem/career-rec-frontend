@@ -1,6 +1,6 @@
-import 'survey-core/defaultV2.min.css';
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
+import 'survey-core/defaultV2.min.css';
 import { surveyJson } from "../components/SurveyJson";
 import { surveyTheme } from "../components/SurveyTheme";
 import { Flex, Heading, Highlight, Stack, Text } from "@chakra-ui/react";
