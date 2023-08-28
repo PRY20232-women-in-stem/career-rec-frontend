@@ -37,7 +37,7 @@ function LogoutAlert({ isOpen, onConfirm, onCancel }) {
         </AlertDialogHeader>
         <AlertDialogCloseButton />
         <AlertDialogBody>
-          <Text textAlign={"center"}>¿Estas segura de cerrar sesión?</Text>
+          <Text textAlign={"center"}>¿Estás segura de cerrar sesión?</Text>
         </AlertDialogBody>
         <AlertDialogFooter justifyContent="center">
           <Button ref={cancelRef} onClick={handleLogoutAlertCancel}>No</Button>
