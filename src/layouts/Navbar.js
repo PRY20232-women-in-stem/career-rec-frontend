@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box,
@@ -25,13 +25,23 @@ const NavLink = ({ to, children, onClose }) => (
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showLogoutAlert, setShowLogoutAlert] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // Al cargar el componente, verifica si hay un token en el local storage
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   const handleLogoutClick = () => {
+    // Realiza las acciones para cerrar sesión
     setShowLogoutAlert(true);
-    onClose(); // Cerrar el Collapse
   };
 
   const handleLogoutAlertConfirm = () => {
+    setIsLoggedIn(false);
     setShowLogoutAlert(false); // Cerrar el modal de alerta
   };
 
@@ -53,9 +63,9 @@ function Navbar() {
             </Link>
             <Flex alignItems={'center'}>
               <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
-                <NavLink to='/about-us'>Nosotras</NavLink>
+                {/*<NavLink to='/about-us'>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
                 <NavLink to='/vocational-test'>Test vocacional</NavLink>
-                <NavLink to='/learn'>Aprendamos de STEM</NavLink>
+                <NavLink to='/'>Aprendamos de STEM</NavLink>
               </HStack>
             </Flex>
           </HStack>
@@ -63,13 +73,25 @@ function Navbar() {
 
         <Collapse in={isOpen} animateOpacity style={{ position: "absolute", left: 0, width: '100%' }}>
           <Stack px={4} pb={2} bg={'purple.300'} align={'start'}>
-            <NavLink to='/about-us' onClose={onClose}>Nosotras</NavLink>
+            {/*<NavLink to='/about-us' onClose={onClose}>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
             <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
-            <NavLink to='/learn' onClose={onClose}>Aprendamos de STEM</NavLink>
+            <NavLink to='/' onClose={onClose}>Aprendamos de STEM</NavLink>
             <Divider />
+            {isLoggedIn ? (
+              <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>
+                Cerrar sesión
+              </Box>
+            ) : (
+              <>
+                <NavLink to='/register' onClose={onClose}>Registrarse</NavLink>
+                <NavLink to='/login' onClose={onClose}>Iniciar sesión</NavLink>
+              </>
+            )}
+            {/* QUITARLO PARA DSP, ESTO SOLO ESTA PARA LA PRUEBA */}
             <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>
               Cerrar sesión
             </Box>
+            {/* QUITARLO PARA DSP, ESTO SOLO ESTA PARA LA PRUEBA */}
           </Stack>
         </Collapse>
         <LogoutAlert isOpen={showLogoutAlert} onConfirm={handleLogoutAlertConfirm} onCancel={handleLogoutAlertCancel} />

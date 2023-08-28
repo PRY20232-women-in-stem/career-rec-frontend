@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import 'survey-core/defaultV2.min.css';
@@ -13,9 +14,12 @@ function VocationalTest() {
     handleSurveyOnComplete(sender.data)
   });
 
+  const [showAnotherComponent, setShowAnotherComponent] = useState(false);
+
   const handleSurveyOnComplete = (answers) => {
     console.log(answers);
     // Envia data al backend
+    setShowAnotherComponent(true);
   };
 
   const SurveyContainer = ({ children }) => ( // Con el propósito de alinear el contenido a la izquierda

@@ -17,18 +17,19 @@ function LogoutAlert({ isOpen, onConfirm, onCancel }) {
   const cancelRef = useRef();
   const navigate = useNavigate();
 
-  const handleLogoutModalConfirm = () => {
-    onConfirm(); // Cerrar el modal de cierre de sesión
+  const handleLogoutAlertConfirm = () => {
     // Aquí podrías implementar la lógica para cerrar sesión
+    localStorage.removeItem('token');
+    onConfirm(); // Cerrar el modal de cierre de sesión
     navigate('/login'); // Redirigir al login después de confirmar
   };
 
-  const handleLogoutModalCancel = () => {
+  const handleLogoutAlertCancel = () => {
     onCancel(); // Cerrar el modal de cierre de sesión
   };
 
   return (
-    <AlertDialog motionPreset='scale' leastDestructiveRef={cancelRef} onClose={handleLogoutModalCancel} isOpen={isOpen} isCentered>
+    <AlertDialog motionPreset='scale' leastDestructiveRef={cancelRef} onClose={handleLogoutAlertCancel} isOpen={isOpen} isCentered>
       <AlertDialogOverlay />
       <AlertDialogContent maxW="xs">
         <AlertDialogHeader>
@@ -39,8 +40,8 @@ function LogoutAlert({ isOpen, onConfirm, onCancel }) {
           <Text textAlign={"center"}>¿Estas segura de cerrar sesión?</Text>
         </AlertDialogBody>
         <AlertDialogFooter justifyContent="center">
-          <Button ref={cancelRef} onClick={handleLogoutModalCancel}>No</Button>
-          <Button bg={'purple.400'} color={'white'} ml={3} onClick={handleLogoutModalConfirm}>Sí</Button>
+          <Button ref={cancelRef} onClick={handleLogoutAlertCancel}>No</Button>
+          <Button bg={'purple.400'} color={'white'} ml={3} onClick={handleLogoutAlertConfirm}>Sí</Button>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
