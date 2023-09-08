@@ -1,102 +1,100 @@
+import { useState, useEffect } from 'react';
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box,
+  Collapse,
+  Divider,
   Flex,
-  Button,
-  IconButton,
-  useDisclosure,
   HStack,
-  Menu,
-  MenuButton,
-  Avatar,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  Stack,
+  IconButton,
   Image,
+  Link,
+  Stack,
   Text,
-  Link
+  useDisclosure
 } from '@chakra-ui/react';
-import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
-import { Link as ReactRouterLink, NavLink } from 'react-router-dom';
+import { Link as ReactRouterLink } from 'react-router-dom';
+import LogoutAlert from '../components/LogoutAlert';
 
+const NavLink = ({ to, children, onClose }) => (
+  <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white'>
+    <ReactRouterLink to={to} onClick={onClose}>{children}</ReactRouterLink>
+  </Box>
+);
 
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [showLogoutAlert, setShowLogoutAlert] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // Al cargar el componente, verifica si hay un token en el local storage
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogoutClick = () => {
+    // Realiza las acciones para cerrar sesión
+    setShowLogoutAlert(true);
+  };
+
+  const handleLogoutAlertConfirm = () => {
+    setIsLoggedIn(false);
+    setShowLogoutAlert(false); // Cerrar el modal de alerta
+  };
+
+  const handleLogoutAlertCancel = () => {
+    setShowLogoutAlert(false); // Cerrar el modal de alerta
+  };
 
   return (
     <>
-      <Box bg={'purple.300'} px={4}>
+      <Box bg={'purple.300'} px={4} position="sticky" top={0} zIndex={1000}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <IconButton size={'md'} icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen} />
-          <HStack alignItems={'center'}>
-            <Link as={ReactRouterLink} to='/'>
-              <Image borderRadius='full' boxSize='50px' src='womenInStem.png' />
+          <IconButton size={'md'} icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen} />
+          <HStack alignItems={'center'} justifyContent={'space-between'} w={{ md: '100%' }}>
+            <Link as={ReactRouterLink} to='/' _hover={{ textDecoration: 'none' }}>
+              <HStack alignItems={'center'}>
+                <Image borderRadius='full' boxSize='50px' src='WomenInStem1.png' />
+                <Text fontSize={'lg'} color={'white'}>Women in STEM</Text>
+              </HStack>
             </Link>
-            <Text fontWeight={'500'} fontSize={'lg'} color={'white'}>
-              Women in STEM
-            </Text>
+            <Flex alignItems={'center'}>
+              <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
+                {/*<NavLink to='/about-us'>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
+                <NavLink to='/vocational-test'>Test vocacional</NavLink>
+                <NavLink to='/'>Aprendamos de STEM</NavLink>
+              </HStack>
+            </Flex>
           </HStack>
-          <Flex alignItems={'center'}>
-            {/* ELEMENTOS DEL NAVBAR */}
-            <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
-              <NavLink to="/about-us">
-                <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white'>
-                  Quienes somos
-                </Box>
-              </NavLink>
-              <NavLink to="/vocational-test">
-                <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white'>
-                  Test vocacional
-                </Box>
-              </NavLink>
-              <NavLink to="/learn">
-                <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white'>
-                  Aprendamos de STEM
-                </Box>
-              </NavLink>
-            </HStack>
-            {/* BOTONES DE ACCION */}
-
-            {/* Construir validacion cuando sesion exista */}
-            <Menu>
-              <MenuButton as={Button} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0} ml={4}>
-                <Avatar size={'sm'} src='personaAvatar.png' />
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Perfil</MenuItem>
-                <MenuItem>Resultados</MenuItem>
-                <MenuDivider />
-                <MenuItem>Cerrar sesión</MenuItem>
-              </MenuList>
-            </Menu>
-            {/* Fin de menu de logeado*/}
-          </Flex>
         </Flex>
 
-        {/* Menu hamburguesa responsive */}
-        {isOpen ? (
-          <Box pb={4} display={{ md: 'flex' }}>
-            {/*<HStack alignItems={'center'}>
-              <Link as={ReactRouterLink} to='/'>
-                <Image borderRadius='full' boxSize='50px' src='womenInStem.png' />
-              </Link>
-              <Text fontWeight={'500'} fontSize={'lg'} color={'white'}>
-                Women in STEM
-              </Text>
-            </HStack>*/}
-            <Stack as={'nav'} spacing={4}>
-              <NavLink to="/about-us">
-                Quienes somos
-              </NavLink>
-              <NavLink to="/vocational-test">
-                Test vocacional
-              </NavLink>
-              <NavLink to="/learn">
-                Aprendamos de STEM
-              </NavLink>
-            </Stack>
-          </Box>
-        ) : null}
+        <Collapse in={isOpen} animateOpacity style={{ position: "absolute", left: 0, width: '100%' }}>
+          <Stack px={4} pb={2} bg={'purple.300'} align={'start'}>
+            {/*<NavLink to='/about-us' onClose={onClose}>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
+            <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
+            <NavLink to='/' onClose={onClose}>Aprendamos de STEM</NavLink>
+            <Divider />
+            {isLoggedIn ? (
+              <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>
+                Cerrar sesión
+              </Box>
+            ) : (
+              <>
+                <NavLink to='/register' onClose={onClose}>Registrarse</NavLink>
+                <NavLink to='/login' onClose={onClose}>Iniciar sesión</NavLink>
+              </>
+            )}
+            {/* QUITARLO PARA DSP, ESTO SOLO ESTA PARA LA PRUEBA */}
+            <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>
+              Cerrar sesión
+            </Box>
+            {/* QUITARLO PARA DSP, ESTO SOLO ESTA PARA LA PRUEBA */}
+          </Stack>
+        </Collapse>
+        <LogoutAlert isOpen={showLogoutAlert} onConfirm={handleLogoutAlertConfirm} onCancel={handleLogoutAlertCancel} />
       </Box>
     </>
   )
