@@ -1,4 +1,4 @@
-export const surveyJson = {
+export const testVocacionalJson = {
   "pages": [
     {
       "name": "page1",
@@ -1212,6 +1212,6 @@ export const surveyJson = {
   ],
   "showPrevButton": false,
   "showQuestionNumbers": "off",
-  "widthMode": "static",
-  "width": "1000px"
+  "widthMode": "static",// Tamaño de la encuesta
+  "width": "1000px" // Tamaño de la encuesta
 }

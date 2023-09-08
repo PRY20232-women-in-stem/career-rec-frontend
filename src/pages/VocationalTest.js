@@ -1,16 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import 'survey-core/defaultV2.min.css';
-import { surveyJson } from "../components/SurveyJson";
-import { surveyTheme } from "../components/SurveyTheme";
+import { testVocacionalJson } from "../util/TestVocacionalJson";
+import { testVocacionalTheme } from "../util/TestVocacionalTheme";
 import { Button, Card, CardBody, CardFooter, CardHeader, Flex, Heading, Highlight, Image, Stack, Text } from "@chakra-ui/react";
+import PreTest from "../components/PreTest";
 import { useNavigate } from 'react-router-dom';
 
 function VocationalTest() {
-  const survey = new Model(surveyJson); // Carga el Json de la encuesta
-  survey.applyTheme(surveyTheme); // Aplica el estilo personalizado
+  const survey = new Model(testVocacionalJson); // Carga el Json de la encuesta
+  survey.applyTheme(testVocacionalTheme); // Aplica el estilo personalizado
 
+  const [hasCompletedPreTest, setHasCompletedPreTest] = useState(false); // Validación del pre-test
   const [showResults, setShowResults] = useState(false); // Estado para mostrar los resultados
   const [recommendation, setRecommendation] = useState(""); // Estado para almacenar la recomendación
   const navigate = useNavigate();
@@ -20,6 +22,17 @@ function VocationalTest() {
     surveyOnComplete(answers);
     setShowResults(true);
   });
+
+  // Realizar la solicitud al backend para verificar si el usuario ha completado el pre-test
+  useEffect(() => {
+    const fetchData = async () => {
+      // const completed = await checkPreTestCompletion(); // CAMBIAR POR LA LLAMADA CORRECTA
+      //if (completed) {
+      // setHasCompletedPreTest(true);
+      //}
+    };
+    fetchData();
+  }, []);
 
   const surveyOnComplete = (answers) => {
     console.log(answers);
@@ -46,7 +59,7 @@ function VocationalTest() {
           <Text fontSize={["md", "lg"]} textAlign={"center"} color={'purple.700'}>
             Este test tiene como propósito conocer las habilidades de cada estudiante con el único fin de poder recomendar carreras de acuerdo a sus intereses.
           </Text>
-          <Text fontSize={["md", "lg"]} textAlign={"center"} color={'purple.700'} display={{ md: 'none' }}>
+          <Text fontSize={["md", "lg"]} textAlign={"center"} color={'purple.700'}>
             <Highlight query={['1 al 5', 'Muy en desacuerdo', 'Muy de acuerdo']} styles={{ px: '1.5', py: '0.4', rounded: 'full', bg: 'purple.300', color: 'white' }}>
               Los valores de la encuesta van del 1 al 5 donde 1 significa Muy en desacuerdo y 5 significa Muy de acuerdo.
             </Highlight>
@@ -88,7 +101,11 @@ function VocationalTest() {
     <>
       <Flex minH={"100vh"} justify={"center"} bg={"purple.100"}>
         <Stack spacing={4} mx={"auto"} maxW={{ base: "lg", lg: "100%" }} py={12} px={6}>
-          {renderResults()}
+          {hasCompletedPreTest ? (
+            renderResults()
+          ) : (
+            <PreTest />
+          )}
         </Stack>
       </Flex>
     </>

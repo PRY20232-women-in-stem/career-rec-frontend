@@ -1,4 +1,4 @@
-export const surveyTheme = {
+export const testVocacionalTheme = {
   "cssVariables": {
     "--sjs-general-backcolor": "rgba(255, 255, 255, 1)",
     "--sjs-general-backcolor-dark": "rgba(244, 244, 244, 1)",
