@@ -59,11 +59,16 @@ function VocationalTest() {
           <Text fontSize={["md", "lg"]} textAlign={"center"} color={'purple.700'}>
             Este test tiene como propósito conocer las habilidades de cada estudiante con el único fin de poder recomendar carreras de acuerdo a sus intereses.
           </Text>
-          <Text fontSize={["md", "lg"]} textAlign={"center"} color={'purple.700'}>
-            <Highlight query={['1 al 5', 'Muy en desacuerdo', 'Muy de acuerdo']} styles={{ px: '1.5', py: '0.4', rounded: 'full', bg: 'purple.300', color: 'white' }}>
-              Los valores de la encuesta van del 1 al 5 donde 1 significa Muy en desacuerdo y 5 significa Muy de acuerdo.
-            </Highlight>
-          </Text>
+          <Stack>
+            <Heading fontSize={"xl"} textAlign={"center"} color={'purple.700'}>
+              ¡Importante!
+            </Heading>
+            <Text fontSize={["md", "lg"]} textAlign={"center"} color={'purple.700'}>
+              <Highlight query={['1 al 5', 'Muy en desacuerdo', 'Muy de acuerdo']} styles={{ px: '1.5', py: '0.4', rounded: 'full', bg: 'purple.300', color: 'white' }}>
+                Los valores de la encuesta van del 1 al 5 donde 1 significa Muy en desacuerdo y 5 significa Muy de acuerdo.
+              </Highlight>
+            </Text>
+          </Stack>
           <SurveyContainer>
             <Survey model={survey} />
           </SurveyContainer>

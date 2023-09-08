@@ -29,7 +29,7 @@ export const preTestJson = {
           "isRequired": true
         }
       ],
-      "title": "Interés STEM"
+      "title": "Interés en STEM"
     },
     {
       "name": "page2",
@@ -59,7 +59,7 @@ export const preTestJson = {
       "name": "page3",
       "elements": [
         {
-          "type": "dropdown",
+          "type": "radiogroup",
           "name": "question8",
           "title": "Indica tu nota en la última evaluación de la materia de Matemática",
           "isRequired": true,
@@ -76,7 +76,7 @@ export const preTestJson = {
           "allowClear": false,
         },
         {
-          "type": "dropdown",
+          "type": "radiogroup",
           "name": "question9",
           "title": "Indica tu nota en la última evaluación de la materia de Biología y Geología",
           "isRequired": true,
@@ -93,7 +93,7 @@ export const preTestJson = {
           "allowClear": false,
         },
         {
-          "type": "dropdown",
+          "type": "radiogroup",
           "name": "question10",
           "title": "Indica tu nota en la última evaluación de la materia de Física y Química",
           "isRequired": true,
