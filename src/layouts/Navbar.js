@@ -58,7 +58,7 @@ function Navbar() {
             <Link as={ReactRouterLink} to='/' _hover={{ textDecoration: 'none' }}>
               <HStack alignItems={'center'}>
                 <Image borderRadius='full' boxSize='50px' src='WomenInStem1.png' />
-                <Text fontSize={'lg'} color={'white'}>Women in STEM</Text>
+                <Text fontSize={'lg'} color={'white'}>Girls in STEM</Text>
               </HStack>
             </Link>
             <Flex alignItems={'center'}>

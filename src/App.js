@@ -1,7 +1,6 @@
 import '@fontsource/raleway/400.css'
 import '@fontsource/open-sans/700.css'
 import './App.css';
-// import Home from './pages/Home';
 import Root from './pages/Root';
 import Register from './pages/Register';
 import Login from './pages/Login';
@@ -26,7 +25,7 @@ const router = createBrowserRouter([
     ),
     errorElement: <ErrorNotFound />,
     children: [
-      { path: "", element: <LearnSTEM /> }, // Componente Home no se está usando, se reemplazó por LearnSTEM
+      { path: "", element: <LearnSTEM /> },
       { path: "register", element: <Register /> },
       { path: "login", element: <Login /> },
       // { path: "about-us", element: <AboutUs /> }, // Se ha quitado la ruta porque ya no es necesario

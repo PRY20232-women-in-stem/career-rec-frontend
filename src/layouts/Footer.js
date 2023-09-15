@@ -21,11 +21,11 @@ function Footer() {
               <Box display='flex' alignItems='center'>
                 <Image borderRadius='full' boxSize='35px' src='WomenInStem1.png' />
                 <Text fontSize={'lg'} ml={2}>
-                  Women in STEM
+                  Girls in STEM
                 </Text>
               </Box>
               <Text fontSize={'sm'} textAlign={'left'}>
-                © 2022 Bambu Consulting. All rights reserved
+                © 2023 Bambu Consulting. All rights reserved
               </Text>
               {/*<Stack direction={'row'} spacing={6}>  // Botones de redes sociales
                 <SocialButton label={'Twitter'} href={'#'}>
