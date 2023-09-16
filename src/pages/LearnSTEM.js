@@ -1,7 +1,51 @@
 import { Flex, Heading, Stack, Text, SimpleGrid } from "@chakra-ui/layout";
-import { Button, Card, CardBody, CardFooter, CardHeader, Image } from "@chakra-ui/react";
+import { Button, Card, CardBody, CardFooter, CardHeader, Image, useBreakpointValue } from "@chakra-ui/react";
+import Slider from "react-slick";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function LearnSTEM() {
+  const isMobile = useBreakpointValue({ base: true, md: false })
+
+  const sliderSettings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 5000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: false, // Centra los elementos en el carrusel
+  };
+
+  const cards = [
+    {
+      title: 'Ciencia (Science)',
+      text:
+        'La ciencia se dedica al estudio sistemático y metódico del mundo natural...',
+      image: 'WomenInStem1.png',
+    },
+    {
+      title: 'Tecnología (Technology)',
+      text:
+        'La ciencia se dedica al estudio sistemático y metódico del mundo natural...',
+      image: 'WomenInStem1.png',
+    },
+    {
+      title: 'Ingeniería (Engineering)',
+      text:
+        'La ciencia se dedica al estudio sistemático y metódico del mundo natural...',
+      image: 'WomenInStem1.png',
+    },
+    {
+      title: 'Matemáticas (Mathematics)',
+      text:
+        'La ciencia se dedica al estudio sistemático y metódico del mundo natural...',
+      image: 'WomenInStem1.png',
+    },
+  ];
+
   return (
     <>
       <Flex minH={"100vh"} justify={"center"} bg={"purple.100"}>
@@ -17,56 +61,43 @@ function LearnSTEM() {
           <Heading textAlign={"center"} color={"purple.700"}>
             ¿Cuáles son las áreas de STEM?
           </Heading>
-          <SimpleGrid spacing={8} templateColumns='repeat(auto-fill, minmax(300px, 1fr))'>
-            <Card overflow='hidden'>
-              <Image objectFit='cover' src='WomenInStem1.png' />
-              <CardHeader>
-                <Heading size='md'>Ciencia (Science)</Heading>
-              </CardHeader>
-              <CardBody>
-                <Text>La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.</Text>
-              </CardBody>
-              <CardFooter>
-                <Button>Ver más</Button>
-              </CardFooter>
-            </Card>
-            <Card overflow='hidden'>
-              <Image objectFit='cover' src='WomenInStem1.png' />
-              <CardHeader>
-                <Heading size='md'>Tecnología (Technology)</Heading>
-              </CardHeader>
-              <CardBody>
-                <Text>La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.</Text>
-              </CardBody>
-              <CardFooter>
-                <Button>Ver más</Button>
-              </CardFooter>
-            </Card>
-            <Card overflow='hidden'>
-              <Image objectFit='cover' src='WomenInStem1.png' />
-              <CardHeader>
-                <Heading size='md'>Ingeniería (Engineering)</Heading>
-              </CardHeader>
-              <CardBody>
-                <Text>La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.</Text>
-              </CardBody>
-              <CardFooter>
-                <Button>Ver más</Button>
-              </CardFooter>
-            </Card>
-            <Card overflow='hidden'>
-              <Image objectFit='cover' src='WomenInStem1.png' />
-              <CardHeader>
-                <Heading size='md'>Matemáticas (Mathematics)</Heading>
-              </CardHeader>
-              <CardBody>
-                <Text>La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.</Text>
-              </CardBody>
-              <CardFooter>
-                <Button>Ver más</Button>
-              </CardFooter>
-            </Card>
-          </SimpleGrid>
+          {isMobile ? (
+            <Slider {...sliderSettings}>
+              {cards.map((card, index) => (
+                <div key={index} style={{ margin: '0 8px' }}> {/* Contenedor con margen */}
+                  <Card overflow="hidden">
+                    <Image objectFit="cover" src={card.image} alt={card.title} />
+                    <CardHeader>
+                      <Heading size="md">{card.title}</Heading>
+                    </CardHeader>
+                    <CardBody>
+                      <Text>{card.text}</Text>
+                    </CardBody>
+                    <CardFooter>
+                      <Button>Ver más</Button>
+                    </CardFooter>
+                  </Card>
+                </div>
+              ))}
+            </Slider>
+          ) : (
+            <SimpleGrid spacing={8} templateColumns="repeat(auto-fill, minmax(300px, 1fr))">
+              {cards.map((card, index) => (
+                <Card key={index} overflow="hidden">
+                  <Image objectFit="cover" src={card.image} alt={card.title} />
+                  <CardHeader>
+                    <Heading size="md">{card.title}</Heading>
+                  </CardHeader>
+                  <CardBody>
+                    <Text>{card.text}</Text>
+                  </CardBody>
+                  <CardFooter>
+                    <Button>Ver más</Button>
+                  </CardFooter>
+                </Card>
+              ))}
+            </SimpleGrid>
+          )}
         </Stack>
       </Flex>
     </>
