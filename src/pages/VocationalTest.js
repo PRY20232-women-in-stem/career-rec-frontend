@@ -12,7 +12,7 @@ function VocationalTest() {
   const survey = new Model(testVocacionalJson); // Carga el Json de la encuesta
   survey.applyTheme(testVocacionalTheme); // Aplica el estilo personalizado
 
-  const [hasCompletedPreTest, setHasCompletedPreTest] = useState(false); // Validación del pre-test
+  const [hasCompletedPreTest, setHasCompletedPreTest] = useState(true); // Validación del pre-test
   const [showResults, setShowResults] = useState(false); // Estado para mostrar los resultados
   const [recommendation, setRecommendation] = useState(""); // Estado para almacenar la recomendación
   const navigate = useNavigate();
