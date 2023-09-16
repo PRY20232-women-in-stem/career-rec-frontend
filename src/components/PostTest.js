@@ -5,7 +5,7 @@ import { postTestTheme } from "../util/PostTestTheme";
 import 'survey-core/defaultV2.min.css';
 import { Heading, Highlight, Text } from "@chakra-ui/react";
 
-function PostTest() {
+function PostTest({ onClose }) {
   const survey = new Model(postTestJson); // Carga el Json de la encuesta
   survey.applyTheme(postTestTheme); // Aplica el estilo personalizado
 
@@ -17,6 +17,7 @@ function PostTest() {
   const surveyOnComplete = (answers) => {
     console.log(answers);
     // Envia data al backend
+    onClose();
   };
 
   const SurveyContainer = ({ children }) => ( // Con el propósito de alinear el contenido a la izquierda
