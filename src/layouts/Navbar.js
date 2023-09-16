@@ -13,7 +13,7 @@ import {
   Text,
   useDisclosure
 } from '@chakra-ui/react';
-import { Link as ReactRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
 import LogoutAlert from '../components/LogoutAlert';
 
 const NavLink = ({ to, children, onClose }) => (
@@ -23,6 +23,7 @@ const NavLink = ({ to, children, onClose }) => (
 );
 
 function Navbar() {
+  const location = useLocation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showLogoutAlert, setShowLogoutAlert] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -64,7 +65,9 @@ function Navbar() {
             <Flex alignItems={'center'}>
               <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
                 {/*<NavLink to='/about-us'>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
-                <NavLink to='/vocational-test'>Test vocacional</NavLink>
+                {location.pathname !== "/content" && (
+                  <NavLink to='/vocational-test'>Test vocacional</NavLink>
+                )}
                 <NavLink to='/'>Aprendamos de STEM</NavLink>
               </HStack>
             </Flex>
@@ -74,7 +77,9 @@ function Navbar() {
         <Collapse in={isOpen} animateOpacity style={{ position: "absolute", left: 0, width: '100%' }}>
           <Stack px={4} pb={2} bg={'purple.300'} align={'start'}>
             {/*<NavLink to='/about-us' onClose={onClose}>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
-            <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
+            {location.pathname !== "/content" && (
+              <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
+            )}
             <NavLink to='/' onClose={onClose}>Aprendamos de STEM</NavLink>
             <Divider />
             {isLoggedIn ? (
