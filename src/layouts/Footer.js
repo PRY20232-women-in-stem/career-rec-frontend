@@ -9,7 +9,7 @@ import {
   Image,
   Heading,
 } from '@chakra-ui/react';
-import { BiMailSend } from 'react-icons/bi'
+import { EmailIcon } from '@chakra-ui/icons';
 
 function Footer() {
   return (
@@ -67,7 +67,7 @@ function Footer() {
               </Heading>
               <Stack direction={'row'}>
                 <Input placeholder={'Dirección email'} variant='filled' focusBorderColor='purple.400' />
-                <IconButton bg={'purple.300'} color={'white'} _hover={{ bg: 'purple.400', }} icon={<BiMailSend />} />
+                <IconButton bg={'purple.300'} color={'white'} _hover={{ bg: 'purple.400', }} icon={<EmailIcon />} />
               </Stack>
             </Stack>
             <Stack align={'flex-start'}>

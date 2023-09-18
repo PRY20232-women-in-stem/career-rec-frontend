@@ -1,50 +1,47 @@
-import { Flex, Heading, Stack, Text, SimpleGrid } from "@chakra-ui/layout";
+import { Flex, Heading, Stack, Text, SimpleGrid, Box } from "@chakra-ui/layout";
 import { Button, Card, CardBody, CardFooter, CardHeader, Image, useBreakpointValue } from "@chakra-ui/react";
-import Slider from "react-slick";
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 function LearnSTEM() {
   const isMobile = useBreakpointValue({ base: true, md: false })
-
-  const sliderSettings = {
-    dots: true,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 5000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: false, // Centra los elementos en el carrusel
-  };
 
   const cards = [
     {
       title: 'Ciencia (Science)',
       text:
-        'La ciencia se dedica al estudio sistemático y metódico del mundo natural...',
+        'La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.',
       image: 'WomenInStem1.png',
     },
     {
       title: 'Tecnología (Technology)',
       text:
-        'La ciencia se dedica al estudio sistemático y metódico del mundo natural...',
+        'La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.',
       image: 'WomenInStem1.png',
     },
     {
       title: 'Ingeniería (Engineering)',
       text:
-        'La ciencia se dedica al estudio sistemático y metódico del mundo natural...',
+        'La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.',
       image: 'WomenInStem1.png',
     },
     {
       title: 'Matemáticas (Mathematics)',
       text:
-        'La ciencia se dedica al estudio sistemático y metódico del mundo natural...',
+        'La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.',
       image: 'WomenInStem1.png',
     },
   ];
+
+  const carouselSettings = {
+    showArrows: false,
+    showStatus: false,
+    showThumbs: false,
+    width: 360,
+    autoPlay: true,
+    infiniteLoop: true,
+    interval: 5000,
+  };
 
   return (
     <>
@@ -57,16 +54,20 @@ function LearnSTEM() {
           <Heading textAlign={"center"} color={"purple.700"}>
             ¿Qué son las carreras STEM?
           </Heading>
-          <Text fontSize={["md", "lg"]} textAlign={"center"} color={'purple.700'}>Las carreras STEM están relacionadas con la innovación, el desarrollo de tecnologías y el crecimiento de las empresas, lo que contribuye a la mejora de la economía. Los profesionales que se dedican a estas áreas ayudan a mejorar la competitividad de las empresas y a impulsar la creación de empleos de alta calidad.</Text>
+          <Text fontSize={["md", "lg"]} textAlign={"center"} color={'purple.700'}>
+            Las carreras STEM están relacionadas con la innovación, el desarrollo de tecnologías y el crecimiento de las empresas,
+            lo que contribuye a la mejora de la economía. Los profesionales que se dedican a estas áreas ayudan a mejorar la competitividad
+            de las empresas y a impulsar la creación de empleos de alta calidad.
+          </Text>
           <Heading textAlign={"center"} color={"purple.700"}>
             ¿Cuáles son las áreas de STEM?
           </Heading>
           {isMobile ? (
-            <Slider {...sliderSettings}>
-              {cards.map((card, index) => (
-                <div key={index} style={{ margin: '0 8px' }}> {/* Contenedor con margen */}
-                  <Card overflow="hidden">
-                    <Image objectFit="cover" src={card.image} alt={card.title} />
+            <Box display="flex" justifyContent="center">
+              <Carousel {...carouselSettings}>
+                {cards.map((card, index) => (
+                  <Card key={index} overflow="hidden">
+                    <Image objectFit="cover" src={card.image} />
                     <CardHeader>
                       <Heading size="md">{card.title}</Heading>
                     </CardHeader>
@@ -77,9 +78,9 @@ function LearnSTEM() {
                       <Button>Ver más</Button>
                     </CardFooter>
                   </Card>
-                </div>
-              ))}
-            </Slider>
+                ))}
+              </Carousel>
+            </Box>
           ) : (
             <SimpleGrid spacing={8} templateColumns="repeat(auto-fill, minmax(300px, 1fr))">
               {cards.map((card, index) => (
