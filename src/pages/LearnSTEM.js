@@ -37,7 +37,7 @@ function LearnSTEM() {
     showArrows: false,
     showStatus: false,
     showThumbs: false,
-    width: 360,
+    width: '40vh',
     autoPlay: true,
     infiniteLoop: true,
     interval: 5000,
