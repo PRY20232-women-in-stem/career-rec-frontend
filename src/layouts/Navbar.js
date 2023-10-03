@@ -13,7 +13,7 @@ import {
   Text,
   useDisclosure
 } from '@chakra-ui/react';
-import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
+import { Link as ReactRouterLink, useLocation, useNavigate } from 'react-router-dom';
 import LogoutAlert from '../components/LogoutAlert';
 
 const NavLink = ({ to, children, onClose }) => (
@@ -27,18 +27,23 @@ function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showLogoutAlert, setShowLogoutAlert] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
   // Al cargar el componente, verifica si hay un token en el local storage
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('access_token');
     if (token) {
       setIsLoggedIn(true);
     }
   }, []);
 
   const handleLogoutClick = () => {
-    // Realiza las acciones para cerrar sesión
-    setShowLogoutAlert(true);
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('current_user');
+    setIsLoggedIn(false);
+    setShowLogoutAlert(false);
+    onClose();
+    navigate('/');
   };
 
   const handleLogoutAlertConfirm = () => {
@@ -92,11 +97,6 @@ function Navbar() {
                 <NavLink to='/login' onClose={onClose}>Iniciar sesión</NavLink>
               </>
             )}
-            {/* QUITARLO PARA DSP, ESTO SOLO ESTA PARA LA PRUEBA */}
-            <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>
-              Cerrar sesión
-            </Box>
-            {/* QUITARLO PARA DSP, ESTO SOLO ESTA PARA LA PRUEBA */}
           </Stack>
         </Collapse>
         <LogoutAlert isOpen={showLogoutAlert} onConfirm={handleLogoutAlertConfirm} onCancel={handleLogoutAlertCancel} />

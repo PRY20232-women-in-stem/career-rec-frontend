@@ -67,17 +67,12 @@ function Content() {
   };
 
   const handlePopUpAlertCancel = () => {
-    // Cuando se hace clic en "Cerrar", primero cancela el temporizador actual.
     if (alertTimeout) {
       clearTimeout(alertTimeout);
     }
-
-    // Luego, configura un nuevo temporizador para mostrar la Alerta nuevamente después del tiempo deseado.
     const newTimeout = setTimeout(() => {
       setShowPopUp(true);
     }, 1000); // 1 segundo en milisegundos (o el tiempo deseado)
-
-    // Almacena el identificador del nuevo temporizador en el estado alertTimeout.
     setAlertTimeout(newTimeout);
     setShowPopUp(false);
   };
