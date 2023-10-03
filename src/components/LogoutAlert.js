@@ -18,10 +18,10 @@ function LogoutAlert({ isOpen, onConfirm, onCancel }) {
   const navigate = useNavigate();
 
   const handleLogoutAlertConfirm = () => {
-    // Aquí podrías implementar la lógica para cerrar sesión
-    localStorage.removeItem('token');
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('current_user');
     onConfirm(); // Cerrar el modal de cierre de sesión
-    navigate('/login'); // Redirigir al login después de confirmar
+    navigate('/login');
   };
 
   const handleLogoutAlertCancel = () => {

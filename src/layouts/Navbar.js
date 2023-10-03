@@ -13,7 +13,7 @@ import {
   Text,
   useDisclosure
 } from '@chakra-ui/react';
-import { Link as ReactRouterLink, useLocation, useNavigate } from 'react-router-dom';
+import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
 import LogoutAlert from '../components/LogoutAlert';
 
 const NavLink = ({ to, children, onClose }) => (
@@ -27,7 +27,6 @@ function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showLogoutAlert, setShowLogoutAlert] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const navigate = useNavigate();
 
   // Al cargar el componente, verifica si hay un token en el local storage
   useEffect(() => {
@@ -38,12 +37,7 @@ function Navbar() {
   }, []);
 
   const handleLogoutClick = () => {
-    localStorage.removeItem('access_token');
-    localStorage.removeItem('current_user');
-    setIsLoggedIn(false);
-    setShowLogoutAlert(false);
-    onClose();
-    navigate('/');
+    setShowLogoutAlert(true);
   };
 
   const handleLogoutAlertConfirm = () => {
