@@ -7,7 +7,7 @@ import { Heading, Highlight, Stack, Text } from "@chakra-ui/react";
 import { createPreTest } from "../services/PreTestService";
 import { updateStudentPreTest } from "../services/StudentService";
 
-function PreTest() {
+function PreTest({ onPreTestComplete }) {
   const survey = new Model(preTestJson); // Carga el Json de la encuesta
   survey.applyTheme(preTestTheme); // Aplica el estilo personalizado
 
@@ -23,6 +23,7 @@ function PreTest() {
       const answersWithUserId = { ...answers, studentId: userId };
       await createPreTest(answersWithUserId);
       await updateStudentPreTest(userId);
+      onPreTestComplete();
     }
   };
 

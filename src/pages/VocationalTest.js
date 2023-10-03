@@ -26,21 +26,22 @@ function VocationalTest() {
     setShowResults(true);
   });
 
+  const fetchData = async () => {
+    const currentUser = JSON.parse(localStorage.getItem("current_user"));
+    if (currentUser) {
+      const userId = currentUser.userId;
+      const response = await getStudentById(userId);
+      if (response.preTestCompl) {
+        setHasCompletedPreTest(true);
+      } else {
+        setHasCompletedPreTest(false);
+      }
+    }
+    setIsLoading(false);
+  };
+
   // Realizar la solicitud al backend para verificar si el usuario ha completado el pre-test
   useEffect(() => {
-    const fetchData = async () => {
-      const currentUser = JSON.parse(localStorage.getItem("current_user"));
-      if (currentUser) {
-        const userId = currentUser.userId;
-        const response = await getStudentById(userId);
-        if (response.preTestCompl) {
-          setHasCompletedPreTest(true);
-        } else {
-          setHasCompletedPreTest(false);
-        }
-      }
-      setIsLoading(false);
-    };
     fetchData();
   }, []);
 
@@ -55,6 +56,10 @@ function VocationalTest() {
     const response = await createVocationalTestPrediction(answersForBackend);
     console.log("response vocational test", response);
     //setRecommendation(response); // CAMBIAR POR LA RESPUESTA DEL BACKEND
+  };
+
+  const handlePreTestComplete = async () => {
+    fetchData();
   };
 
   const handleAcceptButtonClick = () => {
@@ -122,14 +127,14 @@ function VocationalTest() {
     <>
       <Flex minH={"100vh"} justify={"center"} bg={"purple.100"}>
         <Stack spacing={4} mx={"auto"} maxW={{ base: "lg", lg: "100%" }} py={12} px={6}>
-          {isLoading ? (
-            <Spinner size="xl" color="purple.700" speed='0.65s' /> /* SPINNER DEL CONTENIDO */
-          ) : (
+          {!isLoading ? (
             hasCompletedPreTest ? (
               renderResults()
             ) : (
-              <PreTest />
+              <PreTest onPreTestComplete={handlePreTestComplete} />
             )
+          ) : (
+            <Spinner size="xl" color="purple.700" speed="0.65s" />
           )}
         </Stack>
       </Flex>
