@@ -5,13 +5,13 @@ export const postTestJson = {
       "elements": [
         {
           "type": "comment",
-          "name": "question1",
+          "name": "projectParticipation",
           "title": "Explique en qué consistió su participación en el proyecto. ¿Qué hiciste?",
           "isRequired": true
         },
         {
           "type": "radiogroup",
-          "name": "question2",
+          "name": "projectTimeSpent",
           "title": "¿Cuánto tiempo le ha dedicado? (Numero de horas totales)",
           "isRequired": true,
           "choices": [
@@ -36,25 +36,25 @@ export const postTestJson = {
       "elements": [
         {
           "type": "rating",
-          "name": "question3",
+          "name": "interestStemFields",
           "title": "Ahora estoy más interesada en la ciencia, tecnología, ingeniería o matemáticas",
           "isRequired": true
         },
         {
           "type": "rating",
-          "name": "question4",
+          "name": "futureInterestStem",
           "title": "Ahora estoy más interesada que antes en estudiar los campos STEM en el futuro",
           "isRequired": true
         },
         {
           "type": "rating",
-          "name": "question5",
+          "name": "learnNewInfo",
           "title": "La actividad me ha permitido conocer nueva información sobre estas profesiones",
           "isRequired": true
         },
         {
           "type": "rating",
-          "name": "question6",
+          "name": "perceptionWomenStem",
           "title": "Después de la actividad, creo que las mujeres podrían involucrarse más en las profesiones STEM",
           "isRequired": true
         }
@@ -66,19 +66,19 @@ export const postTestJson = {
       "elements": [
         {
           "type": "rating",
-          "name": "question7",
+          "name": "activitySatisfaction",
           "title": "En términos generales, consideré que la actividad fue satisfactoria",
           "isRequired": true
         },
         {
           "type": "text",
-          "name": "question8",
+          "name": "projectValue",
           "title": "¿Qué aspectos del proyecto valoras más positivamente? En otras palabras, ¿qué es lo que más te gustó del proyecto?",
           "isRequired": true
         },
         {
           "type": "text",
-          "name": "question9",
+          "name": "projectImprovement",
           "title": "¿Qué piensas que puede mejorarse?",
           "isRequired": true
         }

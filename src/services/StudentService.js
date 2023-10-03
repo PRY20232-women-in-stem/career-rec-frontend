@@ -47,7 +47,7 @@ export async function updateStudentPreTest(studentId) {
 
 export async function updateStudentPostTest(studentId) {
     try {
-        const response = await axiosInstance.patch(`/students/${studentId}/pre-test`);
+        const response = await axiosInstance.patch(`/students/${studentId}/post-test`);
         return response.data;
     } catch (error) {
         throw error;

@@ -4,6 +4,8 @@ import { preTestJson } from "../util/PreTestJson";
 import { preTestTheme } from "../util/PreTestTheme";
 import 'survey-core/defaultV2.min.css';
 import { Heading, Highlight, Stack, Text } from "@chakra-ui/react";
+import { createPreTest } from "../services/PreTestService";
+import { updateStudentPreTest } from "../services/StudentService";
 
 function PreTest() {
   const survey = new Model(preTestJson); // Carga el Json de la encuesta
@@ -14,9 +16,14 @@ function PreTest() {
     surveyOnComplete(answers);
   });
 
-  const surveyOnComplete = (answers) => {
-    console.log(answers);
-    // Envia data al backend
+  const surveyOnComplete = async (answers) => {
+    const currentUser = JSON.parse(localStorage.getItem("current_user"));
+    if (currentUser) {
+      const userId = currentUser.userId;
+      const answersWithUserId = { ...answers, studentId: userId };
+      await createPreTest(answersWithUserId);
+      await updateStudentPreTest(userId);
+    }
   };
 
   const SurveyContainer = ({ children }) => ( // Con el propósito de alinear el contenido a la izquierda

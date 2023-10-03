@@ -5,26 +5,26 @@ export const preTestJson = {
       "elements": [
         {
           "type": "boolean",
-          "name": "question1",
+          "name": "freeTimeActivities",
           "title": "Piensa en las actividades que te gusta hacer en tu tiempo libre. Indica si alguna de ellas está relacionada con la ciencia, la tecnología, la ingeniería o las matemáticas.",
           "isRequired": true,
           "labelTrue": "Sí"
         },
         {
           "type": "rating",
-          "name": "question2",
+          "name": "subjectInterestMath",
           "title": "Indica qué tan interesada está en Matématicas",
           "isRequired": true
         },
         {
           "type": "rating",
-          "name": "question3",
+          "name": "subjectInterestBioGeo",
           "title": "Indica qué tan interesada está en Biología y Geología",
           "isRequired": true
         },
         {
           "type": "rating",
-          "name": "question4",
+          "name": "subjectInterestPhyChe",
           "title": "Indica qué tan interesada está en Física y Química",
           "isRequired": true
         }
@@ -36,19 +36,19 @@ export const preTestJson = {
       "elements": [
         {
           "type": "rating",
-          "name": "question5",
+          "name": "selfPerceptionMath",
           "title": "Indica qué tan buena eres en la materia de Matématicas",
           "isRequired": true
         },
         {
           "type": "rating",
-          "name": "question6",
+          "name": "selfPerceptionBioGeo",
           "title": "Indica qué tan buena eres en las materias de Biología y Geología",
           "isRequired": true
         },
         {
           "type": "rating",
-          "name": "question7",
+          "name": "selfPerceptionPhyChe",
           "title": "Indica qué tan buena eres en las materias de Física y Química",
           "isRequired": true
         }
@@ -60,7 +60,7 @@ export const preTestJson = {
       "elements": [
         {
           "type": "radiogroup",
-          "name": "question8",
+          "name": "lastGradeMath",
           "title": "Indica tu nota en la última evaluación de la materia de Matemática",
           "isRequired": true,
           "searchEnabled": false,
@@ -77,7 +77,7 @@ export const preTestJson = {
         },
         {
           "type": "radiogroup",
-          "name": "question9",
+          "name": "lastGradeBioGeo",
           "title": "Indica tu nota en la última evaluación de la materia de Biología y Geología",
           "isRequired": true,
           "searchEnabled": false,
@@ -94,7 +94,7 @@ export const preTestJson = {
         },
         {
           "type": "radiogroup",
-          "name": "question10",
+          "name": "lastGradePhyChe",
           "title": "Indica tu nota en la última evaluación de la materia de Física y Química",
           "isRequired": true,
           "searchEnabled": false,
