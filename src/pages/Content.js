@@ -4,6 +4,7 @@ import { Image } from "@chakra-ui/react";
 import PopUpAlert from '../components/PopUpAlert';
 import PostTest from '../components/PostTest';
 import { useLocation } from 'react-router-dom';
+import { getStudentById } from "../services/StudentService";
 
 function ContentWrapper({ children }) {
   return (
@@ -44,26 +45,28 @@ function Content() {
   const location = useLocation();
 
   const searchParams = new URLSearchParams(location.search);
-  const area = searchParams.get("area");
+  const area = searchParams.get("area"); // PARA LA MUESTRA DE CONTENIDO
 
   useEffect(() => {
-    // Realiza una verificación en la base de datos para determinar si el usuario ha completado el PostTest.
-    // Si el usuario ha completado el PostTest, muestra directamente el contenido.
-    const userHasCompletedPostTest = false; // checkUserPostTestCompletion(); Esta función debe verificar en la base de datos. EJEMPLO
+    const currentUser = JSON.parse(localStorage.getItem("current_user"));
+    const fetchStudentData = async () => {
+      if (currentUser) {
+        const userId = currentUser.userId;
+        const response = await getStudentById(userId);
+        if (!response.postTestCompl) {
 
-    if (!userHasCompletedPostTest) {
-      // Si el usuario no ha completado el PostTest, muestra la Alerta después del tiempo indicado.
-      const timeout = setTimeout(() => {
-        setShowPopUp(true);
-      }, 1000); // 1 segundo en milisegundos
-      //}, 180000); // 3 minutos en milisegundos
+          const timeout = setTimeout(() => {
+            setShowPopUp(true);
+          }, 1000); // 1 segundo en milisegundos   CAMBIAR IMPORTANTISIMO
+          //}, 180000); // 3 minutos en milisegundos
 
-      // Limpia el temporizador cuando el componente se desmonta.
-      setAlertTimeout(timeout);
-    } else {
-      // Si el usuario ha completado el PostTest, muestra directamente el contenido.
-      setShowPostTest(false);
-    }
+          setAlertTimeout(timeout);
+        } else {
+          setShowPostTest(false);
+        }
+      }
+    };
+    fetchStudentData();
   }, []);
 
   const handlePopUpAlertConfirm = () => {
@@ -77,7 +80,8 @@ function Content() {
     }
     const newTimeout = setTimeout(() => {
       setShowPopUp(true);
-    }, 1000); // 1 segundo en milisegundos (o el tiempo deseado)
+    }, 1000); // 1 segundo en milisegundos (o el tiempo deseado)  CAMBIAR IMPORTANTISIMO
+    //}, 180000); // 3 minutos en milisegundos
     setAlertTimeout(newTimeout);
     setShowPopUp(false);
   };
