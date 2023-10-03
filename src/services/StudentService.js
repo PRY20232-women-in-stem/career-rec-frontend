@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axiosInstance from '../config/AxiosAuthConfig';
 
 export async function createStudent(studentData) {
     try {
-        const response = await axios.post(`${process.env.REACT_APP_URL}/students`, studentData);
+        const response = await axiosInstance.post('/students', studentData);
         return response.data;
     } catch (error) {
         throw error;
@@ -11,7 +11,7 @@ export async function createStudent(studentData) {
 
 export async function getStudentById(studentId) {
     try {
-        const response = await axios.get(`${process.env.REACT_APP_URL}/students/${studentId}`);
+        const response = await axiosInstance.get(`/students/${studentId}`);
         return response.data;
     } catch (error) {
         throw error;
@@ -20,7 +20,7 @@ export async function getStudentById(studentId) {
 
 export async function getStudentByEmail(email) {
     try {
-        const response = await axios.get(`${process.env.REACT_APP_URL}/students/email/${email}`);
+        const response = await axiosInstance.get(`/students/email/${email}`);
         return response.data;
     } catch (error) {
         throw error;
@@ -29,7 +29,7 @@ export async function getStudentByEmail(email) {
 
 export async function updateStudentPassword(email, updatePasswordData) {
     try {
-        const response = await axios.put(`${process.env.REACT_APP_URL}/students/password/${email}`, updatePasswordData);
+        const response = await axiosInstance.put(`/students/password/${email}`, updatePasswordData);
         return response.data;
     } catch (error) {
         throw error;
@@ -38,7 +38,7 @@ export async function updateStudentPassword(email, updatePasswordData) {
 
 export async function updateStudentPreTest(studentId) {
     try {
-        const response = await axios.patch(`${process.env.REACT_APP_URL}/students/${studentId}/pre-test`);
+        const response = await axiosInstance.patch(`/students/${studentId}/pre-test`);
         return response.data;
     } catch (error) {
         throw error;
@@ -47,7 +47,7 @@ export async function updateStudentPreTest(studentId) {
 
 export async function updateStudentPostTest(studentId) {
     try {
-        const response = await axios.patch(`${process.env.REACT_APP_URL}/students/${studentId}/pre-test`);
+        const response = await axiosInstance.patch(`/students/${studentId}/pre-test`);
         return response.data;
     } catch (error) {
         throw error;

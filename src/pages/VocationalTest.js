@@ -4,17 +4,20 @@ import { Survey } from "survey-react-ui";
 import 'survey-core/defaultV2.min.css';
 import { testVocacionalJson } from "../util/TestVocacionalJson";
 import { testVocacionalTheme } from "../util/TestVocacionalTheme";
-import { Button, Card, CardBody, CardFooter, CardHeader, Flex, Heading, Highlight, Image, Stack, Text } from "@chakra-ui/react";
+import { Button, Card, CardBody, CardFooter, CardHeader, Flex, Heading, Highlight, Image, Stack, Text, Spinner } from "@chakra-ui/react";
 import PreTest from "../components/PreTest";
 import { useNavigate } from 'react-router-dom';
+import { getStudentById } from "../services/StudentService";
+import { createVocationalTestPrediction } from "../services/VocationalTestService";
 
 function VocationalTest() {
   const survey = new Model(testVocacionalJson); // Carga el Json de la encuesta
   survey.applyTheme(testVocacionalTheme); // Aplica el estilo personalizado
 
-  const [hasCompletedPreTest, setHasCompletedPreTest] = useState(true); // Validación del pre-test
+  const [hasCompletedPreTest, setHasCompletedPreTest] = useState(null); // Validación del pre-test
   const [showResults, setShowResults] = useState(false); // Estado para mostrar los resultados
   const [recommendation, setRecommendation] = useState(""); // Estado para almacenar la recomendación
+  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
 
   survey.onComplete.add((sender) => {
@@ -26,17 +29,27 @@ function VocationalTest() {
   // Realizar la solicitud al backend para verificar si el usuario ha completado el pre-test
   useEffect(() => {
     const fetchData = async () => {
-      // const completed = await checkPreTestCompletion(); // CAMBIAR POR LA LLAMADA CORRECTA
-      //if (completed) {
-      // setHasCompletedPreTest(true);
-      //}
+      const currentUser = JSON.parse(localStorage.getItem("current_user"));
+      if (currentUser) {
+        const userId = currentUser.userId;
+        const response = await getStudentById(userId);
+        if (response.preTestCompl) {
+          setHasCompletedPreTest(true);
+        } else {
+          setHasCompletedPreTest(false);
+        }
+      }
+      setTimeout(() => {
+        setIsLoading(false); // Finaliza la carga después de un retraso (opcional)
+      }, 500);
     };
     fetchData();
   }, []);
 
-  const surveyOnComplete = (answers) => {
+  const surveyOnComplete = async (answers) => {
     console.log(answers);
-    // Envia data al backend
+    const response = await createVocationalTestPrediction(answers);
+    console.log("response vocational test", response);
     setRecommendation("Ingenieria de sistemas");
   };
 
@@ -106,10 +119,14 @@ function VocationalTest() {
     <>
       <Flex minH={"100vh"} justify={"center"} bg={"purple.100"}>
         <Stack spacing={4} mx={"auto"} maxW={{ base: "lg", lg: "100%" }} py={12} px={6}>
-          {hasCompletedPreTest ? (
-            renderResults()
+          {isLoading ? (
+            <Spinner size="xl" color="purple.700" speed='0.65s' />
           ) : (
-            <PreTest />
+            hasCompletedPreTest ? (
+              renderResults()
+            ) : (
+              <PreTest />
+            )
           )}
         </Stack>
       </Flex>

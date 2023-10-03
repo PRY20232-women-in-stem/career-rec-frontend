@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axiosInstance from '../config/AxiosAuthConfig';
 
 export async function loginUser(loginData) {
     try {
-        const response = await axios.post(`${process.env.REACT_APP_URL}/auth/login`, loginData);
+        const response = await axiosInstance.post(`/auth/login`, loginData);
         return response.data;
     } catch (error) {
         throw error;
