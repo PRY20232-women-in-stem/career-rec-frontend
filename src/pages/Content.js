@@ -3,6 +3,7 @@ import { Flex, Heading, Stack, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
 import PopUpAlert from '../components/PopUpAlert';
 import PostTest from '../components/PostTest';
+import { useLocation } from 'react-router-dom';
 
 function ContentWrapper({ children }) {
   return (
@@ -40,6 +41,10 @@ function Content() {
   const [showPopUp, setShowPopUp] = useState(false);
   const [showPostTest, setShowPostTest] = useState(false);
   const [alertTimeout, setAlertTimeout] = useState(null);
+  const location = useLocation();
+
+  const searchParams = new URLSearchParams(location.search);
+  const area = searchParams.get("area");
 
   useEffect(() => {
     // Realiza una verificación en la base de datos para determinar si el usuario ha completado el PostTest.
