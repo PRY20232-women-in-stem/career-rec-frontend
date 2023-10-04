@@ -7,9 +7,12 @@ import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/layout";
 import { Link, Image } from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
 import { Link as ReactRouterLink, useNavigate } from 'react-router-dom';
+import { loginUser } from "../services/AuthService";
+import jwt_decode from "jwt-decode";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const validationSchema = {
@@ -17,13 +20,27 @@ function Login() {
     password: (value) => (!value ? "Campo requerido" : "")
   };
 
-  const handleSubmit = (values, actions) => {
-    // COLOCAR LLAMADA AL BACKEND
-    setTimeout(() => { // QUITAR TIMEOUT LUEGO
-      console.log(values);
-      navigate('/'); // Redirecciona al home principal (Mover si es necesario)
-      actions.setSubmitting(false)
-    }, 1000)
+  const handleSubmit = async (values, actions) => {
+    try {
+      const token = await loginUser(values);
+      const decodedToken = jwt_decode(token.accessToken);
+
+      const userPayload = JSON.stringify({
+        userId: decodedToken.sub,
+        email: decodedToken.email,
+        firstName: decodedToken.firstName,
+        lastName: decodedToken.lastName,
+      });
+
+      localStorage.setItem("access_token", token.accessToken);
+      localStorage.setItem("current_user", userPayload);
+
+      actions.setSubmitting(false);
+      navigate('/');
+    } catch (error) {
+      console.error("Error al iniciar sesión", error);
+      setError("Email o contraseña incorrecta.");
+    }
   };
 
   return (
@@ -74,6 +91,9 @@ function Login() {
                       </FormControl>
                     )}
                   </Field>
+                  {error && (
+                    <Text color={"red.500"}>{error}</Text>
+                  )}
                   <Stack spacing={10} pt={2}>
                     <Button isLoading={props.isSubmitting} loadingText="Enviando" type="submit" size={"lg"} bg={"purple.300"} color={"white"} _hover={{ bg: 'purple.500' }}>
                       Enviar

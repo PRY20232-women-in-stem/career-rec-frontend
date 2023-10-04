@@ -30,14 +30,13 @@ function Navbar() {
 
   // Al cargar el componente, verifica si hay un token en el local storage
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('access_token');
     if (token) {
       setIsLoggedIn(true);
     }
   }, []);
 
   const handleLogoutClick = () => {
-    // Realiza las acciones para cerrar sesión
     setShowLogoutAlert(true);
   };
 
@@ -92,11 +91,6 @@ function Navbar() {
                 <NavLink to='/login' onClose={onClose}>Iniciar sesión</NavLink>
               </>
             )}
-            {/* QUITARLO PARA DSP, ESTO SOLO ESTA PARA LA PRUEBA */}
-            <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>
-              Cerrar sesión
-            </Box>
-            {/* QUITARLO PARA DSP, ESTO SOLO ESTA PARA LA PRUEBA */}
           </Stack>
         </Collapse>
         <LogoutAlert isOpen={showLogoutAlert} onConfirm={handleLogoutAlertConfirm} onCancel={handleLogoutAlertCancel} />

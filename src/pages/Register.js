@@ -8,6 +8,7 @@ import { Link, Image } from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
 import { Link as ReactRouterLink } from 'react-router-dom';
 import RegisterAlert from "../components/RegisterAlert";
+import { createStudent } from "../services/StudentService";
 
 function Register() {
   const [showPassword, setShowPassword] = useState(false);
@@ -20,13 +21,14 @@ function Register() {
     password: (value) => (!value ? "Campo requerido" : "")
   };
 
-  const handleSubmit = (values, actions) => {
-    // COLOCAR LLAMADA AL BACKEND
-    setTimeout(() => { // QUITAR TIMEOUT LUEGO
-      console.log(values);
-      handleRegisterAlertClose() // Mostrar el modal de alerta despues de registrar el usuario
-      actions.setSubmitting(false)
-    }, 1000)
+  const handleSubmit = async (values, actions) => {
+    try {
+      await createStudent(values);
+      handleRegisterAlertClose();
+      actions.setSubmitting(false);
+    } catch (error) {
+      console.error("Error al registrar estudiante");
+    }
   };
 
   const handleRegisterAlertConfirm = () => {

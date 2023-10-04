@@ -4,6 +4,8 @@ import { postTestJson } from "../util/PostTestJson";
 import { postTestTheme } from "../util/PostTestTheme";
 import 'survey-core/defaultV2.min.css';
 import { Heading, Highlight, Text } from "@chakra-ui/react";
+import { createPostTest } from "../services/PostTestService";
+import { updateStudentPostTest } from "../services/StudentService";
 
 function PostTest({ onClose }) {
   const survey = new Model(postTestJson); // Carga el Json de la encuesta
@@ -14,9 +16,14 @@ function PostTest({ onClose }) {
     surveyOnComplete(answers);
   });
 
-  const surveyOnComplete = (answers) => {
-    console.log(answers);
-    // Envia data al backend
+  const surveyOnComplete = async (answers) => {
+    const currentUser = JSON.parse(localStorage.getItem("current_user"));
+    if (currentUser) {
+      const userId = currentUser.userId;
+      const answersWithUserId = { ...answers, studentId: userId };
+      await createPostTest(answersWithUserId);
+      await updateStudentPostTest(userId);
+    }
     onClose();
   };
 
