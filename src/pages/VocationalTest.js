@@ -54,7 +54,7 @@ function VocationalTest() {
     setRecommendation("Ingeniería");
     // FALTA CONFIGURAR EL OTRO BACKEND
     const response = await createVocationalTestPrediction(answersForBackend);
-    console.log("response vocational test", response);
+    console.log("response vocational test", response); // BORRAR
     //setRecommendation(response); // CAMBIAR POR LA RESPUESTA DEL BACKEND
   };
 
