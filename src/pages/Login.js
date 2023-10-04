@@ -12,6 +12,7 @@ import jwt_decode from "jwt-decode";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const validationSchema = {
@@ -38,6 +39,7 @@ function Login() {
       navigate('/');
     } catch (error) {
       console.error("Error al iniciar sesión", error);
+      setError("Email o contraseña incorrecta.");
     }
   };
 
@@ -89,6 +91,9 @@ function Login() {
                       </FormControl>
                     )}
                   </Field>
+                  {error && (
+                    <Text color={"red.500"}>{error}</Text>
+                  )}
                   <Stack spacing={10} pt={2}>
                     <Button isLoading={props.isSubmitting} loadingText="Enviando" type="submit" size={"lg"} bg={"purple.300"} color={"white"} _hover={{ bg: 'purple.500' }}>
                       Enviar

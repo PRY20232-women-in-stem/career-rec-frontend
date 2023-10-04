@@ -30,11 +30,15 @@ function VocationalTest() {
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
     if (currentUser) {
       const userId = currentUser.userId;
-      const response = await getStudentById(userId);
-      if (response.preTestCompl) {
-        setHasCompletedPreTest(true);
-      } else {
-        setHasCompletedPreTest(false);
+      try {
+        const response = await getStudentById(userId);
+        if (response.preTestCompl) {
+          setHasCompletedPreTest(true);
+        } else {
+          setHasCompletedPreTest(false);
+        }
+      } catch (error) {
+        console.error("Error al obtener datos del estudiante:", error);
       }
     }
     setIsLoading(false);
@@ -51,11 +55,10 @@ function VocationalTest() {
     delete answersForBackend.question2;
     delete answersForBackend.question3;
 
-    setRecommendation("Ingeniería");
-    // FALTA CONFIGURAR EL OTRO BACKEND
-    const response = await createVocationalTestPrediction(answersForBackend);
+    setRecommendation("Ingeniería");// BORRAR CUANDO HAYA BACKEND
+    const response = await createVocationalTestPrediction(answersForBackend);// FALTA CONFIGURAR EL OTRO BACKEND
     console.log("response vocational test", response); // BORRAR
-    //setRecommendation(response); // CAMBIAR POR LA RESPUESTA DEL BACKEND
+    //setRecommendation(response); // DESCOMENTAR CUANDO EL BACKEND ML FUNCIONE
   };
 
   const handlePreTestComplete = async () => {
@@ -126,7 +129,7 @@ function VocationalTest() {
   return (
     <>
       <Flex minH={"100vh"} justify={"center"} bg={"purple.100"}>
-        <Stack spacing={4} mx={"auto"} maxW={{ base: "lg", lg: "100%" }} py={12} px={6}>
+        <Stack spacing={4} mx={"auto"} my={isLoading ? "auto" : undefined} maxW={{ base: "lg", lg: "100%" }} py={12} px={6}>
           {!isLoading ? (
             hasCompletedPreTest ? (
               renderResults()
