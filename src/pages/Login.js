@@ -39,7 +39,12 @@ function Login() {
       navigate('/');
     } catch (error) {
       console.error("Error al iniciar sesión", error);
-      setError("Email o contraseña incorrecta.");
+      if (error.response.status === 404) {
+        setError("Email no está registrado.");
+      }
+      if (error.response.status === 401) {
+        setError("Email o contraseña incorrecta.");
+      }
     }
   };
 

@@ -21,9 +21,13 @@ function PreTest({ onPreTestComplete }) {
     if (currentUser) {
       const userId = currentUser.userId;
       const answersWithUserId = { ...answers, studentId: userId };
-      await createPreTest(answersWithUserId);
-      await updateStudentPreTest(userId);
-      onPreTestComplete();
+      try {
+        await createPreTest(answersWithUserId);
+        await updateStudentPreTest(userId);
+        onPreTestComplete();
+      } catch (error) {
+        console.error("Error enviar el pre-test:", error);
+      }
     }
   };
 

@@ -21,8 +21,12 @@ function PostTest({ onClose }) {
     if (currentUser) {
       const userId = currentUser.userId;
       const answersWithUserId = { ...answers, studentId: userId };
-      await createPostTest(answersWithUserId);
-      await updateStudentPostTest(userId);
+      try {
+        await createPostTest(answersWithUserId);
+        await updateStudentPostTest(userId);
+      } catch (error) {
+        console.error("Error enviar el post-test:", error);
+      }
     }
     onClose();
   };
