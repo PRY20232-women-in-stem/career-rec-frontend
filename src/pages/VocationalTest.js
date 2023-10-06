@@ -75,6 +75,10 @@ function VocationalTest() {
     navigate(`/content?area=${encodeURIComponent(recommendation)}`);
   };
 
+  const handleRegisterNowAlertConfirm = () => {
+    setShowRegisterModal(false) // Cerrar el modal de alerta
+  };
+
   const SurveyContainer = ({ children }) => ( // Con el propósito de alinear el contenido a la izquierda
     <div style={{ textAlign: "left" }}>{children}</div>
   );
@@ -134,14 +138,13 @@ function VocationalTest() {
 
   return (
     <>
-      <Flex minH={"100vh"} justify={"center"} bg={"purple.100"}>
+      <Flex minH={"100vh"} align={"center"} justify={"center"} bg={"purple.100"}>
         <Stack spacing={4} mx={"auto"} my={isLoading ? "auto" : undefined} maxW={{ base: "lg", lg: "100%" }} py={12} px={6}>
           {!isLoading ? (
             hasCompletedPreTest ? (
               renderResults()
             ) : (
               <>
-                {showRegisterModal && <RegisterNowAlert isOpen={showRegisterModal} onConfirm={() => setShowRegisterModal(false)} />}
                 <PreTest onPreTestComplete={handlePreTestComplete} />
               </>
             )
@@ -150,6 +153,7 @@ function VocationalTest() {
           )}
         </Stack>
       </Flex>
+      <RegisterNowAlert isOpen={showRegisterModal} onConfirm={handleRegisterNowAlertConfirm} />
     </>
   );
 }
