@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
-function RegisterAlert({ isOpen, onConfirm }) {
+function RegisterSuccessfulAlert({ isOpen, onConfirm }) {
   const cancelRef = useRef();
   const navigate = useNavigate();
 
@@ -39,4 +39,4 @@ function RegisterAlert({ isOpen, onConfirm }) {
   );
 }
 
-export default RegisterAlert;
+export default RegisterSuccessfulAlert;

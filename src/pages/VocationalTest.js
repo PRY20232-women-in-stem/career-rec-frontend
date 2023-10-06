@@ -6,6 +6,7 @@ import { testVocacionalJson } from "../util/TestVocacionalJson";
 import { testVocacionalTheme } from "../util/TestVocacionalTheme";
 import { Button, Card, CardBody, CardFooter, CardHeader, Flex, Heading, Highlight, Image, Stack, Text, Spinner } from "@chakra-ui/react";
 import PreTest from "../components/PreTest";
+import RegisterNowAlert from "../components/RegisterNowAlert";
 import { useNavigate } from 'react-router-dom';
 import { getStudentById } from "../services/StudentService";
 import { createVocationalTestPrediction } from "../services/VocationalTestService";
@@ -18,6 +19,7 @@ function VocationalTest() {
   const [showResults, setShowResults] = useState(false); // Estado para mostrar los resultados
   const [recommendation, setRecommendation] = useState(""); // Estado para almacenar la recomendación
   const [isLoading, setIsLoading] = useState(true);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
   const navigate = useNavigate();
 
   survey.onComplete.add((sender) => {
@@ -28,7 +30,11 @@ function VocationalTest() {
 
   const fetchData = async () => {
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
-    if (currentUser) {
+    if (!currentUser) {
+      setTimeout(() => {
+        setShowRegisterModal(true);
+      }, 2000);
+    } else {
       const userId = currentUser.userId;
       try {
         const response = await getStudentById(userId);
@@ -55,9 +61,9 @@ function VocationalTest() {
     delete answersForBackend.question2;
     delete answersForBackend.question3;
 
-    setRecommendation("Ingeniería");// BORRAR CUANDO HAYA BACKEND
-    const response = await createVocationalTestPrediction(answersForBackend);// FALTA CONFIGURAR EL OTRO BACKEND
-    console.log("response vocational test", response); // BORRAR
+    setRecommendation("Ingeniería");  // BORRAR CUANDO HAYA BACKEND
+    //const response = await createVocationalTestPrediction(answersForBackend); // FALTA CONFIGURAR EL OTRO BACKEND
+    //console.log("response vocational test", response); // BORRAR
     //setRecommendation(response); // DESCOMENTAR CUANDO EL BACKEND ML FUNCIONE
   };
 
@@ -134,7 +140,10 @@ function VocationalTest() {
             hasCompletedPreTest ? (
               renderResults()
             ) : (
-              <PreTest onPreTestComplete={handlePreTestComplete} />
+              <>
+                {showRegisterModal && <RegisterNowAlert isOpen={showRegisterModal} onConfirm={() => setShowRegisterModal(false)} />}
+                <PreTest onPreTestComplete={handlePreTestComplete} />
+              </>
             )
           ) : (
             <Spinner size="xl" color="purple.700" speed="0.65s" />
