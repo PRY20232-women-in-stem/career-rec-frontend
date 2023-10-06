@@ -61,9 +61,9 @@ function VocationalTest() {
     delete answersForBackend.question2;
     delete answersForBackend.question3;
 
-    setRecommendation("Ingeniería");// BORRAR CUANDO HAYA BACKEND
-    const response = await createVocationalTestPrediction(answersForBackend);// FALTA CONFIGURAR EL OTRO BACKEND
-    console.log("response vocational test", response); // BORRAR
+    setRecommendation("Ingeniería");  // BORRAR CUANDO HAYA BACKEND
+    //const response = await createVocationalTestPrediction(answersForBackend); // FALTA CONFIGURAR EL OTRO BACKEND
+    //console.log("response vocational test", response); // BORRAR
     //setRecommendation(response); // DESCOMENTAR CUANDO EL BACKEND ML FUNCIONE
   };
 
