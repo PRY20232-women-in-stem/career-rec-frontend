@@ -4,10 +4,13 @@ import { preTestJson } from "../util/PreTestJson";
 import { preTestTheme } from "../util/PreTestTheme";
 import 'survey-core/defaultV2.min.css';
 import { Heading, Highlight, Stack, Text } from "@chakra-ui/react";
+import { useNavigate } from 'react-router-dom';
 import { createPreTest } from "../services/PreTestService";
 import { updateStudentPreTest } from "../services/StudentService";
 
 function PreTest({ onPreTestComplete }) {
+  const navigate = useNavigate();
+
   const survey = new Model(preTestJson); // Carga el Json de la encuesta
   survey.applyTheme(preTestTheme); // Aplica el estilo personalizado
 
@@ -22,11 +25,12 @@ function PreTest({ onPreTestComplete }) {
       const userId = currentUser.userId;
       const answersWithUserId = { ...answers, studentId: userId };
       try {
-        await createPreTest(answersWithUserId);
+        await createPreTest(userId, answersWithUserId);
         await updateStudentPreTest(userId);
         onPreTestComplete();
       } catch (error) {
         console.error("Error enviar el pre-test:", error);
+        navigate("/vocational-test") // Si salió mal, redirige a darlo denuevo. Poner un modal de error en el futuro.
       }
     }
   };
