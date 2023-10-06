@@ -4,10 +4,13 @@ import { postTestJson } from "../util/PostTestJson";
 import { postTestTheme } from "../util/PostTestTheme";
 import 'survey-core/defaultV2.min.css';
 import { Heading, Highlight, Text } from "@chakra-ui/react";
+import { useNavigate } from 'react-router-dom';
 import { createPostTest } from "../services/PostTestService";
 import { updateStudentPostTest } from "../services/StudentService";
 
 function PostTest({ onClose }) {
+  const navigate = useNavigate();
+
   const survey = new Model(postTestJson); // Carga el Json de la encuesta
   survey.applyTheme(postTestTheme); // Aplica el estilo personalizado
 
@@ -22,10 +25,11 @@ function PostTest({ onClose }) {
       const userId = currentUser.userId;
       const answersWithUserId = { ...answers, studentId: userId };
       try {
-        await createPostTest(answersWithUserId);
+        await createPostTest(userId, answersWithUserId);
         await updateStudentPostTest(userId);
       } catch (error) {
         console.error("Error enviar el post-test:", error);
+        navigate("/vocational-test") // Si salió mal, redirige a darlo denuevo. Poner un modal de error en el futuro.
       }
     }
     onClose();
