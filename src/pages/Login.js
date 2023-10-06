@@ -106,7 +106,7 @@ function Login() {
                   </Stack>
                   <Stack pt={6}>
                     <Text align={"center"}>
-                      ¿Aún no tienes una cuenta? <Link as={ReactRouterLink} to='/register' color={"blue.400"}>Regístrate</Link>
+                      ¿No tienes una cuenta? <Link as={ReactRouterLink} to='/register' color={"blue.400"}>Regístrate</Link>
                     </Text>
                   </Stack>
                 </Stack>
