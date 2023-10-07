@@ -2,7 +2,7 @@ export const testVocacionalJson = {
   "pages": [
     {
       "name": "page1",
-      "title": "Información personal",
+      "title": "Consentimiento de la información",
       "elements": [
         {
           "type": "radiogroup",
@@ -17,33 +17,6 @@ export const testVocacionalJson = {
             {
               "value": "No acepto",
               "text": "No acepto"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "name": "question2",
-          "title": "Fecha de nacimiento",
-          "isRequired": true,
-          "inputType": "date"
-        },
-        {
-          "type": "radiogroup",
-          "name": "question3",
-          "title": "Género",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "Femenino",
-              "text": "Femenino"
-            },
-            {
-              "value": "Masculino",
-              "text": "Masculino"
-            },
-            {
-              "value": "Otro",
-              "text": "Otro"
             }
           ]
         }

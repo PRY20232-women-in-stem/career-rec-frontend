@@ -58,11 +58,12 @@ function VocationalTest() {
   const surveyOnComplete = async (answers) => {
     const answersForBackend = { ...answers };
     delete answersForBackend.question1;
-    delete answersForBackend.question2;
-    delete answersForBackend.question3;
+
+    const currentUser = JSON.parse(localStorage.getItem("current_user"));
+    const userId = currentUser.userId;
 
     setRecommendation("Ingeniería");  // BORRAR CUANDO HAYA BACKEND
-    //const response = await createVocationalTestPrediction(answersForBackend); // FALTA CONFIGURAR EL OTRO BACKEND
+    //const response = await createVocationalTestPrediction(userId, answersForBackend); // FALTA CONFIGURAR EL OTRO BACKEND
     //console.log("response vocational test", response); // BORRAR
     //setRecommendation(response); // DESCOMENTAR CUANDO EL BACKEND ML FUNCIONE
   };
