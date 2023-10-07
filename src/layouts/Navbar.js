@@ -64,9 +64,7 @@ function Navbar() {
             <Flex alignItems={'center'}>
               <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
                 {/*<NavLink to='/about-us'>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
-                {location.pathname !== "/content" && (
-                  <NavLink to='/vocational-test'>Test vocacional</NavLink>
-                )}
+                <NavLink to='/vocational-test'>Test vocacional</NavLink>
                 <NavLink to='/'>Aprendamos de STEM</NavLink>
               </HStack>
             </Flex>
@@ -76,9 +74,7 @@ function Navbar() {
         <Collapse in={isOpen} animateOpacity style={{ position: "absolute", left: 0, width: '100%' }}>
           <Stack px={4} pb={2} bg={'purple.300'} align={'start'}>
             {/*<NavLink to='/about-us' onClose={onClose}>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
-            {location.pathname !== "/content" && (
-              <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
-            )}
+            <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
             <NavLink to='/' onClose={onClose}>Aprendamos de STEM</NavLink>
             <Divider />
             {isLoggedIn ? (
