@@ -60,30 +60,6 @@ export const postTestJson = {
         }
       ],
       "title": "Impacto en estudiantes"
-    },
-    {
-      "name": "page3",
-      "elements": [
-        {
-          "type": "rating",
-          "name": "activitySatisfaction",
-          "title": "En términos generales, consideré que la actividad fue satisfactoria",
-          "isRequired": true
-        },
-        {
-          "type": "text",
-          "name": "projectValue",
-          "title": "¿Qué aspectos del proyecto valoras más positivamente? En otras palabras, ¿qué es lo que más te gustó del proyecto?",
-          "isRequired": true
-        },
-        {
-          "type": "text",
-          "name": "projectImprovement",
-          "title": "¿Qué piensas que puede mejorarse?",
-          "isRequired": true
-        }
-      ],
-      "title": "Satisfacción y propuesta de mejora"
     }
   ],
   "showPrevButton": false,

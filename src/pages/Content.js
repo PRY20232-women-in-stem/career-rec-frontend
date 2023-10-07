@@ -150,7 +150,8 @@ function Content() {
 
           const timeout = setTimeout(() => {
             setShowPopUp(true);
-          }, 1000); // 1 segundo en milisegundos, CAMBIAR IMPORTANTISIMO
+          }, 60000); // 60 segundos en milisegundos, CAMBIAR IMPORTANTISIMO
+          //}, 1000); // 1 segundo en milisegundos (o el tiempo deseado), CAMBIAR IMPORTANTISIMO
           //}, 180000); // 3 minutos en milisegundos
 
           setAlertTimeout(timeout);
@@ -173,7 +174,8 @@ function Content() {
     }
     const newTimeout = setTimeout(() => {
       setShowPopUp(true);
-    }, 1000); // 1 segundo en milisegundos (o el tiempo deseado), CAMBIAR IMPORTANTISIMO
+    }, 60000); // 60 segundos en milisegundos, CAMBIAR IMPORTANTISIMO
+    //}, 1000); // 1 segundo en milisegundos (o el tiempo deseado), CAMBIAR IMPORTANTISIMO
     //}, 180000); // 3 minutos en milisegundos
     setAlertTimeout(newTimeout);
     setShowPopUp(false);
