@@ -60,7 +60,7 @@ function ContentView() {
         {/* Agrega componentes de video aquí */}
         <Card>
           <CardBody>
-            <YouTubeVideo width="100%" height="100%" videoUrl="https://www.youtube.com/watch?v=CbEst0K063c" />
+            <YouTubeVideo width="100%" height="100%" videoUrl="https://www.youtube.com/watch?v=PbyKKD7mvpA" />
             <Text fontSize={["md", "lg"]} color="purple.700">
               Descripción del video 1.
             </Text>
@@ -68,7 +68,7 @@ function ContentView() {
         </Card>
         <Card>
           <CardBody>
-            <YouTubeVideo width="100%" height="100%" videoUrl="https://www.youtube.com/watch?v=BVdngsy95mY" />
+            <YouTubeVideo width="100%" height="100%" videoUrl="https://www.youtube.com/watch?v=W53Ks824GTA" />
             <Text fontSize={["md", "lg"]} color="purple.700">
               Descripción del video 2.
             </Text>
