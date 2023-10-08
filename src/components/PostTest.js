@@ -29,7 +29,7 @@ function PostTest({ onClose }) {
         await updateStudentPostTest(userId);
       } catch (error) {
         console.error("Error enviar el post-test:", error);
-        navigate("/") // Si salió mal, redirige a darlo denuevo. Poner un modal de error en el futuro.
+        navigate("/content") // Si salió mal, redirigirlo al contenido. Poner un modal de error en el futuro.
       }
     }
     onClose();

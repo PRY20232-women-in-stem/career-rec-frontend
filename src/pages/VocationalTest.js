@@ -145,16 +145,16 @@ function VocationalTest() {
             hasCompletedPreTest ? (
               renderResults()
             ) : (
-              <>
-                <PreTest onPreTestComplete={handlePreTestComplete} />
-              </>
+              <PreTest onPreTestComplete={handlePreTestComplete} />
             )
           ) : (
             <Spinner size="xl" color="purple.700" speed="0.65s" />
           )}
         </Stack>
       </Flex>
-      <RegisterNowAlert isOpen={showRegisterModal} onConfirm={handleRegisterNowAlertConfirm} />
+      {showRegisterModal && (
+        <RegisterNowAlert isOpen={showRegisterModal} onConfirm={handleRegisterNowAlertConfirm} />
+      )}
     </>
   );
 }

@@ -13,7 +13,7 @@ import {
   Text,
   useDisclosure
 } from '@chakra-ui/react';
-import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
+import { Link as ReactRouterLink, useLocation, useNavigate } from 'react-router-dom';
 import LogoutAlert from '../components/LogoutAlert';
 
 const NavLink = ({ to, children, onClose }) => (
@@ -24,6 +24,7 @@ const NavLink = ({ to, children, onClose }) => (
 
 function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showLogoutAlert, setShowLogoutAlert] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -34,7 +35,10 @@ function Navbar() {
     if (token) {
       setIsLoggedIn(true);
     }
-  }, []);
+    if (!token && location.pathname === "/content") {
+      navigate('/login');
+    }
+  }, [navigate, location.pathname]);
 
   const handleLogoutClick = () => {
     setShowLogoutAlert(true);
