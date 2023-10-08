@@ -12,20 +12,14 @@ export const postTestJson = {
         {
           "type": "radiogroup",
           "name": "projectTimeSpent",
-          "title": "¿Cuánto tiempo le ha dedicado? (Numero de horas totales)",
+          "title": "¿Cuánto tiempo le ha dedicado?",
           "isRequired": true,
           "choices": [
-            "Entre 0 a 1 hora",
-            "Entre 1 a 2 horas",
-            "Entre 2 a 3 horas",
-            "Entre 3 a 4 horas",
-            "Entre 4 a 5 horas",
-            "Entre 5 a 6 horas",
-            "Entre 6 a 7 horas",
-            "Entre 7 a 8 horas",
-            "Entre 8 a 10 horas",
-            "Entre 10 a 15 horas",
-            "Más de 15 horas"
+            "Entre 0 a 5 minutos",
+            "Entre 10 a 20 minutos",
+            "Entre 25 a 35 minutos",
+            "Entre 40 a 50 minutos",
+            "Entre 55 a 60 minutos"
           ]
         }
       ],
@@ -64,6 +58,6 @@ export const postTestJson = {
   ],
   "showPrevButton": false,
   "showQuestionNumbers": "off",
-  "widthMode": "static", // Tamaño de la encuesta
-  "width": "1000px" // Tamaño de la encuesta
+  // "widthMode": "static", // Tamaño de la encuesta
+  // "width": "1000px" // Tamaño de la encuesta
 }

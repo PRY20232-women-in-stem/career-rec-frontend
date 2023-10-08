@@ -8,6 +8,7 @@ function YouTubeVideo({ width, height, videoUrl }) {
     width: width,
     playerVars: {
       autoplay: 0, // Cambiar a 1 si deseas que el video se reproduzca automáticamente
+      origin: window.location.host,
     },
   };
 

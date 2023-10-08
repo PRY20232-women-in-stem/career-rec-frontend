@@ -58,11 +58,12 @@ function VocationalTest() {
   const surveyOnComplete = async (answers) => {
     const answersForBackend = { ...answers };
     delete answersForBackend.question1;
-    delete answersForBackend.question2;
-    delete answersForBackend.question3;
+
+    const currentUser = JSON.parse(localStorage.getItem("current_user"));
+    const userId = currentUser.userId;
 
     setRecommendation("Ingeniería");  // BORRAR CUANDO HAYA BACKEND
-    //const response = await createVocationalTestPrediction(answersForBackend); // FALTA CONFIGURAR EL OTRO BACKEND
+    //const response = await createVocationalTestPrediction(userId, answersForBackend); // FALTA CONFIGURAR EL OTRO BACKEND
     //console.log("response vocational test", response); // BORRAR
     //setRecommendation(response); // DESCOMENTAR CUANDO EL BACKEND ML FUNCIONE
   };
@@ -138,22 +139,22 @@ function VocationalTest() {
 
   return (
     <>
-      <Flex minH={"100vh"} align={"center"} justify={"center"} bg={"purple.100"}>
+      <Flex minH={"100vh"} justify={"center"} bg={"purple.100"}>
         <Stack spacing={4} mx={"auto"} my={isLoading ? "auto" : undefined} maxW={{ base: "lg", lg: "100%" }} py={12} px={6}>
           {!isLoading ? (
             hasCompletedPreTest ? (
               renderResults()
             ) : (
-              <>
-                <PreTest onPreTestComplete={handlePreTestComplete} />
-              </>
+              <PreTest onPreTestComplete={handlePreTestComplete} />
             )
           ) : (
             <Spinner size="xl" color="purple.700" speed="0.65s" />
           )}
         </Stack>
       </Flex>
-      <RegisterNowAlert isOpen={showRegisterModal} onConfirm={handleRegisterNowAlertConfirm} />
+      {showRegisterModal && (
+        <RegisterNowAlert isOpen={showRegisterModal} onConfirm={handleRegisterNowAlertConfirm} />
+      )}
     </>
   );
 }
