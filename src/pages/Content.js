@@ -1,40 +1,35 @@
 import { useState, useEffect } from 'react';
 import {
   Stack, Flex, Heading, Text, Image, Button, Modal, ModalOverlay, ModalContent, ModalHeader,
-  ModalCloseButton, ModalBody, ModalFooter, Link, Card, CardBody, CardHeader
+  ModalCloseButton, ModalBody, ModalFooter, Link, Card, CardBody, CardHeader, useDisclosure,
 } from '@chakra-ui/react';
 //import { useLocation } from 'react-router-dom';
-import PopUpAlert from '../components/PopUpAlert';
+import PopUpButton from '../components/PopUpButton';
 import PostTest from '../components/PostTest';
-import { getStudentById } from "../services/StudentService";
 import YouTubeVideo from '../components/YoutubeVideo';
+import { getStudentById } from "../services/StudentService";
 
 function ContentWrapper({ children }) {
   return (
     <Flex minH={"100vh"} justify={"center"} bg={"purple.100"}>
-      <Stack spacing={4} mx={"auto"} maxW={{ base: "lg", lg: "100%" }} py={12} px={6}>
+      <Stack spacing={4} mx={"auto"} maxW={{ base: "lg", lg: "100%" }} py={12} px={6} >
         {children}
       </Stack>
     </Flex>
   );
 }
 
-function ContentView() {
-  // Estado para controlar la apertura del modal
-  const [isOpen, setIsOpen] = useState(false);
-
-  // Función para abrir el modal
-  const openModal = () => {
-    setIsOpen(true);
-  };
-
-  // Función para cerrar el modal
-  const closeModal = () => {
-    setIsOpen(false);
-  };
+function ContentView({ onConfirm, showMessagePopUp }) {
+  const { onOpen, onClose, isOpen } = useDisclosure();
+  //const [showPopUp, setShowPopUp] = useState(true);
 
   return (
     <ContentWrapper>
+
+      {/* Boton PopUp */}
+
+      <PopUpButton onConfirm={onConfirm} isOpen={showMessagePopUp} />
+
       {/* Contenido de la vista */}
       {/* Sección 1: ¿Qué son las carreras STEM? */}
       <Card mb={4} >
@@ -101,12 +96,12 @@ function ContentView() {
       </Stack>
 
       {/* Botón para abrir un modal */}
-      <Button onClick={openModal} colorScheme="purple" size="sm" mt={4}>
+      <Button onClick={onOpen} colorScheme="purple" size="sm" mt={4}>
         Abrir Modal
       </Button>
 
       {/* Modal interactivo */}
-      <Modal isOpen={isOpen} onClose={closeModal} size="lg">
+      <Modal isOpen={isOpen} onClose={onClose} size="lg">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Información Adicional</ModalHeader>
@@ -120,21 +115,20 @@ function ContentView() {
             </Link>
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="purple" onClick={closeModal}>
+            <Button colorScheme="purple" onClick={onClose}>
               Cerrar
             </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
       {/* Contenido de la vista */}
-    </ContentWrapper>
+    </ContentWrapper >
   );
 }
 
 function Content() {
-  const [showPopUp, setShowPopUp] = useState(false);
   const [showPostTest, setShowPostTest] = useState(false);
-  const [alertTimeout, setAlertTimeout] = useState(null);
+  const [showMessagePopover, setShowMessagePopover] = useState(false);
 
   //const location = useLocation(); // PARA LA MUESTRA DE CONTENIDO, USARSE LUEGO PARA MOSTRAR CONTENIDO
   //const searchParams = new URLSearchParams(location.search); // PARA LA MUESTRA DE CONTENIDO, USARSE LUEGO PARA MOSTRAR CONTENIDO
@@ -142,56 +136,36 @@ function Content() {
 
   useEffect(() => {
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
+
     const fetchStudentData = async () => {
       if (currentUser) {
         const userId = currentUser.userId;
         const response = await getStudentById(userId);
         if (!response.postTestCompl) {
-
-          const timeout = setTimeout(() => {
-            setShowPopUp(true);
-          }, 60000); // 60 segundos en milisegundos, CAMBIAR IMPORTANTISIMO
-          //}, 1000); // 1 segundo en milisegundos (o el tiempo deseado), CAMBIAR IMPORTANTISIMO
-          //}, 180000); // 3 minutos en milisegundos
-
-          setAlertTimeout(timeout);
-        } else {
-          setShowPostTest(false);
+          console.log("XXDXDD")
+          setTimeout(() => {
+            setShowMessagePopover(true);
+          }, 2000); // 2000 milisegundos (2 segundos)
         }
       }
     };
+
     fetchStudentData();
   }, []);
 
-  const handlePopUpAlertConfirm = () => {
-    setShowPopUp(false);
+  const handlePopUpButtonConfirm = () => {
     setShowPostTest(true);
   };
 
-  const handlePopUpAlertCancel = () => {
-    if (alertTimeout) {
-      clearTimeout(alertTimeout);
-    }
-    const newTimeout = setTimeout(() => {
-      setShowPopUp(true);
-    }, 60000); // 60 segundos en milisegundos, CAMBIAR IMPORTANTISIMO
-    //}, 1000); // 1 segundo en milisegundos (o el tiempo deseado), CAMBIAR IMPORTANTISIMO
-    //}, 180000); // 3 minutos en milisegundos
-    setAlertTimeout(newTimeout);
-    setShowPopUp(false);
-  };
 
   return (
     <>
-      {showPopUp && (
-        <PopUpAlert isOpen={showPopUp} onConfirm={handlePopUpAlertConfirm} onCancel={handlePopUpAlertCancel} />
-      )}
       {showPostTest ? (
         <ContentWrapper>
           <PostTest onClose={() => setShowPostTest(false)} />
         </ContentWrapper>
       ) : (
-        <ContentView />
+        <ContentView onConfirm={handlePopUpButtonConfirm} showMessagePopUp={showMessagePopover} />
       )}
     </>
   );
