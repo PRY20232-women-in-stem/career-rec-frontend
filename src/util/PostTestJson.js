@@ -58,6 +58,6 @@ export const postTestJson = {
   ],
   "showPrevButton": false,
   "showQuestionNumbers": "off",
-  "widthMode": "static", // Tamaño de la encuesta
-  "width": "1000px" // Tamaño de la encuesta
+  // "widthMode": "static", // Tamaño de la encuesta
+  // "width": "1000px" // Tamaño de la encuesta
 }

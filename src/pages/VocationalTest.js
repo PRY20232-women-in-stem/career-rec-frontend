@@ -139,7 +139,7 @@ function VocationalTest() {
 
   return (
     <>
-      <Flex minH={"100vh"} align={"center"} justify={"center"} bg={"purple.100"}>
+      <Flex minH={"100vh"} justify={"center"} bg={"purple.100"}>
         <Stack spacing={4} mx={"auto"} my={isLoading ? "auto" : undefined} maxW={{ base: "lg", lg: "100%" }} py={12} px={6}>
           {!isLoading ? (
             hasCompletedPreTest ? (
