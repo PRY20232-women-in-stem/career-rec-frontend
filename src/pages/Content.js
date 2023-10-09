@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import {
   Stack, Flex, Heading, Text, Image, Button, Modal, ModalOverlay, ModalContent, ModalHeader,
-  ModalCloseButton, ModalBody, ModalFooter, Link, Card, CardBody, CardHeader, useDisclosure,
+  ModalCloseButton, ModalBody, ModalFooter, Link, Card, CardBody, CardHeader, useDisclosure, Tabs, Tab, TabList, TabPanel, TabPanels
 } from '@chakra-ui/react';
 //import { useLocation } from 'react-router-dom';
 import PopUpButton from '../components/PopUpButton';
@@ -29,95 +29,109 @@ function ContentView({ onConfirm, showPopUpButton }) {
 
       {/* Contenido de la vista */}
       {/* Sección 1: ¿Qué son las carreras STEM? */}
-      <Card mb={4} >
-        <CardHeader>
-          <Heading fontSize="xl" color="purple.700">
-            ¿Qué son las carreras STEM?
-          </Heading>
-        </CardHeader>
-        <CardBody>
-          <Text fontSize={["md", "lg"]} color="purple.700">
-            Las carreras STEM están relacionadas con la innovación, el desarrollo de tecnologías y el crecimiento de las empresas,
-            lo que contribuye a la mejora de la economía. Los profesionales que se dedican a estas áreas ayudan a mejorar la competitividad
-            de las empresas y a impulsar la creación de empleos de alta calidad.
-          </Text>
-        </CardBody>
-      </Card>
+      <Tabs variant='soft-rounded' colorScheme='green'>
+        <TabList>
+          <Tab>Ingeniería</Tab>
+          <Tab>Tab 2</Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel>
+            <Card mb={4} >
+              <CardHeader>
+                <Heading fontSize="xl" color="purple.700">
+                  ¿Qué son las carreras STEM?
+                </Heading>
+              </CardHeader>
+              <CardBody>
+                <Text fontSize={["md", "lg"]} color="purple.700">
+                  Las carreras STEM están relacionadas con la innovación, el desarrollo de tecnologías y el crecimiento de las empresas,
+                  lo que contribuye a la mejora de la economía. Los profesionales que se dedican a estas áreas ayudan a mejorar la competitividad
+                  de las empresas y a impulsar la creación de empleos de alta calidad.
+                </Text>
+              </CardBody>
+            </Card>
 
-      {/* Sección 2: Videos */}
-      <Stack spacing={4}>
-        <Heading fontSize="xl" color="purple.700">
-          Videos sobre STEM
-        </Heading>
-        {/* Agrega componentes de video aquí */}
-        <Card>
-          <CardBody>
-            <YouTubeVideo width="100%" height="100%" videoUrl="https://www.youtube.com/watch?v=PbyKKD7mvpA" />
-            <Text fontSize={["md", "lg"]} color="purple.700">
-              Descripción del video 1.
-            </Text>
-          </CardBody>
-        </Card>
-        <Card>
-          <CardBody>
-            <YouTubeVideo width="100%" height="100%" videoUrl="https://www.youtube.com/watch?v=W53Ks824GTA" />
-            <Text fontSize={["md", "lg"]} color="purple.700">
-              Descripción del video 2.
-            </Text>
-          </CardBody>
-        </Card>
-      </Stack>
+            {/* Sección 2: Videos */}
+            <Stack spacing={4}>
+              <Heading fontSize="xl" color="purple.700">
+                Videos sobre STEM
+              </Heading>
+              {/* Agrega componentes de video aquí */}
+              <Card>
+                <CardBody>
+                  <YouTubeVideo width="100%" height="100%" videoUrl="https://www.youtube.com/watch?v=PbyKKD7mvpA" />
+                  <Text fontSize={["md", "lg"]} color="purple.700">
+                    Descripción del video 1.
+                  </Text>
+                </CardBody>
+              </Card>
+              <Card>
+                <CardBody>
+                  <YouTubeVideo width="100%" height="100%" videoUrl="https://www.youtube.com/watch?v=W53Ks824GTA" />
+                  <Text fontSize={["md", "lg"]} color="purple.700">
+                    Descripción del video 2.
+                  </Text>
+                </CardBody>
+              </Card>
+            </Stack>
 
-      {/* Sección 3: Fotos con descripción */}
-      <Stack spacing={4}>
-        <Heading fontSize="xl" color="purple.700">
-          Fotos con Descripción
-        </Heading>
-        {/* Agrega componentes de fotos con descripción aquí */}
-        <Card mb={4} >
-          <CardBody>
-            <Image objectFit="cover" src="WomenInStem2.png" />
-            <Text fontSize={["md", "lg"]} color="purple.700">
-              Descripción de la foto 1.
-            </Text>
-          </CardBody>
-        </Card>
-        <Card mb={4}>
-          <CardBody>
-            <Image objectFit="cover" src="WomenInStem2.png" />
-            <Text fontSize={["md", "lg"]} color="purple.700">
-              Descripción de la foto 2.
-            </Text>
-          </CardBody>
-        </Card>
-      </Stack>
+            {/* Sección 3: Fotos con descripción */}
+            <Stack spacing={4}>
+              <Heading fontSize="xl" color="purple.700">
+                Fotos con Descripción
+              </Heading>
+              {/* Agrega componentes de fotos con descripción aquí */}
+              <Card mb={4} >
+                <CardBody>
+                  <Image objectFit="cover" src="WomenInStem2.png" />
+                  <Text fontSize={["md", "lg"]} color="purple.700">
+                    Descripción de la foto 1.
+                  </Text>
+                </CardBody>
+              </Card>
+              <Card mb={4}>
+                <CardBody>
+                  <Image objectFit="cover" src="WomenInStem2.png" />
+                  <Text fontSize={["md", "lg"]} color="purple.700">
+                    Descripción de la foto 2.
+                  </Text>
+                </CardBody>
+              </Card>
+            </Stack>
 
-      {/* Botón para abrir un modal */}
-      <Button onClick={onOpen} colorScheme="purple" size="sm" mt={4}>
-        Abrir Modal
-      </Button>
-
-      {/* Modal interactivo */}
-      <Modal isOpen={isOpen} onClose={onClose} size="lg">
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Información Adicional</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Text fontSize="lg" color="purple.700">
-              Este es un modal interactivo con contenido adicional. Puedes agregar información detallada, enlaces o cualquier otro contenido que desees.
-            </Text>
-            <Link color="purple.400" href="#" mt={2}>
-              Enlace a más detalles
-            </Link>
-          </ModalBody>
-          <ModalFooter>
-            <Button colorScheme="purple" onClick={onClose}>
-              Cerrar
+            {/* Botón para abrir un modal */}
+            <Button onClick={onOpen} colorScheme="purple" size="sm" mt={4}>
+              Abrir Modal
             </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+
+            {/* Modal interactivo */}
+            <Modal isOpen={isOpen} onClose={onClose} size="lg">
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>Información Adicional</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
+                  <Text fontSize="lg" color="purple.700">
+                    Este es un modal interactivo con contenido adicional. Puedes agregar información detallada, enlaces o cualquier otro contenido que desees.
+                  </Text>
+                  <Link color="purple.400" href="#" mt={2}>
+                    Enlace a más detalles
+                  </Link>
+                </ModalBody>
+                <ModalFooter>
+                  <Button colorScheme="purple" onClick={onClose}>
+                    Cerrar
+                  </Button>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+          </TabPanel>
+          <TabPanel>
+            <p>two!</p>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
+
       {/* Contenido de la vista */}
     </ContentWrapper >
   );

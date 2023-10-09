@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   Heading, Text, Image, Button, IconButton, Popover, PopoverTrigger, PopoverContent, PopoverHeader,
-  PopoverBody, PopoverFooter, PopoverArrow, PopoverCloseButton, PopoverAnchor,
+  PopoverBody, PopoverFooter, PopoverArrow, PopoverCloseButton
 } from '@chakra-ui/react';
 
 function PopUpButton({ onConfirm }) {
@@ -56,13 +56,19 @@ function PopUpButton({ onConfirm }) {
         <PopoverContent>
           <PopoverArrow />
           <PopoverCloseButton onClick={handlePopoverClose} />
-          <Heading textAlign={"center"} color={"purple.700"}>Post Test</Heading>
-          <Text textAlign="center">
-            ¡Te invitamos a resolver un test super cortito!
-          </Text>
-          <Button bg={'purple.400'} color={'white'} onClick={handlePopUpAlertConfirm}>
-            Hacerlo ahora
-          </Button>
+          <PopoverHeader>
+            <Heading textAlign={"center"} color={"purple.700"}>Post Test</Heading>
+          </PopoverHeader>
+          <PopoverBody>
+            <Text textAlign="center">
+              ¡Te invitamos a resolver un test super cortito!
+            </Text>
+          </PopoverBody>
+          <PopoverFooter>
+            <Button bg={'purple.400'} color={'white'} onClick={handlePopUpAlertConfirm}>
+              Hacerlo ahora
+            </Button>
+          </PopoverFooter>
         </PopoverContent>
       </Popover>
     </motion.div>
