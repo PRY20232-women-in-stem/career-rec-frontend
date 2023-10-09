@@ -35,7 +35,7 @@ function Navbar() {
     if (token) {
       setIsLoggedIn(true);
     }
-    if (!token && location.pathname === "/content") {
+    if (!token && location.pathname === "/contentt") {
       navigate('/login');
     }
   }, [navigate, location.pathname]);
