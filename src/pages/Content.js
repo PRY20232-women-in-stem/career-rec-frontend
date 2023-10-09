@@ -19,16 +19,13 @@ function ContentWrapper({ children }) {
   );
 }
 
-function ContentView({ onConfirm, showMessagePopUp }) {
+function ContentView({ onConfirm, showPopUpButton }) {
   const { onOpen, onClose, isOpen } = useDisclosure();
-  //const [showPopUp, setShowPopUp] = useState(true);
 
   return (
     <ContentWrapper>
 
-      {/* Boton PopUp */}
-
-      <PopUpButton onConfirm={onConfirm} isOpen={showMessagePopUp} />
+      {showPopUpButton && <PopUpButton onConfirm={onConfirm} />}
 
       {/* Contenido de la vista */}
       {/* Sección 1: ¿Qué son las carreras STEM? */}
@@ -128,7 +125,7 @@ function ContentView({ onConfirm, showMessagePopUp }) {
 
 function Content() {
   const [showPostTest, setShowPostTest] = useState(false);
-  const [showMessagePopover, setShowMessagePopover] = useState(false);
+  const [showPopUpButton, setShowPopUpButton] = useState(false);
 
   //const location = useLocation(); // PARA LA MUESTRA DE CONTENIDO, USARSE LUEGO PARA MOSTRAR CONTENIDO
   //const searchParams = new URLSearchParams(location.search); // PARA LA MUESTRA DE CONTENIDO, USARSE LUEGO PARA MOSTRAR CONTENIDO
@@ -142,21 +139,18 @@ function Content() {
         const userId = currentUser.userId;
         const response = await getStudentById(userId);
         if (!response.postTestCompl) {
-          console.log("XXDXDD")
-          setTimeout(() => {
-            setShowMessagePopover(true);
-          }, 2000); // 2000 milisegundos (2 segundos)
+          setShowPopUpButton(true);
+        } else {
+          console.log("No se ha completado el post test");
         }
       }
     };
-
     fetchStudentData();
   }, []);
 
   const handlePopUpButtonConfirm = () => {
     setShowPostTest(true);
   };
-
 
   return (
     <>
@@ -165,7 +159,7 @@ function Content() {
           <PostTest onClose={() => setShowPostTest(false)} />
         </ContentWrapper>
       ) : (
-        <ContentView onConfirm={handlePopUpButtonConfirm} showMessagePopUp={showMessagePopover} />
+        <ContentView onConfirm={handlePopUpButtonConfirm} showPopUpButton={showPopUpButton} />
       )}
     </>
   );

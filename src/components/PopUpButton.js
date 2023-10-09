@@ -1,16 +1,30 @@
-import { useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   Heading, Text, Image, Button, IconButton, Popover, PopoverTrigger, PopoverContent, PopoverHeader,
   PopoverBody, PopoverFooter, PopoverArrow, PopoverCloseButton, PopoverAnchor,
 } from '@chakra-ui/react';
 
-function PopUpButton({ onConfirm, isOpen }) {
+function PopUpButton({ onConfirm }) {
+  const [localIsOpen, setLocalIsOpen] = useState(false);
+
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      setLocalIsOpen(true);
+    }, 240000); // 4 minutos en milisegundos
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, []);
 
   const handlePopUpAlertConfirm = () => {
     onConfirm();
   };
 
+  const handlePopoverClose = () => {
+    setLocalIsOpen(false); // Cierra el Popover al hacer clic en el botón de cierre
+  };
   return (
     <motion.div
       drag
@@ -29,18 +43,19 @@ function PopUpButton({ onConfirm, isOpen }) {
         zIndex: 9999, // Valor alto para que esté por encima de otros elementos
       }}
     >
-      <Popover placement='left' isOpen={isOpen}>
+      <Popover placement='left' isOpen={localIsOpen}>
         <PopoverTrigger>
           <IconButton
             isRound={true}
             bg='purple.200'
             sx={{ _hover: { backgroundColor: 'purple.200' }, w: '65px', h: '65px' }}
             icon={<Image src='/imgPrac.png' w='55px' h='60px' />}
+            onClick={() => setLocalIsOpen(!localIsOpen)}
           />
         </PopoverTrigger>
         <PopoverContent>
           <PopoverArrow />
-          <PopoverCloseButton />
+          <PopoverCloseButton onClick={handlePopoverClose} />
           <Heading textAlign={"center"} color={"purple.700"}>Post Test</Heading>
           <Text textAlign="center">
             ¡Te invitamos a resolver un test super cortito!
