@@ -11,25 +11,25 @@ function LearnSTEM() {
       title: 'Ciencia (Science)',
       text:
         'La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.',
-      image: 'WomenInStem1.png',
+      image: 'https://img.freepik.com/vektoren-kostenlos/hand-gezeichneter-naturwissenschaftlicher-bildungshintergrund_23-2148499325.jpg?w=1380&t=st=1696922014~exp=1696922614~hmac=33575e876791a77085a3183dac4506a863d6fb98825e335c8ab2b20af27eaf38',
     },
     {
       title: 'Tecnología (Technology)',
       text:
         'La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.',
-      image: 'WomenInStem1.png',
+      image: 'https://img.freepik.com/free-vector/illustration-technology-vector_53876-20556.jpg?w=1380&t=st=1696922240~exp=1696922840~hmac=b207502a5a1200d69cf9838a72610233d2e07acb4bb9fba6581a3d1682f8edc9',
     },
     {
       title: 'Ingeniería (Engineering)',
       text:
         'La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.',
-      image: 'WomenInStem1.png',
+      image: 'https://www.aiche.org/sites/default/files/styles/chenected_lead_image/public/images/Chenected/lead/shutterstock411197581.jpg?itok=p0wQIykw',
     },
     {
       title: 'Matemáticas (Mathematics)',
       text:
         'La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.',
-      image: 'WomenInStem1.png',
+      image: 'https://img.jagranjosh.com/imported/images/E/Articles/maths2.jpg',
     },
   ];
 
@@ -54,11 +54,15 @@ function LearnSTEM() {
           <Heading textAlign={"center"} color={"purple.700"}>
             ¿Qué son las carreras STEM?
           </Heading>
-          <Text fontSize={["md", "lg"]} textAlign={"center"} color={'purple.700'}>
-            Las carreras STEM están relacionadas con la innovación, el desarrollo de tecnologías y el crecimiento de las empresas,
-            lo que contribuye a la mejora de la economía. Los profesionales que se dedican a estas áreas ayudan a mejorar la competitividad
-            de las empresas y a impulsar la creación de empleos de alta calidad.
-          </Text>
+          <Card >
+            <CardBody>
+              <Text fontSize={["md", "lg"]} textAlign={"center"}>
+                Las carreras STEM están relacionadas con la innovación, el desarrollo de tecnologías y el crecimiento de las empresas,
+                lo que contribuye a la mejora de la economía. Los profesionales que se dedican a estas áreas ayudan a mejorar la competitividad
+                de las empresas y a impulsar la creación de empleos de alta calidad.
+              </Text>
+            </CardBody>
+          </Card>
           <Heading textAlign={"center"} color={"purple.700"}>
             ¿Cuáles son las áreas de STEM?
           </Heading>

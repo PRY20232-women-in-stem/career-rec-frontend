@@ -1,0 +1,28 @@
+{
+  "information": [
+    {
+      "title": "¿Qué son las carreras STEM?",
+      "content": "Las carreras STEM están relacionadas con la innovación, el desarrollo de tecnologías y el crecimiento de las empresas, lo que contribuye a la mejora de la economía. Los profesionales que se dedican a estas áreas ayudan a mejorar la competitividad de las empresas y a impulsar la creación de empleos de alta calidad."
+    }
+  ],
+  "videos": [
+    {
+      "videoUrl": "https://www.youtube.com/watch?v=PbyKKD7mvpA",
+      "description": "Descripción del video 1."
+    },
+    {
+      "videoUrl": "https://www.youtube.com/watch?v=W53Ks824GTA",
+      "description": "Descripción del video 2."
+    }
+  ],
+  "photos": [
+    {
+      "imageUrl": "WomenInStem2.png",
+      "description": "Descripción de la foto 1."
+    },
+    {
+      "imageUrl": "WomenInStem2.png",
+      "description": "Descripción de la foto 2."
+    }
+  ]
+}
