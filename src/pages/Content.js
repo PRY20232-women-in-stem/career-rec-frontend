@@ -19,13 +19,13 @@ function ContentWrapper({ children }) {
   );
 }
 
-function ContentView({ onConfirm, showPopUpButton }) {
+function ContentView({ onConfirm, showFinishedPopUp }) {
   const { onOpen, onClose, isOpen } = useDisclosure();
 
   return (
     <ContentWrapper>
 
-      {showPopUpButton && <PopUpButton onConfirm={onConfirm} />}
+      <PopUpButton onConfirm={onConfirm} showFinishedPopUp={showFinishedPopUp} />
 
       {/* Contenido de la vista */}
       {/* Sección 1: ¿Qué son las carreras STEM? */}
@@ -139,7 +139,7 @@ function ContentView({ onConfirm, showPopUpButton }) {
 
 function Content() {
   const [showPostTest, setShowPostTest] = useState(false);
-  const [showPopUpButton, setShowPopUpButton] = useState(false);
+  const [showFinishedPopUp, setShowFinishedPopUp] = useState(false);
 
   //const location = useLocation(); // PARA LA MUESTRA DE CONTENIDO, USARSE LUEGO PARA MOSTRAR CONTENIDO
   //const searchParams = new URLSearchParams(location.search); // PARA LA MUESTRA DE CONTENIDO, USARSE LUEGO PARA MOSTRAR CONTENIDO
@@ -147,19 +147,29 @@ function Content() {
 
   useEffect(() => {
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
+    const cachedPostTestStatus = localStorage.getItem('post_test_compl');
 
-    const fetchStudentData = async () => {
-      if (currentUser) {
-        const userId = currentUser.userId;
-        const response = await getStudentById(userId);
-        if (!response.postTestCompl) {
-          setShowPopUpButton(true);
-        } else {
-          console.log("No se ha completado el post test");
+    if (cachedPostTestStatus === 'true') {
+      setShowFinishedPopUp(true);
+    } else {
+      const fetchStudentData = async () => {
+        if (currentUser) {
+          const userId = currentUser.userId;
+          try {
+            const response = await getStudentById(userId);
+            if (response.postTestCompl) {
+              setShowFinishedPopUp(true);
+              localStorage.setItem('post_test_compl', 'true');
+            } else {
+              localStorage.setItem('post_test_compl', 'false');
+            }
+          } catch (error) {
+            console.error("Error al obtener datos del estudiante:", error);
+          }
         }
-      }
-    };
-    fetchStudentData();
+      };
+      fetchStudentData();
+    }
   }, []);
 
   const handlePopUpButtonConfirm = () => {
@@ -173,7 +183,7 @@ function Content() {
           <PostTest onClose={() => setShowPostTest(false)} />
         </ContentWrapper>
       ) : (
-        <ContentView onConfirm={handlePopUpButtonConfirm} showPopUpButton={showPopUpButton} />
+        <ContentView onConfirm={handlePopUpButtonConfirm} showFinishedPopUp={showFinishedPopUp} />
       )}
     </>
   );
