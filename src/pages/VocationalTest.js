@@ -10,6 +10,7 @@ import RegisterNowAlert from "../components/RegisterNowAlert";
 import { useNavigate } from 'react-router-dom';
 import { getStudentById } from "../services/StudentService";
 import { createVocationalTestPrediction } from "../services/VocationalTestService";
+import { updateStudentVocationalTest } from "../services/StudentService";
 
 function VocationalTest() {
   const survey = new Model(testVocacionalJson); // Carga el Json de la encuesta
@@ -36,15 +37,22 @@ function VocationalTest() {
       }, 2000);
     } else {
       const userId = currentUser.userId;
-      try {
-        const response = await getStudentById(userId);
-        if (response.preTestCompl) {
-          setHasCompletedPreTest(true);
-        } else {
-          setHasCompletedPreTest(false);
+      const cachedPreTestCompl = localStorage.getItem('pre_test_compl');
+      if (cachedPreTestCompl === 'true') {
+        setHasCompletedPreTest(true);
+      } else {
+        try {
+          const response = await getStudentById(userId);
+          if (response.preTestCompl) {
+            setHasCompletedPreTest(true);
+            localStorage.setItem('pre_test_compl', 'true');
+          } else {
+            setHasCompletedPreTest(false);
+            localStorage.setItem('pre_test_compl', 'false');
+          }
+        } catch (error) {
+          console.error("Error al obtener datos del estudiante:", error);
         }
-      } catch (error) {
-        console.error("Error al obtener datos del estudiante:", error);
       }
     }
     setIsLoading(false);
@@ -63,9 +71,10 @@ function VocationalTest() {
     const userId = currentUser.userId;
 
     setRecommendation("Ingeniería");  // BORRAR CUANDO HAYA BACKEND
-    //const response = await createVocationalTestPrediction(userId, answersForBackend); // FALTA CONFIGURAR EL OTRO BACKEND
-    //console.log("response vocational test", response); // BORRAR
+    //const response = await createVocationalTestPrediction(userId, answersForBackend); // DESCOMENTAR CUANDO EL BACKEND ML FUNCIONE
+    //console.log("response vocational test", response); // BORRAR BORRAR CUANDO HAYA BACKEND
     //setRecommendation(response); // DESCOMENTAR CUANDO EL BACKEND ML FUNCIONE
+    await updateStudentVocationalTest(userId);
   };
 
   const handlePreTestComplete = async () => {

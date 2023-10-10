@@ -53,3 +53,12 @@ export async function updateStudentPostTest(studentId) {
         throw error;
     }
 }
+
+export async function updateStudentVocationalTest(studentId) {
+    try {
+        const response = await axiosInstance.patch(`/students/${studentId}/vocational-test`);
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
+}

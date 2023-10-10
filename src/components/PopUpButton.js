@@ -28,7 +28,7 @@ function PopUpButton({ onConfirm }) {
   return (
     <motion.div
       drag
-      initial={{ x: window.innerWidth - 90, y: window.innerHeight / 8 - 120 }} // Alinea a la derecha
+      initial={{ x: window.innerWidth - 90, y: window.innerHeight / 8 - 75 }} // Alinea a la derecha
       dragTransition={{ bounceStiffness: 200, bounceDamping: 20 }}
       whileHover={{ scale: 1.2 }}
       dragConstraints={{
@@ -56,16 +56,18 @@ function PopUpButton({ onConfirm }) {
         <PopoverContent>
           <PopoverArrow />
           <PopoverCloseButton onClick={handlePopoverClose} />
-          <PopoverHeader>
-            <Heading textAlign={"center"} color={"purple.700"}>Post Test</Heading>
+          <PopoverHeader border='0'>
+            <Heading size='lg' textAlign={"center"} color={"purple.700"}>
+              Post Test
+            </Heading>
           </PopoverHeader>
-          <PopoverBody>
+          <PopoverBody border='0'>
             <Text textAlign="center">
               ¡Te invitamos a resolver un test super cortito!
             </Text>
           </PopoverBody>
-          <PopoverFooter>
-            <Button bg={'purple.400'} color={'white'} onClick={handlePopUpAlertConfirm}>
+          <PopoverFooter border='0'>
+            <Button size='sm' bg={'purple.400'} color={'white'} onClick={handlePopUpAlertConfirm}>
               Hacerlo ahora
             </Button>
           </PopoverFooter>

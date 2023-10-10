@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { Link as ReactRouterLink, useLocation, useNavigate } from 'react-router-dom';
 import LogoutAlert from '../components/LogoutAlert';
+import { getStudentById } from "../services/StudentService";
 
 const NavLink = ({ to, children, onClose }) => (
   <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white'>
@@ -28,6 +29,7 @@ function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showLogoutAlert, setShowLogoutAlert] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isVocTestCompleted, setIsVocTestCompleted] = useState(false)
 
   // Al cargar el componente, verifica si hay un token en el local storage
   useEffect(() => {
@@ -35,8 +37,26 @@ function Navbar() {
     if (token) {
       setIsLoggedIn(true);
     }
-    if (!token && location.pathname === "/contentt") {
+    if (!token && location.pathname === "/contentt") {  // DEVOLVER A SU ESTADO CORRECTO "/content"!!
       navigate('/login');
+    }
+
+    const cachedVocationalTestCompl = localStorage.getItem('vocational_test_compl');
+    if (cachedVocationalTestCompl === 'true') {
+      setIsVocTestCompleted(true);
+    } else {
+      const currentUser = JSON.parse(localStorage.getItem("current_user"));
+      const fetcStudentData = async () => {
+        if (currentUser) {
+          const userId = currentUser.userId;
+          const response = await getStudentById(userId);
+          if (response.vocationalTestCompl === true) {
+            setIsVocTestCompleted(true);
+            localStorage.setItem('vocational_test_compl', 'true');
+          }
+        }
+      };
+      fetcStudentData();
     }
   }, [navigate, location.pathname]);
 
@@ -68,8 +88,9 @@ function Navbar() {
             <Flex alignItems={'center'}>
               <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
                 {/*<NavLink to='/about-us'>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
-                <NavLink to='/vocational-test'>Test vocacional</NavLink>
-                <NavLink to='/'>Aprendamos de STEM</NavLink>
+                <NavLink to='/' >Aprendamos de STEM</NavLink>
+                <NavLink to='/vocational-test' >Test vocacional</NavLink>
+                {isVocTestCompleted && <NavLink to='/content' >Contenido STEM</NavLink>}
               </HStack>
             </Flex>
           </HStack>
@@ -78,8 +99,9 @@ function Navbar() {
         <Collapse in={isOpen} animateOpacity style={{ position: "absolute", left: 0, width: '100%' }}>
           <Stack px={4} pb={2} bg={'purple.300'} align={'start'}>
             {/*<NavLink to='/about-us' onClose={onClose}>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
-            <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
             <NavLink to='/' onClose={onClose}>Aprendamos de STEM</NavLink>
+            <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
+            {isVocTestCompleted && <NavLink to='/content' onClose={onClose}>Contenido STEM</NavLink>}
             <Divider />
             {isLoggedIn ? (
               <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>
