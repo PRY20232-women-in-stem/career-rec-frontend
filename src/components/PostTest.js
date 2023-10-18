@@ -27,6 +27,7 @@ function PostTest({ onClose }) {
       try {
         await createPostTest(userId, answersWithUserId);
         await updateStudentPostTest(userId);
+        localStorage.setItem('post_test_compl', 'true');
       } catch (error) {
         console.error("Error enviar el post-test:", error);
         navigate("/content") // Si salió mal, redirigirlo al contenido. Poner un modal de error en el futuro.

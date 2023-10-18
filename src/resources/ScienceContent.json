@@ -1,0 +1,298 @@
+{
+  "information": [
+    {
+      "id": 1,
+      "title": "Perfil del Ingresante",
+      "content": "El estudiante admitido a la Carrera de Medicina muestra escucha efectiva y comunica sus ideas, emociones y opiniones con claridad, sencillez y coherencia; sustenta sus ideas y reconoce los conceptos y principios que subyacen a ellas; demuestra razonamiento lógico, elabora juicios y alcanza conclusiones válidas frente a situaciones planteadas; maneja efectivamente sus emociones a pesar de la tensión, se muestra sensible frente a los demás, es respetuoso y tolerante con las diferencias y respeta y acepta las normas de su entorno; sustenta sus decisiones sobre la base de valores, reconociendo responsabilidad por ellas; demuestra interés en servir a las personas y a la sociedad a través de la práctica médica y de salud pública así como de la generación de conocimiento. Demuestra conocimientos suficientes en las áreas de matemáticas (nociones básicas de aritmética y álgebra, sistema de coordenadas rectangulares, funciones reales de variable real), química (materia, estructura atómica y tabla periódica, reacciones químicas, estequiometria y soluciones) y biología (bases químicas de la vida, célula, expresión genética, herencia mendeliana, metabolismo, conceptos generales de ecología y evolución) para abordar con éxito las exigencias de la Carrera."
+    },
+    {
+      "id": 2,
+      "title": "Perfil del Graduado",
+      "content": "El graduado de la carrera de Medicina promueve la salud, previene, diagnostica y trata la enfermedad; diagnostica la situación de salud de una comunidad y diseña acciones para mejorarla; toma decisiones éticas sobre la base de la información disponible y la reflexión sobre su experiencia, asume responsabilidad por ellas y se integra al equipo de salud; demuestra aprendizaje autónomo; evalúa, crea y comparte conocimiento a través de la investigación."
+    },
+    {
+      "id": 3,
+      "title": "Perfil del ingresante",
+      "content": "El estudiante admitido a la Carrera de Biología presenta: Gran curiosidad e interés por temáticas biológicas, de salud y tecnológicas; es apasionado por solucionar problemas de los seres vivos; posee empatía frente a los demás, y respeta las normas del entorno buscando comprender el mundo que nos rodea; tiene como objetivo servir a las personas, a la sociedad y al medio ambiente a través de la ciencia, desarrollo tecnológico e innovación; y demuestra conocimientos suficientes en las ciencias naturales y exactas para abordar con éxito las exigencias de la carrera."
+    },
+    {
+      "id": 4,
+      "title": "Perfil del Graduado",
+      "content": "El estudiante graduado de la Carrera de Biología estará preparado para: desenvolverse con naturalidad en un laboratorio de investigación, clínico, biotecnológico o industrial; integrarse en equipos interprofesionales que afrontan problemas de salud pública; diseñar, ejecutar proyectos de investigación y reportar los resultados en reportes, artículos y tesis de científicas; ejercer su profesión aplicando la ética en la toma de decisiones y asumiendo responsabilidad profesional; y empoderarse de su aprendizaje y en su desarrollo profesional como parte de un equipo interprofesional."
+    },
+    {
+      "id": 5,
+      "title": "Acerca de la carrera",
+      "content": "Una carrera que se sustenta en una sólida base científica. Recibirás conocimientos en técnicas quirúrgicas, fisioterapia y rehabilitación animal. Como médico veterinario, serás capaz de prevenir, diagnosticar y tratar enfermedades en pequeñas y grandes especies. Además, estarás preparado para administrar tu propio consultorio o clínica veterinaria."
+    },
+    {
+      "id": 6,
+      "title": "Perfil del Graduado",
+      "content": "El estudiante graduado de la Carrera de Medicina Veterinaria estará preparado para: ser un profesional competente y responsable, que realiza con gran calidad la práctica clínica animal en sus cuatro dimensiones (prevención, diagnóstico, tratamiento y promoción); generar información científica potencialmente publicable y demostrar capacidad de gestión en la práctica profesional; y Ser capaz de colaborar en un establecimiento de salud e integrar un equipo multidisciplinario para su gestión.."
+    },
+    {
+      "id": 7,
+      "title": "Acerca de la carrera",
+      "content": "Conviértete en un profesional capaz de diagnosticar, intervenir y prevenir problemas de salud en nutrición clínica, pública o ciencias de los alimentos aprendiendo a través de nuestra metodología basada en la simulación."
+    },
+    {
+      "id": 8,
+      "title": "Perfil del Graduado",
+      "content": "El estudiante graduado de la Carrera de Nutrición y Dietética estará preparado para: realizar la prática de salud pública en sus dos dimensiones: diagnóstico e intervención; formular un plan de gestión estratégica en nutrición; transformar los alimentos en productos procesados utilizando aditivos de acuerdo con la legislación alimentaria; y evidenciar aprendizaje autónomo y generar información potencialmente publicable en revistas científicas, a partir de una tesis de investigación."
+    },
+    {
+      "id": 9,
+      "title": "Acerca de la carrera",
+      "content": "Una carrera en la que aprenderás bajo una metodología de enseñanza basado en la simulación, como parte de tu entrenamiento, con equipos, tecnología e infraestructura de última generación. Como odontólogo, serás capaz de atender, diagnosticar, tratar y prevenir problemas de salud oral del individuo, la familia y la comunidad."
+    },
+    {
+      "id": 10,
+      "title": "Perfil del Graduado",
+      "content": "El estudiante graduado de la Carrera de Odontología estará preparado para: ser capaz de atender los problemas de salud oral del individuo, la familia y la comunidad; diagnosticar, tratar y prevenir las enfermedades de la cavidad oral. Generar información científica potencialmente publicable; y demostrar capacidad de gestión en la práctica profesional."
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "title": "Medicina UPC – Esto no es para cualquiera",
+      "videoUrl": "https://www.youtube.com/watch?v=lWIGVxH5N7I",
+      "description": "Esto es para los que quieren transformar la Medicina. Descubre la carrera de Medicina en la UPC y acepta el reto de ser el mejor aprendiendo de los mejores."
+    },
+    {
+      "id": 2,
+      "title": "UPC ¿Cómo es la vida de un estudiante de Medicina?",
+      "videoUrl": "https://www.youtube.com/watch?v=6JhJ8OI3yDs",
+      "description": "En la UPC se forma Médicos íntegros y comprometidos con la transformación de la salud del país, por eso durante toda su vida universitaria le brindamos una formación basada en la tecnología y la exigencia."
+    },
+    {
+      "id": 3,
+      "title": "¿Por qué estudiar Medicina en la UPC?",
+      "videoUrl": "https://www.youtube.com/watch?v=mfStfQiI6AU",
+      "description": "Manuel Gutierrez, director de la carrera de Medicina,  nos cuenta de qué trata la carrera y por qué elegir la UPC. Conoce a detalle los cursos que ofrece la malla curricular y el campo laboral en el que te puedes desempeñar. Además, contamos con infraestrucutura de calidad, laboratorios especializados y un hospital simulado equipado con tecnología de punta."
+    },
+    {
+      "id": 4,
+      "title": "¿Por qué estudiar Biología en la UPC?",
+      "videoUrl": "https://www.youtube.com/watch?v=kvOmzC3w4bE",
+      "description": "Conoce todas las razones por las que debes estudiar Biología."
+    },
+    {
+      "id": 5,
+      "title": "Explora el mundo con Biología UPC: Conoce nuestras salidas a campo",
+      "videoUrl": "https://www.youtube.com/watch?v=syufT4w1-xQ",
+      "description": "Explora el mundo y obtén experiencia práctica desde primer ciclo con Biología UPC.  Participarás de excursiones y salidas de campo donde podrás aprender sobre la increíble diversidad de nuestro planeta y adquirir conocimientos en campo."
+    },
+    {
+      "id": 6,
+      "title": "Nueva carrera de Biología de la UPC - Dale más vida al mundo",
+      "videoUrl": "https://www.youtube.com/watch?v=H9t1_7fLQpc",
+      "description": "Con la nueva carrera de Biología de la UPC podrás convertirte en una Biólogo innovadora."
+    },
+    {
+      "id": 7,
+      "title": "Medicina Veterinaria en la UPC",
+      "videoUrl": "https://www.youtube.com/watch?v=6QzgEON4-N8",
+      "description": "Mira todo lo que te ofrece UPC para estudiar Medicina Veterinaria."
+    },
+    {
+      "id": 8,
+      "title": "Centro Médico Veterinario UPC",
+      "videoUrl": "https://www.youtube.com/watch?v=dXMDnihN9eo",
+      "description": "“Cuidamos a tu mascota con el mismo amor que le das en casa”"
+    },
+    {
+      "id": 9,
+      "title": "Conoce la experiencia de las Alumnas en el Centro Médico Veterinario de la UPC",
+      "videoUrl": "https://www.youtube.com/watch?v=byJ1l6rRbwg",
+      "description": "Las alumnas de la carrera de Medicina Veterinaria nos cuentan su experiencia en el nuevo Centro Médico Veterinario UPC en el Campus Villa."
+    },
+    {
+      "id": 10,
+      "title": "¿Por qué estudiar Nutrición y Dietética en la UPC?",
+      "videoUrl": "https://www.youtube.com/watch?v=IvW-9ztCzPw&list=PLkR7K6BW1-o9BKZNR6UZTJS5wOkPAbKuI",
+      "description": "Claudia Ontaneda, directora de la carrera de Nutrición y Dietética, nos cuenta de qué trata la carrera y por qué elegir la UPC. Conoce los cursos que ofrece la malla curricular, el campo laboral en el que te puedes desempeñar y los laboratorios especializados en donde podrás llevar tus clases. Además, la UPC tiene convenios internacionales con diferentes universidades alrededor del mundo. "
+    },
+    {
+      "id": 11,
+      "title": "Revive nuestro evento Nutritalks UPC - Carrera de Nutrición y Dietética",
+      "videoUrl": "https://www.youtube.com/watch?v=QK-60l62_go",
+      "description": ""
+    },
+    {
+      "id": 12,
+      "title": "Conoce los testimoniales de nuestros egresados de Nutrición y Dietética",
+      "videoUrl": "https://www.youtube.com/watch?v=BbNR5n0iqHY",
+      "description": ""
+    },
+    {
+      "id": 13,
+      "title": "¿Por qué estudiar Odontología en la UPC?",
+      "videoUrl": "https://www.youtube.com/watch?v=h6PZVv0WISY",
+      "description": "Eduardo Morzán, Director de la carrera de Odontología, nos cuenta todo lo que debes saber si decides estudiar esta carrera en la UPC. "
+    },
+    {
+      "id": 14,
+      "title": "¿Por qué estudiar segundas especialidades en odontología en la UPC?",
+      "videoUrl": "https://www.youtube.com/watch?v=Z7OOH0hHR-c",
+      "description": "Madelaine Grandez nos cuenta su experiencia como alumno en el programa de segundas especialidades en odontología."
+    },
+    {
+      "id": 15,
+      "title": "¿Cómo enseñamos Odontología en la UPC?",
+      "videoUrl": "https://www.youtube.com/watch?v=tRyIVzIKUUQ",
+      "description": "El Centro Universitario de Salud cuenta con ambientes especializados para la carrera de Odontología, podrás aprender con equipos de última generación, ambientes de simulación, y metodología activa que te va permitir vivir tu carrera desde los primeros ciclos."
+    }
+  ],
+  "photos": [
+    {
+      "id": 1,
+      "title": "",
+      "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/53713784_2112869572130727_5119257050081132544_n.png?_nc_cat=111&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=1Xx244af3T8AX_XyURX&_nc_oc=AQlhkTOjwhFzA9mrni4lL5TdAk_R_BFI9dlf9Tz6ZaEK4VMpjh4bkFuydfKUR-TiUq8&_nc_ht=scontent.flim2-1.fna&oh=00_AfBslrElqgVOI1BOzdUs7XUnQc_Rx2BuQ7Uc4aadoZukug&oe=6550EE94",
+      "description": "Los profesionales de Medicina Humana son los pilares del desarrollo de cualquier sociedad, y la especialidad de medicina general aún más, ya que se enfoca en el trabajo de prevención, diagnóstico y tratamiento de la salud en la comunidad. 👨‍⚕👩‍⚕"
+    },
+    {
+      "id": 2,
+      "title": "Lidera el CAMBIO",
+      "imageUrl": "https://g8j7p2p3.rocketcdn.me/wp-content/uploads/2022/07/medicina-humana-1024x881.png.webp",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "title": "Día de la Medicina Peruana",
+      "imageUrl": "https://www.acmedical.pe/admin/_uploads/imagenes/blog-03102020103041-dia-de-la-medicina-peruana.jpg",
+      "description": "El 5 de octubre celebramos el Día de la Medicina Peruana en honor a la muerte de Daniel Alcides Carrión, estudiante de medicina que se inoculó el virus de la verruga peruana para analizar su evolución y sus síntomas, debido a esto es reconocido como mártir y héroe nacional. Conocer esto nos ayuda a formular y responder una gran pregunta, ¿qué queremos de nuestra medicina, de la medicina que se practica en el Perú, queremos seguir teniendo mártires y héroes nacionales, o personal capaz y entrenado para cambiar la realidad sanitaria que poseemos actualmente?"
+    },
+    {
+      "id": 4,
+      "title": "Datos curiosos: Vasos Sanguíneos",
+      "imageUrl": "https://i.pinimg.com/originals/9f/57/3a/9f573a8ba4ae2bcdb94be37c518577d7.png",
+      "description": "Por cada nuevo kilogramo de grasa o músculo el cuerpo crea 10 kilómetros de nuevos vasos sanguíneos."
+    },
+    {
+      "id": 5,
+      "title": "Datos curiosos: Músculos",
+      "imageUrl": "https://pin.it/kqZtj53",
+      "description": "¿Conocías este dato interesante?"
+    },
+    {
+      "id": 6,
+      "title": "La importancia de la Biología",
+      "imageUrl": "https://cdn-v1.udocz-assets.com/uploads/book/cover/223582/223582.jpg",
+      "description": ""
+    },
+    {
+      "id": 7,
+      "title": "8 Razones para estudiar la Carrera de Biología",
+      "imageUrl": "https://www.buscouniversidad.com.ar/orientacion/wp-content/uploads/2019/07/Biologia-768x1086.png",
+      "description": ""
+    },
+    {
+      "id": 8,
+      "title": "Día del Biólogo Peruano",
+      "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/126911735_10157588900382765_5431892247630300500_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=FXLlknhFpV4AX__7cpt&_nc_ht=scontent.flim2-1.fna&oh=00_AfBf9L0LrFad-uS2wePE6rJitDgpomYqmE0CpG_LJ28vZA&oe=655180D9",
+      "description": "Día del Biólogo Peruano, saludamos a todos los especialistas en biología del país y destacamos su comprometida labor cuidando la salud de nuestra población."
+    },
+    {
+      "id": 9,
+      "title": "Datos curiosos: Cromosomas",
+      "imageUrl": "https://scontent.flim2-2.fna.fbcdn.net/v/t1.6435-9/83105026_3957770140962953_709267253025157594_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9b3078&_nc_ohc=NslquHa-gfcAX_F-YN-&_nc_ht=scontent.flim2-2.fna&oh=00_AfBiBn0BJs7tFRGIfQxwWKRCMJEkdkxSIn8x0-iCGWLx6g&oe=655160F7",
+      "description": "¿Conocías este dato curioso?"
+    },
+    {
+      "id": 10,
+      "title": "Datos curiosos: ADN",
+      "imageUrl": "https://www.udocz.com/butler/pdf/80917/80917-61377e5c724e7366d4466e02deabdacd/bg1.jpg?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0OCwiZXhwIjoxNjk3MzM2MjIzfQ.Y1X0cqxDCHP92NCCkkc8TiruI-wW2ul1-VFsoiKi_ek",
+      "description": "17 datos curiosos sobre el ADN"
+    },
+    {
+      "id": 11,
+      "title": "7 razones para… ¿No estudiar veterinaria?",
+      "imageUrl": "https://enfoque.upc.edu.pe/wp-content/uploads/2019/12/Infograf%C3%ADa-Veterninaria_UPC_JPG-final.jpg",
+      "description": ""
+    },
+    {
+      "id": 12,
+      "title": "Lidera el CAMBIO",
+      "imageUrl": "https://g8j7p2p3.rocketcdn.me/wp-content/uploads/2022/07/veterinaria-1024x886.png.webp",
+      "description": ""
+    },
+    {
+      "id": 13,
+      "title": "Día del Médico Veterinario",
+      "imageUrl": "https://scontent.flim2-2.fna.fbcdn.net/v/t1.6435-9/107719944_10157238089097765_4878596720027522304_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=URCUEWcjvc0AX98FuxZ&_nc_ht=scontent.flim2-2.fna&oh=00_AfCIDn1BYyUjksw-18q7ElprrUR-ltrBb1fFL-__Em0qJA&oe=65518AF8",
+      "description": "Se da un gran saludo a todos los profesionales dedicados a la prevención y control de enfermedades en animales. Con su compromiso y esfuerzo contribuyen al bienestar de toda la población"
+    },
+    {
+      "id": 14,
+      "title": "Datos curiosos: Orejitas del perrito",
+      "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/118653197_3361426083896779_8092886168767723781_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=C53hNqw4i5sAX_boEFJ&_nc_ht=scontent.flim2-1.fna&oh=00_AfD2wWYW4AtfaVfHDqJjbvajnCUkNM3dAYyarYwRduQs-A&oe=65516799",
+      "description": "Aquí te dejamos esta infografía con algunos datos curiosos sobre las orejas de los perros 🐶"
+    },
+    {
+      "id": 15,
+      "title": "Datos curiosos: Los gatitos",
+      "imageUrl": "https://media.metrolatam.com/2020/02/19/diadelgato2020-9bc65818c3a24432cb547750655f15a3-1200x0.jpg",
+      "description": "Día Internacional del Gato: 10 datos curiosos de estos felinos"
+    },
+    {
+      "id": 16,
+      "title": "",
+      "imageUrl": "https://d3tvd1u91rr79.cloudfront.net/c35e08b802d42b203a838323bb924ceb/html/bg1.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2QzdHZkMXU5MXJyNzkuY2xvdWRmcm9udC5uZXRcL2MzNWUwOGI4MDJkNDJiMjAzYTgzODMyM2JiOTI0Y2ViXC9odG1sXC8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjk3MzQwNTg2fX19XX0_&Signature=EQ0OzL1AItTbaBA5JZoccexLfGdGjQnn5~~9EwjwsiKf1nLqHjz4MOVbSVnfkjFMZ5D3ZV9Rdvc5tD6BUz51TjKStHAuL4NYd2RBsvVgH1P-Qrm696d8Ajtw-~wfmVAGVnSzj-iw0yrM9cDS61k8PrfVold43X6r6n1s6FEtO86LFMdo9hGrx~BZwc5V5FzdWQZy3Khp6wOLuToJwG-EdYoxTYOjrtrkT5jIeyMy50A9OaunOpN5pdy15bo7khn15HJ6-CsyzdXbug8t2NZ8MN4xB-DkIwNY4hlfhlF59~1YKbKB8wgnYRKfp350IryxDmlTulc-cEBf-zvkZtq-ug__&Key-Pair-Id=APKAJ535ZH3ZAIIOADHQ",
+      "description": ""
+    },
+    {
+      "id": 17,
+      "title": "",
+      "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/80439760_1409311669240782_1230058670566408192_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9b3078&_nc_ohc=peIC0gZfuHIAX8D2f0u&_nc_ht=scontent.flim2-1.fna&oh=00_AfBQoXjj2BxOlwRNQGdBUgKLgh7XZSYKq0trO6W7n5QPLA&oe=65516729",
+      "description": "Ventajas de estudiar #Nutrición! 🍏🤓"
+    },
+    {
+      "id": 18,
+      "title": "Día del Nutricionista Peruano",
+      "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/68688193_10156327456657765_6772064657193566208_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=py0FPNkQZDIAX_ZoB-o&_nc_ht=scontent.flim2-1.fna&oh=00_AfA7e_7_8xksFb6bbXIQJyDu3sp6y3jj9zUjROYsTohnyg&oe=65517B28",
+      "description": "Saludamos a todos los especialistas de la nutrición en su día y resaltamos la gran labor que realizan para mejorar la calidad de vida de los peruanos, a través de una alimentación saludable."
+    },
+    {
+      "id": 19,
+      "title": "Datos curiosos: Octógonos Nutricionales",
+      "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/65992445_10156145956806965_1047688530907627520_n.png?_nc_cat=104&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=DThBOugk-NoAX8FzLyl&_nc_ht=scontent.flim2-1.fna&oh=00_AfCr_-I2TjNH4EZWw9RSnPRjc4Z9s6HY-cSTRhS93xRzIA&oe=65518B29",
+      "description": "¿Ya empezaste a revisar las etiquetas de los productos que consumes diariamente? 🛑❌"
+    },
+    {
+      "id": 20,
+      "title": "Datos curiosos: Legumbres",
+      "imageUrl": "https://gastronomiaycia.republica.com/wp-content/uploads/2016/05/infografia_legumbres_fao_2.jpg",
+      "description": ""
+    },
+    {
+      "id": 21,
+      "title": "Salud Bucal",
+      "imageUrl": "http://www.gob.mx/cms/uploads/image/file/48312/08Salud_bucodental.jpg",
+      "description": ""
+    },
+    {
+      "id": 22,
+      "title": "",
+      "imageUrl": "https://i.pinimg.com/originals/50/e9/94/50e99400ad640214bdf042e663c79668.jpg",
+      "description": ""
+    },
+    {
+      "id": 23,
+      "title": "Día de la Odontología Peruana",
+      "imageUrl": "https://scontent.flim2-2.fna.fbcdn.net/v/t1.6435-9/129176741_10157603991612765_3068179045392441957_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=J9VNJW-sowIAX_Eyu7X&_nc_ht=scontent.flim2-2.fna&oh=00_AfBEpaCDxp8VVK07-dhomxaCi7_U4KWmgVDCWkBDREy33w&oe=6551800A",
+      "description": "Hoy, en el Día de la Odontología Peruana, saludamos a todos los odontólogos del país y destacamos su comprometida labor cuidando la salud bucal de nuestra población."
+    },
+    {
+      "id": 24,
+      "title": "Datos curiosos: Historia de la Odontología",
+      "imageUrl": "https://topaula.com/wp-content/uploads/2019/12/Curiosidades-odontologia-infografia.jpg",
+      "description": ""
+    },
+    {
+      "id": 25,
+      "title": "Datos curiosos: Higienista Dental",
+      "imageUrl": "https://i.pinimg.com/236x/27/ed/a4/27eda4ffd9610b8c584e524f2b8aeb98--dentistry-dental.jpg",
+      "description": ""
+    }
+  ]
+}
