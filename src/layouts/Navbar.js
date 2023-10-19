@@ -1,16 +1,7 @@
 import { useState, useEffect } from 'react';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
-  Box,
-  Collapse,
-  Divider,
-  Flex,
-  HStack,
-  IconButton,
-  Image,
-  Link,
-  Stack,
-  Text,
+  Box, Collapse, Divider, Flex, HStack, IconButton, Image, Link, Stack, Text,
   useDisclosure
 } from '@chakra-ui/react';
 import { Link as ReactRouterLink, useLocation, useNavigate } from 'react-router-dom';
@@ -18,8 +9,9 @@ import LogoutAlert from '../components/LogoutAlert';
 import { getStudentById } from "../services/StudentService";
 
 const NavLink = ({ to, children, onClose }) => (
-  <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white'>
-    <ReactRouterLink to={to} onClick={onClose}>{children}</ReactRouterLink>
+  <Box fontWeight='semibold' px={2} py={1} rounded={'md'} w={{ base: "100%", md: "auto" }} textAlign={{ base: "left", md: "center" }}
+    _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white'>
+    <ReactRouterLink to={to} onClick={onClose} >{children}</ReactRouterLink>
   </Box>
 );
 
@@ -96,12 +88,17 @@ function Navbar() {
           </HStack>
         </Flex>
 
+        {/* VERSION MOBILE DEL NAVBAR */}
         <Collapse in={isOpen} animateOpacity style={{ position: "absolute", left: 0, width: '100%' }}>
           <Stack px={4} pb={2} bg={'purple.300'} align={'start'}>
             {/*<NavLink to='/about-us' onClose={onClose}>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
             <NavLink to='/' onClose={onClose}>Aprendamos de STEM</NavLink>
             <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
-            {isVocTestCompleted && <NavLink to='/content' onClose={onClose}>Contenido STEM</NavLink>}
+
+            {isVocTestCompleted && <NavLink to="/content?area=ciencias" onClose={onClose}>Ciencias</NavLink>}
+            {isVocTestCompleted && <NavLink to="/content?area=ingenieria" onClose={onClose}>Ingeniería</NavLink>}
+            {isVocTestCompleted && <NavLink to="/content?area=tecnologia" onClose={onClose}>Tecnología</NavLink>}
+            {isVocTestCompleted && <NavLink to="/content?area=matematicas" onClose={onClose}>Matemáticas</NavLink>}
             <Divider />
             {isLoggedIn ? (
               <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>
@@ -115,6 +112,7 @@ function Navbar() {
             )}
           </Stack>
         </Collapse>
+
         <LogoutAlert isOpen={showLogoutAlert} onConfirm={handleLogoutAlertConfirm} onCancel={handleLogoutAlertCancel} />
       </Box>
     </>
