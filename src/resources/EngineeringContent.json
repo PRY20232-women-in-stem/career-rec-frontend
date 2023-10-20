@@ -1,28 +1,332 @@
 {
-  "information": [
-    {
-      "title": "¿Qué son las carreras STEM?",
-      "content": "Las carreras STEM están relacionadas con la innovación, el desarrollo de tecnologías y el crecimiento de las empresas, lo que contribuye a la mejora de la economía. Los profesionales que se dedican a estas áreas ayudan a mejorar la competitividad de las empresas y a impulsar la creación de empleos de alta calidad."
-    }
-  ],
-  "videos": [
-    {
-      "videoUrl": "https://www.youtube.com/watch?v=PbyKKD7mvpA",
-      "description": "Descripción del video 1."
-    },
-    {
-      "videoUrl": "https://www.youtube.com/watch?v=W53Ks824GTA",
-      "description": "Descripción del video 2."
-    }
-  ],
-  "photos": [
-    {
-      "imageUrl": "WomenInStem2.png",
-      "description": "Descripción de la foto 1."
-    },
-    {
-      "imageUrl": "WomenInStem2.png",
-      "description": "Descripción de la foto 2."
-    }
-  ]
+  "biomedic": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Ingeniería Biomédica es la carrera que integra el conocimiento de las ciencias médicas y biológicas con los principios de ingeniería para proponer soluciones que ayuden a atender y satisfacer las necesidades de las personas en el área de la salud."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "El estudiante graduado de la Carrera de Ingeniería Biomédica podrá: resolver problemas complejos en el ámbito de la medicina y biología haciendo uso del diseño de ingeniería, creando tecnologías que cumplen con estándares internacionales y de acuerdo a las normas profesionales y éticas; comunicarse de manera eficaz con especialistas de otras especialidades, siendo capaz de liderar equipos de trabajo multidisciplinarios; y ser capaz de llevar a cabo experimentos científicos y ser autodidacta, lo que te permitirá desempeñarse satisfactoriamente en ambientes de investigación."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Por qué estudiar Ingeniería Biomédica en la UPC?",
+        "videoUrl": "https://www.youtube.com/watch?v=KVd9U_ho0Jw",
+        "description": "Sergio Salas, Director de la carrera de Ingeniería Biomédica, nos cuenta todo lo que debes saber si decides estudiar esta carrera en la UPC."
+      },
+      {
+        "id": 2,
+        "title": "Ingeniería Biomédica UPC – Ingenia el Futuro",
+        "videoUrl": "https://www.youtube.com/watch?v=HsWKYTqn4p4",
+        "description": "La Facultad de Ingeniería y Ciencias de la Salud se unieron para formar la nueva carrera de Ingeniería Biomédica. "
+      },
+      {
+        "id": 3,
+        "title": "Conoce la nueva carrera de Ingeniería Biomédica UPC",
+        "videoUrl": "https://www.youtube.com/watch?v=tM2QKFnk6G0",
+        "description": "Descubre la nueva carrera de Ingeniería Biomédica"
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "¿Qué es la Ingeniería Biomédica?",
+        "imageUrl": "https://d20ohkaloyme4g.cloudfront.net/img/document_thumbnails/1c4b98e9b522a041947e6176df4a1953/thumb_1200_3000.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "Ingeniería Biomédica en el cuerpo humano",
+        "imageUrl": "https://4.bp.blogspot.com/-VvrFSDWCm7M/WXkuPkBf29I/AAAAAAAALJc/aAA_BSFp-yY1jEeh34HHCOhKYqR4P9blwCLcBGAs/s1600/Ingenier%25C3%25ADa%2BBiom%25C3%25A9dica.png",
+        "description": "La Ingeniería Biomédica se ha caracterizado por su desarrollo y práctica clínica sobre los órganos artificiales, miembros ortopédicos y prótesis. Esta combina los criterios de la ingeniería y las herramientas de análisis de las matemáticas, la física y la química para buscar una solución a problemas de medicina, biología y biotecnología."
+      },
+      {
+        "id": 3,
+        "title": "Día Mundial de la ingeniería biomédica",
+        "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t39.30808-6/260980061_2910463365950018_4876491956820475105_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=JcjGaUkrMEEAX8UTXVL&_nc_ht=scontent.flim2-1.fna&oh=00_AfBbnkNuZtm5RjJkuAVItGPE7x2htZgR4McgEflX4i6TfA&oe=6530ADD7",
+        "description": "El 5 de Diciembre, el Día Mundial de la ingeniería biomédica"
+      },
+      {
+        "id": 4,
+        "title": "Datos Curiosos: Posibles avances en la Ingeniería Biomédica",
+        "imageUrl": "https://peru21.pe/resizer/Vq6UwR2-zBDi9yrhXoalaPlqUJs=/620x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/4UCYMJJ7IRDCLJPWEEOYXMIPEE.jpg",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "La Universidad Peruana de Ciencias Aplicadas, líder latinoamericano en el desarrollo de la Ingeniería Biomédica",
+        "imageUrl": "https://www.saludediciones.com/wp-content/uploads/2017/08/ingenieria-biomedica-cuerpo-humano-ingenieria-upc-e1501702104644.png",
+        "description": ""
+      }
+    ]
+  },
+  "mining": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Una carrera que forma ingenieros para gestionar estratégicamente recursos y actividades propias de la operación extractiva, formando parte de grupos de trabajo, liderándolos hacia los objetivos de la organización, poniendo énfasis en el cuidado del medio ambiente, la responsabilidad social y la seguridad en el trabajo. Esta carrera forma directivos de la industria minera con habilidades gerenciales y empresarios mineros en los diferentes campos de la industria conexa, a través de la prestación de servicios y labores de investigación."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "El estudiante graduado de la Carrera de Ingeniería Biomédica podrá: gestionar estratégicamente recursos y actividades propias de la operación extractiva; liderar organizaciónes y proyectos mineros; y desempeñarse como empresario minero o en los diferentes campos de la industria."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Por qué estudiar Ingeniería de Gestión Minera en la UPC?",
+        "videoUrl": "https://www.youtube.com/watch?v=V5V0v5k3654",
+        "description": "Paul Fernando Peralta, estudiante de la carrera de Ingeniería de Gestión Minera, nos cuenta todo sobre su experiencia y por qué decidió estudiar en la UPC."
+      },
+      {
+        "id": 2,
+        "title": "Ingeniería de Gestión Minera UPC – Ingenia el Futuro",
+        "videoUrl": "https://www.youtube.com/watch?v=S_bA6GjQt0A",
+        "description": "Ingenia el futuro. Transforma el país en beneficio de todos a través de la minería."
+      },
+      {
+        "id": 3,
+        "title": "Ingeniería de Gestión Minera en la UPC",
+        "videoUrl": "https://www.youtube.com/watch?v=6w9wF2FfDTQ",
+        "description": "Carlos Torres, director de la carrera de Ingeniería de Gestión Minera, nos cuenta todo lo que debes saber si decides estudiar esta carrera en la UPC."
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "",
+        "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/109859229_4197711230270031_133417886862903064_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=GYWYxi0C_XYAX92ZlBJ&_nc_ht=scontent.flim2-1.fna&oh=00_AfAw_PlKUxNfqkMPGrEaP3vbCgC21wjtb7bJsjnczTiFnA&oe=6552544F",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "Codigo de Etica Del Ingeniero en Minas",
+        "imageUrl": "https://imgv2-1-f.scribdassets.com/img/document/541582049/original/06f05288d2/1696164837?v=1",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "¡Feliz Día del Ingeniero de Minas! ",
+        "imageUrl": "https://scontent.flim2-2.fna.fbcdn.net/v/t1.6435-9/137674125_732744300694947_9054567099986975356_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=HNqej62IGwwAX8o_KEC&_nc_ht=scontent.flim2-2.fna&oh=00_AfDTAGUNkh4Hx5v68bccqXc9BYoEjeur1c23aCUQ_9TX0Q&oe=6552469F",
+        "description": "El 14 por su admirable labor. de enero, reconocemos a todos los ingenieros e ingenieras de minas del Perú por su admirable labor."
+      },
+      {
+        "id": 4,
+        "title": "¿Sabías qué? 💰",
+        "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/175772106_4157792004284745_372623515254946140_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=nNoly9tFkrsAX-lhzkr&_nc_ht=scontent.flim2-1.fna&oh=00_AfC6mxtgub6gNY3KdyOumMT13-75yCf6IcWO7Fdu3Hheqg&oe=65524730",
+        "description": "A nivel mundial🌎 y latinoamericano, el Perú se ubica entre los primeros productores📈de diversos metales (cobre, oro, plata, plomo, zinc, hierro, estaño, molibdeno, entre otros), lo cual es el reflejo de la abundancia de sus recursos y la capacidad de producción de la actividad minera peruana👷‍♂️; así como de la estabilidad de sus políticas económicas."
+      },
+      {
+        "id": 5,
+        "title": "¿Sabías qué? 💰",
+        "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/176334734_4166627230067889_1996792994647859281_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=4X4c6qNRmAQAX-iqHcD&_nc_ht=scontent.flim2-1.fna&oh=00_AfBJxRVFYTFAYg8v8qtcX2g2AuuHkRYOfjiTfUWYGyzG0w&oe=655255E2",
+        "description": "A nivel nacional🇵🇪 , la minera subterránea👷‍♂️más profunda es la unidad Yauliyacu que se opera a una profundidad aproximada de 1500m. Esta ubicada en el distrito de Chilca, provincia de Huarochiri, en la vertiente occidental de la cordillera de los Andes⛰️ , en la región central del Perú. Inició sus actividades en 1919 a cargo de la compañía Cerro de Pasco Mining🏭."
+      }
+    ]
+  },
+  "enviromental": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Estudiarás una carrera muy relevante en el contexto actual, donde aprenderás a prevenir y reducir los impactos ambientales. Serás experto en gestionar eficientemente estrategias sobre aire, agua, energía, residuos sólidos y suelos, así como de analizar información compleja, tomar decisiones de manera integral - ética y diseñar estrategias para la prevención, control y mitigación de los problemas ambientales, teniendo en cuenta la rentabilidad de la organización. Buscarás la constante solución a los problemas ambientales con criterios de sostenibilidad. Te convertirás en agente del cambio con una visión innovadora de buenas prácticas ambientales, base sólida y una gestión dinámica."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "El estudiante graduado de la Carrera de Ingeniería Ambiental podrá: evaluar el impacto ambiental de procesos productivos y de servicios, y proponer medidas de prevención, mitigación y control; brindar recomendaciones de tecnologías y prácticas ambientales sostenibles en los diferentes sectores productivos y de servicios; proponer y diseñar materiales ambientalmente amigables, considerando características de biodegradación y contaminación ambiental; y seleccionar y aplicar herramientas adecuadas para la simulación de proceso ambientales."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Por qué estudiar Ingeniería Ambiental en la UPC?",
+        "videoUrl": "https://www.youtube.com/watch?v=TwKa90QLePA",
+        "description": "Christian Cardich, egresado de la carrera de Ingeniería Ambiental, nos cuenta todo sobre su experiencia y por qué decidió estudiar en la UPC."
+      },
+      {
+        "id": 2,
+        "title": "Ingeniería Ambiental UPC",
+        "videoUrl": "https://www.youtube.com/watch?v=ZG1mf4QRWNs",
+        "description": "Mercedes Gomez, directora de la carrera de Ingeniería Ambiental, nos invita a conocer todo sobre esta apasionada carrera."
+      },
+      {
+        "id": 3,
+        "title": "¿Por qué estudiar Ingeniería Ambiental?",
+        "videoUrl": "https://www.youtube.com/watch?v=uHX-4PrMZoE",
+        "description": "Fiorela, alumna de Ingeniería Ambiental en UPC, nos cuenta cómo definió su vocación por la carrera desde el colegio y nos comparte cómo empezó a vivir su pasión desde el primer ciclo."
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "¿Sabes qué hacen los ingenieros ambientales? ",
+        "imageUrl": "https://pbs.twimg.com/media/Efutz9WVoAAbEJq?format=png&name=900x900",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "",
+        "imageUrl": "https://blogs.unitec.mx/hubfs/287524/Imported_Blog_Media/Infograf%C3%ADa_Ingenier%C3%ADa_Ambiental_y_Sustentabilidad-1280x1280-3.jpeg",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "Día del Ingenierio Ambiental",
+        "imageUrl": "https://pbs.twimg.com/media/FKeyRnIWQAMKxwD?format=jpg&name=900x900",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "¿Sabías que...?",
+        "imageUrl": "https://www.uv.mx/pozarica/uv-ca-464/files/2022/05/4.-datoqrioso1-1536x1187.png",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "¿Sabías que...?",
+        "imageUrl": "https://scontent.flim2-2.fna.fbcdn.net/v/t1.6435-9/118404593_2504679216488838_6639001007052691717_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c2f564&_nc_ohc=s4ttcpV_7KQAX8z0uMV&_nc_ht=scontent.flim2-2.fna&oh=00_AfD2JgEnSJ6Y6TLGqO5YCrfxc3yeHclM5cjLmaRvkmJMjA&oe=65524FE4",
+        "description": "Datos curiosos sobre el medio ambiente."
+      }
+    ]
+  },
+  "industrial": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Perfil de ingresante",
+        "content": "El ingresante a la carrera de ingeniería industrial debe poseer una sólida base en materias de carácter matemático, científico y técnico, deben de manejar un inglés básico, una comunicación efectiva y sentirse atraídos por la innovación, la tecnología, la industria, la automatización industrial y una capacidad de explicar las relaciones entre su desarrollo personal y su entorno social, económico del país y del mundo; y actuar en función de los requerimientos de las mismas, a través del trabajo en equipo, ejercicio de la solidaridad, el respeto mutuo, la responsabilidad social y la protección del ambiente."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "El graduado podrá diseñar, desarrollar, implementar y mejorar los sistemas integrados que incluyen personas, materiales, información, equipo y energía. Con una sólida formación matemática, científica, tecnológica y humanista para lograr la integración de los sistemas usando prácticas experimentales, herramientas modernas, aprendizaje continuo y responsabilidad ética tomando en cuenta el impacto de soluciones de  ingeniería dentro de un contexto global, de tal manera que le permita compenetrarse con nuestra realidad y contribuir de manera significativa con el desarrollo del país."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Cómo es Ingeniería Industrial?",
+        "videoUrl": "https://www.youtube.com/watch?v=5k3BCwZIrio",
+        "description": "Laho, estudiante de Ingeniería Industrial en UPC, nos cuenta cómo decidió estudiar la carrera y la importancia de elegir una buena universidad que le permita crecer y desarrollarse desde el inicio."
+      },
+      {
+        "id": 2,
+        "title": "Ingeniería Industrial UPC – Ingenia el Futuro",
+        "videoUrl": "https://www.youtube.com/watch?v=Bv8jM45sMKQ",
+        "description": "Ingenia el futuro. Mejora la productividad de las compañías más destacadas del mercado con la carrera de Ingeniería Industrial en la UPC."
+      },
+      {
+        "id": 3,
+        "title": "Ingeniería Industrial en UTEC",
+        "videoUrl": "https://www.youtube.com/watch?v=INffVqf1-7Q",
+        "description": ""
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "",
+        "imageUrl": "https://pin.it/89IDjVi",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "9 Mitos sobre la Ingeniería Industrial",
+        "imageUrl": "https://pin.it/1bPunnD",
+        "description": "¡Descubre la verdad detrás de la Ingeniería Industrial!"
+      },
+      {
+        "id": 3,
+        "title": "Datos curiosos: 2 herramientas de un ingeniero industrial",
+        "imageUrl": "https://pin.it/6PV2PNf",
+        "description": "Estas herramientas harán más sencillo tu trabajo.😉"
+      },
+      {
+        "id": 4,
+        "title": "Datos curiosos: ¿Qué es un KPI?",
+        "imageUrl": "https://pin.it/1PE007D",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "Datos curiosos: ¿Qué es ser un Ingeniero Industrial?",
+        "imageUrl": "https://pin.it/3NVNQBd",
+        "description": "¿Conocías este dato interesante?"
+      }
+    ]
+  },
+  "civil": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Perfil de ingresante",
+        "content": "Se espera que el ingresante a la carrera de Ingeniería Civil demuestre capacidad analítica y cuantitativa y tenga un interés por la física así como por la construcción y diseño. Debe interesarse en innovar y poseer habilidades para trabajar en equipo en el desarrollo de proyectos de Ingeniería Civil."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "El estudiante graduado de la Carrera de Ingeniería Civil podrá: estar preparado para planificar, diseñar y ejecutar obras civiles; poseer una sólida formación científica y tecnológica que le permite utilizar técnicas modernas que satisfacen las demandas del sector construcción; ser un profesional comprometido con principios éticos, estándares profesionales y el respeto al medio ambiente; y se identifica con una cultura de aprendizaje continuo y temas de actualidad que le permite contribuir con el desarrollo del país."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Por qué estudiar Ingeniería Civil en la UPC?",
+        "videoUrl": "https://www.youtube.com/watch?v=YwhJtvdjxP8",
+        "description": "Omar Cárdenas, estudiante de la carrera de Ingeniería Civil, nos cuenta todo sobre su experiencia y por qué decidió estudiar en la UPC. "
+      },
+      {
+        "id": 2,
+        "title": "¿Cómo es Ingeniería Civil?",
+        "videoUrl": "https://www.youtube.com/watch?v=ud9H-cpfsiU",
+        "description": "José Carlos, alumno de Ingeniería Civil en UPC, nos cuenta cómo la carrera apoya su formación mediante programas que le permiten intercambiar experiencia con profesionales del sector."
+      },
+      {
+        "id": 3,
+        "title": "¿Cómo es la carrera de Ingeniería Civil?",
+        "videoUrl": "https://www.youtube.com/watch?v=RHrMrjE2x_Q",
+        "description": "Illarick, alumno de Ingeniería Civil en UPC, nos cuenta cómo su formación en la carrera le brindó las competencias necesarias para destacar en congresos a nivel nacional e internacional."
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "",
+        "imageUrl": "https://i.pinimg.com/736x/61/e3/96/61e39699cf3ba0dbcf9fc3ee0a6ac7f8.jpg",
+        "description": "La ingeniería civil en el campo profesional"
+      },
+      {
+        "id": 2,
+        "title": "",
+        "imageUrl": "https://html.scribdassets.com/62nahcan7k7x356y/images/1-b83fe4af01.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "Día del Ingeniero Civil",
+        "imageUrl": "https://scontent.flim2-2.fna.fbcdn.net/v/t1.6435-9/77417787_2867522119946258_3083076264081227776_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=0Mz66JEgW3oAX-EldeB&_nc_ht=scontent.flim2-2.fna&oh=00_AfA7LTjNjz_vy2ZrNGpACQX5GHR2z66lE4dG_o2mZDLAKQ&oe=655236EB",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "Datos curiosos: Acerca de la Ingeniería Civil",
+        "imageUrl": "https://i.pinimg.com/originals/13/58/e5/1358e5b8422592f9e48cade844ec4052.jpg",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "Datos curiosos: Ramas de la Ingeniería Civil",
+        "imageUrl": "https://1.bp.blogspot.com/-rn8x37sDxWo/XWioNsQ9soI/AAAAAAAAAKE/I2HnqAgRbvYuNG4RS7lPqKz-ujdK0rsbQCLcBGAs/s640/pyramid.jpg",
+        "description": "¿Conocías este dato interesante?"
+      }
+    ]
+  }
 }
