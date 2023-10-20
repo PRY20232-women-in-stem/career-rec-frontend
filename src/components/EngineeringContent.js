@@ -11,7 +11,7 @@ function EngineeringContent() {
     <>
       {/* INTRODUCCION */}
       <Heading fontSize={"4xl"} color="purple.700">
-        Q PONER ACA / Ingeniería 
+        Q PONER ACA / Ingeniería
       </Heading>
       <Text fontSize={["md", "lg"]} color="purple.700" mb={4}>
         La ingeniería estudia las disciplinas que combinan las habilidades científicas y técnicas para el diseño y/o construcción de sistemas,
@@ -66,7 +66,7 @@ function EngineeringContent() {
           {/* CONTENIDO DE MUJERES SELECCIONADO */}
           <TabPanel>
             <Heading>
-              Contenido de mujeres seleccionadas
+              Contenido de mujeres seleccionadas de ingeniería
             </Heading>
           </TabPanel>
         </TabPanels>
