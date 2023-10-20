@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import {
-  Stack, Flex, Tabs, Tab, TabList, TabPanel, TabPanels
+  Stack, Flex
 } from '@chakra-ui/react';
 //import { useLocation } from 'react-router-dom';
 import PopUpButton from '../components/PopUpButton';
 import PostTest from '../components/PostTest';
 import { getStudentById } from "../services/StudentService";
-import PredictedContent from '../components/PredictedContent';
-import PredictedContentProfiles from '../components/PredictedContentProfiles';
+import EngineeringContent from '../components/EngineeringContent';
+import ScienceContent from '../components/ScienceContent';
+import TechnologyContent from '../components/TechnologyContent';
+import MathematicsContent from '../components/MathematicsContent';
 
 function ContentWrapper({ children }) {
   return (
@@ -25,24 +27,12 @@ function ContentView({ onConfirm, showFinishedPopUp }) {
   //const area = searchParams.get("area"); // PARA LA MUESTRA DE CONTENIDO, USARSE LUEGO PARA MOSTRAR CONTENIDO
   return (
     <ContentWrapper>
-
       <PopUpButton onConfirm={onConfirm} showFinishedPopUp={showFinishedPopUp} />
-
-      <Tabs variant='soft-rounded' colorScheme='green' size='lg' isFitted>
-        <TabList>
-          <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Ingeniería</Tab>
-          <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Destacado</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
-            <PredictedContent predictedArea={""} /> {/* Contenido de la predicción */}
-          </TabPanel>
-          <TabPanel>
-            <PredictedContentProfiles predictedArea={""} /> {/* Contenido de mujeres en stem de la predicción */}
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
-
+      <EngineeringContent />
+      {/*{area === "Engineering" ? <EngineeringContent /> : null}
+      {area === "Science" ? <ScienceContent /> : null}
+      {area === "Technology" ? <TechnologyContent /> : null}
+      {area === "Mathematics" ? <MathematicsContent /> : null}*/}
     </ContentWrapper >
   );
 }

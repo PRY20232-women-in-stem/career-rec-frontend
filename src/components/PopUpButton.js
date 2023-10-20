@@ -7,16 +7,17 @@ import {
 
 function PopUpButton({ onConfirm }) {
   const [localIsOpen, setLocalIsOpen] = useState(false);
+  const postTestCompleted = localStorage.getItem("post_test_compl") === "true";
 
   useEffect(() => {
     const timerId = setTimeout(() => {
-      setLocalIsOpen(true);
+      setLocalIsOpen(!postTestCompleted);
     }, 240000); // 4 minutos en milisegundos
 
     return () => {
       clearTimeout(timerId);
     };
-  }, []);
+  }, [postTestCompleted]);
 
   const handlePopUpAlertConfirm = () => {
     onConfirm();
@@ -56,21 +57,33 @@ function PopUpButton({ onConfirm }) {
         <PopoverContent>
           <PopoverArrow />
           <PopoverCloseButton onClick={handlePopoverClose} />
-          <PopoverHeader border='0'>
-            <Heading size='lg' textAlign={"center"} color={"purple.700"}>
-              Post Test
-            </Heading>
-          </PopoverHeader>
-          <PopoverBody border='0'>
-            <Text textAlign="center">
-              ¡Te invitamos a resolver un test super cortito!
-            </Text>
-          </PopoverBody>
-          <PopoverFooter border='0'>
-            <Button size='sm' bg={'purple.400'} color={'white'} onClick={handlePopUpAlertConfirm}>
-              Hacerlo ahora
-            </Button>
-          </PopoverFooter>
+          {postTestCompleted ? (
+            <>
+              <PopoverBody border='0'>
+                <Heading size='lg' textAlign={"center"} color={"purple.700"}>
+                  Gracias por hacer el test!💜
+                </Heading>
+              </PopoverBody>
+            </>
+          ) :
+            <>
+              <PopoverHeader border='0'>
+                <Heading size='lg' textAlign={"center"} color={"purple.700"}>
+                  Post Test
+                </Heading>
+              </PopoverHeader>
+              <PopoverBody border='0'>
+                <Text textAlign="center">
+                  ¡Te invitamos a resolver un test super cortito!
+                </Text>
+              </PopoverBody>
+              <PopoverFooter border='0'>
+                <Button size='sm' bg={'purple.400'} color={'white'} onClick={handlePopUpAlertConfirm}>
+                  Hacerlo ahora
+                </Button>
+              </PopoverFooter>
+            </>
+          }
         </PopoverContent>
       </Popover>
     </motion.div>
