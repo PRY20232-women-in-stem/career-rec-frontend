@@ -74,7 +74,7 @@ function ScienceContent() {
   );
 }
 
-export default EngineeringContent;
+export default ScienceContent;
 
 function renderCareerInfo(careerData) {
   return careerData.information.map((info, index) => (
