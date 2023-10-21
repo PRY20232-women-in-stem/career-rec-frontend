@@ -1,5 +1,5 @@
 import {
-  Stack, Heading, Text, Image, Card, CardBody, useDisclosure, Tabs, Tab, TabList, TabPanel, TabPanels
+  Stack, Heading, Text, Image, Card, CardBody, CardHeader, useDisclosure, Tabs, Tab, TabList, TabPanel, TabPanels, Box
 } from '@chakra-ui/react';
 import YouTubeVideo from './YoutubeVideo';
 import engineeringData from '../resources/EngineeringContent';
@@ -11,7 +11,7 @@ function EngineeringContent() {
     <>
       {/* INTRODUCCION */}
       <Heading fontSize={"4xl"} color="purple.700">
-        Q PONER ACA / Ingeniería
+        Ingeniería
       </Heading>
       <Text fontSize={["md", "lg"]} color="purple.700" mb={4}>
         La ingeniería estudia las disciplinas que combinan las habilidades científicas y técnicas para el diseño y/o construcción de sistemas,
@@ -21,7 +21,7 @@ function EngineeringContent() {
 
       <Tabs variant='soft-rounded' colorScheme='green' size='lg' isFitted>
         <TabList>
-          <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Ingeniería</Tab>
+          <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Contenido</Tab>
           <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Destacado</Tab>
         </TabList>
         <TabPanels>
@@ -100,24 +100,26 @@ function renderCareerVideos(careerData) {
   return (
     <Stack mb={4} spacing={4}>
       {careerData.videos.map((video, index) => (
-        <Card key={index}>
-          <CardBody>
-            <Stack spacing={3}>
-              {video.title !== "" && (
-                <Heading fontSize="xl">
-                  {video.title}
-                </Heading>
-              )}
-              {video.videoUrl !== "" && (
-                <YouTubeVideo width="100%" height="100%" videoUrl={video.videoUrl} />
-              )}
-              {video.description !== "" && (
-                <Text fontSize={["md", "lg"]}>
-                  {video.description}
-                </Text>
-              )}
-            </Stack>
-          </CardBody>
+        <Card key={index} maxW='md'>
+          {video.title !== "" && (
+            <CardHeader>
+              <Heading fontSize="xl">
+                {video.title}
+              </Heading>
+            </CardHeader>
+          )}
+          {video.description !== "" && (
+            <CardBody>
+              <Text fontSize={["md", "lg"]}>
+                {video.description}
+              </Text>
+            </CardBody>
+          )}
+          {video.videoUrl !== "" && (
+            <Box pb="20px">
+              <YouTubeVideo width="100%" height="100%" videoUrl={video.videoUrl} />
+            </Box>
+          )}
         </Card>
       ))}
     </Stack>
@@ -128,24 +130,24 @@ function renderCareerPhotos(careerData) {
   return (
     <Stack spacing={4}>
       {careerData.photos.map((photo, index) => (
-        <Card key={index}>
-          <CardBody>
-            <Stack spacing={3}>
-              {photo.title !== "" && (
-                <Heading fontSize="xl">
-                  {photo.title}
-                </Heading>
-              )}
-              {photo.imageUrl !== "" && (
-                <Image objectFit="cover" borderRadius='lg' src={photo.imageUrl} />
-              )}
-              {photo.description !== "" && (
-                <Text mt='3' fontSize={["md", "lg"]}>
-                  {photo.description}
-                </Text>
-              )}
-            </Stack>
-          </CardBody>
+        <Card key={index} maxW='md'>
+          {photo.title !== "" && (
+            <CardHeader>
+              <Heading fontSize="xl">
+                {photo.title}
+              </Heading>
+            </CardHeader>
+          )}
+          {photo.description !== "" && (
+            <CardBody>
+              <Text fontSize={["md", "lg"]}>
+                {photo.description}
+              </Text>
+            </CardBody>
+          )}
+          {photo.imageUrl !== "" && (
+            <Image objectFit="cover" borderRadius='lg' pb="40px" src={photo.imageUrl} />
+          )}
         </Card>
       ))}
     </Stack>

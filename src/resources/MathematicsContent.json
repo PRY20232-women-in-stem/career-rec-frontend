@@ -1,0 +1,313 @@
+{
+  "matemathics": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Las matemáticas sirven para resolver problemas que necesiten una respuesta verdadera o falsa y para ello, su objeto es estudiar las propiedades y las relaciones que se establecen entre los entes abstractos, es decir, los números, la geometría, símbolos."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Un profesional de matemáticas esta capacidado para elaborar modelos matemáticos aplicados a fenómenos sociales y naturales, obtener información y elaborar proyecciones por medio de análisis de datos estadísticos que sirven para la toma de decisiones a un caso en particular."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿QUE SE ESTUDIA EN LA CARRERA DE MATEMÁTICAS? ¡Todo lo que necesitas saber!",
+        "videoUrl": "https://www.youtube.com/watch?v=TSn3RRXSqTg",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "¿Cómo es estudiar matemáticas? | ¿es difícil estudiar la carrera de matemáticas?",
+        "videoUrl": "https://www.youtube.com/watch?v=gegfXm4MM0U",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "¿Qué hace un matemático? | ¿Qué es una demostración?",
+        "videoUrl": "https://www.youtube.com/watch?v=tPeaF2fvQZ0",
+        "description": ""
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "¿Dónde trabaja un profesional de Matemáticas?",
+        "imageUrl": "https://thumbs.dreamstime.com/b/smiling-teenage-girl-reading-book-couch-leisure-education-home-concept-glasses-sitting-home-43090287.jpg",
+        "description": " Puede desempeñarse en el área de finanzas,  ámbito científico manejando logaritmos, Elaborando modelos matemáticos que permitan responder de manera económica las exigencias de construcción, investigador, docente "
+      },
+      {
+        "id": 2,
+        "title": "",
+        "imageUrl": "https://ibb.co/ZMBm7dh",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "¿Esta es la carrera para ti?",
+        "imageUrl": "https://ibb.co/vvs6KKM",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "Relevancia de la labor de un matemático en la sociedad",
+        "imageUrl": "https://ibb.co/WFsj3g2",
+        "description": " "
+      }
+    ]
+  },
+  "economy": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Economía se relaciona directamente con la gestión de los recursos, para la producción de bienes y servicios, además de estudiar los movimientos dentro de los diferentes mercados. Es un carrera muy importante para empresas de todo tipo."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Su papel principal dentro de una empresa consiste en detectar problemas , así como diseñar y ejecutar planes para el crecimiento de la organización"
+      },
+      {
+        "id": 3,
+        "title": "Tareas diarias de un economista",
+        "content": "Estudiar los movimientos de los mercados presentar informes, estadísticas, recopilación de datos, Conocer la situación económica y financiera actual de la empresa u organización, Elaborar los planes de financiamientos que necesite la empresa, Ayudar a establecer los presupuestos de forma más eficiente"
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Qué es la economía?",
+        "videoUrl": "https://www.youtube.com/watch?v=JLGAyU3dy2E",
+        "description": "La economía es más que números, cálculos o estadísticas. Estudia los medios que las personas utilizan para satisfacer sus necesidades mediante los recursos disponibles."
+      },
+      {
+        "id": 2,
+        "title": "¿Por qué estudiar economía? ",
+        "videoUrl": "https://www.youtube.com/watch?v=9lo4mL-0TyY",
+        "description": "Si estás pensando estudiar economía, este video te puede ayudar a tomar una decisión."
+      },
+      {
+        "id": 3,
+        "title": "Mitos y Errores en la Carrera de Economía",
+        "videoUrl": "https://www.youtube.com/watch?v=C351qyQuXm0",
+        "description": "La economía es una ciencia que estudia las relaciones humanas involucradas en los procesos de producción de bienes y servicios. "
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "",
+        "imageUrl": "https://ibb.co/1ZT73D5",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "Ramas de la Economia",
+        "imageUrl": "https://ibb.co/mvK2VGT",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "",
+        "imageUrl": "https://ibb.co/D4mjBFq",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "¿Dónde trabaja un economista? Campo laboral",
+        "imageUrl": "https://ibb.co/6WwbtcF",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "¿Cuánto gana un licenciado en Economía? 💰",
+        "imageUrl": "https://ibb.co/nBXXXzh",
+        "description": ""
+      }
+    ]
+  },
+  "stadistic": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "La estadística es usada para apoyar la toma de decisiones dentro de los gobiernos, partidos políticos, compañías financieras, empresas de opinión pública, compañías de seguros, bancos, hospitales, organizaciones sociales e industrias."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Es una persona con una alta capacidad de análisis y uso de la lógica para la resolución de problemas complejos de alto impacto."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Por qué estudiar la carrera de Estadística?",
+        "videoUrl": "https://www.youtube.com/watch?v=Jl2KuPzcqSY",
+        "description": "Datos interesantes para iniciar una carrera de Estadística"
+      },
+      {
+        "id": 2,
+        "title": "¿Que hace un profesional de Estadística?",
+        "videoUrl": "https://www.youtube.com/watch?v=6JicKX-lOss",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "El futuro de la carrera de Estadística",
+        "videoUrl": "https://www.youtube.com/watch?v=nU9tXiw7Qvg",
+        "description": "En esta entrevista se plantea el futuro de la Estadística en el ambito laboral."
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "La importancia de la Estadística en las empresas",
+        "imageUrl": "https://tudashboard.com/wp-content/uploads/2019/03/Info-estadisticas-empresas.jpg",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "¿Como se puede usar la Estadística?",
+        "imageUrl": "https://edteam-media.s3.amazonaws.com/infographics/original/8bc38c94-f3af-4768-9d73-baf6d139c4f7.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "¿Cual es el campo laboral para la carrera de Estadística?",
+        "imageUrl": "https://i.ibb.co/8gKw6Gg/CAmpo-Laboral-Stadistica.png",
+        "description": "Algunos de los lugares donde poder ejercer la carrera de Estadística"
+      },
+      {
+        "id": 4,
+        "title": "Se celebra a nivel mundial el día de la Estadística",
+        "imageUrl": "https://static.misionesonline.news/wp-content/uploads/2020/10/20-de-octubre-d%C3%ADa-mund-de-la-estad%C3%ADstica.jpg",
+        "description": ""
+      }
+    ]
+  },
+  "accounting": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Consiste en el estudio y manejo de las finanzas de una empresa, incluyendo la gestión de ingresos, gastos, impuestos y nóminas"
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Dominarás la normativa contable y tributaria y la aplicarás en la implementación de soluciones integrales en una empresa. Serás capaz de utilizar las herramientas tecnológicas, de planificación y de control disponibles."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Qué es la Contabilidad?",
+        "videoUrl": "https://www.youtube.com/watch?v=ugxCocs75zE",
+        "description": "Un breve video donde se explica con ejemplos que es la Contabilidad"
+      },
+      {
+        "id": 2,
+        "title": "Conoce cómo trabaja un contador",
+        "videoUrl": "https://www.youtube.com/watch?v=BUC22-cDDhs",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "¡Campo laboral de Contabilidad!",
+        "videoUrl": "https://www.youtube.com/watch?v=XmjF9pTXJRg",
+        "description": "El campo de la Contabilidad a nivel laboral"
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "¿Qué caracteristicas se necesita para ser una profesional de Contabilidad?",
+        "imageUrl": "https://www.ucq.edu.mx/uc/images/pillar/contabilidad/caracteristicas.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "5 razones para estudiar Contabilidad",
+        "imageUrl": "https://adnfiscal.com/wp-content/uploads/razones-para-estudiar-contabilidad-contapedia.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "El uso de la tecnología en la Contabilidad",
+        "imageUrl": "https://rediseno-blogs-qa.s3.us-east-2.amazonaws.com/uploads/2017/11/upn_blog_neg_apps-utiles-est-contabilidad_02-nov.jpg",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "Descibre las especialidades mejores pagadas de Contabilidad",
+        "imageUrl": "https://i.ibb.co/F3Rh6Lz/Contabilidad-Pngggg.png",
+        "description": ""
+      }
+    ]
+  },
+  "finance": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "La carrera de Finanzas se centra en el análisis, la planificación y la gestión de los recursos económicos de las organizaciones."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Los profesionales en este campo se dedican a tomar decisiones financieras inteligentes y estratégicas para maximizar el valor de los activos, minimizar los riesgos y lograr los objetivos financieros de una empresa."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Que son las Finanzas?",
+        "videoUrl": "https://www.youtube.com/watch?v=OXa7maKuY0Q",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "¿Por qué estudiar Finanzas?",
+        "videoUrl": "https://www.youtube.com/watch?v=_8--sGgcS5Q",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "Diferencia entre Finanzas y Economía",
+        "videoUrl": "https://www.youtube.com/watch?v=DQAAsOkWzMg",
+        "description": ""
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "¿Que son las finanzas en un entorno empresarial?",
+        "imageUrl": "https://guiadelempresario.com/wp-content/uploads/2022/01/%C2%BFQue%CC%81-son-las-finanzas-corporativas_.jpg",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "¿Sabes qué características tiene un egresado de la carrera de Finanzas?",
+        "imageUrl": "https://i.ibb.co/ZYcN5HH/profesional-FInanzas.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "Mejores universidades a nivel mundial para estudiar Finanzas",
+        "imageUrl": "https://www.eleconomista.com.mx/__export/1507908616269/sites/eleconomista/img/historico/universidades_finanzas_210317.png_554688468.png",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "",
+        "imageUrl": "https://i.pinimg.com/1200x/50/78/44/50784490f8d2da501d0e51970a2a5e13.jpg",
+        "description": ""
+      }
+    ]
+  }
+}

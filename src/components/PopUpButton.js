@@ -54,7 +54,7 @@ function PopUpButton({ onConfirm }) {
             onClick={() => setLocalIsOpen(!localIsOpen)}
           />
         </PopoverTrigger>
-        <PopoverContent>
+        <PopoverContent w={{ base: "250px", sm: "auto" }}>
           <PopoverArrow />
           <PopoverCloseButton onClick={handlePopoverClose} />
           {postTestCompleted ? (
