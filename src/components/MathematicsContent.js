@@ -1,6 +1,8 @@
 import {
-  Stack, Heading, Text, Image, Card, CardBody, useDisclosure, Tabs, Tab, TabList, TabPanel, TabPanels
+  Stack, Heading, Text, Image, Card, CardBody, CardHeader, useDisclosure, Tabs, Tab, TabList, TabPanel, TabPanels, Box
 } from '@chakra-ui/react';
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 import YouTubeVideo from './YoutubeVideo';
 import mathematicsData from '../resources/MathematicsContent';
 
@@ -26,39 +28,39 @@ function MathematicsContent() {
           {/* CONTENIDO SELECCIONADO */}
           <TabPanel>
             <Heading fontSize="xl" color="purple.700" mb={3} mt={3}>
-              Ingeniería Biomédica
+              Matemática pura
             </Heading>
-            {renderCareerInfo(mathematicsData.biomedic)}
-            {renderCareerVideos(mathematicsData.biomedic)}
-            {renderCareerPhotos(mathematicsData.biomedic)}
+            {renderCareerInfo(mathematicsData.matemathics)}
+            {renderCareerVideos(mathematicsData.matemathics)}
+            {renderCareerPhotos(mathematicsData.matemathics)}
 
             <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-              Ingeniería de Gestión Minera
+              Economía
             </Heading>
-            {renderCareerInfo(mathematicsData.mining)}
-            {renderCareerVideos(mathematicsData.mining)}
-            {renderCareerPhotos(mathematicsData.mining)}
+            {renderCareerInfo(mathematicsData.economy)}
+            {renderCareerVideos(mathematicsData.economy)}
+            {renderCareerPhotos(mathematicsData.economy)}
 
             <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-              Ingeniería Ambiental
+              Estadística
             </Heading>
-            {renderCareerInfo(mathematicsData.enviromental)}
-            {renderCareerVideos(mathematicsData.enviromental)}
-            {renderCareerPhotos(mathematicsData.enviromental)}
+            {renderCareerInfo(mathematicsData.stadistic)}
+            {renderCareerVideos(mathematicsData.stadistic)}
+            {renderCareerPhotos(mathematicsData.stadistic)}
 
             <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-              Ingeniería Industrial
+              Contabilidad
             </Heading>
-            {renderCareerInfo(mathematicsData.industrial)}
-            {renderCareerVideos(mathematicsData.industrial)}
-            {renderCareerPhotos(mathematicsData.industrial)}
+            {renderCareerInfo(mathematicsData.accounting)}
+            {renderCareerVideos(mathematicsData.accounting)}
+            {renderCareerPhotos(mathematicsData.accounting)}
 
             <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-              Ingeniería Civil
+              Finanzas
             </Heading>
-            {renderCareerInfo(mathematicsData.civil)}
-            {renderCareerVideos(mathematicsData.civil)}
-            {renderCareerPhotos(mathematicsData.civil)}
+            {renderCareerInfo(mathematicsData.finance)}
+            {renderCareerVideos(mathematicsData.finance)}
+            {renderCareerPhotos(mathematicsData.finance)}
           </TabPanel>
 
           {/* CONTENIDO DE MUJERES SELECCIONADO */}
@@ -144,7 +146,9 @@ function renderCareerPhotos(careerData) {
             </CardBody>
           )}
           {photo.imageUrl !== "" && (
-            <Image objectFit="cover" borderRadius='lg' pb="40px" src={photo.imageUrl} />
+            <Zoom>
+              <Image objectFit="cover" pb="40px" src={photo.imageUrl} />
+            </Zoom>
           )}
         </Card>
       ))}

@@ -1,6 +1,8 @@
 import {
   Stack, Heading, Text, Image, Card, CardBody, CardHeader, useDisclosure, Tabs, Tab, TabList, TabPanel, TabPanels, Box
 } from '@chakra-ui/react';
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 import YouTubeVideo from './YoutubeVideo';
 import engineeringData from '../resources/EngineeringContent';
 
@@ -146,7 +148,9 @@ function renderCareerPhotos(careerData) {
             </CardBody>
           )}
           {photo.imageUrl !== "" && (
-            <Image objectFit="cover" borderRadius='lg' pb="40px" src={photo.imageUrl} />
+            <Zoom>
+              <Image objectFit="cover" pb="40px" src={photo.imageUrl} />
+            </Zoom>
           )}
         </Card>
       ))}

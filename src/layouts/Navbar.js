@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box, Collapse, Divider, Flex, HStack, IconButton, Image, Link, Stack, Text,
-  useDisclosure
+  useDisclosure, Highlight
 } from '@chakra-ui/react';
 import { Link as ReactRouterLink, useLocation, useNavigate } from 'react-router-dom';
 import LogoutAlert from '../components/LogoutAlert';
@@ -95,7 +95,14 @@ function Navbar() {
             <NavLink to='/' onClose={onClose}>Aprendamos de STEM</NavLink>
             <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
 
-            {isVocTestCompleted && <NavLink to="/content?area=ciencias" onClose={onClose}>Ciencias</NavLink>}
+
+            {isVocTestCompleted &&
+              <NavLink to="/content?area=ciencias" onClose={onClose}>
+                <Highlight query={['Ciencias']} color="white" styles={{ px: '2', py: '1', rounded: 'full', bg: 'purple.600', color: 'white' }}>
+                  Ciencias
+                </Highlight>
+              </NavLink>
+            }
             {isVocTestCompleted && <NavLink to="/content?area=ingenieria" onClose={onClose}>Ingeniería</NavLink>}
             {isVocTestCompleted && <NavLink to="/content?area=tecnologia" onClose={onClose}>Tecnología</NavLink>}
             {isVocTestCompleted && <NavLink to="/content?area=matematicas" onClose={onClose}>Matemáticas</NavLink>}

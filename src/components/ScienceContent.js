@@ -1,7 +1,9 @@
 import {
-  Stack, Heading, Text, Image, Card, CardBody, useDisclosure, Tabs, Tab, TabList, TabPanel, TabPanels
+  Stack, Heading, Text, Image, Card, CardBody, CardHeader, useDisclosure, Tabs, Tab, TabList, TabPanel, TabPanels, Box
 } from '@chakra-ui/react';
 import YouTubeVideo from './YoutubeVideo';
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 import scienceData from '../resources/ScienceContent';
 
 function ScienceContent() {
@@ -127,24 +129,26 @@ function renderCareerPhotos(careerData) {
   return (
     <Stack spacing={4}>
       {careerData.photos.map((photo, index) => (
-        <Card key={index}>
-          <CardBody>
-            <Stack spacing={3}>
-              {photo.title !== "" && (
-                <Heading fontSize="xl">
-                  {photo.title}
-                </Heading>
-              )}
-              {photo.imageUrl !== "" && (
-                <Image objectFit="cover" borderRadius='lg' src={photo.imageUrl} />
-              )}
-              {photo.description !== "" && (
-                <Text mt='3' fontSize={["md", "lg"]}>
-                  {photo.description}
-                </Text>
-              )}
-            </Stack>
-          </CardBody>
+        <Card key={index} maxW='md'>
+          {photo.title !== "" && (
+            <CardHeader>
+              <Heading fontSize="xl">
+                {photo.title}
+              </Heading>
+            </CardHeader>
+          )}
+          {photo.description !== "" && (
+            <CardBody>
+              <Text fontSize={["md", "lg"]}>
+                {photo.description}
+              </Text>
+            </CardBody>
+          )}
+          {photo.imageUrl !== "" && (
+            <Zoom>
+              <Image objectFit="cover" pb="40px" src={photo.imageUrl} />
+            </Zoom>
+          )}
         </Card>
       ))}
     </Stack>
