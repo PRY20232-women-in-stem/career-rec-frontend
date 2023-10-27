@@ -1,13 +1,13 @@
 import {
-  Stack, Heading, Text, Image, Card, CardBody, CardHeader, useDisclosure, Tabs, Tab, TabList, TabPanel, TabPanels, Box
+  Stack, Heading, Text, Image, Card, CardBody, CardHeader, Tabs, Tab, TabList, TabPanel, TabPanels, Box, IconButton
 } from '@chakra-ui/react';
+import { BsLinkedin } from 'react-icons/bs';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import YouTubeVideo from './YoutubeVideo';
 import engineeringData from '../resources/EngineeringContent';
 
 function EngineeringContent() {
-  const { onOpen, onClose, isOpen } = useDisclosure();
 
   return (
     <>
@@ -67,9 +67,30 @@ function EngineeringContent() {
 
           {/* CONTENIDO DE MUJERES SELECCIONADO */}
           <TabPanel>
-            <Heading>
-              Contenido de mujeres seleccionadas de ingeniería
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={3}>
+              Ingeniería Biomédica
             </Heading>
+            {renderWomenProfiles(engineeringData.biomedic)}
+
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+              Ingeniería de Gestión Minera
+            </Heading>
+            {renderWomenProfiles(engineeringData.mining)}
+
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+              Ingeniería Ambiental
+            </Heading>
+            {renderWomenProfiles(engineeringData.enviromental)}
+
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+              Ingeniería Industrial
+            </Heading>
+            {renderWomenProfiles(engineeringData.industrial)}
+
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+              Ingeniería Civil
+            </Heading>
+            {renderWomenProfiles(engineeringData.civil)}
           </TabPanel>
         </TabPanels>
       </Tabs>
@@ -152,6 +173,48 @@ function renderCareerPhotos(careerData) {
               <Image objectFit="cover" pb="40px" src={photo.imageUrl} />
             </Zoom>
           )}
+        </Card>
+      ))}
+    </Stack>
+  );
+}
+
+function renderWomenProfiles(careerData) {
+  return (
+    <Stack spacing={4}>
+      {careerData.women.map((woman, index) => (
+        <Card key={index} maxW='md'>
+          {woman.name !== "" && (
+            <CardHeader>
+              <Heading fontSize="xl">
+                {woman.name}
+              </Heading>
+            </CardHeader>
+          )}
+          {woman.photo !== "" && (
+            <Box mx="auto">
+              <Image maxW="200px" objectFit="cover" src={woman.photo} />
+            </Box>
+          )}
+          <CardBody>
+            {woman.linkedin && woman.linkedin !== "" && (
+              <IconButton
+                variant='ghost'
+                colorScheme='blue'
+                icon={<BsLinkedin />}
+              />
+            )}
+            {woman.description !== "" && (
+              <Text fontSize={["md", "lg"]}>
+                {woman.description}
+              </Text>
+            )}
+            {woman.description2 && woman.description2 !== "" && (
+              <Text fontSize={["md", "lg"]}>
+                {woman.description2}
+              </Text>
+            )}
+          </CardBody>
         </Card>
       ))}
     </Stack>

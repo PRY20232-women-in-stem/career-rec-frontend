@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box, Collapse, Divider, Flex, HStack, IconButton, Image, Link, Stack, Text,
-  useDisclosure, Highlight
+  useDisclosure
 } from '@chakra-ui/react';
 import { Link as ReactRouterLink, useLocation, useNavigate } from 'react-router-dom';
 import LogoutAlert from '../components/LogoutAlert';
@@ -97,15 +97,13 @@ function Navbar() {
 
 
             {isVocTestCompleted &&
-              <NavLink to="/content?area=ciencias" onClose={onClose}>
-                <Highlight query={['Ciencias']} color="white" styles={{ px: '2', py: '1', rounded: 'full', bg: 'purple.600', color: 'white' }}>
-                  Ciencias
-                </Highlight>
+              <NavLink to="/content?area=Ciencia" onClose={onClose}>
+                Ciencias
               </NavLink>
             }
-            {isVocTestCompleted && <NavLink to="/content?area=ingenieria" onClose={onClose}>Ingeniería</NavLink>}
-            {isVocTestCompleted && <NavLink to="/content?area=tecnologia" onClose={onClose}>Tecnología</NavLink>}
-            {isVocTestCompleted && <NavLink to="/content?area=matematicas" onClose={onClose}>Matemáticas</NavLink>}
+            {isVocTestCompleted && <NavLink to="/content?area=Tecnologia" onClose={onClose}>Tecnología</NavLink>}
+            {isVocTestCompleted && <NavLink to="/content?area=Ingenieria" onClose={onClose}>Ingeniería</NavLink>}
+            {isVocTestCompleted && <NavLink to="/content?area=Matematica" onClose={onClose}>Matemáticas</NavLink>}
             <Divider />
             {isLoggedIn ? (
               <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>

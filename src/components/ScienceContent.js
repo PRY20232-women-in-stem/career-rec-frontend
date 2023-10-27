@@ -1,19 +1,19 @@
 import {
-  Stack, Heading, Text, Image, Card, CardBody, CardHeader, useDisclosure, Tabs, Tab, TabList, TabPanel, TabPanels, Box
+  Stack, Heading, Text, Image, Card, CardBody, CardHeader, Tabs, Tab, TabList, TabPanel, TabPanels, Box, IconButton
 } from '@chakra-ui/react';
+import { BsLinkedin } from 'react-icons/bs';
 import YouTubeVideo from './YoutubeVideo';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import scienceData from '../resources/ScienceContent';
 
 function ScienceContent() {
-  const { onOpen, onClose, isOpen } = useDisclosure();
 
   return (
     <>
       {/* INTRODUCCION */}
       <Heading fontSize={"4xl"} color="purple.700">
-        Q PONER ACA / CIENCIA
+        Ciencias
       </Heading>
       <Text fontSize={["md", "lg"]} color="purple.700" mb={4}>
         La ciencia estudia los fenómenos naturales y sociales de la realidad. Además, las ciencias realizan procesos de experimentación y demostración.
@@ -31,44 +31,65 @@ function ScienceContent() {
             <Heading fontSize="xl" color="purple.700" mb={3} mt={3}>
               Medicina
             </Heading>
-            {renderCareerInfo(scienceData.biomedic)}
-            {renderCareerVideos(scienceData.biomedic)}
-            {renderCareerPhotos(scienceData.biomedic)}
+            {renderCareerInfo(scienceData.medicine)}
+            {renderCareerVideos(scienceData.medicine)}
+            {renderCareerPhotos(scienceData.medicine)}
 
             <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
               Biología
             </Heading>
-            {renderCareerInfo(scienceData.mining)}
-            {renderCareerVideos(scienceData.mining)}
-            {renderCareerPhotos(scienceData.mining)}
+            {renderCareerInfo(scienceData.biology)}
+            {renderCareerVideos(scienceData.biology)}
+            {renderCareerPhotos(scienceData.biology)}
 
             <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
               Química Industrial
             </Heading>
-            {renderCareerInfo(scienceData.enviromental)}
-            {renderCareerVideos(scienceData.enviromental)}
-            {renderCareerPhotos(scienceData.enviromental)}
+            {renderCareerInfo(scienceData.chemistry)}
+            {renderCareerVideos(scienceData.chemistry)}
+            {renderCareerPhotos(scienceData.chemistry)}
 
             <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
               Microbiología y Parasitología
             </Heading>
-            {renderCareerInfo(scienceData.industrial)}
-            {renderCareerVideos(scienceData.industrial)}
-            {renderCareerPhotos(scienceData.industrial)}
+            {renderCareerInfo(scienceData.microParasi)}
+            {renderCareerVideos(scienceData.microParasi)}
+            {renderCareerPhotos(scienceData.microParasi)}
 
             <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
               Farmacia y Bioquímica
             </Heading>
-            {renderCareerInfo(scienceData.civil)}
-            {renderCareerVideos(scienceData.civil)}
-            {renderCareerPhotos(scienceData.civil)}
+            {renderCareerInfo(scienceData.pharmaBioche)}
+            {renderCareerVideos(scienceData.pharmaBioche)}
+            {renderCareerPhotos(scienceData.pharmaBioche)}
           </TabPanel>
 
           {/* CONTENIDO DE MUJERES SELECCIONADO */}
           <TabPanel>
-            <Heading>
-              Contenido de mujeres seleccionadas de ciencias
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={3}>
+              Medicina
             </Heading>
+            {renderWomenProfiles(scienceData.medicine)}
+
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+              Biología
+            </Heading>
+            {renderWomenProfiles(scienceData.biology)}
+
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+              Química
+            </Heading>
+            {renderWomenProfiles(scienceData.chemistry)}
+
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+              Microbiología y Parasitología
+            </Heading>
+            {renderWomenProfiles(scienceData.microParasi)}
+
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+              Farmacología y Bioquímica
+            </Heading>
+            {renderWomenProfiles(scienceData.pharmaBioche)}
           </TabPanel>
         </TabPanels>
       </Tabs>
@@ -149,6 +170,48 @@ function renderCareerPhotos(careerData) {
               <Image objectFit="cover" pb="40px" src={photo.imageUrl} />
             </Zoom>
           )}
+        </Card>
+      ))}
+    </Stack>
+  );
+}
+
+function renderWomenProfiles(careerData) {
+  return (
+    <Stack spacing={4}>
+      {careerData.women.map((woman, index) => (
+        <Card key={index} maxW='md'>
+          {woman.name !== "" && (
+            <CardHeader>
+              <Heading fontSize="xl">
+                {woman.name}
+              </Heading>
+            </CardHeader>
+          )}
+          {woman.photo !== "" && (
+            <Box mx="auto">
+              <Image maxW="200px" objectFit="cover" src={woman.photo} />
+            </Box>
+          )}
+          <CardBody>
+            {woman.linkedin && woman.linkedin !== "" && (
+              <IconButton
+                variant='ghost'
+                colorScheme='blue'
+                icon={<BsLinkedin />}
+              />
+            )}
+            {woman.description !== "" && (
+              <Text fontSize={["md", "lg"]}>
+                {woman.description}
+              </Text>
+            )}
+            {woman.description2 && woman.description2 !== "" && (
+              <Text fontSize={["md", "lg"]}>
+                {woman.description2}
+              </Text>
+            )}
+          </CardBody>
         </Card>
       ))}
     </Stack>

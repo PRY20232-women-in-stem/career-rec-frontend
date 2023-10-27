@@ -57,6 +57,23 @@
         "imageUrl": "https://scontent.flim19-1.fna.fbcdn.net/v/t1.6435-9/162851181_779588326019152_286519339782861158_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=R5NueiVETVcAX8jHxS9&_nc_ht=scontent.flim19-1.fna&oh=00_AfA5gXUohBy8YCtTUM1wflpeIi7q8gYUQROnQXw8r7UCpQ&oe=65596B52",
         "description": ""
       }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Rosario Villalta",
+        "photo": "https://pregrado.upc.edu.pe/static/img/autoridades/rosario-del-pilar.jpg",
+        "linkedin": "https://www.linkedin.com/in/rosario-del-pilar-villalta-riega-a6018441/",
+        "description": "Decana de la Facultad de Ingeniería de la UPC.",
+        "description2": "Tiene un MBA en Dirección de Sistemas y Tecnologías de Información y, al mismo tiempo, muestra un destacado interés por motivar a las mujeres a embarcarse en carreras STEM."
+      },
+      {
+        "id": 2,
+        "name": "Kamilah Taylor",
+        "photo": "https://www.elblogdelaingenieria.com/wp-content/uploads/2021/03/image-17.png",
+        "linkedin": "https://www.linkedin.com/in/kamilahtaylor/",
+        "description": "Ingeniera de sistemas en la empresa LinkedIn, la mayor empresa de empleabilidad y networking del mundo, ha sido autora del libro “Mujeres en la tecnología: lleva tu carrera al siguiente nivel con consejos prácticos e historias inspiradoras”"
+      }
     ]
   },
   "electronic": {
@@ -107,7 +124,7 @@
       {
         "id": 2,
         "title": "Conceptos básicos de la electrónica",
-        "imageUrl": "https://ibb.co/WyZfnK4",
+        "imageUrl": "https://i.ibb.co/gTNJygL/INGENIERIA-ELEFCTRO.jpg",
         "description": ""
       },
       {
@@ -119,7 +136,7 @@
       {
         "id": 4,
         "title": "Ingeniería Electromecánica",
-        "imageUrl": "https://ibb.co/THTysw4",
+        "imageUrl": "https://i.ibb.co/JzdZ9cv/Infografi-a-Ing-Electromeca-nica-1024x1024.jpg",
         "description": ""
       },
       {
@@ -127,6 +144,23 @@
         "title": "¿Sabías qué? 💰",
         "imageUrl": "https://aprende.com/wp-content/uploads/2021/10/que-es-la-electronica.jpg",
         "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Vivian Salazar",
+        "photo": "https://uniandes.edu.co/sites/default/files/premio-mujeres-ciencia-n.jpg",
+        "linkedin": "",
+        "description": "El proyecto de la investigadora posdoctoral del Departamento de Ingeniería Eléctrica y Electrónica, ayudaría al desarrollo de nuevas terapias para enfermedades como el Parkinson."
+      },
+      {
+        "id": 2,
+        "name": "Liz Vivas",
+        "photo": "https://www.infobae.com/new-resizer/xz_vSWtKezDsULu16Pno4QEIPjM=/992x558/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/6KDD4I5MBRHOZLROOWVKDL5P6E.jpg",
+        "linkedin": "",
+        "description": "La primera mujer en lograr ser primer puesto en la UNI en en la Facultad de Ingeniería Electrónica, ahora triunfa en Estados Unidos.",
+        "description2": "Obtuvo una medalla de bronce en la III Olimpiada Matemática del Cono Sur."
       }
     ]
   },
@@ -173,7 +207,7 @@
       {
         "id": 2,
         "title": "Ramas de la Ingenieria Mecatronica",
-        "imageUrl": "https://ibb.co/ssGGtr7",
+        "imageUrl": "https://i.ibb.co/7r55bFh/UPVM-IMG-Info-Mecatronica.jpg",
         "description": ""
       },
       {
@@ -184,7 +218,7 @@
       {
         "id": 4,
         "title": "¿Sabías que?",
-        "imageUrl": "https://ibb.co/CQZGzgf",
+        "imageUrl": "https://i.ibb.co/WfwJ6ZL/UPVM-IMG-Info-Mecatronica-1.jpg",
         "description": ""
       },
       {
@@ -192,6 +226,22 @@
         "title": "",
         "imageUrl": "https://blogs.unitec.mx/hubfs/287524/Imported_Blog_Media/Campo%20laboral-Ing_%20Mecatr%C3%B3nica-UNITEC-4.png",
         "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Karen Cuba",
+        "photo": "https://www.guiasemanal.pe/wp-content/uploads/2023/04/Karen-Cuba-Vargas.jpg",
+        "linkedin": "https://www.linkedin.com/in/karencubavargas/",
+        "description": "Investigadora de la carrera de Ingeniería Mecatrónica, fue reconocida por Indecopi como la mujer con mayor número de solicitudes de patentes acumuladas al 2022, gracias a los 51 proyectos donde figura como inventora."
+      },
+      {
+        "id": 2,
+        "name": "Dalia Carolina",
+        "photo": "https://laverdadnoticias.com/__export/1666999101576/sites/laverdad/img/2022/10/28/dalia_ramos-alpine-fxrmula_1_crop1666999078383.jpg_1421840632.jpg",
+        "linkedin": "https://www.linkedin.com/in/daliacarolinaramos/",
+        "description": "Actualemente trabaja como lider del equipo de construcción y pruebas de vehículos de Formula 1 para el equipo de Alpine, así mismo ha colaborado con grandes marcas como Rolls Royce."
       }
     ]
   },
@@ -231,8 +281,8 @@
     "photos": [
       {
         "id": 1,
-        "title": "¿Cuánto gana un ingeniero en Telecomunicaciones en Perú? ",
-        "imageUrl": "https://ibb.co/3s6tJ2G",
+        "title": "¿Cuánto gana un ingeniero en Telecomunicaciones en Perú?",
+        "imageUrl": "https://i.ibb.co/g7qsnNH/descarga-2.jpg",
         "description": "Según información del portal web Ponte en Carrera del Ministerio de Educación del Perú, donde se detalla que su ingreso promedio mensual es de S/4,046."
       },
       {
@@ -250,7 +300,7 @@
       {
         "id": 4,
         "title": " La Ciencia detás de las Telecomunicaciones",
-        "imageUrl": "https://ibb.co/1bz7q6h",
+        "imageUrl": "https://i.ibb.co/pnhbzyG/telecomunicaciones-largo1-2048x965.png",
         "description": ""
       },
       {
@@ -258,6 +308,22 @@
         "title": "1965, primeras mujeres ingenieras de telecomunicación",
         "imageUrl": "https://www.etsit.upm.es/fileadmin/documentos/biblioteca/biblioteca/imagenes/dia_del_libro/2020/Hitos/Hitos_imagenes/Hito12_Mujeres_ingenieras_413x200.jpg",
         "description": "La primera mujer que se matricula en la Escuela de Ingeniería de Telecomunicación de Madrid es Adelina Álvarez Bartolomé.  La primera promoción con tres pioneras eran Adelina Álvarez Bartolomé, María de los Remedios Uriel Aguirre y María Teresa Vidal Martín. Se titularon junto a 131 varones.  "
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Paula Hartley",
+        "photo": "https://www.cnybj.com/media/2949/paula-hartley.jpg",
+        "linkedin": "https://www.linkedin.com/in/paula-smith-hartley-06541734/",
+        "description": "Gerente General de negocios de Sistemas de Lockheed Martin, empresa de tecnología aeronautica. Se encarga del diseño y construcción de soluciones para comunicaciones militares, seguridad, cabinas de piloto de avión, vigilancia y armas."
+      },
+      {
+        "id": 2,
+        "name": "Maria Teresa Arredondo",
+        "photo": "https://www.lst.tfo.upm.es/wp-content/uploads/2021/03/mta.jpg",
+        "linkedin": "https://www.linkedin.com/in/maria-teresa-arredondo-waldmeyer-36a075b7/",
+        "description": "Se convirtió en la primera catedrática de telecomunicaciones en la Escuela Técnica Superior de Ingenieros de Telecomunicación, marcando un hito en la Universidad Politécnica de Madrid."
       }
     ]
   },
@@ -316,8 +382,24 @@
       {
         "id": 4,
         "title": "Aplicación de las ciencias de la Computación",
-        "imageUrl": "https://media.licdn.com/dms/image/D4E22AQEYPmFShwIDdg/feedshare-shrink_2048_1536/0/1692195051517?e=1700697600&v=beta&t=Ct3t7lUzIbAtvPt3FDLfDlq4oBdHcUP_rsV2RLKUYH0",
+        "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t39.30808-6/307532392_471724324999386_3062274835235518187_n.png?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=sArB7TBsRzoAX8Gz55v&_nc_ht=scontent.flim2-1.fna&cb_e2o_trans=q&oh=00_AfCQy9CE8ZfwQFjyaNVWapFYz42axw-dNnLQhtOXdsYyyg&oe=65413DDE",
         "description": "Uno de los campos de apliación con mucho interés es el desarrollo de videojuegos, la universidad UPC ha desarrollado grupos de estudios especializados en desarrollar estas habilidades."
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Justyna Zander",
+        "photo": "https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2018/06/no-30-justyna-zander-senior-automotive-product-manager-nvidia.jpg?tf=640x",
+        "linkedin": "https://www.linkedin.com/in/justynazander/",
+        "description": "Experta en el aprendizaje profundo, la inteligencia artificial y el aprendizaje automático. Ha sido jefa de productos de conducción autónoma de NVIDIA, una de las principales empresas fabricantes de tecnologías para la automoción."
+      },
+      {
+        "id": 2,
+        "name": "Yael Garten",
+        "photo": "https://media.bizj.us/view/img/11592008/012720yaelgartenselect2*320xx1842-2758-158-0.jpg",
+        "linkedin": "https://www.linkedin.com/in/yaelgarten/",
+        "description": "Ha sido directora de ciencia y análisis de datos de Siri en Apple. Estuvo a cargo de la toma de decisiones de la asistente de voz sobre cómo se actualizaría Siri o qué nuevas características obtendrá el programa."
       }
     ]
   }

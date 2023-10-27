@@ -42,20 +42,45 @@
       {
         "id": 2,
         "title": "",
-        "imageUrl": "https://ibb.co/ZMBm7dh",
+        "imageUrl": "https://i.ibb.co/gRSVhyD/cuanto-gana-mate.png",
         "description": ""
       },
       {
         "id": 3,
         "title": "¿Esta es la carrera para ti?",
-        "imageUrl": "https://ibb.co/vvs6KKM",
+        "imageUrl": "https://i.ibb.co/k63sWWP/porque-mate.png",
         "description": ""
       },
       {
         "id": 4,
         "title": "Relevancia de la labor de un matemático en la sociedad",
-        "imageUrl": "https://ibb.co/WFsj3g2",
+        "imageUrl": "https://i.ibb.co/2P5H6gk/relevancia-mate.png",
         "description": " "
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Lorelei Penn",
+        "photo": "https://i1.rgstatic.net/ii/profile.image/1116569555996674-1643222335565_Q512/Lorelei-Penn-2.jpg",
+        "linkedin": "https://www.linkedin.com/in/lorelei-penn/",
+        "description": "Científica matemática con habilidades en matemáticas, matemáticas aplicadas y programación (actualmente entrenando más a fondo habilidades para cómputo científico).",
+        "description2": "Estudio Ciencias, Físico Matemáticas"
+      },
+      {
+        "id": 2,
+        "name": "Maryam Mirzajani",
+        "photo": "https://assets.isu.pub/document-structure/200519161710-e94bd5b7d892fcfd76e7783d60d9e1c7/v1/e34965922729cbeeba579440cb346191.jpg",
+        "linkedin": "",
+        "description": " En 2014 fue galardonada con la Medalla Fields, siendo la primera mujer en recibir este premio equivalente al Nobel de las matemáticas.",
+        "description2": "Matemática iraní y profesora de matemáticas en la Universidad de Stanford"
+      },
+      {
+        "id": 3,
+        "name": "Mônica de O. Lima Dorsa",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyPpmpYoWNIaVeeq88q-RZPPMwadfD7iqkuhLO1B0lJao6NEiIKo8Ed2Aw6n8PoedrmTs&usqp=CAU",
+        "linkedin": "https://www.linkedin.com/in/m%C3%B4nica-de-o-lima-dorsa-b47b7a50/",
+        "description": "25 años de experiencia en el aula. Con un trabajo diferente en el aula enseñando Matemáticas a través del “por qué“ detrás de ellas y destacando cómo pueden impactar la vida de los estudiantes."
       }
     ]
   },
@@ -101,32 +126,48 @@
       {
         "id": 1,
         "title": "",
-        "imageUrl": "https://ibb.co/1ZT73D5",
+        "imageUrl": "https://i.ibb.co/6YFr23x/requiere-mate-eco.png",
         "description": ""
       },
       {
         "id": 2,
         "title": "Ramas de la Economia",
-        "imageUrl": "https://ibb.co/mvK2VGT",
+        "imageUrl": "https://i.ibb.co/cb9ZS13/areas-eco.png",
         "description": ""
       },
       {
         "id": 3,
         "title": "",
-        "imageUrl": "https://ibb.co/D4mjBFq",
+        "imageUrl": "https://i.ibb.co/Wn7RrXT/eco-hoy.jpg",
         "description": ""
       },
       {
         "id": 4,
         "title": "¿Dónde trabaja un economista? Campo laboral",
-        "imageUrl": "https://ibb.co/6WwbtcF",
+        "imageUrl": "https://i.ibb.co/71CVpxK/trabaja-eco.png",
         "description": ""
       },
       {
         "id": 5,
         "title": "¿Cuánto gana un licenciado en Economía? 💰",
-        "imageUrl": "https://ibb.co/nBXXXzh",
+        "imageUrl": "https://i.ibb.co/G9ZZZcg/cuanto-gana.png",
         "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Gita Gopinath",
+        "photo": "https://scholar.harvard.edu/sites/scholar.harvard.edu/files/styles/os_files_large/public/gopinath/files/harvard_profile_2014.jpg?m=1453309113&itok=VkcFkcOU",
+        "linkedin": "",
+        "description": "Es la Primera Subdirectora Gerente del Fondo Monetario Internacional (FMI) y catedrática en la Universidad de Hardvard en la carrera de Economía"
+      },
+      {
+        "id": 2,
+        "name": "Veronica Valdez",
+        "photo": "https://ferreteria-y-bricolaje.cdecomunicacion.es/wp-content/uploads/2023/09/vero-2-1.jpg",
+        "linkedin": "https://www.linkedin.com/in/veronica-valdez-31a7b11a3/",
+        "description": "Actual Gerente General de Promart, es la primera mujer en llevar el cargo dentro del grupo Intercorp Retail"
       }
     ]
   },
@@ -188,6 +229,23 @@
         "imageUrl": "https://static.misionesonline.news/wp-content/uploads/2020/10/20-de-octubre-d%C3%ADa-mund-de-la-estad%C3%ADstica.jpg",
         "description": ""
       }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Cristina Pulido Martín",
+        "photo": "https://i.ibb.co/KxgYqJm/xcxxxxxxx.jpg",
+        "linkedin": "https://www.linkedin.com/in/cristina-pulido-mart%C3%ADn-174b3b77/",
+        "description": " Estudio un Máster Ciencias Actuariales y financieras y cuenta con 10 años de experiencia como actuaria y aplica modelos estadísticos a diario."
+      },
+      {
+        "id": 2,
+        "name": "Nan McKenzie Laird",
+        "photo": "https://mujeresconciencia.com/app/uploads/2021/07/Laird.jpeg",
+        "linkedin": "",
+        "description": "Matemática y estadística estadounidense",
+        "description2": "Laird ha publicado tres libros de gran relevancia y más de 400 artículos con en torno a 180 000 citas. Su nombre será siempre asociado al análisis de datos longitudinales."
+      }
     ]
   },
   "accounting": {
@@ -239,7 +297,7 @@
       {
         "id": 3,
         "title": "El uso de la tecnología en la Contabilidad",
-        "imageUrl": "https://rediseno-blogs-qa.s3.us-east-2.amazonaws.com/uploads/2017/11/upn_blog_neg_apps-utiles-est-contabilidad_02-nov.jpg",
+        "imageUrl": "https://blogs.upn.edu.pe/negocios/2017/11/07/apps-utiles-para-estudiantes-de-contabilidad/upn_blog_neg_apps-utiles-est-contabilidad_02-nov/",
         "description": ""
       },
       {
@@ -247,6 +305,32 @@
         "title": "Descibre las especialidades mejores pagadas de Contabilidad",
         "imageUrl": "https://i.ibb.co/F3Rh6Lz/Contabilidad-Pngggg.png",
         "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Lori A. Roth",
+        "photo": "https://pragermetis.com/wp-content/uploads/2018/08/Roth_Lori_Headshot.jpg",
+        "linkedin": "https://www.linkedin.com/in/lori-a-roth-923a67/",
+        "description": "Fue felicitada en “Mujeres destacadas en contabilidad y consultoría de Crain 2020“",
+        "description2": "Lori ha estado en la industria de la contabilidad desde 1984, especializándose en servicios de auditoría y aseguramiento.supervisa todas las operaciones diarias de toda la empresa y brinda orientación y supervisión a cada uno de nuestros socios gerentes de oficina y líderes de líneas de servicio."
+      },
+      {
+        "id": 2,
+        "name": "Dawn Bergen",
+        "photo": "https://s3-prod.crainsnewyork.com/Notables_accounting%20and%20consulting_Bergen%20Dawn.jpg",
+        "linkedin": "https://www.linkedin.com/in/dawn-bergen-1b528015/",
+        "description": "Fue felicitada en “Mujeres destacadas en contabilidad y consultoría de Crain 2020“",
+        "description2": "Contadora pública certificada con más de 20 años de experiencia en aseguramiento y contabilidad.Ella ha renovado e implementado con éxito políticas líderes en la industria y nuevos procedimientos que rigen los departamentos de auditoría en las 17 oficinas globales"
+      },
+      {
+        "id": 3,
+        "name": "Ladidas Lumpkins",
+        "photo": "https://s3-prod.crainsnewyork.com/styles/width_375/s3/Lumpkins%20Ladidas_HS.jpg",
+        "linkedin": "https://www.linkedin.com/in/ladidas-lumpkins-cpa-jd-ll-m-tax-7b25b261/",
+        "description": "Fue felicitada en “Mujeres destacadas en contabilidad y consultoría de Crain 2020“",
+        "description2": "Vicepresidenta del Consejo de Planificación Patrimonial de la Ciudad de Nueva York. Ella es especialista en planificación fiscal estratégica, cumplimiento, consultoría y tributación de personas y fideicomisos. Asesora a familias de alto patrimonio neto y sus negocios"
       }
     ]
   },
@@ -307,6 +391,22 @@
         "title": "",
         "imageUrl": "https://i.pinimg.com/1200x/50/78/44/50784490f8d2da501d0e51970a2a5e13.jpg",
         "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Kristalina Georgieva",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Kristalina_Georgieva_Headshot.jpg",
+        "linkedin": "https://www.linkedin.com/in/kristalina-georgieva/",
+        "description": "Es la actual directora del Fondo Monetario Internacional (FMI), anteriormente fue directora general del Banco Mundial."
+      },
+      {
+        "id": 2,
+        "name": "Maria Eugenia Gonzalez",
+        "photo": "https://i.ibb.co/SmXrrzD/yyyyyyyy.jpg",
+        "linkedin": "https://www.linkedin.com/in/mega-79970b9/",
+        "description": "Trabajó como líder del banco CityBank en Perú, así mismo fue cabeza de la Banca Corporativa."
       }
     ]
   }

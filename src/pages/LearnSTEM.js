@@ -1,5 +1,5 @@
 import { Flex, Heading, Stack, Text, SimpleGrid, Box } from "@chakra-ui/layout";
-import { Button, Card, CardBody, CardFooter, CardHeader, Image, useBreakpointValue } from "@chakra-ui/react";
+import { Card, CardBody, CardHeader, Image, useBreakpointValue } from "@chakra-ui/react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
@@ -16,19 +16,19 @@ function LearnSTEM() {
     {
       title: 'Tecnología (Technology)',
       text:
-        'La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.',
+        'La tecnología se enfoca en la aplicación de conocimientos técnicos para desarrollar soluciones innovadoras que mejoran la vida cotidiana. Implica la creación de sistemas, dispositivos y software que impulsan el progreso en áreas como la comunicación y la automatización. Los campos tecnológicos abarcan la ingeniería de sistemas, la electrónica, la mecatrónica, las telecomunicaciones y la ciencia de la computación, entre otros.',
       image: 'https://img.freepik.com/free-vector/illustration-technology-vector_53876-20556.jpg?w=1380&t=st=1696922240~exp=1696922840~hmac=b207502a5a1200d69cf9838a72610233d2e07acb4bb9fba6581a3d1682f8edc9',
     },
     {
       title: 'Ingeniería (Engineering)',
       text:
-        'La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.',
+        'La ingeniería se dedica a la aplicación creativa de principios científicos y matemáticos para diseñar, construir y mantener sistemas, productos y soluciones tecnológicas. Implica la resolución de desafíos complejos, la innovación y la colaboración multidisciplinaria. Las disciplinas de ingeniería abarcan campos como la ingeniería civil, la ingeniería eléctrica, la ingeniería mecánica, la ingeniería química y muchas otras.',
       image: 'https://www.aiche.org/sites/default/files/styles/chenected_lead_image/public/images/Chenected/lead/shutterstock411197581.jpg?itok=p0wQIykw',
     },
     {
       title: 'Matemáticas (Mathematics)',
       text:
-        'La ciencia se dedica al estudio sistemático y metódico del mundo natural. Comprende la observación, la experimentación, la formulación de hipótesis y la obtención de conclusiones basadas en evidencia. Las disciplinas científicas abarcan campos como la biología, la química, la física, la astronomía y muchas otras.',
+        'Las matemáticas se dedican al estudio sistemático y riguroso de las estructuras y patrones abstractos. Comprenden la resolución de problemas, la formulación de teoremas, y la obtención de soluciones basadas en razonamiento lógico. Las disciplinas matemáticas abarcan campos como el álgebra, la geometría, el cálculo, la estadística y muchas otras.',
       image: 'https://img.jagranjosh.com/imported/images/E/Articles/maths2.jpg',
     },
   ];
@@ -78,9 +78,6 @@ function LearnSTEM() {
                     <CardBody>
                       <Text>{card.text}</Text>
                     </CardBody>
-                    <CardFooter>
-                      <Button>Ver más</Button>
-                    </CardFooter>
                   </Card>
                 ))}
               </Carousel>
@@ -96,9 +93,6 @@ function LearnSTEM() {
                   <CardBody>
                     <Text>{card.text}</Text>
                   </CardBody>
-                  <CardFooter>
-                    <Button>Ver más</Button>
-                  </CardFooter>
                 </Card>
               ))}
             </SimpleGrid>

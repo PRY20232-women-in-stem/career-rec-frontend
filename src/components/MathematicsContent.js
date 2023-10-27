@@ -1,13 +1,13 @@
 import {
-  Stack, Heading, Text, Image, Card, CardBody, CardHeader, useDisclosure, Tabs, Tab, TabList, TabPanel, TabPanels, Box
+  Stack, Heading, Text, Image, Card, CardBody, CardHeader, Tabs, Tab, TabList, TabPanel, TabPanels, Box, IconButton
 } from '@chakra-ui/react';
+import { BsLinkedin } from 'react-icons/bs';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import YouTubeVideo from './YoutubeVideo';
 import mathematicsData from '../resources/MathematicsContent';
 
 function MathematicsContent() {
-  const { onOpen, onClose, isOpen } = useDisclosure();
 
   return (
     <>
@@ -16,7 +16,9 @@ function MathematicsContent() {
         Matemáticas
       </Heading>
       <Text fontSize={["md", "lg"]} color="purple.700" mb={4}>
-        Introduccipón de matematicas
+        Las Matemáticas ocupan un lugar fundamental en el campo STEM. Aquí, te adentrarás en disciplinas que se basan en el razonamiento lógico
+        y el rigor matemático. Explorarás teorías abstractas y aplicaciones prácticas. Algunas de las carreras que encontrarás en esta área son
+        Matemática Pura, Economía, Estadística, Contabilidad y Finanzas.
       </Text>
 
       <Tabs variant='soft-rounded' colorScheme='green' size='lg' isFitted>
@@ -65,9 +67,30 @@ function MathematicsContent() {
 
           {/* CONTENIDO DE MUJERES SELECCIONADO */}
           <TabPanel>
-            <Heading>
-              Contenido de mujeres seleccionadas de Matemáticas
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={3}>
+              Matematica pura
             </Heading>
+            {renderWomenProfiles(mathematicsData.matemathics)}
+
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+              Economía
+            </Heading>
+            {renderWomenProfiles(mathematicsData.economy)}
+
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+              Estadística
+            </Heading>
+            {renderWomenProfiles(mathematicsData.stadistic)}
+
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+              Contabilidad
+            </Heading>
+            {renderWomenProfiles(mathematicsData.accounting)}
+
+            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+              Finanzas
+            </Heading>
+            {renderWomenProfiles(mathematicsData.finance)}
           </TabPanel>
         </TabPanels>
       </Tabs>
@@ -150,6 +173,48 @@ function renderCareerPhotos(careerData) {
               <Image objectFit="cover" pb="40px" src={photo.imageUrl} />
             </Zoom>
           )}
+        </Card>
+      ))}
+    </Stack>
+  );
+}
+
+function renderWomenProfiles(careerData) {
+  return (
+    <Stack spacing={4}>
+      {careerData.women.map((woman, index) => (
+        <Card key={index} maxW='md'>
+          {woman.name !== "" && (
+            <CardHeader>
+              <Heading fontSize="xl">
+                {woman.name}
+              </Heading>
+            </CardHeader>
+          )}
+          {woman.photo !== "" && (
+            <Box mx="auto">
+              <Image maxW="200px" objectFit="cover" src={woman.photo} />
+            </Box>
+          )}
+          <CardBody>
+            {woman.linkedin && woman.linkedin !== "" && (
+              <IconButton
+                variant='ghost'
+                colorScheme='blue'
+                icon={<BsLinkedin />}
+              />
+            )}
+            {woman.description !== "" && (
+              <Text fontSize={["md", "lg"]}>
+                {woman.description}
+              </Text>
+            )}
+            {woman.description2 && woman.description2 !== "" && (
+              <Text fontSize={["md", "lg"]}>
+                {woman.description2}
+              </Text>
+            )}
+          </CardBody>
         </Card>
       ))}
     </Stack>

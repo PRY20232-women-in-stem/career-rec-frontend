@@ -111,6 +111,26 @@
         "imageUrl": "https://i.ibb.co/QYk6RQm/12.png",
         "description": ""
       }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "María Camila Lancheros Vega",
+        "photo": "https://i.ibb.co/gzrbc2Z/biomedica.jpg",
+        "description": "Es una ingeniera biomédica colombiana que ha sido reconocida por su trabajo en el campo de la ingeniería biomédica. En 2023, fue entrevistada por la Universidad Nacional de Colombia y habló sobre su vida y sus investigaciones en el extranjero."
+      },
+      {
+        "id": 2,
+        "name": "Jennifer Elisseeff",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCc-oa4pCj6s9-fz_7xj74ieSUyzwgOog_9isjeBkNptme_PCoPDck5emFbZyIdKp9p2Y&usqp=CAU",
+        "description": "Es profesora adjunta del departamento de Ingeniería Biomédica de la Universidad John Hopkins, y sus colaboradores han desarrollado un método inyectable para hacer crecer cartílago en ratones. El equipo inserta una mezcla de Polímeros, células y estimuladores de crecimiento por debajo de la piel del lomo de ratones."
+      },
+      {
+        "id": 3,
+        "name": "Joaquina Rubio",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnH7KosAZpW2soCqI_B9xgkh6lIH1ER3jqfjudFxtbbJbVRQGG7C8QYmxZJFAdqtuSqc8&usqp=CAU",
+        "description": "La primera mujer titulada de Ingeniería Biomédica PUCP - UPCH. La actual responsable de proyectos de tejidos y cultivo celular en la empresa donde labora, nos narra su inspiradora historia y nos deja una enseñanza de esfuerzo y dedicación en el mundo STEM."
+      }
     ]
   },
   "mining": {
@@ -177,6 +197,26 @@
         "imageUrl": "https://i.ibb.co/sQJGFqZ/16.png",
         "description": ""
       }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Rosa María Rojas",
+        "photo": "https://d2bqn2kyidxvh4.cloudfront.net/wp-content/uploads/2020/11/201804698-rojas-rosa-728_46211211512_o.jpg",
+        "description": "Egresada de la especialidad de Ingeniería de Minas en la PUCP. Su aporte para que la industria minera sea más inclusiva y sostenible, Rosa María Rojas fue elegida por la organización “Women in Mining UK” como una de las “100 mujeres inspiradoras de la minería global”, convirtiéndose en la primera ingeniera peruana en recibir este reconocimiento."
+      },
+      {
+        "id": 2,
+        "name": "Delia Tasaico del Pino",
+        "photo": "https://imgmedia.larepublica.pe/640x360/larepublica/migration/images/6KSDSPQTIVAOLNG3CIMPHEJ7ZE.webp",
+        "description": "Es la primera mujer que se graduó como ingeniera de minas en el país. Le sorprendió verse entre los finalistas para el concurso, que se le reconozca como pionera en un ámbito históricamente masculino, y también que su nombre le haya ganado al de Santa Rosa de Lima."
+      },
+      {
+        "id": 3,
+        "name": "Carmen Schwarze",
+        "photo": "https://nuevamineria01.akamaized.net/revista/wp-content/uploads/2015/04/perfil_carmen_schwarze_001-1024x640.jpg",
+        "description": "Se convirtió en la primera mujer egresada y titulada de Ingeniería en Minas de Chile y Latinoamérica. Fue la mejor de su generación y obtuvo el premio “Juan Brüggen” que entrega anualmente el Instituto de Ingenieros de Minasal al estudiante que se destaque en cada promoción."
+      }
     ]
   },
   "enviromental": {
@@ -242,6 +282,26 @@
         "title": "¿Sabías que...?",
         "imageUrl": "https://i.ibb.co/z2xqhD1/22.png",
         "description": "Datos curiosos sobre el medio ambiente."
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Maria Paula Barral",
+        "photo": "https://www.fontagro.org/new/uploads/investigadores/Captura_de_Pantalla_2021-09-18_a_la(s)_17_28_57.png",
+        "description": "Ingeniera Ambiental, graduada de la Universidad FASTA de Mar del Plata en el año 2009. Doctora en Ciencias Agrarias egresada de la Facultad de Ciencias Agrarias (Universidad Nacional de Mar del Plata) en el año 2015. Realizó su tesis de grado en el grupo de Recursos Naturales y Gestión Ambiental del INTA Balcarce y su tesis de doctorado, con una beca de CONICET, en el mismo grupo. En 2015 ganó una beca de formación de INTA donde continuó los trabajos que venía realizando desde su doctorado. Desde principios de 2017 se desempeña como profesional de INTA. "
+      },
+      {
+        "id": 2,
+        "name": "Ellen Henrietta Swallow Richards",
+        "photo": "https://mujeresconciencia.com/app/uploads/2014/09/esr2.jpg",
+        "description": "Fue una pionera de la ingeniería ambiental y acuñó el concepto de higiene ambiental, base de la ecología moderna, desarrollando métodos de análisis que se siguen utilizando en la actualidad. En 1873 se convirtió en la primera mujer en ser admitida por el MIT (Massachusetts Institute of Technology) para cursar los estudios de química. Aunque fue la primera mujer en ser admitida por una universidad norteamericana para estudiar ciencias, el MIT no le permitió llegar a doctorarse porque los profesores no querían que el primer doctorado de química fuese para una mujer. Durante su trayectoria investigó sobre la contaminación del agua y diseñó sistemas de seguros para el aprovisionamiento."
+      },
+      {
+        "id": 3,
+        "name": "María Elena Huertas",
+        "photo": "https://mgi-iki.com/wp-content/uploads/2021/03/Maria-Elena-Huertas-Bolanos-768x768.jpeg",
+        "description": "Ingenieria Ambiental dedicada al desarrollo de proyetos enfocados en temas de calidad de aire, emsiones y energía. Su trabajo se ha centrado en la evaluación y desarrollo de metodologías y aplicaciones."
       }
     ]
   },
@@ -339,6 +399,26 @@
         "imageUrl": "https://i.ibb.co/S0RHPY0/32.png",
         "description": ""
       }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Odeyda Alcántara Reyes",
+        "photo": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/200776960_4049408458473904_4502896270915011309_n.jpg?stp=cp0_dst-jpg_e15_q65_s403x403&_nc_cat=105&ccb=1-7&_nc_sid=512d91&_nc_ohc=cYTGCVxr5SQAX_VYBT2&_nc_ht=scontent.flim2-1.fna&oh=00_AfCdiTC3EMhnyf4k1etRslrEWI2vOhHNpeFjE__PrW0ujw&oe=6552D36E",
+        "description": "Ingeniera Industrial de la Universidad Autónoma de Santo Domingo, desarrolla su trabajo en el departamento de Medio Ambiente en el área de manejo de residuos y reciclaje. Su labor se basa en asegurar la buena gestión y manejo de los residuos peligrosos y no peligrosos, generados en los diversos proyectos para evitar la contaminación y posible impacto al medio ambiente. "
+      },
+      {
+        "id": 2,
+        "name": "Carolina García Calle",
+        "photo": "https://fi.udec.cl/wp-content/uploads/2019/10/Carolina-2-e1571244210898.jpg",
+        "description": "Ingeniera Industrial. Magister en Administración económica y financiera. En el 2015 ocupó el cargo de Jefe Departamento de producción. Del 2017 al 2023, ocupó el cargo Coordinadora Administrativa del Departamento de poyectos. Actualmente fue ascendida a Directora de Proyectos."
+      },
+      {
+        "id": 3,
+        "name": "Meredith Westafer",
+        "photo": "https://assets.rbl.ms/25588071/origin.jpg",
+        "description": "Ingeniera industrial en Tesla, esta profesional coordina el diseño y la maquetación de la Gigafábrica de la compañía, ubicada en Nevada. Su papel ha sido determinante en el desarrollo innovador de un sistema de automatización en la entrega de material. Esta infraestructura emplea una flota de robots móviles autónomos para llevar mercancías desde y hacia la línea de producción."
+      }
     ]
   },
   "civil": {
@@ -404,6 +484,26 @@
         "title": "Datos curiosos: Acerca de la Ingeniería Civil",
         "imageUrl": "https://i.ibb.co/cDY99ZW/37.png",
         "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Dra. Emily Warren Roebling",
+        "photo": "https://mujeresconciencia.com/app/uploads/2016/09/eroebling.jpg",
+        "description": "Fue una ingeniera civil estadounidense conocida por su contribución al puente de Brooklyn en Nueva York. Desempeñó un papel fundamental en la supervisión y la finalización de la construcción del puente después de que su esposo, el ingeniero Washington Roebling, quedara incapacitado."
+      },
+      {
+        "id": 2,
+        "name": "Amy Patrick",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcHU2rkfGuz6GAX43cooZpkxqn6T0BOBgwwSooYp83KqrPm0KP8Duky7F2lcpjgjoOGMY&usqp=CAU",
+        "description": "Es una ingeniera civil y experta en la construcción de muros demostró que, de manera estructural, es inviable la construcción del muro de Trump, con el que se pretende separar a Estados Unidos de México. Amy se ha hecho popular a partir de una actualización en su muro de Facebook. Ingeniera civil de profesión, y con maestría en ingeniería estructural, esta avalada experta se opone a la promesa de Trump dando argumentos profesionales sobre por qué es una mala idea."
+      },
+      {
+        "id": 3,
+        "name": "María del Carmen de Andrés Conde",
+        "photo": "https://pbs.twimg.com/profile_images/1245320579177156610/fjdt_XX__400x400.jpg",
+        "description": "Carmen de Andrés Conde se matriculó en la Escuela Técnica Superior de Ingenieros de Caminos, Canales y Puertos de la Universidad Politécnica de Madrid en el curso 1968/69, pese a no ser la única mujer que en ese curso entró a formar parte del alumnado de la escuela, sí se convirtió, cuatro años después, en la primera mujer titulada Ingeniero Civil, en solo cuatro años y quedando la decimoquinta de su promoción. En el año 2009 el Colegio de Ingenieros de Caminos, Canales y Puertos la distinguió otorgándole la Medalla de Honor. En 2021 fue la primera mujer en recibir el Premio Nacional de Ingeniería Civil."
       }
     ]
   }
