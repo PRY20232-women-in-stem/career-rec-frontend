@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
-  Box, Collapse, Divider, Flex, HStack, IconButton, Image, Link, Stack, Text,
+  Box, Collapse, Divider, Flex, HStack, Highlight, IconButton, Image, Link, Stack, Text,
   useDisclosure
 } from '@chakra-ui/react';
 import { Link as ReactRouterLink, useLocation, useNavigate } from 'react-router-dom';
@@ -10,7 +10,7 @@ import { getStudentById } from "../services/StudentService";
 
 const NavLink = ({ to, children, onClose }) => (
   <Box fontWeight='semibold' px={2} py={1} rounded={'md'} w={{ base: "100%", md: "auto" }} textAlign={{ base: "left", md: "center" }}
-    _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white'>
+    _hover={{ textDecoration: 'none', bg: 'purple.400' }} color={'white'}>
     <ReactRouterLink to={to} onClick={onClose} >{children}</ReactRouterLink>
   </Box>
 );
@@ -21,7 +21,8 @@ function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showLogoutAlert, setShowLogoutAlert] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isVocTestCompleted, setIsVocTestCompleted] = useState(false)
+  const [isVocTestCompleted, setIsVocTestCompleted] = useState(false);
+  const [recCareer, setRecCareer] = useState("");
 
   // Al cargar el componente, verifica si hay un token en el local storage
   useEffect(() => {
@@ -29,7 +30,7 @@ function Navbar() {
     if (token) {
       setIsLoggedIn(true);
     }
-    if (!token && location.pathname === "/contentt") {  // DEVOLVER A SU ESTADO CORRECTO "/content"!!
+    if (!token && location.pathname === "/content") {
       navigate('/login');
     }
 
@@ -44,6 +45,8 @@ function Navbar() {
           const response = await getStudentById(userId);
           if (response.vocationalTestCompl === true) {
             setIsVocTestCompleted(true);
+            setRecCareer(response.recCareer);
+            localStorage.setItem('rec_career', response.recCareer);
             localStorage.setItem('vocational_test_compl', 'true');
           }
         }
@@ -95,15 +98,50 @@ function Navbar() {
             <NavLink to='/' onClose={onClose}>Aprendamos de STEM</NavLink>
             <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
 
-
             {isVocTestCompleted &&
               <NavLink to="/content?area=Ciencia" onClose={onClose}>
-                Ciencias
+                {recCareer === 'Ciencia' ? (
+                  <Highlight query={['Ciencias']} styles={{ px: '3', py: '1', rounded: 'full', bg: 'purple.500', color: 'white' }}>
+                    Ciencias
+                  </Highlight>
+                ) : (
+                  'Ciencias'
+                )}
               </NavLink>
             }
-            {isVocTestCompleted && <NavLink to="/content?area=Tecnologia" onClose={onClose}>Tecnología</NavLink>}
-            {isVocTestCompleted && <NavLink to="/content?area=Ingenieria" onClose={onClose}>Ingeniería</NavLink>}
-            {isVocTestCompleted && <NavLink to="/content?area=Matematica" onClose={onClose}>Matemáticas</NavLink>}
+            {isVocTestCompleted &&
+              <NavLink to="/content?area=Tecnologia" onClose={onClose}>
+                {recCareer === 'Tecnologia' ? (
+                  <Highlight query={['Tecnología']} styles={{ px: '3', py: '1', rounded: 'full', bg: 'purple.500', color: 'white' }}>
+                    Tecnología
+                  </Highlight>
+                ) : (
+                  'Tecnología'
+                )}
+              </NavLink>
+            }
+            {isVocTestCompleted &&
+              <NavLink to="/content?area=Ingenieria" onClose={onClose}>
+                {recCareer === 'Ingenieria' ? (
+                  <Highlight query={['Ingeniería']} styles={{ px: '3', py: '1', rounded: 'full', bg: 'purple.500', color: 'white' }}>
+                    Ingeniería
+                  </Highlight>
+                ) : (
+                  'Ingeniería'
+                )}
+              </NavLink>
+            }
+            {isVocTestCompleted &&
+              <NavLink to="/content?area=Matematica" onClose={onClose}>
+                {recCareer === 'Matematica' ? (
+                  <Highlight query={['Matemáticas']} styles={{ px: '3', py: '1', rounded: 'full', bg: 'purple.500', color: 'white' }}>
+                    Matemáticas
+                  </Highlight>
+                ) : (
+                  'Matemáticas'
+                )}
+              </NavLink>
+            }
             <Divider />
             {isLoggedIn ? (
               <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>

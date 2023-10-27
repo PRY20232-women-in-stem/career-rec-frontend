@@ -72,6 +72,7 @@ function VocationalTest() {
 
     const response = await createVocationalTestPrediction(userId, answersForBackend);
     setRecommendation(response);
+    localStorage.setItem('rec_career', response);
     await updateStudentVocationalTest(userId);
   };
 
