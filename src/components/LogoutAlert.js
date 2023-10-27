@@ -23,6 +23,7 @@ function LogoutAlert({ isOpen, onConfirm, onCancel }) {
     localStorage.removeItem('vocational_test_compl');
     localStorage.removeItem('pre_test_compl');
     localStorage.removeItem('post_test_compl');
+    localStorage.removeItem('rec_career');
     onConfirm(); // Cerrar el modal de cierre de sesión
     navigate('/login');
   };
