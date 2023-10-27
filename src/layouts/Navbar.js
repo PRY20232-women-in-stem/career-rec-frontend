@@ -95,10 +95,15 @@ function Navbar() {
             <NavLink to='/' onClose={onClose}>Aprendamos de STEM</NavLink>
             <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
 
-            {isVocTestCompleted && <NavLink to="/content?area=ciencias" onClose={onClose}>Ciencias</NavLink>}
-            {isVocTestCompleted && <NavLink to="/content?area=ingenieria" onClose={onClose}>Ingeniería</NavLink>}
-            {isVocTestCompleted && <NavLink to="/content?area=tecnologia" onClose={onClose}>Tecnología</NavLink>}
-            {isVocTestCompleted && <NavLink to="/content?area=matematicas" onClose={onClose}>Matemáticas</NavLink>}
+
+            {isVocTestCompleted &&
+              <NavLink to="/content?area=Ciencia" onClose={onClose}>
+                Ciencias
+              </NavLink>
+            }
+            {isVocTestCompleted && <NavLink to="/content?area=Tecnologia" onClose={onClose}>Tecnología</NavLink>}
+            {isVocTestCompleted && <NavLink to="/content?area=Ingenieria" onClose={onClose}>Ingeniería</NavLink>}
+            {isVocTestCompleted && <NavLink to="/content?area=Matematica" onClose={onClose}>Matemáticas</NavLink>}
             <Divider />
             {isLoggedIn ? (
               <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>

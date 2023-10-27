@@ -1,0 +1,413 @@
+{
+  "matemathics": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Las matemáticas sirven para resolver problemas que necesiten una respuesta verdadera o falsa y para ello, su objeto es estudiar las propiedades y las relaciones que se establecen entre los entes abstractos, es decir, los números, la geometría, símbolos."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Un profesional de matemáticas esta capacidado para elaborar modelos matemáticos aplicados a fenómenos sociales y naturales, obtener información y elaborar proyecciones por medio de análisis de datos estadísticos que sirven para la toma de decisiones a un caso en particular."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿QUE SE ESTUDIA EN LA CARRERA DE MATEMÁTICAS? ¡Todo lo que necesitas saber!",
+        "videoUrl": "https://www.youtube.com/watch?v=TSn3RRXSqTg",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "¿Cómo es estudiar matemáticas? | ¿es difícil estudiar la carrera de matemáticas?",
+        "videoUrl": "https://www.youtube.com/watch?v=gegfXm4MM0U",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "¿Qué hace un matemático? | ¿Qué es una demostración?",
+        "videoUrl": "https://www.youtube.com/watch?v=tPeaF2fvQZ0",
+        "description": ""
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "¿Dónde trabaja un profesional de Matemáticas?",
+        "imageUrl": "https://thumbs.dreamstime.com/b/smiling-teenage-girl-reading-book-couch-leisure-education-home-concept-glasses-sitting-home-43090287.jpg",
+        "description": " Puede desempeñarse en el área de finanzas,  ámbito científico manejando logaritmos, Elaborando modelos matemáticos que permitan responder de manera económica las exigencias de construcción, investigador, docente "
+      },
+      {
+        "id": 2,
+        "title": "",
+        "imageUrl": "https://i.ibb.co/gRSVhyD/cuanto-gana-mate.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "¿Esta es la carrera para ti?",
+        "imageUrl": "https://i.ibb.co/k63sWWP/porque-mate.png",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "Relevancia de la labor de un matemático en la sociedad",
+        "imageUrl": "https://i.ibb.co/2P5H6gk/relevancia-mate.png",
+        "description": " "
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Lorelei Penn",
+        "photo": "https://i1.rgstatic.net/ii/profile.image/1116569555996674-1643222335565_Q512/Lorelei-Penn-2.jpg",
+        "linkedin": "https://www.linkedin.com/in/lorelei-penn/",
+        "description": "Científica matemática con habilidades en matemáticas, matemáticas aplicadas y programación (actualmente entrenando más a fondo habilidades para cómputo científico).",
+        "description2": "Estudio Ciencias, Físico Matemáticas"
+      },
+      {
+        "id": 2,
+        "name": "Maryam Mirzajani",
+        "photo": "https://assets.isu.pub/document-structure/200519161710-e94bd5b7d892fcfd76e7783d60d9e1c7/v1/e34965922729cbeeba579440cb346191.jpg",
+        "linkedin": "",
+        "description": " En 2014 fue galardonada con la Medalla Fields, siendo la primera mujer en recibir este premio equivalente al Nobel de las matemáticas.",
+        "description2": "Matemática iraní y profesora de matemáticas en la Universidad de Stanford"
+      },
+      {
+        "id": 3,
+        "name": "Mônica de O. Lima Dorsa",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyPpmpYoWNIaVeeq88q-RZPPMwadfD7iqkuhLO1B0lJao6NEiIKo8Ed2Aw6n8PoedrmTs&usqp=CAU",
+        "linkedin": "https://www.linkedin.com/in/m%C3%B4nica-de-o-lima-dorsa-b47b7a50/",
+        "description": "25 años de experiencia en el aula. Con un trabajo diferente en el aula enseñando Matemáticas a través del “por qué“ detrás de ellas y destacando cómo pueden impactar la vida de los estudiantes."
+      }
+    ]
+  },
+  "economy": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Economía se relaciona directamente con la gestión de los recursos, para la producción de bienes y servicios, además de estudiar los movimientos dentro de los diferentes mercados. Es un carrera muy importante para empresas de todo tipo."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Su papel principal dentro de una empresa consiste en detectar problemas , así como diseñar y ejecutar planes para el crecimiento de la organización"
+      },
+      {
+        "id": 3,
+        "title": "Tareas diarias de un economista",
+        "content": "Estudiar los movimientos de los mercados presentar informes, estadísticas, recopilación de datos, Conocer la situación económica y financiera actual de la empresa u organización, Elaborar los planes de financiamientos que necesite la empresa, Ayudar a establecer los presupuestos de forma más eficiente"
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Qué es la economía?",
+        "videoUrl": "https://www.youtube.com/watch?v=JLGAyU3dy2E",
+        "description": "La economía es más que números, cálculos o estadísticas. Estudia los medios que las personas utilizan para satisfacer sus necesidades mediante los recursos disponibles."
+      },
+      {
+        "id": 2,
+        "title": "¿Por qué estudiar economía? ",
+        "videoUrl": "https://www.youtube.com/watch?v=9lo4mL-0TyY",
+        "description": "Si estás pensando estudiar economía, este video te puede ayudar a tomar una decisión."
+      },
+      {
+        "id": 3,
+        "title": "Mitos y Errores en la Carrera de Economía",
+        "videoUrl": "https://www.youtube.com/watch?v=C351qyQuXm0",
+        "description": "La economía es una ciencia que estudia las relaciones humanas involucradas en los procesos de producción de bienes y servicios. "
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "",
+        "imageUrl": "https://i.ibb.co/6YFr23x/requiere-mate-eco.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "Ramas de la Economia",
+        "imageUrl": "https://i.ibb.co/cb9ZS13/areas-eco.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "",
+        "imageUrl": "https://i.ibb.co/Wn7RrXT/eco-hoy.jpg",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "¿Dónde trabaja un economista? Campo laboral",
+        "imageUrl": "https://i.ibb.co/71CVpxK/trabaja-eco.png",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "¿Cuánto gana un licenciado en Economía? 💰",
+        "imageUrl": "https://i.ibb.co/G9ZZZcg/cuanto-gana.png",
+        "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Gita Gopinath",
+        "photo": "https://scholar.harvard.edu/sites/scholar.harvard.edu/files/styles/os_files_large/public/gopinath/files/harvard_profile_2014.jpg?m=1453309113&itok=VkcFkcOU",
+        "linkedin": "",
+        "description": "Es la Primera Subdirectora Gerente del Fondo Monetario Internacional (FMI) y catedrática en la Universidad de Hardvard en la carrera de Economía"
+      },
+      {
+        "id": 2,
+        "name": "Veronica Valdez",
+        "photo": "https://ferreteria-y-bricolaje.cdecomunicacion.es/wp-content/uploads/2023/09/vero-2-1.jpg",
+        "linkedin": "https://www.linkedin.com/in/veronica-valdez-31a7b11a3/",
+        "description": "Actual Gerente General de Promart, es la primera mujer en llevar el cargo dentro del grupo Intercorp Retail"
+      }
+    ]
+  },
+  "stadistic": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "La estadística es usada para apoyar la toma de decisiones dentro de los gobiernos, partidos políticos, compañías financieras, empresas de opinión pública, compañías de seguros, bancos, hospitales, organizaciones sociales e industrias."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Es una persona con una alta capacidad de análisis y uso de la lógica para la resolución de problemas complejos de alto impacto."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Por qué estudiar la carrera de Estadística?",
+        "videoUrl": "https://www.youtube.com/watch?v=Jl2KuPzcqSY",
+        "description": "Datos interesantes para iniciar una carrera de Estadística"
+      },
+      {
+        "id": 2,
+        "title": "¿Que hace un profesional de Estadística?",
+        "videoUrl": "https://www.youtube.com/watch?v=6JicKX-lOss",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "El futuro de la carrera de Estadística",
+        "videoUrl": "https://www.youtube.com/watch?v=nU9tXiw7Qvg",
+        "description": "En esta entrevista se plantea el futuro de la Estadística en el ambito laboral."
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "La importancia de la Estadística en las empresas",
+        "imageUrl": "https://tudashboard.com/wp-content/uploads/2019/03/Info-estadisticas-empresas.jpg",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "¿Como se puede usar la Estadística?",
+        "imageUrl": "https://edteam-media.s3.amazonaws.com/infographics/original/8bc38c94-f3af-4768-9d73-baf6d139c4f7.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "¿Cual es el campo laboral para la carrera de Estadística?",
+        "imageUrl": "https://i.ibb.co/8gKw6Gg/CAmpo-Laboral-Stadistica.png",
+        "description": "Algunos de los lugares donde poder ejercer la carrera de Estadística"
+      },
+      {
+        "id": 4,
+        "title": "Se celebra a nivel mundial el día de la Estadística",
+        "imageUrl": "https://static.misionesonline.news/wp-content/uploads/2020/10/20-de-octubre-d%C3%ADa-mund-de-la-estad%C3%ADstica.jpg",
+        "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Cristina Pulido Martín",
+        "photo": "https://i.ibb.co/KxgYqJm/xcxxxxxxx.jpg",
+        "linkedin": "https://www.linkedin.com/in/cristina-pulido-mart%C3%ADn-174b3b77/",
+        "description": " Estudio un Máster Ciencias Actuariales y financieras y cuenta con 10 años de experiencia como actuaria y aplica modelos estadísticos a diario."
+      },
+      {
+        "id": 2,
+        "name": "Nan McKenzie Laird",
+        "photo": "https://mujeresconciencia.com/app/uploads/2021/07/Laird.jpeg",
+        "linkedin": "",
+        "description": "Matemática y estadística estadounidense",
+        "description2": "Laird ha publicado tres libros de gran relevancia y más de 400 artículos con en torno a 180 000 citas. Su nombre será siempre asociado al análisis de datos longitudinales."
+      }
+    ]
+  },
+  "accounting": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Consiste en el estudio y manejo de las finanzas de una empresa, incluyendo la gestión de ingresos, gastos, impuestos y nóminas"
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Dominarás la normativa contable y tributaria y la aplicarás en la implementación de soluciones integrales en una empresa. Serás capaz de utilizar las herramientas tecnológicas, de planificación y de control disponibles."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Qué es la Contabilidad?",
+        "videoUrl": "https://www.youtube.com/watch?v=ugxCocs75zE",
+        "description": "Un breve video donde se explica con ejemplos que es la Contabilidad"
+      },
+      {
+        "id": 2,
+        "title": "Conoce cómo trabaja un contador",
+        "videoUrl": "https://www.youtube.com/watch?v=BUC22-cDDhs",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "¡Campo laboral de Contabilidad!",
+        "videoUrl": "https://www.youtube.com/watch?v=XmjF9pTXJRg",
+        "description": "El campo de la Contabilidad a nivel laboral"
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "¿Qué caracteristicas se necesita para ser una profesional de Contabilidad?",
+        "imageUrl": "https://www.ucq.edu.mx/uc/images/pillar/contabilidad/caracteristicas.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "5 razones para estudiar Contabilidad",
+        "imageUrl": "https://adnfiscal.com/wp-content/uploads/razones-para-estudiar-contabilidad-contapedia.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "El uso de la tecnología en la Contabilidad",
+        "imageUrl": "https://blogs.upn.edu.pe/negocios/2017/11/07/apps-utiles-para-estudiantes-de-contabilidad/upn_blog_neg_apps-utiles-est-contabilidad_02-nov/",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "Descibre las especialidades mejores pagadas de Contabilidad",
+        "imageUrl": "https://i.ibb.co/F3Rh6Lz/Contabilidad-Pngggg.png",
+        "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Lori A. Roth",
+        "photo": "https://pragermetis.com/wp-content/uploads/2018/08/Roth_Lori_Headshot.jpg",
+        "linkedin": "https://www.linkedin.com/in/lori-a-roth-923a67/",
+        "description": "Fue felicitada en “Mujeres destacadas en contabilidad y consultoría de Crain 2020“",
+        "description2": "Lori ha estado en la industria de la contabilidad desde 1984, especializándose en servicios de auditoría y aseguramiento.supervisa todas las operaciones diarias de toda la empresa y brinda orientación y supervisión a cada uno de nuestros socios gerentes de oficina y líderes de líneas de servicio."
+      },
+      {
+        "id": 2,
+        "name": "Dawn Bergen",
+        "photo": "https://s3-prod.crainsnewyork.com/Notables_accounting%20and%20consulting_Bergen%20Dawn.jpg",
+        "linkedin": "https://www.linkedin.com/in/dawn-bergen-1b528015/",
+        "description": "Fue felicitada en “Mujeres destacadas en contabilidad y consultoría de Crain 2020“",
+        "description2": "Contadora pública certificada con más de 20 años de experiencia en aseguramiento y contabilidad.Ella ha renovado e implementado con éxito políticas líderes en la industria y nuevos procedimientos que rigen los departamentos de auditoría en las 17 oficinas globales"
+      },
+      {
+        "id": 3,
+        "name": "Ladidas Lumpkins",
+        "photo": "https://s3-prod.crainsnewyork.com/styles/width_375/s3/Lumpkins%20Ladidas_HS.jpg",
+        "linkedin": "https://www.linkedin.com/in/ladidas-lumpkins-cpa-jd-ll-m-tax-7b25b261/",
+        "description": "Fue felicitada en “Mujeres destacadas en contabilidad y consultoría de Crain 2020“",
+        "description2": "Vicepresidenta del Consejo de Planificación Patrimonial de la Ciudad de Nueva York. Ella es especialista en planificación fiscal estratégica, cumplimiento, consultoría y tributación de personas y fideicomisos. Asesora a familias de alto patrimonio neto y sus negocios"
+      }
+    ]
+  },
+  "finance": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "La carrera de Finanzas se centra en el análisis, la planificación y la gestión de los recursos económicos de las organizaciones."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Los profesionales en este campo se dedican a tomar decisiones financieras inteligentes y estratégicas para maximizar el valor de los activos, minimizar los riesgos y lograr los objetivos financieros de una empresa."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Que son las Finanzas?",
+        "videoUrl": "https://www.youtube.com/watch?v=OXa7maKuY0Q",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "¿Por qué estudiar Finanzas?",
+        "videoUrl": "https://www.youtube.com/watch?v=_8--sGgcS5Q",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "Diferencia entre Finanzas y Economía",
+        "videoUrl": "https://www.youtube.com/watch?v=DQAAsOkWzMg",
+        "description": ""
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "¿Que son las finanzas en un entorno empresarial?",
+        "imageUrl": "https://guiadelempresario.com/wp-content/uploads/2022/01/%C2%BFQue%CC%81-son-las-finanzas-corporativas_.jpg",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "¿Sabes qué características tiene un egresado de la carrera de Finanzas?",
+        "imageUrl": "https://i.ibb.co/ZYcN5HH/profesional-FInanzas.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "Mejores universidades a nivel mundial para estudiar Finanzas",
+        "imageUrl": "https://www.eleconomista.com.mx/__export/1507908616269/sites/eleconomista/img/historico/universidades_finanzas_210317.png_554688468.png",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "",
+        "imageUrl": "https://i.pinimg.com/1200x/50/78/44/50784490f8d2da501d0e51970a2a5e13.jpg",
+        "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Kristalina Georgieva",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Kristalina_Georgieva_Headshot.jpg",
+        "linkedin": "https://www.linkedin.com/in/kristalina-georgieva/",
+        "description": "Es la actual directora del Fondo Monetario Internacional (FMI), anteriormente fue directora general del Banco Mundial."
+      },
+      {
+        "id": 2,
+        "name": "Maria Eugenia Gonzalez",
+        "photo": "https://i.ibb.co/SmXrrzD/yyyyyyyy.jpg",
+        "linkedin": "https://www.linkedin.com/in/mega-79970b9/",
+        "description": "Trabajó como líder del banco CityBank en Perú, así mismo fue cabeza de la Banca Corporativa."
+      }
+    ]
+  }
+}

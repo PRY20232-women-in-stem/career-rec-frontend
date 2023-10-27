@@ -26,7 +26,7 @@ function PostTest({ onClose }) {
       const answersWithUserId = { ...answers, studentId: userId };
       try {
         await createPostTest(userId, answersWithUserId);
-        await updateStudentPostTest(userId);
+        await updateStudentPostTest(userId); // COMENTAR ESTO PARA ENVIAR MUCHAS VECES EL POST TEST
         localStorage.setItem('post_test_compl', 'true');
       } catch (error) {
         console.error("Error enviar el post-test:", error);

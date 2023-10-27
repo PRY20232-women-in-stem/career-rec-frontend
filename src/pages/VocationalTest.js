@@ -70,10 +70,8 @@ function VocationalTest() {
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
     const userId = currentUser.userId;
 
-    setRecommendation("Ingeniería");  // BORRAR CUANDO HAYA BACKEND
-    //const response = await createVocationalTestPrediction(userId, answersForBackend); // DESCOMENTAR CUANDO EL BACKEND ML FUNCIONE
-    //console.log("response vocational test", response); // BORRAR BORRAR CUANDO HAYA BACKEND
-    //setRecommendation(response); // DESCOMENTAR CUANDO EL BACKEND ML FUNCIONE
+    const response = await createVocationalTestPrediction(userId, answersForBackend);
+    setRecommendation(response);
     await updateStudentVocationalTest(userId);
   };
 
@@ -135,7 +133,7 @@ function VocationalTest() {
               <Text fontSize={["md", "lg"]} color={'purple.700'} mb={5}>
                 De acuerdo a sus intereses y preferencias evaluados en el Test Vocacional, podemos recomendarle la siguiente area STEM:
               </Text>
-              <Heading fontSize={"lg"} color={'purple.700'}>{recommendation}</Heading>
+              <Heading fontSize={"2xl"} color={'purple.700'}>{recommendation}</Heading>
             </CardBody>
             <CardFooter justifyContent={"center"}>
               <Button onClick={handleAcceptButtonClick} colorScheme="purple">Continuar</Button>

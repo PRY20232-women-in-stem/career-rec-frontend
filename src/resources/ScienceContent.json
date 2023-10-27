@@ -1,298 +1,546 @@
 {
-  "information": [
-    {
-      "id": 1,
-      "title": "Perfil del Ingresante",
-      "content": "El estudiante admitido a la Carrera de Medicina muestra escucha efectiva y comunica sus ideas, emociones y opiniones con claridad, sencillez y coherencia; sustenta sus ideas y reconoce los conceptos y principios que subyacen a ellas; demuestra razonamiento lógico, elabora juicios y alcanza conclusiones válidas frente a situaciones planteadas; maneja efectivamente sus emociones a pesar de la tensión, se muestra sensible frente a los demás, es respetuoso y tolerante con las diferencias y respeta y acepta las normas de su entorno; sustenta sus decisiones sobre la base de valores, reconociendo responsabilidad por ellas; demuestra interés en servir a las personas y a la sociedad a través de la práctica médica y de salud pública así como de la generación de conocimiento. Demuestra conocimientos suficientes en las áreas de matemáticas (nociones básicas de aritmética y álgebra, sistema de coordenadas rectangulares, funciones reales de variable real), química (materia, estructura atómica y tabla periódica, reacciones químicas, estequiometria y soluciones) y biología (bases químicas de la vida, célula, expresión genética, herencia mendeliana, metabolismo, conceptos generales de ecología y evolución) para abordar con éxito las exigencias de la Carrera."
-    },
-    {
-      "id": 2,
-      "title": "Perfil del Graduado",
-      "content": "El graduado de la carrera de Medicina promueve la salud, previene, diagnostica y trata la enfermedad; diagnostica la situación de salud de una comunidad y diseña acciones para mejorarla; toma decisiones éticas sobre la base de la información disponible y la reflexión sobre su experiencia, asume responsabilidad por ellas y se integra al equipo de salud; demuestra aprendizaje autónomo; evalúa, crea y comparte conocimiento a través de la investigación."
-    },
-    {
-      "id": 3,
-      "title": "Perfil del ingresante",
-      "content": "El estudiante admitido a la Carrera de Biología presenta: Gran curiosidad e interés por temáticas biológicas, de salud y tecnológicas; es apasionado por solucionar problemas de los seres vivos; posee empatía frente a los demás, y respeta las normas del entorno buscando comprender el mundo que nos rodea; tiene como objetivo servir a las personas, a la sociedad y al medio ambiente a través de la ciencia, desarrollo tecnológico e innovación; y demuestra conocimientos suficientes en las ciencias naturales y exactas para abordar con éxito las exigencias de la carrera."
-    },
-    {
-      "id": 4,
-      "title": "Perfil del Graduado",
-      "content": "El estudiante graduado de la Carrera de Biología estará preparado para: desenvolverse con naturalidad en un laboratorio de investigación, clínico, biotecnológico o industrial; integrarse en equipos interprofesionales que afrontan problemas de salud pública; diseñar, ejecutar proyectos de investigación y reportar los resultados en reportes, artículos y tesis de científicas; ejercer su profesión aplicando la ética en la toma de decisiones y asumiendo responsabilidad profesional; y empoderarse de su aprendizaje y en su desarrollo profesional como parte de un equipo interprofesional."
-    },
-    {
-      "id": 5,
-      "title": "Acerca de la carrera",
-      "content": "Una carrera que se sustenta en una sólida base científica. Recibirás conocimientos en técnicas quirúrgicas, fisioterapia y rehabilitación animal. Como médico veterinario, serás capaz de prevenir, diagnosticar y tratar enfermedades en pequeñas y grandes especies. Además, estarás preparado para administrar tu propio consultorio o clínica veterinaria."
-    },
-    {
-      "id": 6,
-      "title": "Perfil del Graduado",
-      "content": "El estudiante graduado de la Carrera de Medicina Veterinaria estará preparado para: ser un profesional competente y responsable, que realiza con gran calidad la práctica clínica animal en sus cuatro dimensiones (prevención, diagnóstico, tratamiento y promoción); generar información científica potencialmente publicable y demostrar capacidad de gestión en la práctica profesional; y Ser capaz de colaborar en un establecimiento de salud e integrar un equipo multidisciplinario para su gestión.."
-    },
-    {
-      "id": 7,
-      "title": "Acerca de la carrera",
-      "content": "Conviértete en un profesional capaz de diagnosticar, intervenir y prevenir problemas de salud en nutrición clínica, pública o ciencias de los alimentos aprendiendo a través de nuestra metodología basada en la simulación."
-    },
-    {
-      "id": 8,
-      "title": "Perfil del Graduado",
-      "content": "El estudiante graduado de la Carrera de Nutrición y Dietética estará preparado para: realizar la prática de salud pública en sus dos dimensiones: diagnóstico e intervención; formular un plan de gestión estratégica en nutrición; transformar los alimentos en productos procesados utilizando aditivos de acuerdo con la legislación alimentaria; y evidenciar aprendizaje autónomo y generar información potencialmente publicable en revistas científicas, a partir de una tesis de investigación."
-    },
-    {
-      "id": 9,
-      "title": "Acerca de la carrera",
-      "content": "Una carrera en la que aprenderás bajo una metodología de enseñanza basado en la simulación, como parte de tu entrenamiento, con equipos, tecnología e infraestructura de última generación. Como odontólogo, serás capaz de atender, diagnosticar, tratar y prevenir problemas de salud oral del individuo, la familia y la comunidad."
-    },
-    {
-      "id": 10,
-      "title": "Perfil del Graduado",
-      "content": "El estudiante graduado de la Carrera de Odontología estará preparado para: ser capaz de atender los problemas de salud oral del individuo, la familia y la comunidad; diagnosticar, tratar y prevenir las enfermedades de la cavidad oral. Generar información científica potencialmente publicable; y demostrar capacidad de gestión en la práctica profesional."
-    }
-  ],
-  "videos": [
-    {
-      "id": 1,
-      "title": "Medicina UPC – Esto no es para cualquiera",
-      "videoUrl": "https://www.youtube.com/watch?v=lWIGVxH5N7I",
-      "description": "Esto es para los que quieren transformar la Medicina. Descubre la carrera de Medicina en la UPC y acepta el reto de ser el mejor aprendiendo de los mejores."
-    },
-    {
-      "id": 2,
-      "title": "UPC ¿Cómo es la vida de un estudiante de Medicina?",
-      "videoUrl": "https://www.youtube.com/watch?v=6JhJ8OI3yDs",
-      "description": "En la UPC se forma Médicos íntegros y comprometidos con la transformación de la salud del país, por eso durante toda su vida universitaria le brindamos una formación basada en la tecnología y la exigencia."
-    },
-    {
-      "id": 3,
-      "title": "¿Por qué estudiar Medicina en la UPC?",
-      "videoUrl": "https://www.youtube.com/watch?v=mfStfQiI6AU",
-      "description": "Manuel Gutierrez, director de la carrera de Medicina,  nos cuenta de qué trata la carrera y por qué elegir la UPC. Conoce a detalle los cursos que ofrece la malla curricular y el campo laboral en el que te puedes desempeñar. Además, contamos con infraestrucutura de calidad, laboratorios especializados y un hospital simulado equipado con tecnología de punta."
-    },
-    {
-      "id": 4,
-      "title": "¿Por qué estudiar Biología en la UPC?",
-      "videoUrl": "https://www.youtube.com/watch?v=kvOmzC3w4bE",
-      "description": "Conoce todas las razones por las que debes estudiar Biología."
-    },
-    {
-      "id": 5,
-      "title": "Explora el mundo con Biología UPC: Conoce nuestras salidas a campo",
-      "videoUrl": "https://www.youtube.com/watch?v=syufT4w1-xQ",
-      "description": "Explora el mundo y obtén experiencia práctica desde primer ciclo con Biología UPC.  Participarás de excursiones y salidas de campo donde podrás aprender sobre la increíble diversidad de nuestro planeta y adquirir conocimientos en campo."
-    },
-    {
-      "id": 6,
-      "title": "Nueva carrera de Biología de la UPC - Dale más vida al mundo",
-      "videoUrl": "https://www.youtube.com/watch?v=H9t1_7fLQpc",
-      "description": "Con la nueva carrera de Biología de la UPC podrás convertirte en una Biólogo innovadora."
-    },
-    {
-      "id": 7,
-      "title": "Medicina Veterinaria en la UPC",
-      "videoUrl": "https://www.youtube.com/watch?v=6QzgEON4-N8",
-      "description": "Mira todo lo que te ofrece UPC para estudiar Medicina Veterinaria."
-    },
-    {
-      "id": 8,
-      "title": "Centro Médico Veterinario UPC",
-      "videoUrl": "https://www.youtube.com/watch?v=dXMDnihN9eo",
-      "description": "“Cuidamos a tu mascota con el mismo amor que le das en casa”"
-    },
-    {
-      "id": 9,
-      "title": "Conoce la experiencia de las Alumnas en el Centro Médico Veterinario de la UPC",
-      "videoUrl": "https://www.youtube.com/watch?v=byJ1l6rRbwg",
-      "description": "Las alumnas de la carrera de Medicina Veterinaria nos cuentan su experiencia en el nuevo Centro Médico Veterinario UPC en el Campus Villa."
-    },
-    {
-      "id": 10,
-      "title": "¿Por qué estudiar Nutrición y Dietética en la UPC?",
-      "videoUrl": "https://www.youtube.com/watch?v=IvW-9ztCzPw&list=PLkR7K6BW1-o9BKZNR6UZTJS5wOkPAbKuI",
-      "description": "Claudia Ontaneda, directora de la carrera de Nutrición y Dietética, nos cuenta de qué trata la carrera y por qué elegir la UPC. Conoce los cursos que ofrece la malla curricular, el campo laboral en el que te puedes desempeñar y los laboratorios especializados en donde podrás llevar tus clases. Además, la UPC tiene convenios internacionales con diferentes universidades alrededor del mundo. "
-    },
-    {
-      "id": 11,
-      "title": "Revive nuestro evento Nutritalks UPC - Carrera de Nutrición y Dietética",
-      "videoUrl": "https://www.youtube.com/watch?v=QK-60l62_go",
-      "description": ""
-    },
-    {
-      "id": 12,
-      "title": "Conoce los testimoniales de nuestros egresados de Nutrición y Dietética",
-      "videoUrl": "https://www.youtube.com/watch?v=BbNR5n0iqHY",
-      "description": ""
-    },
-    {
-      "id": 13,
-      "title": "¿Por qué estudiar Odontología en la UPC?",
-      "videoUrl": "https://www.youtube.com/watch?v=h6PZVv0WISY",
-      "description": "Eduardo Morzán, Director de la carrera de Odontología, nos cuenta todo lo que debes saber si decides estudiar esta carrera en la UPC. "
-    },
-    {
-      "id": 14,
-      "title": "¿Por qué estudiar segundas especialidades en odontología en la UPC?",
-      "videoUrl": "https://www.youtube.com/watch?v=Z7OOH0hHR-c",
-      "description": "Madelaine Grandez nos cuenta su experiencia como alumno en el programa de segundas especialidades en odontología."
-    },
-    {
-      "id": 15,
-      "title": "¿Cómo enseñamos Odontología en la UPC?",
-      "videoUrl": "https://www.youtube.com/watch?v=tRyIVzIKUUQ",
-      "description": "El Centro Universitario de Salud cuenta con ambientes especializados para la carrera de Odontología, podrás aprender con equipos de última generación, ambientes de simulación, y metodología activa que te va permitir vivir tu carrera desde los primeros ciclos."
-    }
-  ],
-  "photos": [
-    {
-      "id": 1,
-      "title": "",
-      "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/53713784_2112869572130727_5119257050081132544_n.png?_nc_cat=111&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=1Xx244af3T8AX_XyURX&_nc_oc=AQlhkTOjwhFzA9mrni4lL5TdAk_R_BFI9dlf9Tz6ZaEK4VMpjh4bkFuydfKUR-TiUq8&_nc_ht=scontent.flim2-1.fna&oh=00_AfBslrElqgVOI1BOzdUs7XUnQc_Rx2BuQ7Uc4aadoZukug&oe=6550EE94",
-      "description": "Los profesionales de Medicina Humana son los pilares del desarrollo de cualquier sociedad, y la especialidad de medicina general aún más, ya que se enfoca en el trabajo de prevención, diagnóstico y tratamiento de la salud en la comunidad. 👨‍⚕👩‍⚕"
-    },
-    {
-      "id": 2,
-      "title": "Lidera el CAMBIO",
-      "imageUrl": "https://g8j7p2p3.rocketcdn.me/wp-content/uploads/2022/07/medicina-humana-1024x881.png.webp",
-      "description": ""
-    },
-    {
-      "id": 3,
-      "title": "Día de la Medicina Peruana",
-      "imageUrl": "https://www.acmedical.pe/admin/_uploads/imagenes/blog-03102020103041-dia-de-la-medicina-peruana.jpg",
-      "description": "El 5 de octubre celebramos el Día de la Medicina Peruana en honor a la muerte de Daniel Alcides Carrión, estudiante de medicina que se inoculó el virus de la verruga peruana para analizar su evolución y sus síntomas, debido a esto es reconocido como mártir y héroe nacional. Conocer esto nos ayuda a formular y responder una gran pregunta, ¿qué queremos de nuestra medicina, de la medicina que se practica en el Perú, queremos seguir teniendo mártires y héroes nacionales, o personal capaz y entrenado para cambiar la realidad sanitaria que poseemos actualmente?"
-    },
-    {
-      "id": 4,
-      "title": "Datos curiosos: Vasos Sanguíneos",
-      "imageUrl": "https://i.pinimg.com/originals/9f/57/3a/9f573a8ba4ae2bcdb94be37c518577d7.png",
-      "description": "Por cada nuevo kilogramo de grasa o músculo el cuerpo crea 10 kilómetros de nuevos vasos sanguíneos."
-    },
-    {
-      "id": 5,
-      "title": "Datos curiosos: Músculos",
-      "imageUrl": "https://pin.it/kqZtj53",
-      "description": "¿Conocías este dato interesante?"
-    },
-    {
-      "id": 6,
-      "title": "La importancia de la Biología",
-      "imageUrl": "https://cdn-v1.udocz-assets.com/uploads/book/cover/223582/223582.jpg",
-      "description": ""
-    },
-    {
-      "id": 7,
-      "title": "8 Razones para estudiar la Carrera de Biología",
-      "imageUrl": "https://www.buscouniversidad.com.ar/orientacion/wp-content/uploads/2019/07/Biologia-768x1086.png",
-      "description": ""
-    },
-    {
-      "id": 8,
-      "title": "Día del Biólogo Peruano",
-      "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/126911735_10157588900382765_5431892247630300500_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=FXLlknhFpV4AX__7cpt&_nc_ht=scontent.flim2-1.fna&oh=00_AfBf9L0LrFad-uS2wePE6rJitDgpomYqmE0CpG_LJ28vZA&oe=655180D9",
-      "description": "Día del Biólogo Peruano, saludamos a todos los especialistas en biología del país y destacamos su comprometida labor cuidando la salud de nuestra población."
-    },
-    {
-      "id": 9,
-      "title": "Datos curiosos: Cromosomas",
-      "imageUrl": "https://scontent.flim2-2.fna.fbcdn.net/v/t1.6435-9/83105026_3957770140962953_709267253025157594_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9b3078&_nc_ohc=NslquHa-gfcAX_F-YN-&_nc_ht=scontent.flim2-2.fna&oh=00_AfBiBn0BJs7tFRGIfQxwWKRCMJEkdkxSIn8x0-iCGWLx6g&oe=655160F7",
-      "description": "¿Conocías este dato curioso?"
-    },
-    {
-      "id": 10,
-      "title": "Datos curiosos: ADN",
-      "imageUrl": "https://www.udocz.com/butler/pdf/80917/80917-61377e5c724e7366d4466e02deabdacd/bg1.jpg?token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0OCwiZXhwIjoxNjk3MzM2MjIzfQ.Y1X0cqxDCHP92NCCkkc8TiruI-wW2ul1-VFsoiKi_ek",
-      "description": "17 datos curiosos sobre el ADN"
-    },
-    {
-      "id": 11,
-      "title": "7 razones para… ¿No estudiar veterinaria?",
-      "imageUrl": "https://enfoque.upc.edu.pe/wp-content/uploads/2019/12/Infograf%C3%ADa-Veterninaria_UPC_JPG-final.jpg",
-      "description": ""
-    },
-    {
-      "id": 12,
-      "title": "Lidera el CAMBIO",
-      "imageUrl": "https://g8j7p2p3.rocketcdn.me/wp-content/uploads/2022/07/veterinaria-1024x886.png.webp",
-      "description": ""
-    },
-    {
-      "id": 13,
-      "title": "Día del Médico Veterinario",
-      "imageUrl": "https://scontent.flim2-2.fna.fbcdn.net/v/t1.6435-9/107719944_10157238089097765_4878596720027522304_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=URCUEWcjvc0AX98FuxZ&_nc_ht=scontent.flim2-2.fna&oh=00_AfCIDn1BYyUjksw-18q7ElprrUR-ltrBb1fFL-__Em0qJA&oe=65518AF8",
-      "description": "Se da un gran saludo a todos los profesionales dedicados a la prevención y control de enfermedades en animales. Con su compromiso y esfuerzo contribuyen al bienestar de toda la población"
-    },
-    {
-      "id": 14,
-      "title": "Datos curiosos: Orejitas del perrito",
-      "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/118653197_3361426083896779_8092886168767723781_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=C53hNqw4i5sAX_boEFJ&_nc_ht=scontent.flim2-1.fna&oh=00_AfD2wWYW4AtfaVfHDqJjbvajnCUkNM3dAYyarYwRduQs-A&oe=65516799",
-      "description": "Aquí te dejamos esta infografía con algunos datos curiosos sobre las orejas de los perros 🐶"
-    },
-    {
-      "id": 15,
-      "title": "Datos curiosos: Los gatitos",
-      "imageUrl": "https://media.metrolatam.com/2020/02/19/diadelgato2020-9bc65818c3a24432cb547750655f15a3-1200x0.jpg",
-      "description": "Día Internacional del Gato: 10 datos curiosos de estos felinos"
-    },
-    {
-      "id": 16,
-      "title": "",
-      "imageUrl": "https://d3tvd1u91rr79.cloudfront.net/c35e08b802d42b203a838323bb924ceb/html/bg1.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2QzdHZkMXU5MXJyNzkuY2xvdWRmcm9udC5uZXRcL2MzNWUwOGI4MDJkNDJiMjAzYTgzODMyM2JiOTI0Y2ViXC9odG1sXC8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjk3MzQwNTg2fX19XX0_&Signature=EQ0OzL1AItTbaBA5JZoccexLfGdGjQnn5~~9EwjwsiKf1nLqHjz4MOVbSVnfkjFMZ5D3ZV9Rdvc5tD6BUz51TjKStHAuL4NYd2RBsvVgH1P-Qrm696d8Ajtw-~wfmVAGVnSzj-iw0yrM9cDS61k8PrfVold43X6r6n1s6FEtO86LFMdo9hGrx~BZwc5V5FzdWQZy3Khp6wOLuToJwG-EdYoxTYOjrtrkT5jIeyMy50A9OaunOpN5pdy15bo7khn15HJ6-CsyzdXbug8t2NZ8MN4xB-DkIwNY4hlfhlF59~1YKbKB8wgnYRKfp350IryxDmlTulc-cEBf-zvkZtq-ug__&Key-Pair-Id=APKAJ535ZH3ZAIIOADHQ",
-      "description": ""
-    },
-    {
-      "id": 17,
-      "title": "",
-      "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/80439760_1409311669240782_1230058670566408192_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9b3078&_nc_ohc=peIC0gZfuHIAX8D2f0u&_nc_ht=scontent.flim2-1.fna&oh=00_AfBQoXjj2BxOlwRNQGdBUgKLgh7XZSYKq0trO6W7n5QPLA&oe=65516729",
-      "description": "Ventajas de estudiar #Nutrición! 🍏🤓"
-    },
-    {
-      "id": 18,
-      "title": "Día del Nutricionista Peruano",
-      "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/68688193_10156327456657765_6772064657193566208_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=py0FPNkQZDIAX_ZoB-o&_nc_ht=scontent.flim2-1.fna&oh=00_AfA7e_7_8xksFb6bbXIQJyDu3sp6y3jj9zUjROYsTohnyg&oe=65517B28",
-      "description": "Saludamos a todos los especialistas de la nutrición en su día y resaltamos la gran labor que realizan para mejorar la calidad de vida de los peruanos, a través de una alimentación saludable."
-    },
-    {
-      "id": 19,
-      "title": "Datos curiosos: Octógonos Nutricionales",
-      "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t1.6435-9/65992445_10156145956806965_1047688530907627520_n.png?_nc_cat=104&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=DThBOugk-NoAX8FzLyl&_nc_ht=scontent.flim2-1.fna&oh=00_AfCr_-I2TjNH4EZWw9RSnPRjc4Z9s6HY-cSTRhS93xRzIA&oe=65518B29",
-      "description": "¿Ya empezaste a revisar las etiquetas de los productos que consumes diariamente? 🛑❌"
-    },
-    {
-      "id": 20,
-      "title": "Datos curiosos: Legumbres",
-      "imageUrl": "https://gastronomiaycia.republica.com/wp-content/uploads/2016/05/infografia_legumbres_fao_2.jpg",
-      "description": ""
-    },
-    {
-      "id": 21,
-      "title": "Salud Bucal",
-      "imageUrl": "http://www.gob.mx/cms/uploads/image/file/48312/08Salud_bucodental.jpg",
-      "description": ""
-    },
-    {
-      "id": 22,
-      "title": "",
-      "imageUrl": "https://i.pinimg.com/originals/50/e9/94/50e99400ad640214bdf042e663c79668.jpg",
-      "description": ""
-    },
-    {
-      "id": 23,
-      "title": "Día de la Odontología Peruana",
-      "imageUrl": "https://scontent.flim2-2.fna.fbcdn.net/v/t1.6435-9/129176741_10157603991612765_3068179045392441957_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=J9VNJW-sowIAX_Eyu7X&_nc_ht=scontent.flim2-2.fna&oh=00_AfBEpaCDxp8VVK07-dhomxaCi7_U4KWmgVDCWkBDREy33w&oe=6551800A",
-      "description": "Hoy, en el Día de la Odontología Peruana, saludamos a todos los odontólogos del país y destacamos su comprometida labor cuidando la salud bucal de nuestra población."
-    },
-    {
-      "id": 24,
-      "title": "Datos curiosos: Historia de la Odontología",
-      "imageUrl": "https://topaula.com/wp-content/uploads/2019/12/Curiosidades-odontologia-infografia.jpg",
-      "description": ""
-    },
-    {
-      "id": 25,
-      "title": "Datos curiosos: Higienista Dental",
-      "imageUrl": "https://i.pinimg.com/236x/27/ed/a4/27eda4ffd9610b8c584e524f2b8aeb98--dentistry-dental.jpg",
-      "description": ""
-    }
-  ]
+  "medicine": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Perfil del Ingresante",
+        "content": "El estudiante admitido en Medicina muestra habilidades de comunicación efectiva, razonamiento lógico, empatía y respeto por los demás, además de tener un sólido conocimiento en matemáticas, química y biología, y un compromiso con el servicio a la sociedad a través de la medicina y la salud pública."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "El graduado de Medicina promueve la salud, previene, diagnostica y trata enfermedades, aborda la salud de comunidades, toma decisiones éticas, aprende de forma autónoma, y contribuye al conocimiento a través de la investigación."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¡Sí, ESTUDIA MEDICINA!",
+        "videoUrl": "https://www.youtube.com/watch?v=LPmg0BchOqI",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "Qué significa estudiar medicina humana",
+        "videoUrl": "https://www.youtube.com/watch?v=rX7b5iYWZyQ",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "50 VERDADES DE ESTUDIAR MEDICINA",
+        "videoUrl": "https://www.youtube.com/watch?v=IQLsG1OW7A0",
+        "description": ""
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "Funciones principales de un 👨‍⚕👩‍⚕",
+        "imageUrl": "https://i.ibb.co/7gG2qpk/38.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "Día de la Medicina Peruana",
+        "imageUrl": "https://unjfsc.edu.pe/wp-content/uploads/2022/05/244685852_4704250949594537_7272099644316114613_n.jpg",
+        "description": "El 5 de octubre celebramos el Día de la Medicina Peruana en honor a la muerte de Daniel Alcides Carrión, estudiante de medicina que se inoculó el virus de la verruga peruana para analizar su evolución y sus síntomas, debido a esto es reconocido como mártir y héroe nacional."
+      },
+      {
+        "id": 3,
+        "title": "Datos curiosos: Lengua",
+        "imageUrl": "https://i.ibb.co/XyZBk9r/39.png",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "Datos curiosos: Vasos Sanguíneos",
+        "imageUrl": "https://i.pinimg.com/originals/9f/57/3a/9f573a8ba4ae2bcdb94be37c518577d7.png",
+        "description": "Por cada nuevo kilogramo de grasa o músculo el cuerpo crea 10 kilómetros de nuevos vasos sanguíneos."
+      },
+      {
+        "id": 5,
+        "title": "Datos curiosos: Músculos",
+        "imageUrl": "https://i.ibb.co/JWLgjLQ/40.png",
+        "description": "¿Conocías este dato interesante?"
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Dra. Ana María Cuervo",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Ana_Maria_Cuervo.jpg/330px-Ana_Maria_Cuervo.jpg",
+        "description": "Es una médica española que ha sido reconocida por su trabajo en el campo de la biología celular y la enfermedad de Alzheimer. Es considerada una experta en el campo de la autofagia, el proceso por el cual las células reciclan sus residuos. Es también una experta en la biología molecular del envejecimiento. El trabajo de su grupo ha sido reconocido con más de 20 premios de prestigio internacional como Benson Award, Keith Porter Fellow, Nathan Shock Memorial Lecture Award, Vincent Cristofalo Award in Aging, Bennett J. Cohen award en biología básica del envejecimiento, Marshall Horwitz Prize por excelencia en investigación, y el Saul Korey Prize in Translational in Medicine Science. Dr. Cuervo ha impartido conferencia de prestigio tales como la SEBBM L’Oreal-UNESCO for Women in Science"
+      },
+      {
+        "id": 2,
+        "name": "Dra. Patricia García Funegra",
+        "photo": "https://enlace.redcameral.org/images/stories/flexicontent/l_patricia%20garcia_dh.jpg",
+        "description": "Es una médica peruana que ha sido reconocida por su trabajo en salud pública y epidemiología. La Dra. Patricia García Funegra, docente de la FASPA, ganó el Premio a la Producción Científica Scopus Concytec 2022 en la categoría “Mujeres en la Ciencia», organizado por CONCYTEC y Editorial Elsevier.Doctora en Medicina de la Universidad de Washington-Seattle, EE.UU. Magíster en Salud Pública de la Universidad de Washington-Seattle, EE.UU. Especialidad en ETS y SIDA, Center for AIDS and STD (WHO Collaborating Center Universidad de Washington). Médico Cirujano de la Universidad Peruana Cayetano Heredia.  Médico internista de la Universidad de Miami, Florida, EE.UU. Médico Infectólogo, de la Universidad de Washington, EEUU. Ex Ministra de Salud del Perú durante el periodo de gobierno presidencial de Pedro Pablo Kuczynski (2016-2017)"
+      },
+      {
+        "id": 3,
+        "name": "Dra. María Isabel Rodríguez",
+        "photo": "https://1.bp.blogspot.com/-ZNItUDQXw_w/XcH2wgIfCBI/AAAAAAAA19Y/ThyMiiZL5qwuZiw3dXgRhruKBzTkQSL9QCLcBGAsYHQ/s1600/maria%2Bisabel%2Bel%2Bsalvador.JPG",
+        "description": "Es una médica salvadoreña que se desempeñó como Ministra de Salud de El Salvador entre 2004 y 2009. Durante su gestión, implementó políticas públicas para mejorar la salud de la población, especialmente en áreas rurales y marginadas. La Dra. María Isabel Rodríguez ganó el Premio al Mérito en Salud Pública. Escuela Nacional de Salud Pública e Instituto Nacional de Salud Pública y Premio “Trabajador por la Paz” otorgado por la Asociación para la Resolución de Conflictos y la Cooperación (ARCO), febrero de 2004."
+      }
+    ]
+  },
+  "biology": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Perfil del ingresante",
+        "content": "El estudiante de Biología es curioso, apasionado por la resolución de problemas biológicos, empático y orientado al servicio, con conocimientos en ciencias naturales y exactas para la carrera."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "El graduado en Biología estará listo para trabajar en laboratorios de investigación, colaborar en equipos de salud pública, llevar a cabo proyectos de investigación, actuar éticamente en su profesión y continuar su desarrollo profesional en equipos interprofesionales."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "Magdalena Pavlich: La biología es la mejor carrera del mundo",
+        "videoUrl": "https://www.youtube.com/watch?v=0LFpcvxocGI",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "Cómo es estudiar Biología 👩‍🔬 - Mi experiencia, tips, etc",
+        "videoUrl": "https://www.youtube.com/watch?v=hkpRJAA2iFg",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "ESTUDIAR BIOLOGÍA 🌱 50 VERDADES DE ESTUDIAR LIC. EN BIOLOGÍA",
+        "videoUrl": "https://www.youtube.com/watch?v=lK7KMeXJEeA",
+        "description": ""
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "La importancia de la Biología: Ambiente",
+        "imageUrl": "https://i.ibb.co/f8QvbZw/41.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "La importancia de la Biología: Contaminación",
+        "imageUrl": "https://i.ibb.co/mBR33pw/42.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "La importancia de la Biología: Cambio Climático",
+        "imageUrl": "",
+        "description": "https://i.ibb.co/TBpFP8f/43.png"
+      },
+      {
+        "id": 4,
+        "title": "Razones para estudiar la Carrera de Biología",
+        "imageUrl": "https://i.ibb.co/cL5TtxL/44.png",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "Razones para estudiar la Carrera de Biología",
+        "imageUrl": "https://i.ibb.co/bWLBY1z/45.png",
+        "description": ""
+      },
+      {
+        "id": 6,
+        "title": "Razones para estudiar la Carrera de Biología",
+        "imageUrl": "https://i.ibb.co/K69ZRW7/46.png",
+        "description": ""
+      },
+      {
+        "id": 7,
+        "title": "Razones para estudiar la Carrera de Biología",
+        "imageUrl": "https://i.ibb.co/g7x0FK1/47.png",
+        "description": ""
+      },
+      {
+        "id": 8,
+        "title": "Día del Biólogo Peruano",
+        "imageUrl": "https://i.ibb.co/VgcW6sW/48.png",
+        "description": "Día del Biólogo Peruano, saludamos a todos los especialistas en biología del país y destacamos su comprometida labor cuidando la salud de nuestra población."
+      },
+      {
+        "id": 9,
+        "title": "Datos curiosos: Cromosomas",
+        "imageUrl": "https://i.ibb.co/k2xtHdb/49.png",
+        "description": "¿Conocías este dato curioso?"
+      },
+      {
+        "id": 10,
+        "title": "Datos curiosos: ADN",
+        "imageUrl": "https://i.ibb.co/XbG6C5G/50.png",
+        "description": ""
+      },
+      {
+        "id": 11,
+        "title": "",
+        "imageUrl": "https://i.ibb.co/LC7wv4f/51.png",
+        "description": ""
+      },
+      {
+        "id": 12,
+        "title": "",
+        "imageUrl": "https://i.ibb.co/tq738HF/52.png",
+        "description": ""
+      },
+      {
+        "id": 13,
+        "title": "",
+        "imageUrl": "https://i.ibb.co/xfdp2VC/53.png",
+        "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Dra. Susana López Charreton",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Susana_L%C3%B3pez_Charret%C3%B3n_%28cropped%29.jpg/330px-Susana_L%C3%B3pez_Charret%C3%B3n_%28cropped%29.jpg",
+        "description": "Es una bióloga argentina que ha sido reconocida por su trabajo en el campo de la biología molecular y celular. En 2012, ganó el Premios L'Oréal-UNESCO a Mujeres en Ciencia por la identificación del mecanismo de enfermedad del rotavirus que causa la muerte de 600,000 niños cada año. Ese mismo año, la Dra. López Charretón fue galardonada con la medalla Omecihuatl InMujeres. En el 2013, la Dra. López Charretón recibió el Premio Universidad Nacional de la academia de investigación científica en el área de ciencias naturales."
+      },
+      {
+        "id": 2,
+        "name": "Dra. María Elena Álvarez-Buylla",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Mar%C3%ADa_Elena_%C3%81lvarez-Buylla_%28cropped%29.jpg",
+        "description": "Es una bióloga mexicana que ha sido reconocida por su trabajo en el campo de la biología evolutiva y la conservación de la biodiversidad. En 2017 recibió el Premio Nacional de Ciencias y Artes por parte de Enrique Peña Nieto, en la categoría de ciencias físico-matemáticas y naturales. En el 2016 recibió el Premio Nacional a la Investigación Científico-Tecnológica de la Universidad Autónoma de San Luis Potosí. En el 2008 fue galardonada con el Premio Heberto Castillo de la Ciudad de México en la categoría Salud y Medio Ambiente —con la medalla que lleva el nombre de “Blanca Elena Jiménez Cisneros”—, por sus estudios en la conservación de la biodiversidad de México, con énfasis en el maíz, así como por sus investigaciones con comunidades rurales en el manejo integral de su flora."
+      },
+      {
+        "id": 6,
+        "name": "Dra. Ana María Rey",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ana_Maria_Rey_among_2014_PECASE_winners.jpg/330px-Ana_Maria_Rey_among_2014_PECASE_winners.jpg",
+        "description": "Es una física y bióloga colombiana que ha sido reconocida por su trabajo en el campo de la física atómica y molecular. Reconocida por su investigación en átomos ultrafríos, le fue otorgado el premio Genius en el 2013 por parte de la Fundación MacArthur1 y el premio Maria Goeppert-Mayer de la American Physical Society. En el año 2019 recibió el premio Blavatnik para Jóvenes Científicos y en el año 2015 recibió el premio APS Fellow de la American Physical Society, entre muchos más"
+      }
+    ]
+  },
+  "chemistry": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Perfil del ingresante",
+        "content": "Los estudiantes de Química Industrial son perseverantes, observadores, poseen conocimientos en diversas áreas y están interesados en la transformación de recursos naturales en productos industriales con creatividad."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Tiene la capacidad de diseñar, investigar, producir, innovar y comercializar productos en procesos industriales, con creatividad y mentalidad emprendedora, priorizando la satisfacción del cliente y la responsabilidad social."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Quieres estudiar Ingeniería Química Industrial?",
+        "videoUrl": "https://www.youtube.com/watch?v=Y72wrgCmHSY",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "AEQIBI-Química Industrial",
+        "videoUrl": "https://www.youtube.com/watch?v=lAd9N80hT0M",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "ESPECIALIDAD DE QUÍMICA INDUSTRIAL",
+        "videoUrl": "https://www.youtube.com/watch?v=_eoRh0Vbi2s",
+        "description": ""
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "El compromiso de la Industria Química con la Seguridad en 10 DATOS",
+        "imageUrl": "https://i.ibb.co/Dz71rTR/54.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "El compromiso de la Industria Química con la Seguridad en 10 DATOS",
+        "imageUrl": "https://i.ibb.co/4jxHwKH/55.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "El compromiso de la Industria Química con la Seguridad en 10 DATOS",
+        "imageUrl": "https://i.ibb.co/r3wTv7m/56.png",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "El compromiso de la Industria Química con la Seguridad en 10 DATOS",
+        "imageUrl": "https://i.ibb.co/mGNZ4ry/57.png",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "El compromiso de la Industria Química con la Seguridad en 10 DATOS",
+        "imageUrl": "https://i.ibb.co/4Ksy67d/58.png",
+        "description": ""
+      },
+      {
+        "id": 6,
+        "title": "El compromiso de la Industria Química con la Seguridad en 10 DATOS",
+        "imageUrl": "https://i.ibb.co/2vnv6pN/59.png",
+        "description": ""
+      },
+      {
+        "id": 7,
+        "title": "El compromiso de la Industria Química con la Seguridad en 10 DATOS",
+        "imageUrl": "https://i.ibb.co/cD2c6H8/60.png",
+        "description": ""
+      },
+      {
+        "id": 8,
+        "title": "El compromiso de la Industria Química con la Seguridad en 10 DATOS",
+        "imageUrl": "https://i.ibb.co/qmPXNfD/61.png",
+        "description": ""
+      },
+      {
+        "id": 9,
+        "title": "El compromiso de la Industria Química con la Seguridad en 10 DATOS",
+        "imageUrl": "https://i.ibb.co/XpNv240/62.png",
+        "description": ""
+      },
+      {
+        "id": 10,
+        "title": "Dá del Trabajador en la Industria Química",
+        "imageUrl": "https://i.ibb.co/8zYnbJG/63.png",
+        "description": "Día del Trabajador de la Industria Química. Agradecemos y felicitamos a todos los que se dedican o están involucrados en esta industria."
+      },
+      {
+        "id": 11,
+        "title": "Datos Curiosos: ¿Cuántos elementos existen?",
+        "imageUrl": "https://i.ibb.co/Qr3fV0t/64.png",
+        "description": ""
+      },
+      {
+        "id": 12,
+        "title": "Datos Curiosos: Consejos Prácticos",
+        "imageUrl": "https://i.ibb.co/LzJsBV8/65.png",
+        "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Dra. Frances Arnold",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Francesarnoldwiki2012.png/330px-Francesarnoldwiki2012.png",
+        "description": "Es una científica e ingeniera química estadounidense. Fue laureada con el Premio Nobel de Química en 2018 junto a George P. Smith y Gregory Winter.1​ Es pionera en la investigación de métodos de evolución dirigida para crear sistemas biológicos útiles, incluyendo enzimas, rutas metabólicas, circuitos de regulación genética y los organismos con evolución dirigida."
+      },
+      {
+        "id": 2,
+        "name": "Dra. Esther Takeuchi",
+        "photo": "https://national-energystorage-summit.lbl.gov/wp-content/uploads/sites/20/2022/01/EstherTakeuchi.jpg",
+        "description": "es una científica de materiales e ingeniera química estadounidense, que trabaja en sistemas almacenamiento de energía para dispositivos biomédicos. También es una profesora distinguida en la Universidad de Stony Brook y científica jefa en el Laboratorio Nacional de Brookhaven. Tiene más de 145 patentes en los Estados Unidos."
+      },
+      {
+        "id": 3,
+        "name": "Dra. María del Pilar Noriega",
+        "photo": "https://escuelaing.s3.amazonaws.com/production/images/Foto-Maria-del-Pilar-Noriega-Escob.2e16d0ba.fill-440x440.jpg?AWSAccessKeyId=AKIAWFY3NGTFD5OU3IGB&Signature=xxDo7Mq4wBwajbn8mPPiEFS9Zg0%3D&Expires=1699752775",
+        "description": "Doctora en Ingeniería Mecánica (PhD) de la Universidad de Wisconsin-Madison, Estados Unidos, 2001. Posee dos posgrados, en química de la Universidad Técnica de Dresde, Alemania y en extrusión del Instituto de la Tecnología del Plástico (IKT) de la Universidad de Stuttgart, Alemania. Ingeniera Química de la Universidad Pontificia Bolivariana (UPB) de Medellín."
+      }
+    ]
+  },
+  "microParasi": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Los estudiantes de Microbiología y Parasitología son analíticos, comprometidos con la investigación, trabajan bien en equipo y muestran un alto sentido de ética y servicio."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "El graduado de Microbiología y Parasitología comprende los procesos que afectan la salud y la inmunología, genera información científica, comunica resultados de investigaciones y aplica innovaciones en microbiología y parasitología trabajando en equipos multidisciplinarios."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "MICROBIOLOGÍA Y PARASITOLOGÍA",
+        "videoUrl": "https://www.youtube.com/watch?v=aiwJwSMlYJs",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "MICROBIOLOGÍA: Una carrera profesional con espíritu científico y aplicación en los procesos industriales",
+        "videoUrl": "https://www.youtube.com/watch?v=SRR-HqhSLvU",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "MICROBIOLOGIA Y PARASITOLOGIA - Ciencias Basicas",
+        "videoUrl": "https://www.youtube.com/watch?v=YMn1wqZc5VE",
+        "description": ""
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "¿Conoces la importancia de la Parasitología?",
+        "imageUrl": "https://i.ibb.co/2sFYbXp/66.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "¿Conoces la importancia de la Parasitología?",
+        "imageUrl": "https://i.ibb.co/xScHDtD/67.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "¿Conoces la importancia de la Parasitología?",
+        "imageUrl": "https://i.ibb.co/cTRyfvT/68.png",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "¿Conoces la importancia de la Parasitología?",
+        "imageUrl": "https://i.ibb.co/SfGfwX4/69.png",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "Virus, Bacterias, Hongos y Parásitos",
+        "imageUrl": "https://i.ibb.co/3r4MLcv/70.png",
+        "description": ""
+      },
+      {
+        "id": 6,
+        "title": "17 de noviembre - Día del Microbiólogo 🔬💙🧫",
+        "imageUrl": "https://i.ibb.co/vm6dZGs/71.png",
+        "description": "La Microbiología permite conocer el mundo de los microorganismos, entender su importancia y aprovechar la diversidad de sus funciones para mejorar la calidad de vida del hombre. 👌🏼🔬"
+      },
+      {
+        "id": 7,
+        "title": "¿Sabías que...?",
+        "imageUrl": "https://i.ibb.co/TTq8rws/72.png",
+        "description": ""
+      },
+      {
+        "id": 8,
+        "title": "¿Sabías que...?🔬",
+        "imageUrl": "https://i.ibb.co/VmxKJft/73.png",
+        "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 10,
+        "name": "Dra. Rita Colwell",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/0/06/Rita_Colwell.jpg",
+        "description": "La Dra. Rita Colwell es una microbióloga estadounidense conocida por su trabajo en la ecología microbiana, especialmente en la epidemiología de enfermedades transmitidas por el agua. Colwell ha realizado numerosos estudios de prevención de enfermedades infecciosas relacionadas con el agua. Ha recibido numerosos premios y reconocimientos, incluyendo la Medalla Nacional de Ciencias de los Estados Unidos."
+      },
+      {
+        "id": 11,
+        "name": "María del Carmen Maroto Vela",
+        "photo": "https://mujeresconciencia.com/app/uploads/2017/07/maroto.jpg",
+        "description": "Es una médica española conocida por sus investigaciones en microbiología y parasitología. Ha investigado en hepatitis A y B, interacciones virales, replicación y transmisión del virus de la hepatitis B y C, cuantificación de la carga viral, aplicación de las técnicas de biología molecular en diferentes virus y estudios de resistencia a antirretrovirus mediante métodos de secuenciación. Es miembro de número de la Real Academia Nacional de Medicina, ha recibido numerosos galardones por todas sus aportaciones."
+      },
+      {
+        "id": 12,
+        "name": "Odile Bain",
+        "photo": "https://mujeresconciencia.com/app/uploads/2017/04/odile.jpg",
+        "description": "La parasitóloga Odile Bain (1939-2012) nació un 28 de abril. Trabajó la mayor parte de su carrera en el Museo Nacional de Historia Natural de Francia. Fue una experta en sistemática y biología de las filarias. Describió diferentes especies nuevas de especies de estos nematodos en mamíferos, reptiles y batracios. Publicó más de trescientos cincuenta artículos y fue merecedora de numerosos galardones por sus aportaciones a la ciencia."
+      }
+    ]
+  },
+  "pharmaBioche": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "La Bioquímica ofrece una formación multidisciplinaria que prepara a los estudiantes para desempeñar roles integrales en salud y diversas áreas de las ciencias farmacéuticas, como investigación de medicamentos, análisis bioquímicos y atención farmacéutica."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "El graduado en Bioquímica es un profesional altamente competente que se desempeñará en diversas áreas de las ciencias farmacéuticas, incluyendo regulación, investigación de medicamentos, análisis de productos farmacéuticos, atención farmacéutica y más."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Qué es la BIOQUÍMICA y qué estudia? Ramas, importancia y ejemplos",
+        "videoUrl": "https://www.youtube.com/watch?v=lWq28BiHQec",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "¿Qué es ser Bioquímico?",
+        "videoUrl": "https://www.youtube.com/watch?v=HhacWFpmsus",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "ESTUDIAR BIOQUIMICA | SALIDAS, DIFICULTAD, CONSEJOS, ETC",
+        "videoUrl": "https://www.youtube.com/watch?v=E0lh8tSxjIg",
+        "description": ""
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "La importancia de la Bioquímica",
+        "imageUrl": "https://i.ibb.co/XZn7n4p/76.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "La importancia de la Bioquímica",
+        "imageUrl": "https://i.ibb.co/HHz55wL/77.png",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "Conceptos básicos de la Bioquímica",
+        "imageUrl": "https://i.ibb.co/n63Qbfz/78.png",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "Conceptos básicos de la Bioquímica",
+        "imageUrl": "https://i.ibb.co/bNKcmp1/79.png",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "Día del Bioquímico Farmacéutico👩‍🔬👨‍🔬🍀",
+        "imageUrl": "https://i.ibb.co/nfYZqBV/74.png",
+        "description": ""
+      },
+      {
+        "id": 6,
+        "title": "Datos Curiosos: ¿Sabías que ...?",
+        "imageUrl": "https://i.ibb.co/gZDWfxV/75.png",
+        "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 13,
+        "name": "Dra. Gertrude B. Elion",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Gertrude_Elion_1991.jpg/330px-Gertrude_Elion_1991.jpg",
+        "description": "Fue una bioquímica y farmacóloga estadounidense, que recibió en 1988 el Premio Nobel de Fisiología y Medicina por sus «descubrimientos de los principios clave sobre el desarrollo y el tratamiento de medicamentos».1​ Descubrió tratamientos para la leucemia, la malaria e infecciones urinarias."
+      },
+      {
+        "id": 14,
+        "name": "Dra. Tu Youyou",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Tu_Youyou_5012-2015.jpg/375px-Tu_Youyou_5012-2015.jpg",
+        "description": "Es una científica, médica y química farmacéutica china, conocida por descubrir la artemisinina (también conocida como dihidroartemisinina), utilizada para tratar la malaria. Por sus investigaciones en 2015 recibió el Premio Nobel en Medicina."
+      },
+      {
+        "id": 15,
+        "name": "Dra. Ada Yonath",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Yonath_Weizmann_Institute_of_Science.jpg/330px-Ada_Yonath_Weizmann_Institute_of_Science.jpg",
+        "description": "La Dra. Ada Yonath es una bioquímica israelí que recibió el Premio Nobel de Química en 2009 por su investigación en la estructura de los ribosomas, que son componentes esenciales de las células y objetivos para el desarrollo de antibióticos."
+      }
+    ]
+  }
 }

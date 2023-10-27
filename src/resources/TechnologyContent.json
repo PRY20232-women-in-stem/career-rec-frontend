@@ -1,0 +1,406 @@
+{
+  "system": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Desarrollarás aplicaciones, programas, sistemas de seguridad e incluso juegos"
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "En esta carrera podrás analizar, evaluar y gestionar la incorporación de nuevas tecnologías que mejorarán la eficiencia de las empresas. Podrás desarrollar proyectos para que la calidad y seguridad de los sistemas de información empresarial estén garantizadas."
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Qué es la Ingeniería en Sistemas?",
+        "videoUrl": "https://www.youtube.com/watch?v=hgitkRjrUuY",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "¿Qué hace un Ingeniero en Sistemas?",
+        "videoUrl": "https://www.youtube.com/watch?v=OCrshijNYdg",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "Ingeniería de Software vs Ingeniería de Sistemas",
+        "videoUrl": "https://www.youtube.com/watch?v=EMfiP1Uwkmg",
+        "description": ""
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "Razones para estudiar Ingeniería de Sistemas",
+        "imageUrl": "https://i.ibb.co/PChQw8B/Razonespara-Ing-Sistemas.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "¿Como se creó el término Ingeniería de Software?",
+        "imageUrl": "https://edteam-media.s3.amazonaws.com/community/original/5ebcebf2-95ef-49b2-a761-ca8a5e75b144.jpg",
+        "description": "Una de las primeras personas en llevar a cabo la labor de Ingeniera de Software"
+      },
+      {
+        "id": 3,
+        "title": "¿Que hace un ingeniero de sistemas?",
+        "imageUrl": "https://i.ibb.co/vzpTSLK/quehaceing.png",
+        "description": "Estas son las tareas a las que se dedica un ingeniero de sistemas"
+      },
+      {
+        "id": 4,
+        "title": "Dia de la Ingenieria de sistemas",
+        "imageUrl": "https://scontent.flim19-1.fna.fbcdn.net/v/t1.6435-9/162851181_779588326019152_286519339782861158_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=R5NueiVETVcAX8jHxS9&_nc_ht=scontent.flim19-1.fna&oh=00_AfA5gXUohBy8YCtTUM1wflpeIi7q8gYUQROnQXw8r7UCpQ&oe=65596B52",
+        "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Rosario Villalta",
+        "photo": "https://pregrado.upc.edu.pe/static/img/autoridades/rosario-del-pilar.jpg",
+        "linkedin": "https://www.linkedin.com/in/rosario-del-pilar-villalta-riega-a6018441/",
+        "description": "Decana de la Facultad de Ingeniería de la UPC.",
+        "description2": "Tiene un MBA en Dirección de Sistemas y Tecnologías de Información y, al mismo tiempo, muestra un destacado interés por motivar a las mujeres a embarcarse en carreras STEM."
+      },
+      {
+        "id": 2,
+        "name": "Kamilah Taylor",
+        "photo": "https://www.elblogdelaingenieria.com/wp-content/uploads/2021/03/image-17.png",
+        "linkedin": "https://www.linkedin.com/in/kamilahtaylor/",
+        "description": "Ingeniera de sistemas en la empresa LinkedIn, la mayor empresa de empleabilidad y networking del mundo, ha sido autora del libro “Mujeres en la tecnología: lleva tu carrera al siguiente nivel con consejos prácticos e historias inspiradoras”"
+      }
+    ]
+  },
+  "electronic": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "¿Has soñado con casas inteligentes? Construirás sistemas electrónicos de alta tecnología para casas, empresas o instituciones"
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "diseño y aplicación de antenas para aplicaciones y regiones, hasta el procesamiento de señal, pasando por transmisión de información por medios alámbricos e inalámbricos."
+      },
+      {
+        "id": 3,
+        "title": "Algunas de las asignaturas que encontrarás a lo largo de la carrera son",
+        "content": "Mecánica clásica,  Controladores lógicos programables,  Dinámica  Máquinas eléctrica, Diseño y control digital, Electromagnetismo"
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Qué hace un Ingeniero en Electrónica y Telecomunicaciones en TV Azteca?",
+        "videoUrl": "https://www.youtube.com/watch?v=WDAkr4PP2qM",
+        "description": "¿Quieres estudiar una Ingeniería en Electrónica y Telecomunicaciones? Dos ingenieros de #TVazteca te dan las razones por las que deberías hacerlo mientras te dan un recorrido por los foros e instalaciones de la televisora"
+      },
+      {
+        "id": 2,
+        "title": "¿12 COSAS que DEBES SABER si queres estudiar INGENIERÍA ELECTRÓNICA",
+        "videoUrl": "https://www.youtube.com/watch?v=Cjyr0UQQzXA",
+        "description": "¿Sabes qué es lo que hace un Ingeniero de Electronica? ¿A qué se dedican? ¿Qué es lo que estudian?"
+      },
+      {
+        "id": 3,
+        "title": "Especialidades de Ingenieria Electronica",
+        "videoUrl": "https://www.youtube.com/watch?v=eHwRG4I2BCU",
+        "description": "¿Eres Ingeniero Electrónico, estudiante o aspirante?, quédate y descubre las ramas o especialidades en las cuales podrás desempeñarte laboralmente"
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "Dia del Ingeniero Electrónico",
+        "imageUrl": "https://scontent.flim19-1.fna.fbcdn.net/v/t1.6435-9/167719248_281617036900308_6316381453792753838_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=8Op36lV-f8oAX8wizHB&_nc_ht=scontent.flim19-1.fna&oh=00_AfAGa30uYgo_bNdBu2gJseXAV8q85pDlrQRG9oeDCPD8Iw&oe=655960C9",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "Conceptos básicos de la electrónica",
+        "imageUrl": "https://i.ibb.co/gTNJygL/INGENIERIA-ELEFCTRO.jpg",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "Diferencias entre Ingeniería Eléctrica e Ingeniería Electrónica ",
+        "imageUrl": "https://images.ctfassets.net/szez98lehkfm/1W0JDq6QwZYh78V32llKuj/cbb6c5d97f8f2885d4dd31502eeb5650/MyIC_Inline_32056?fm=webp&w=490",
+        "description": "a electrónica es el campo de la ingeniería y de la física aplicada relativo al diseño y aplicación de dispositivos, por lo general circuitos electrónicos, cuyo funcionamiento depende del flujo de electrones para la generación, transmisión, recepción, almacenamiento de información, entre otros."
+      },
+      {
+        "id": 4,
+        "title": "Ingeniería Electromecánica",
+        "imageUrl": "https://i.ibb.co/JzdZ9cv/Infografi-a-Ing-Electromeca-nica-1024x1024.jpg",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "¿Sabías qué? 💰",
+        "imageUrl": "https://aprende.com/wp-content/uploads/2021/10/que-es-la-electronica.jpg",
+        "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Vivian Salazar",
+        "photo": "https://uniandes.edu.co/sites/default/files/premio-mujeres-ciencia-n.jpg",
+        "linkedin": "",
+        "description": "El proyecto de la investigadora posdoctoral del Departamento de Ingeniería Eléctrica y Electrónica, ayudaría al desarrollo de nuevas terapias para enfermedades como el Parkinson."
+      },
+      {
+        "id": 2,
+        "name": "Liz Vivas",
+        "photo": "https://www.infobae.com/new-resizer/xz_vSWtKezDsULu16Pno4QEIPjM=/992x558/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/6KDD4I5MBRHOZLROOWVKDL5P6E.jpg",
+        "linkedin": "",
+        "description": "La primera mujer en lograr ser primer puesto en la UNI en en la Facultad de Ingeniería Electrónica, ahora triunfa en Estados Unidos.",
+        "description2": "Obtuvo una medalla de bronce en la III Olimpiada Matemática del Cono Sur."
+      }
+    ]
+  },
+  "mecatronic": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Serás capaz de crear robots, prótesis ortopédicas, maquinaria de construcción y dispositivos inteligentes."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Los ingenieros en mecatrónica trabajan principalmente en el desarrollo de máquinas inteligentes y procesos de automatización, desde el diseño y las pruebas de funcionamiento, hasta la fabricación final"
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "📍¿Qué Hace un Ingeniero Mecatrónico?🛠🪛",
+        "videoUrl": "https://www.youtube.com/watch?v=Ne9DOdZhtcg",
+        "description": "Encontraras ¿Qué hace un Ingeniero Mecatrónico?, Áreas de Trabajo,¿Qué materias imparten en Ingeniería Mecatrónica?"
+      },
+      {
+        "id": 2,
+        "title": "¿Qué es la MECATRÓNICA? 🤖",
+        "videoUrl": "https://www.youtube.com/watch?v=2V0Bj05FeFc",
+        "description": "Mercedes Gomez, directora de la carrera de Ingeniería Ambiental, nos invita a conocer todo sobre esta apasionada carrera."
+      },
+      {
+        "id": 3,
+        "title": "¿Qué estudiar si me gustan los ROBOTS? 🤖",
+        "videoUrl": "https://www.youtube.com/watch?v=DDeKkP01LBs",
+        "description": "Lo más probable es que estés pensando en estudiar alguna carrera como mecatrónica o robótica industrial, pero no entiendes claramente la diferencia."
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "¿Sabes qué campos incluye la Ingenieria Mecatronica? ",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Meca.svg/1200px-Meca.svg.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "Ramas de la Ingenieria Mecatronica",
+        "imageUrl": "https://i.ibb.co/7r55bFh/UPVM-IMG-Info-Mecatronica.jpg",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "Áreas del Mecatronica",
+        "imageUrl": "https://micarrerauniversitaria.com/wp-content/uploads/2018/02/IMT.gif"
+      },
+      {
+        "id": 4,
+        "title": "¿Sabías que?",
+        "imageUrl": "https://i.ibb.co/WfwJ6ZL/UPVM-IMG-Info-Mecatronica-1.jpg",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "",
+        "imageUrl": "https://blogs.unitec.mx/hubfs/287524/Imported_Blog_Media/Campo%20laboral-Ing_%20Mecatr%C3%B3nica-UNITEC-4.png",
+        "description": ""
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Karen Cuba",
+        "photo": "https://www.guiasemanal.pe/wp-content/uploads/2023/04/Karen-Cuba-Vargas.jpg",
+        "linkedin": "https://www.linkedin.com/in/karencubavargas/",
+        "description": "Investigadora de la carrera de Ingeniería Mecatrónica, fue reconocida por Indecopi como la mujer con mayor número de solicitudes de patentes acumuladas al 2022, gracias a los 51 proyectos donde figura como inventora."
+      },
+      {
+        "id": 2,
+        "name": "Dalia Carolina",
+        "photo": "https://laverdadnoticias.com/__export/1666999101576/sites/laverdad/img/2022/10/28/dalia_ramos-alpine-fxrmula_1_crop1666999078383.jpg_1421840632.jpg",
+        "linkedin": "https://www.linkedin.com/in/daliacarolinaramos/",
+        "description": "Actualemente trabaja como lider del equipo de construcción y pruebas de vehículos de Formula 1 para el equipo de Alpine, así mismo ha colaborado con grandes marcas como Rolls Royce."
+      }
+    ]
+  },
+  "telecom": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "La ingeniería de telecomunicaciones es una carrera que donde estudiaras la rama de los problemas de ingeniería resueltos mediante la transmisión y recepción de señales y redes."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Los ingenieros en telecomunicaciones diseñan e instalan sistemas de comunicaciones de voz, video y datos en equipos utilizados para transmitir datos de teléfonos con cable, celulares y banda ancha. "
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Qué hace un Ingeniero de Telecomunicaciones?",
+        "videoUrl": "hhttps://www.youtube.com/watch?v=OPumRiPR2s4",
+        "description": "¿Sabes qué es lo que hace un Ingeniero de Telecomunicación? ¿A qué se dedican? ¿Qué es lo que estudian? ¿Dónde puedo estudiar este grado universitario?"
+      },
+      {
+        "id": 2,
+        "title": "Conoce más de la ingeniería de telecomunicaciones",
+        "videoUrl": "https://www.youtube.com/watch?v=kGfk8-aZDEI",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "12 COSAS que DEBES SABER si queres estudiar INGENIERÍA EN TELECOMUNICACIONES",
+        "videoUrl": "https://www.youtube.com/watch?v=pq_tKXqIcq0",
+        "description": "Datos interesantes si deseas estudiar Inteniería en Telecomunicaciones"
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "¿Cuánto gana un ingeniero en Telecomunicaciones en Perú?",
+        "imageUrl": "https://i.ibb.co/g7qsnNH/descarga-2.jpg",
+        "description": "Según información del portal web Ponte en Carrera del Ministerio de Educación del Perú, donde se detalla que su ingreso promedio mensual es de S/4,046."
+      },
+      {
+        "id": 2,
+        "title": "¿Dónde y en qué trabaja un ingeniero en Telecomunicaciones?",
+        "imageUrl": "https://blogs.unitec.mx/hubfs/287524/Imported_Blog_Media/cuales-son-las-principales-areas-de-trabajo-de-la-ingenieria-en-telecomunicaciones-3-compressor-Dec-17-2022-07-27-35-1200-PM.jpg",
+        "description": "Áreas de diseño de redes, Gestión de redes, Análisis de la información,  Manejo, implementación y mantenimiento de aplicaciones para garantizar la operatividad de los sistemas de telecomunicación, en diversas empresas e industrias,  En instituciones del área de las comunicaciones relacionadas con televisión por cable, telefonía móvil, PCS, y teledifusión."
+      },
+      {
+        "id": 3,
+        "title": "Día mundial de las telecomunicaciones",
+        "imageUrl": "https://dplnews.com/wp-content/uploads/2021/05/dplnews_infografiadiamundialtelecomunicaciones_mc170521.jpg",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": " La Ciencia detás de las Telecomunicaciones",
+        "imageUrl": "https://i.ibb.co/pnhbzyG/telecomunicaciones-largo1-2048x965.png",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "1965, primeras mujeres ingenieras de telecomunicación",
+        "imageUrl": "https://www.etsit.upm.es/fileadmin/documentos/biblioteca/biblioteca/imagenes/dia_del_libro/2020/Hitos/Hitos_imagenes/Hito12_Mujeres_ingenieras_413x200.jpg",
+        "description": "La primera mujer que se matricula en la Escuela de Ingeniería de Telecomunicación de Madrid es Adelina Álvarez Bartolomé.  La primera promoción con tres pioneras eran Adelina Álvarez Bartolomé, María de los Remedios Uriel Aguirre y María Teresa Vidal Martín. Se titularon junto a 131 varones.  "
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Paula Hartley",
+        "photo": "https://www.cnybj.com/media/2949/paula-hartley.jpg",
+        "linkedin": "https://www.linkedin.com/in/paula-smith-hartley-06541734/",
+        "description": "Gerente General de negocios de Sistemas de Lockheed Martin, empresa de tecnología aeronautica. Se encarga del diseño y construcción de soluciones para comunicaciones militares, seguridad, cabinas de piloto de avión, vigilancia y armas."
+      },
+      {
+        "id": 2,
+        "name": "Maria Teresa Arredondo",
+        "photo": "https://www.lst.tfo.upm.es/wp-content/uploads/2021/03/mta.jpg",
+        "linkedin": "https://www.linkedin.com/in/maria-teresa-arredondo-waldmeyer-36a075b7/",
+        "description": "Se convirtió en la primera catedrática de telecomunicaciones en la Escuela Técnica Superior de Ingenieros de Telecomunicación, marcando un hito en la Universidad Politécnica de Madrid."
+      }
+    ]
+  },
+  "computer": {
+    "information": [
+      {
+        "id": 1,
+        "title": "Acerca de la carrera",
+        "content": "Se trata de un campo de conocimiento que abarca las diferentes áreas de estudio e investigación que emplean datos y algoritmos para la construcción de ecosistemas digitales y la resolución de problemas informáticos complejos."
+      },
+      {
+        "id": 2,
+        "title": "Perfil del Graduado",
+        "content": "Desafíate, pon a prueba tu ingenio y creatividad, y encuentra las oportunidades más valiosas dentro de grandes volumenes de información . Podrás desarrollar simuladores, sistemas para procesar datos a gran escala, análisis forense para delitos electrónicos, reconstrucción de información y mucho más. "
+      }
+    ],
+    "videos": [
+      {
+        "id": 1,
+        "title": "¿Qué son las Ciencias de la Computación?",
+        "videoUrl": "https://www.youtube.com/watch?v=cpitEYEQGto",
+        "description": "Conoce un poco más de lo que es estudiar Ciencias de la Computación."
+      },
+      {
+        "id": 2,
+        "title": "¿Cómo se originó la Ciencia de la Computación?",
+        "videoUrl": "https://www.youtube.com/watch?v=0vkrAWiPssA",
+        "description": "Aprendamos de la historia de las Ciencias de la Computación de manera breve"
+      },
+      {
+        "id": 3,
+        "title": "Una mirada profunda sobre el potencial de las Ciencias de la Computación",
+        "videoUrl": "https://www.youtube.com/watch?v=W9N2NWwsySA",
+        "description": "A través de la entrevista en el video, se puede explorar más del mundo de las Ciencias de la Computación."
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "title": "¿Que significa Ciencias de la Computación?",
+        "imageUrl": "https://muytecnologicos.com/wp-content/uploads/2021/10/Ciencias-de-la-computacion-que-es.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "El impacto de las Ciencias de la Computación",
+        "imageUrl": "https://www.azulweb.net/wp-content/uploads/2014/09/YoPuedoProgramar.png",
+        "description": "A veces solo se necesita probar un nuevo camino para encontrar lo que te apasiona."
+      },
+      {
+        "id": 3,
+        "title": "Las primeras mujeres en ejercer las Ciencias de la computacion",
+        "imageUrl": "https://i.pinimg.com/736x/1b/bf/79/1bbf79791c5d7acfdadb74d43d7b1685.jpg",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "Aplicación de las ciencias de la Computación",
+        "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t39.30808-6/307532392_471724324999386_3062274835235518187_n.png?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=sArB7TBsRzoAX8Gz55v&_nc_ht=scontent.flim2-1.fna&cb_e2o_trans=q&oh=00_AfCQy9CE8ZfwQFjyaNVWapFYz42axw-dNnLQhtOXdsYyyg&oe=65413DDE",
+        "description": "Uno de los campos de apliación con mucho interés es el desarrollo de videojuegos, la universidad UPC ha desarrollado grupos de estudios especializados en desarrollar estas habilidades."
+      }
+    ],
+    "women": [
+      {
+        "id": 1,
+        "name": "Justyna Zander",
+        "photo": "https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2018/06/no-30-justyna-zander-senior-automotive-product-manager-nvidia.jpg?tf=640x",
+        "linkedin": "https://www.linkedin.com/in/justynazander/",
+        "description": "Experta en el aprendizaje profundo, la inteligencia artificial y el aprendizaje automático. Ha sido jefa de productos de conducción autónoma de NVIDIA, una de las principales empresas fabricantes de tecnologías para la automoción."
+      },
+      {
+        "id": 2,
+        "name": "Yael Garten",
+        "photo": "https://media.bizj.us/view/img/11592008/012720yaelgartenselect2*320xx1842-2758-158-0.jpg",
+        "linkedin": "https://www.linkedin.com/in/yaelgarten/",
+        "description": "Ha sido directora de ciencia y análisis de datos de Siri en Apple. Estuvo a cargo de la toma de decisiones de la asistente de voz sobre cómo se actualizaría Siri o qué nuevas características obtendrá el programa."
+      }
+    ]
+  }
+}

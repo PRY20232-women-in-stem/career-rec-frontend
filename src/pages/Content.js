@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import {
   Stack, Flex
 } from '@chakra-ui/react';
-//import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import PopUpButton from '../components/PopUpButton';
 import PostTest from '../components/PostTest';
 import { getStudentById } from "../services/StudentService";
@@ -22,17 +22,16 @@ function ContentWrapper({ children }) {
 }
 
 function ContentView({ onConfirm, showFinishedPopUp }) {
-  //const location = useLocation(); // PARA LA MUESTRA DE CONTENIDO, USARSE LUEGO PARA MOSTRAR CONTENIDO
-  //const searchParams = new URLSearchParams(location.search); // PARA LA MUESTRA DE CONTENIDO, USARSE LUEGO PARA MOSTRAR CONTENIDO
-  //const area = searchParams.get("area"); // PARA LA MUESTRA DE CONTENIDO, USARSE LUEGO PARA MOSTRAR CONTENIDO
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const area = searchParams.get("area");
   return (
     <ContentWrapper>
       <PopUpButton onConfirm={onConfirm} showFinishedPopUp={showFinishedPopUp} />
-      <EngineeringContent />
-      {/*{area === "Engineering" ? <EngineeringContent /> : null}
-      {area === "Science" ? <ScienceContent /> : null}
-      {area === "Technology" ? <TechnologyContent /> : null}
-      {area === "Mathematics" ? <MathematicsContent /> : null}*/}
+      {area === "Ingenieria" ? <EngineeringContent /> : null}
+      {area === "Ciencia" ? <ScienceContent /> : null}
+      {area === "Tecnologia" ? <TechnologyContent /> : null}
+      {area === "Matematica" ? <MathematicsContent /> : null}
     </ContentWrapper >
   );
 }
