@@ -89,7 +89,7 @@ function PreTest({ onPreTestComplete }) {
         zIndex={9999999}
       >
         <Flex direction="column" align="center">
-          <Heading color="purple.700" mx={6} mb={20}>No te preocupes, ¡Estamos esperando 5 minutos a que todas tus compañeras respondan!</Heading>
+          <Heading color="purple.700" mx={6} mb={20}>No te preocupes, ¡Estamos esperando 4 minutos a que todas tus compañeras respondan!</Heading>
           <Spinner size="xl" color="purple.700" />
           <Text mt={4} fontSize="2xl" color="purple.700">Cargando{loadingDots}</Text>
         </Flex>
