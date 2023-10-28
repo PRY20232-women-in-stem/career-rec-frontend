@@ -70,7 +70,7 @@ function LearnSTEM() {
             <Box display="flex" justifyContent="center">
               <Carousel {...carouselSettings}>
                 {cards.map((card, index) => (
-                  <Card key={index} overflow="hidden">
+                  <Card key={index} overflow="hidden" mx={2}>
                     <Image objectFit="cover" src={card.image} />
                     <CardHeader>
                       <Heading size="md">{card.title}</Heading>

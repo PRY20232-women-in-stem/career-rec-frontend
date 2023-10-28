@@ -4,9 +4,13 @@ import { Survey } from "survey-react-ui";
 import 'survey-core/defaultV2.min.css';
 import { testVocacionalJson } from "../util/TestVocacionalJson";
 import { testVocacionalTheme } from "../util/TestVocacionalTheme";
-import { Button, Card, CardBody, CardFooter, CardHeader, Flex, Heading, Highlight, Image, Stack, Text, Spinner } from "@chakra-ui/react";
+import {
+  Button, Card, CardBody, CardFooter, CardHeader, Flex, Heading, Highlight, Image, Stack, Text, Spinner, Skeleton,
+} from "@chakra-ui/react";
 import PreTest from "../components/PreTest";
+import PostTest from "../components/PostTest";
 import RegisterNowAlert from "../components/RegisterNowAlert";
+import DoPostTestAlert from "../components/DoPostTestAlert";
 import { useNavigate } from 'react-router-dom';
 import { getStudentById } from "../services/StudentService";
 import { createVocationalTestPrediction } from "../services/VocationalTestService";
@@ -21,12 +25,16 @@ function VocationalTest() {
   const [recommendation, setRecommendation] = useState(""); // Estado para almacenar la recomendación
   const [isLoading, setIsLoading] = useState(true);
   const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [showPostTestAlert, setShowPostTestAlert] = useState(false);
+  const [showPostTest, setShowPostTest] = useState(false);
   const navigate = useNavigate();
 
   survey.onComplete.add((sender) => {
     const answers = sender.data;
     surveyOnComplete(answers);
     setShowResults(true);
+    window.scrollTo(0, 0);
   });
 
   const fetchData = async () => {
@@ -46,6 +54,7 @@ function VocationalTest() {
           if (response.preTestCompl) {
             setHasCompletedPreTest(true);
             localStorage.setItem('pre_test_compl', 'true');
+            localStorage.setItem('group', response.group);
           } else {
             setHasCompletedPreTest(false);
             localStorage.setItem('pre_test_compl', 'false');
@@ -73,6 +82,7 @@ function VocationalTest() {
     const response = await createVocationalTestPrediction(userId, answersForBackend);
     setRecommendation(response);
     localStorage.setItem('rec_career', response);
+    setIsLoaded(true);
     await updateStudentVocationalTest(userId);
   };
 
@@ -80,8 +90,24 @@ function VocationalTest() {
     fetchData();
   };
 
+  const handleModalPostTest = async () => {
+    setShowPostTestAlert(true);
+  };
+
+  const handlePostTestlertConfirm = () => {
+    setShowPostTestAlert(false);
+  };
+
+  const handlePostTestAlertCancel = () => {
+    setShowPostTestAlert(false);
+  };
+
   const handleAcceptButtonClick = () => {
-    navigate(`/content?area=${encodeURIComponent(recommendation)}`);
+    if (recommendation === "NO") {
+      navigate(`/content?area=Ciencia`);
+    } else {
+      navigate(`/content?area=${encodeURIComponent(recommendation)}`);
+    }
   };
 
   const handleRegisterNowAlertConfirm = () => {
@@ -99,14 +125,14 @@ function VocationalTest() {
           <Heading fontSize={"4xl"} textAlign={"center"} color={"purple.700"}>
             Test Vocacional
           </Heading>
-          <Text fontSize={["md", "lg"]} textAlign={"center"} color={'purple.700'}>
+          <Text fontSize={"lg"} textAlign={"center"} color={'purple.700'}>
             Este test tiene como propósito conocer las habilidades de cada estudiante con el único fin de poder recomendar carreras de acuerdo a sus intereses.
           </Text>
           <Stack>
             <Heading fontSize={"xl"} textAlign={"center"} color={'purple.700'}>
               ¡Importante!
             </Heading>
-            <Text fontSize={["md", "lg"]} textAlign={"center"} color={'purple.700'}>
+            <Text fontSize={"lg"} textAlign={"center"} color={'purple.700'}>
               <Highlight query={['1 al 5', 'Muy en desacuerdo', 'Muy de acuerdo']} styles={{ px: '1.5', py: '0.4', rounded: 'full', bg: 'purple.300', color: 'white' }}>
                 Los valores de la encuesta van del 1 al 5 donde 1 significa Muy en desacuerdo y 5 significa Muy de acuerdo.
               </Highlight>
@@ -117,34 +143,105 @@ function VocationalTest() {
           </SurveyContainer>
         </>
       );
-    } else {
+    } else if (showPostTest) {
       return (
-        <>
-          <Heading fontSize={"4xl"} color={"purple.700"}>
-            Resultado
-          </Heading>
-          <Card>
-            <CardHeader>
-              <Heading fontSize={["2xl"]} color={'purple.700'}>
-                ¡Felicitaciones!
-              </Heading>
-            </CardHeader>
-            <CardBody>
-              <Image borderRadius='full' src='WomenInStem1.png' mb={5} />
-              <Text fontSize={["md", "lg"]} color={'purple.700'} mb={5}>
-                De acuerdo a sus intereses y preferencias evaluados en el Test Vocacional, podemos recomendarle la siguiente area STEM:
-              </Text>
-              <Heading fontSize={"2xl"} color={'purple.700'}>{recommendation}</Heading>
-            </CardBody>
-            <CardFooter justifyContent={"center"}>
-              <Button onClick={handleAcceptButtonClick} colorScheme="purple">Continuar</Button>
-            </CardFooter>
-          </Card>
-        </>
+        <PostTest onClose={() => {
+          setShowPostTest(false)
+          handleAcceptButtonClick();
+        }} />
       );
+    } else {
+      if (recommendation === 'NO') {
+        return (
+          <>
+            <Heading fontSize={"4xl"} color={"purple.700"}>
+              Resultado
+            </Heading>
+            <Card>
+              <CardHeader>
+                <Heading fontSize={["2xl"]} color={'purple.700'}>
+                  ¡Lo sentimos!
+                </Heading>
+              </CardHeader>
+              <CardBody>
+                <Image borderRadius='full' src='WomenInStem1.png' mb={8} />
+                <Text fontSize={"lg"} color={'purple.700'}>
+                  No formas parte de carreras las en STEM, pero puedes seguir viendo el contenido en general.
+                </Text>
+              </CardBody>
+              <CardFooter justifyContent={"center"}>
+                <Button onClick={handleAcceptButtonClick} colorScheme="purple">Continuar</Button>
+              </CardFooter>
+            </Card>
+          </>
+        );
+      } else if (localStorage.getItem('group') === 'G2') {
+        return (
+          <>
+            <Heading fontSize={"4xl"} color={"purple.700"}>
+              Resultado
+            </Heading>
+            <Card>
+              <CardHeader>
+                <Heading fontSize={["2xl"]} color={'purple.700'}>
+                  Grupo experimental
+                </Heading>
+              </CardHeader>
+              <CardBody>
+                <Image borderRadius='full' src='WomenInStem1.png' mb={5} />
+                <Text fontSize={"lg"} color={'purple.700'} mb={5}>
+                  Has sido seleccionada para el grupo experimental, investiga de tu área STEM en internet y luego dale a continuar para realizar el Post test.
+                </Text>
+                <Skeleton isLoaded={isLoaded}>
+                  <Heading fontSize={"2xl"} color={'purple.700'}>{recommendation}</Heading>
+                </Skeleton>
+              </CardBody>
+              <CardFooter justifyContent={"center"}>
+                <Button
+                  onClick={() => {
+                    handleModalPostTest();
+                    setShowPostTest(true); // Mostrar el PostTest
+                    setShowPostTestAlert(false); // Cerrar el modal DoPostTestAlert
+                  }}
+                  colorScheme="purple"
+                >
+                  Continuar
+                </Button>
+              </CardFooter>
+            </Card>
+            <DoPostTestAlert isOpen={showPostTestAlert} onConfirm={handlePostTestlertConfirm} onCancel={handlePostTestAlertCancel} />
+          </>
+        );
+      } else {
+        return (
+          <>
+            <Heading fontSize={"4xl"} color={"purple.700"}>
+              Resultado
+            </Heading>
+            <Card>
+              <CardHeader>
+                <Heading fontSize={["2xl"]} color={'purple.700'}>
+                  ¡Felicitaciones!
+                </Heading>
+              </CardHeader>
+              <CardBody>
+                <Image borderRadius='full' src='WomenInStem1.png' mb={5} />
+                <Text fontSize={"lg"} color={'purple.700'} mb={5}>
+                  De acuerdo a sus intereses y preferencias evaluados en el Test Vocacional, podemos recomendarle la siguiente área STEM:
+                </Text>
+                <Skeleton isLoaded={isLoaded}>
+                  <Heading fontSize={"2xl"} color={'purple.700'}>{recommendation}</Heading>
+                </Skeleton>
+              </CardBody>
+              <CardFooter justifyContent={"center"}>
+                <Button onClick={handleAcceptButtonClick} colorScheme="purple">Continuar</Button>
+              </CardFooter>
+            </Card>
+          </>
+        );
+      }
     }
   };
-
   return (
     <>
       <Flex minH={"100vh"} justify={"center"} bg={"purple.100"}>

@@ -38,6 +38,7 @@ axiosInstance.interceptors.response.use(
             localStorage.removeItem('pre_test_compl');
             localStorage.removeItem('post_test_compl');
             localStorage.removeItem('rec_career');
+            localStorage.removeItem('group');
 
             if (error.config.url !== '/auth/login') {
                 window.location.href = '/login';
