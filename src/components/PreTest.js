@@ -41,31 +41,33 @@ function PreTest({ onPreTestComplete }) {
 
   useEffect(() => {
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
-    const userId = currentUser.userId;
-    const socket = io(process.env.REACT_APP_URL_SOCKET);
+    if (currentUser) {
+      const userId = currentUser.userId;
+      const socket = io(process.env.REACT_APP_URL_SOCKET);
 
-    // ESTILOS PARA LA PAGINA
-    if (isLoading) {
-      setInterval(() => {
-        setLoadingDots((prevDots) => (prevDots === "..." ? "" : prevDots + "."));
-      }, 500);
-      document.body.style.overflow = 'hidden';
+      // ESTILOS PARA LA PAGINA
+      if (isLoading) {
+        setInterval(() => {
+          setLoadingDots((prevDots) => (prevDots === "..." ? "" : prevDots + "."));
+        }, 500);
+        document.body.style.overflow = 'hidden';
+      }
+      // ESTILOS PARA LA PAGINA
+
+      socket.emit('captureStudentInfo', userId);
+
+      socket.on('recieveMessage', (group) => {
+        localStorage.setItem("group", group);
+        setIsLoading(false);
+        onPreTestComplete();
+        window.scrollTo(0, 0);
+      });
+
+      return () => {
+        socket.disconnect();
+        document.body.style.overflow = 'visible';
+      };
     }
-    // ESTILOS PARA LA PAGINA
-
-    socket.emit('captureStudentInfo', userId);
-
-    socket.on('recieveMessage', (group) => {
-      localStorage.setItem("group", group);
-      setIsLoading(false);
-      onPreTestComplete();
-      window.scrollTo(0, 0);
-    });
-
-    return () => {
-      socket.disconnect();
-      document.body.style.overflow = 'visible';
-    };
   }, [onPreTestComplete, isLoading]);
 
   const SurveyContainer = ({ children }) => ( // Con el propósito de alinear el contenido a la izquierda
