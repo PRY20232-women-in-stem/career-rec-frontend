@@ -24,6 +24,7 @@ function LogoutAlert({ isOpen, onConfirm, onCancel }) {
     localStorage.removeItem('pre_test_compl');
     localStorage.removeItem('post_test_compl');
     localStorage.removeItem('rec_career');
+    localStorage.removeItem('group');
     onConfirm(); // Cerrar el modal de cierre de sesión
     navigate('/login');
   };

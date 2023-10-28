@@ -56,7 +56,6 @@ function PreTest({ onPreTestComplete }) {
     socket.emit('captureStudentInfo', userId);
 
     socket.on('recieveMessage', (group) => {
-      console.log("XDXDXDX", group)
       localStorage.setItem("group", group);
       setIsLoading(false);
       onPreTestComplete();

@@ -25,9 +25,11 @@ function ContentView({ onConfirm, showFinishedPopUp }) {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const area = searchParams.get("area");
+  const recCareer = localStorage.getItem('rec_career');
+  
   return (
     <ContentWrapper>
-      <PopUpButton onConfirm={onConfirm} showFinishedPopUp={showFinishedPopUp} />
+      {recCareer !== "NO" && <PopUpButton onConfirm={onConfirm} showFinishedPopUp={showFinishedPopUp} />}
       {area === "Ingenieria" ? <EngineeringContent /> : null}
       {area === "Ciencia" ? <ScienceContent /> : null}
       {area === "Tecnologia" ? <TechnologyContent /> : null}
