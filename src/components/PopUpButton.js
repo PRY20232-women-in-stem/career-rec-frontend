@@ -8,6 +8,7 @@ import {
 function PopUpButton({ onConfirm }) {
   const [localIsOpen, setLocalIsOpen] = useState(false);
   const postTestCompleted = localStorage.getItem("post_test_compl") === "true";
+  const userGroup = localStorage.getItem("group");
 
   useEffect(() => {
     const timerId = setTimeout(() => {
@@ -26,6 +27,7 @@ function PopUpButton({ onConfirm }) {
   const handlePopoverClose = () => {
     setLocalIsOpen(false); // Cierra el Popover al hacer clic en el botón de cierre
   };
+
   return (
     <motion.div
       drag
@@ -57,15 +59,8 @@ function PopUpButton({ onConfirm }) {
         <PopoverContent w={{ base: "250px", sm: "auto" }}>
           <PopoverArrow />
           <PopoverCloseButton onClick={handlePopoverClose} />
-          {postTestCompleted ? (
-            <>
-              <PopoverBody border='0'>
-                <Heading size='lg' textAlign={"center"} color={"purple.700"}>
-                  Gracias por hacer el test!💜
-                </Heading>
-              </PopoverBody>
-            </>
-          ) :
+
+          {postTestCompleted && (userGroup === 'G2') ? (
             <>
               <PopoverHeader border='0'>
                 <Heading size='lg' textAlign={"center"} color={"purple.700"}>
@@ -83,7 +78,16 @@ function PopUpButton({ onConfirm }) {
                 </Button>
               </PopoverFooter>
             </>
-          }
+          ) : (
+            <>
+              <PopoverBody border='0'>
+                <Heading size='lg' textAlign={"center"} color={"purple.700"}>
+                  Gracias por hacer el test!💜
+                </Heading>
+              </PopoverBody>
+            </>
+          )}
+
         </PopoverContent>
       </Popover>
     </motion.div>
