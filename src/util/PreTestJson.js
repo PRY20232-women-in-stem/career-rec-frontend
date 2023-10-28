@@ -13,19 +13,19 @@ export const preTestJson = {
         {
           "type": "rating",
           "name": "subjectInterestMath",
-          "title": "Indica qué tan interesada está en Matématicas",
+          "title": "Indica qué tan interesada está en Matemáticas",
           "isRequired": true
         },
         {
           "type": "rating",
-          "name": "subjectInterestBioGeo",
-          "title": "Indica qué tan interesada está en Biología y Geología",
+          "name": "subjectInterestSci",
+          "title": "Indica qué tan interesada está en Ciencias (Biología, Geología, Física y Química)",
           "isRequired": true
         },
         {
           "type": "rating",
-          "name": "subjectInterestPhyChe",
-          "title": "Indica qué tan interesada está en Física y Química",
+          "name": "subjectInterestTech",
+          "title": "Indica qué tan interesada está en las áreas de Tecnología",
           "isRequired": true
         }
       ],
@@ -37,80 +37,23 @@ export const preTestJson = {
         {
           "type": "rating",
           "name": "selfPerceptionMath",
-          "title": "Indica qué tan buena eres en la materia de Matématicas",
+          "title": "Indica qué tan buena eres en la materia de Matemáticas",
           "isRequired": true
         },
         {
           "type": "rating",
-          "name": "selfPerceptionBioGeo",
-          "title": "Indica qué tan buena eres en las materias de Biología y Geología",
+          "name": "selfPerceptionSci",
+          "title": "Indica qué tan buena eres en las materias de Ciencias (Biología, Geología, Física y Química)",
           "isRequired": true
         },
         {
           "type": "rating",
-          "name": "selfPerceptionPhyChe",
-          "title": "Indica qué tan buena eres en las materias de Física y Química",
+          "name": "selfPerceptionTech",
+          "title": "Indica qué tan buena eres en las áreas de Tecnología",
           "isRequired": true
         }
       ],
       "title": "Autopercepción"
-    },
-    {
-      "name": "page3",
-      "elements": [
-        {
-          "type": "radiogroup",
-          "name": "lastGradeMath",
-          "title": "Indica tu nota en la última evaluación de la materia de Matemática",
-          "isRequired": true,
-          "searchEnabled": false,
-          "choices": [
-            "Entre 0 y 4",
-            "Entre 5 y 8",
-            "Entre 9 y 11",
-            "Entre 12 y 14",
-            "Entre 15 y 17",
-            "Entre 18 y 20",
-            "No llevo este curso"
-          ],
-          "allowClear": false,
-        },
-        {
-          "type": "radiogroup",
-          "name": "lastGradeBioGeo",
-          "title": "Indica tu nota en la última evaluación de la materia de Biología y Geología",
-          "isRequired": true,
-          "searchEnabled": false,
-          "choices": [
-            "Entre 0 y 4",
-            "Entre 5 y 8",
-            "Entre 9 y 11",
-            "Entre 12 y 14",
-            "Entre 15 y 17",
-            "Entre 18 y 20",
-            "No llevo este curso"
-          ],
-          "allowClear": false,
-        },
-        {
-          "type": "radiogroup",
-          "name": "lastGradePhyChe",
-          "title": "Indica tu nota en la última evaluación de la materia de Física y Química",
-          "isRequired": true,
-          "searchEnabled": false,
-          "choices": [
-            "Entre 0 y 4",
-            "Entre 5 y 8",
-            "Entre 9 y 11",
-            "Entre 12 y 14",
-            "Entre 15 y 17",
-            "Entre 18 y 20",
-            "No llevo este curso"
-          ],
-          "allowClear": false,
-        }
-      ],
-      "title": "Logros en cursos STEM"
     }
   ],
   "showPrevButton": false,

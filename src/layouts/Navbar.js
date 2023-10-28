@@ -27,6 +27,8 @@ function Navbar() {
   // Al cargar el componente, verifica si hay un token en el local storage
   useEffect(() => {
     const token = localStorage.getItem('access_token');
+    const currentUser = JSON.parse(localStorage.getItem("current_user"));
+
     if (token) {
       setIsLoggedIn(true);
     }
@@ -34,25 +36,31 @@ function Navbar() {
       navigate('/login');
     }
 
+    const fetchStudentData = async () => {
+      if (currentUser) {
+        const userId = currentUser.userId;
+        const response = await getStudentById(userId);
+        if (response.vocationalTestCompl === true) {
+          setIsVocTestCompleted(true);
+          localStorage.setItem('vocational_test_compl', 'true');
+        }
+        if (response.recCareer !== "") {
+          setRecCareer(response.recCareer);
+          localStorage.setItem('rec_career', response.recCareer);
+        }
+      }
+    };
+
     const cachedVocationalTestCompl = localStorage.getItem('vocational_test_compl');
     if (cachedVocationalTestCompl === 'true') {
       setIsVocTestCompleted(true);
     } else {
-      const currentUser = JSON.parse(localStorage.getItem("current_user"));
-      const fetcStudentData = async () => {
-        if (currentUser) {
-          const userId = currentUser.userId;
-          const response = await getStudentById(userId);
-          if (response.vocationalTestCompl === true) {
-            setIsVocTestCompleted(true);
-            setRecCareer(response.recCareer);
-            localStorage.setItem('rec_career', response.recCareer);
-            localStorage.setItem('vocational_test_compl', 'true');
-          }
-        }
-      };
-      fetcStudentData();
-    }
+      fetchStudentData();
+    };
+
+    if (location.pathname === "/content") {
+      fetchStudentData();
+    };
   }, [navigate, location.pathname]);
 
   const handleLogoutClick = () => {

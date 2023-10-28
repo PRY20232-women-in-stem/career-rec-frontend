@@ -4,7 +4,7 @@ import { Survey } from "survey-react-ui";
 import 'survey-core/defaultV2.min.css';
 import { testVocacionalJson } from "../util/TestVocacionalJson";
 import { testVocacionalTheme } from "../util/TestVocacionalTheme";
-import { Button, Card, CardBody, CardFooter, CardHeader, Flex, Heading, Highlight, Image, Stack, Text, Spinner } from "@chakra-ui/react";
+import { Button, Card, CardBody, CardFooter, CardHeader, Flex, Heading, Highlight, Image, Stack, Text, Spinner, Skeleton } from "@chakra-ui/react";
 import PreTest from "../components/PreTest";
 import RegisterNowAlert from "../components/RegisterNowAlert";
 import { useNavigate } from 'react-router-dom';
@@ -21,12 +21,14 @@ function VocationalTest() {
   const [recommendation, setRecommendation] = useState(""); // Estado para almacenar la recomendación
   const [isLoading, setIsLoading] = useState(true);
   const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false)
   const navigate = useNavigate();
 
   survey.onComplete.add((sender) => {
     const answers = sender.data;
     surveyOnComplete(answers);
     setShowResults(true);
+    window.scrollTo(0, 0);
   });
 
   const fetchData = async () => {
@@ -73,6 +75,7 @@ function VocationalTest() {
     const response = await createVocationalTestPrediction(userId, answersForBackend);
     setRecommendation(response);
     localStorage.setItem('rec_career', response);
+    setIsLoaded(true);
     await updateStudentVocationalTest(userId);
   };
 
@@ -134,7 +137,9 @@ function VocationalTest() {
               <Text fontSize={["md", "lg"]} color={'purple.700'} mb={5}>
                 De acuerdo a sus intereses y preferencias evaluados en el Test Vocacional, podemos recomendarle la siguiente area STEM:
               </Text>
-              <Heading fontSize={"2xl"} color={'purple.700'}>{recommendation}</Heading>
+              <Skeleton isLoaded={isLoaded}>
+                <Heading fontSize={"2xl"} color={'purple.700'}>{recommendation}</Heading>
+              </Skeleton>
             </CardBody>
             <CardFooter justifyContent={"center"}>
               <Button onClick={handleAcceptButtonClick} colorScheme="purple">Continuar</Button>
