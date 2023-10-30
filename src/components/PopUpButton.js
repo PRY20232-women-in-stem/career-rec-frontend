@@ -6,26 +6,26 @@ import {
 } from '@chakra-ui/react';
 
 function PopUpButton({ onConfirm }) {
-  const [localIsOpen, setLocalIsOpen] = useState(false);
-  const postTestCompleted = localStorage.getItem("post_test_compl") === "true";
+  const [popUpIsOpen, setPopUpIsOpen] = useState(false);
+  const postTestStatus = localStorage.getItem("post_test_compl");
   const userGroup = localStorage.getItem("group");
 
   useEffect(() => {
     const timerId = setTimeout(() => {
-      setLocalIsOpen(!postTestCompleted);
+      setPopUpIsOpen(true);
     }, 240000); // 4 minutos en milisegundos
 
     return () => {
       clearTimeout(timerId);
     };
-  }, [postTestCompleted]);
+  }, []);
 
   const handlePopUpAlertConfirm = () => {
     onConfirm();
   };
 
   const handlePopoverClose = () => {
-    setLocalIsOpen(false); // Cierra el Popover al hacer clic en el botón de cierre
+    setPopUpIsOpen(false); // Cierra el Popover al hacer clic en el botón de cierre
   };
 
   return (
@@ -43,24 +43,24 @@ function PopUpButton({ onConfirm }) {
       style={{
         width: "60px",
         position: "fixed", // Posición fija para que el z-index tenga efecto
-        zIndex: 9999, // Valor alto para que esté por encima de otros elementos
+        zIndex: 999, // Valor alto para que esté por encima de otros elementos
       }}
     >
-      <Popover placement='left' isOpen={localIsOpen}>
+      <Popover placement='left' isOpen={popUpIsOpen}>
         <PopoverTrigger>
           <IconButton
             isRound={true}
             bg='purple.200'
             sx={{ _hover: { backgroundColor: 'purple.200' }, w: '65px', h: '65px' }}
             icon={<Image src='/imgPrac.png' w='55px' h='60px' />}
-            onClick={() => setLocalIsOpen(!localIsOpen)}
+            onClick={() => setPopUpIsOpen(!popUpIsOpen)}
           />
         </PopoverTrigger>
         <PopoverContent w={{ base: "250px", sm: "auto" }}>
           <PopoverArrow />
           <PopoverCloseButton onClick={handlePopoverClose} />
 
-          {postTestCompleted && (userGroup === 'G2') ? (
+          {postTestStatus === "false" || (postTestStatus === "true" && userGroup === "G2") ? (
             <>
               <PopoverHeader border='0'>
                 <Heading size='lg' textAlign={"center"} color={"purple.700"}>

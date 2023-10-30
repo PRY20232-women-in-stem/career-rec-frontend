@@ -12,7 +12,7 @@ import { io } from 'socket.io-client';
 
 function PreTest({ onPreTestComplete }) {
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isWaiting, setIsWaiting] = useState(false);
   const [loadingDots, setLoadingDots] = useState("");
 
   const survey = new Model(preTestJson); // Carga el Json de la encuesta
@@ -20,7 +20,7 @@ function PreTest({ onPreTestComplete }) {
 
   survey.onComplete.add((sender) => {
     const answers = sender.data;
-    setIsLoading(true);
+    setIsWaiting(true);
     surveyOnComplete(answers);
   });
 
@@ -46,7 +46,7 @@ function PreTest({ onPreTestComplete }) {
       const socket = io(process.env.REACT_APP_URL_SOCKET);
 
       // ESTILOS PARA LA PAGINA
-      if (isLoading) {
+      if (isWaiting) {
         setInterval(() => {
           setLoadingDots((prevDots) => (prevDots === "..." ? "" : prevDots + "."));
         }, 500);
@@ -57,8 +57,9 @@ function PreTest({ onPreTestComplete }) {
       socket.emit('captureStudentInfo', userId);
 
       socket.on('recieveMessage', (group) => {
+        console.log("Group del socket", group);
         localStorage.setItem("group", group);
-        setIsLoading(false);
+        setIsWaiting(false);
         onPreTestComplete();
         window.scrollTo(0, 0);
       });
@@ -68,26 +69,15 @@ function PreTest({ onPreTestComplete }) {
         document.body.style.overflow = 'visible';
       };
     }
-  }, [onPreTestComplete, isLoading]);
+  }, [onPreTestComplete, isWaiting]);
 
   const SurveyContainer = ({ children }) => ( // Con el propósito de alinear el contenido a la izquierda
     <div style={{ textAlign: "left" }}>{children}</div>
   );
 
-  if (isLoading) {
+  if (isWaiting) {
     return (
-      <Flex
-        position="fixed"
-        top={0}
-        left={0}
-        right={0}
-        bottom={0}
-        align="center"
-        justify="center"
-        backgroundColor="white"
-        opacity="0.8"
-        zIndex={9999999}
-      >
+      <Flex position="fixed" top={0} left={0} right={0} bottom={0} align="center" justify="center" backgroundColor="white" opacity="0.8" zIndex={9999999}>
         <Flex direction="column" align="center">
           <Heading color="purple.700" mx={6} mb={20}>No te preocupes, ¡Estamos esperando 4 minutos a que todas tus compañeras respondan!</Heading>
           <Spinner size="xl" color="purple.700" />
