@@ -43,7 +43,7 @@ function PopUpButton({ onConfirm }) {
       style={{
         width: "60px",
         position: "fixed", // Posición fija para que el z-index tenga efecto
-        zIndex: 9999, // Valor alto para que esté por encima de otros elementos
+        zIndex: 999, // Valor alto para que esté por encima de otros elementos
       }}
     >
       <Popover placement='left' isOpen={popUpIsOpen}>

@@ -14,7 +14,7 @@ import DoPostTestAlert from "../components/DoPostTestAlert";
 import { useNavigate } from 'react-router-dom';
 import { getStudentById } from "../services/StudentService";
 import { createVocationalTestPrediction } from "../services/VocationalTestService";
-import { updateStudentVocationalTest } from "../services/StudentService";
+import { updateStudentVocationalTest, updateStudentRecArea } from "../services/StudentService";
 
 function VocationalTest() {
   const survey = new Model(testVocacionalJson); // Carga el Json de la encuesta
@@ -85,6 +85,7 @@ function VocationalTest() {
     setShowResults(true);
     window.scrollTo(0, 0);
 
+    await updateStudentRecArea(userId, response);
     await updateStudentVocationalTest(userId);
   };
 
@@ -194,7 +195,7 @@ function VocationalTest() {
                 <Text fontSize={"lg"} color={'purple.700'} mb={5}>
                   Has sido seleccionada para el grupo experimental, investiga de tu área STEM en internet y luego dale a continuar para realizar el Post test.
                 </Text>
-                <Skeleton isLoadedRecom={isLoadedRecom}>
+                <Skeleton isLoaded={isLoadedRecom}>
                   <Heading fontSize={"2xl"} color={'purple.700'}>{recommendation}</Heading>
                 </Skeleton>
               </CardBody>
@@ -231,7 +232,7 @@ function VocationalTest() {
                 <Text fontSize={"lg"} color={'purple.700'} mb={5}>
                   De acuerdo a sus intereses y preferencias evaluados en el Test Vocacional, podemos recomendarle la siguiente área STEM:
                 </Text>
-                <Skeleton isLoadedRecom={isLoadedRecom}>
+                <Skeleton isLoaded={isLoadedRecom}>
                   <Heading fontSize={"2xl"} color={'purple.700'}>{recommendation}</Heading>
                 </Skeleton>
               </CardBody>

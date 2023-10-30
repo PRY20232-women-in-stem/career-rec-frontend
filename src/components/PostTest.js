@@ -4,19 +4,17 @@ import { postTestJson } from "../util/PostTestJson";
 import { postTestTheme } from "../util/PostTestTheme";
 import 'survey-core/defaultV2.min.css';
 import { Heading, Highlight, Text } from "@chakra-ui/react";
-import { useNavigate } from 'react-router-dom';
 import { createPostTest } from "../services/PostTestService";
 import { updateStudentPostTest } from "../services/StudentService";
 
 function PostTest({ onClose }) {
-  const navigate = useNavigate();
-
   const survey = new Model(postTestJson); // Carga el Json de la encuesta
   survey.applyTheme(postTestTheme); // Aplica el estilo personalizado
 
   survey.onComplete.add((sender) => {
     const answers = sender.data;
     surveyOnComplete(answers);
+    window.scrollTo(0, 0);
   });
 
   const surveyOnComplete = async (answers) => {

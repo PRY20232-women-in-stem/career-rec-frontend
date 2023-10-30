@@ -62,3 +62,12 @@ export async function updateStudentVocationalTest(studentId) {
         throw error;
     }
 }
+
+export async function updateStudentRecArea(studentId, recArea) {
+    try {
+        const response = await axiosInstance.patch(`/students/${studentId}/recommend-area/${recArea}`);
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
+}

@@ -43,9 +43,9 @@ function Content() {
 
   useEffect(() => {
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
-    const cachedPostTestStatus = localStorage.getItem('post_test_compl');
+    const cachedPostTestStatus = localStorage.getItem("post_test_compl");
 
-    if (cachedPostTestStatus === "false") {
+    if (!cachedPostTestStatus || cachedPostTestStatus === "false") {
       const fetchStudentData = async () => {
         if (currentUser) {
           const userId = currentUser.userId;
@@ -55,6 +55,9 @@ function Content() {
               localStorage.setItem('post_test_compl', 'true');
             } else {
               localStorage.setItem('post_test_compl', 'false');
+            }
+            if (response.group) {
+              localStorage.setItem('group', response.group);
             }
           } catch (error) {
             console.error("Error al obtener datos del estudiante:", error);
