@@ -30,7 +30,7 @@ function PostTest({ onClose }) {
         localStorage.setItem('post_test_compl', 'true');
       } catch (error) {
         console.error("Error enviar el post-test:", error);
-        navigate("/") // Si salió mal, redirigirlo al inicio. Poner un modal de error en el futuro.
+        // Poner un modal de error en el futuro.
       }
     }
     onClose();

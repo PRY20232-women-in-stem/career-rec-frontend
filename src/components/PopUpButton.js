@@ -13,7 +13,7 @@ function PopUpButton({ onConfirm }) {
   useEffect(() => {
     const timerId = setTimeout(() => {
       setPopUpIsOpen(true);
-    }, 10000); // 240000 4 minutos en milisegundos
+    }, 240000); // 4 minutos en milisegundos
 
     return () => {
       clearTimeout(timerId);

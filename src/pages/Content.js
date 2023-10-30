@@ -43,23 +43,26 @@ function Content() {
 
   useEffect(() => {
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
+    const cachedPostTestStatus = localStorage.getItem('post_test_compl');
 
-    const fetchStudentData = async () => {
-      if (currentUser) {
-        const userId = currentUser.userId;
-        try {
-          const response = await getStudentById(userId);
-          if (response.postTestCompl) {
-            localStorage.setItem('post_test_compl', 'true');
-          } else {
-            localStorage.setItem('post_test_compl', 'false');
+    if (cachedPostTestStatus === "false") {
+      const fetchStudentData = async () => {
+        if (currentUser) {
+          const userId = currentUser.userId;
+          try {
+            const response = await getStudentById(userId);
+            if (response.postTestCompl) {
+              localStorage.setItem('post_test_compl', 'true');
+            } else {
+              localStorage.setItem('post_test_compl', 'false');
+            }
+          } catch (error) {
+            console.error("Error al obtener datos del estudiante:", error);
           }
-        } catch (error) {
-          console.error("Error al obtener datos del estudiante:", error);
         }
-      }
-    };
-    fetchStudentData();
+      };
+      fetchStudentData();
+    }
   }, []);
 
   const handlePopUpButtonConfirm = () => {
