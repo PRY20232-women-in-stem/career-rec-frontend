@@ -23,9 +23,9 @@ function VocationalTest() {
   const [hasCompletedPreTest, setHasCompletedPreTest] = useState(null); // Validación del pre-test
   const [showResults, setShowResults] = useState(false); // Estado para mostrar los resultados
   const [recommendation, setRecommendation] = useState(""); // Estado para almacenar la recomendación
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingPreVoc, setIsLoadingPreVoc] = useState(true);
   const [showRegisterModal, setShowRegisterModal] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false)
+  const [isLoadedRecom, setIsLoadedRecom] = useState(false)
   const [showPostTestAlert, setShowPostTestAlert] = useState(false);
   const [showPostTest, setShowPostTest] = useState(false);
   const navigate = useNavigate();
@@ -33,8 +33,6 @@ function VocationalTest() {
   survey.onComplete.add((sender) => {
     const answers = sender.data;
     surveyOnComplete(answers);
-    setShowResults(true);
-    window.scrollTo(0, 0);
   });
 
   const fetchData = async () => {
@@ -64,7 +62,7 @@ function VocationalTest() {
         }
       }
     }
-    setIsLoading(false);
+    setIsLoadingPreVoc(false);
   };
 
   // Realizar la solicitud al backend para verificar si el usuario ha completado el pre-test
@@ -82,7 +80,11 @@ function VocationalTest() {
     const response = await createVocationalTestPrediction(userId, answersForBackend);
     setRecommendation(response);
     localStorage.setItem('rec_career', response);
-    setIsLoaded(true);
+    setIsLoadedRecom(true);
+
+    setShowResults(true);
+    window.scrollTo(0, 0);
+
     await updateStudentVocationalTest(userId);
   };
 
@@ -192,7 +194,7 @@ function VocationalTest() {
                 <Text fontSize={"lg"} color={'purple.700'} mb={5}>
                   Has sido seleccionada para el grupo experimental, investiga de tu área STEM en internet y luego dale a continuar para realizar el Post test.
                 </Text>
-                <Skeleton isLoaded={isLoaded}>
+                <Skeleton isLoadedRecom={isLoadedRecom}>
                   <Heading fontSize={"2xl"} color={'purple.700'}>{recommendation}</Heading>
                 </Skeleton>
               </CardBody>
@@ -229,7 +231,7 @@ function VocationalTest() {
                 <Text fontSize={"lg"} color={'purple.700'} mb={5}>
                   De acuerdo a sus intereses y preferencias evaluados en el Test Vocacional, podemos recomendarle la siguiente área STEM:
                 </Text>
-                <Skeleton isLoaded={isLoaded}>
+                <Skeleton isLoadedRecom={isLoadedRecom}>
                   <Heading fontSize={"2xl"} color={'purple.700'}>{recommendation}</Heading>
                 </Skeleton>
               </CardBody>
@@ -245,8 +247,8 @@ function VocationalTest() {
   return (
     <>
       <Flex minH={"100vh"} justify={"center"} bg={"purple.100"}>
-        <Stack spacing={4} mx={"auto"} my={isLoading ? "auto" : undefined} maxW={{ base: "lg", lg: "100%" }} py={12} px={6}>
-          {!isLoading ? (
+        <Stack spacing={4} mx={"auto"} my={isLoadingPreVoc ? "auto" : undefined} maxW={{ base: "lg", lg: "100%" }} py={12} px={6}>
+          {!isLoadingPreVoc ? (
             hasCompletedPreTest ? (
               renderResults()
             ) : (

@@ -21,15 +21,15 @@ function ContentWrapper({ children }) {
   );
 }
 
-function ContentView({ onConfirm, showFinishedPopUp }) {
+function ContentView({ onConfirm }) {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const area = searchParams.get("area");
   const recCareer = localStorage.getItem('rec_career');
-  
+
   return (
     <ContentWrapper>
-      {recCareer !== "NO" && <PopUpButton onConfirm={onConfirm} showFinishedPopUp={showFinishedPopUp} />}
+      {recCareer !== "NO" && <PopUpButton onConfirm={onConfirm} />}
       {area === "Ingenieria" ? <EngineeringContent /> : null}
       {area === "Ciencia" ? <ScienceContent /> : null}
       {area === "Tecnologia" ? <TechnologyContent /> : null}
@@ -40,33 +40,26 @@ function ContentView({ onConfirm, showFinishedPopUp }) {
 
 function Content() {
   const [showPostTest, setShowPostTest] = useState(false);
-  const [showFinishedPopUp, setShowFinishedPopUp] = useState(false);
 
   useEffect(() => {
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
-    const cachedPostTestStatus = localStorage.getItem('post_test_compl');
 
-    if (cachedPostTestStatus === 'true') {
-      setShowFinishedPopUp(true);
-    } else {
-      const fetchStudentData = async () => {
-        if (currentUser) {
-          const userId = currentUser.userId;
-          try {
-            const response = await getStudentById(userId);
-            if (response.postTestCompl) {
-              setShowFinishedPopUp(true);
-              localStorage.setItem('post_test_compl', 'true');
-            } else {
-              localStorage.setItem('post_test_compl', 'false');
-            }
-          } catch (error) {
-            console.error("Error al obtener datos del estudiante:", error);
+    const fetchStudentData = async () => {
+      if (currentUser) {
+        const userId = currentUser.userId;
+        try {
+          const response = await getStudentById(userId);
+          if (response.postTestCompl) {
+            localStorage.setItem('post_test_compl', 'true');
+          } else {
+            localStorage.setItem('post_test_compl', 'false');
           }
+        } catch (error) {
+          console.error("Error al obtener datos del estudiante:", error);
         }
-      };
-      fetchStudentData();
-    }
+      }
+    };
+    fetchStudentData();
   }, []);
 
   const handlePopUpButtonConfirm = () => {
@@ -80,7 +73,7 @@ function Content() {
           <PostTest onClose={() => setShowPostTest(false)} />
         </ContentWrapper>
       ) : (
-        <ContentView onConfirm={handlePopUpButtonConfirm} showFinishedPopUp={showFinishedPopUp} />
+        <ContentView onConfirm={handlePopUpButtonConfirm} />
       )}
     </>
   );

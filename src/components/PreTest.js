@@ -76,18 +76,7 @@ function PreTest({ onPreTestComplete }) {
 
   if (isLoading) {
     return (
-      <Flex
-        position="fixed"
-        top={0}
-        left={0}
-        right={0}
-        bottom={0}
-        align="center"
-        justify="center"
-        backgroundColor="white"
-        opacity="0.8"
-        zIndex={9999999}
-      >
+      <Flex position="fixed" top={0} left={0} right={0} bottom={0} align="center" justify="center" backgroundColor="white" opacity="0.8" zIndex={9999999}>
         <Flex direction="column" align="center">
           <Heading color="purple.700" mx={6} mb={20}>No te preocupes, ¡Estamos esperando 4 minutos a que todas tus compañeras respondan!</Heading>
           <Spinner size="xl" color="purple.700" />
