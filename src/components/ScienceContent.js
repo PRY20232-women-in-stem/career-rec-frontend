@@ -177,6 +177,9 @@ function renderCareerPhotos(careerData) {
 }
 
 function renderWomenProfiles(careerData) {
+  const openLinkedInProfile = (linkedinURL) => {
+    window.open(linkedinURL, "_blank"); // Abre la URL en una nueva pestaña
+  };
   return (
     <Stack spacing={4}>
       {careerData.women.map((woman, index) => (
@@ -199,6 +202,7 @@ function renderWomenProfiles(careerData) {
                 variant='ghost'
                 colorScheme='blue'
                 icon={<BsLinkedin />}
+                onClick={() => openLinkedInProfile(woman.linkedin)}
               />
             )}
             {woman.description !== "" && (
