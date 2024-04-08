@@ -6,7 +6,6 @@ import {
   useDisclosure
 } from '@chakra-ui/react';
 import LogoutAlert from '../components/LogoutAlert';
-//import { getStudentById } from "../services/StudentService";
 
 const NavLink = ({ to, children, onClose }) => (
   <Box fontWeight='semibold' px={2} py={1} rounded={'md'} w={{ base: "100%", md: "auto" }} textAlign={{ base: "left", md: "center" }}

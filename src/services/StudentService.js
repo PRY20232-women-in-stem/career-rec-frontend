@@ -18,15 +18,6 @@ export async function getStudentById(studentId) {
     }
 }
 
-export async function getStudentByEmail(email) {
-    try {
-        const response = await axiosInstance.get(`/students/email/${email}`);
-        return response.data;
-    } catch (error) {
-        throw error;
-    }
-}
-
 export async function updateStudentPassword(email, updatePasswordData) {
     try {
         const response = await axiosInstance.put(`/students/password/${email}`, updatePasswordData);

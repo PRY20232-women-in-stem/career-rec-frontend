@@ -58,15 +58,15 @@ function VocationalTest() {
       sender.doComplete();
 
       setRecommendation(response);
-      setIsLoaded(true);
       await updateStudentVocationalTest(userId);
 
       currentUser.recommendedArea = response;
       currentUser.vocationalTestCompleted = true;
       const updatedCurrentUserString = JSON.stringify(currentUser);
       localStorage.setItem("current_user", updatedCurrentUserString);
-
+      
       setShowResults(true);
+      setIsLoaded(true);
       window.scrollTo(0, 0);
     } catch (error) {
       survey.onCompleting.add(preventComplete)
@@ -144,8 +144,8 @@ function VocationalTest() {
           <CardBody>
             <Image borderRadius='full' src='WomenInStem1.png' mb={8} />
             <Text fontSize={"lg"} color={'purple.700'}>
-              ¡Oh, parece que por ahora tu pasión no está en el área STEM en base a tus respuestas!
-              Pero no te preocupes en absoluto, ¡sigue disfrutando del contenido con entusiasmo y sigue explorando nuevas cosas!"
+              Parece que por ahora tu pasión no está en el área STEM en base a tus respuestas
+              ¡Pero no te preocupes!, sigue disfrutando del contenido con entusiasmo y sigue explorando nuevas cosas!"
             </Text>
           </CardBody>
           <CardFooter justifyContent={"center"}>

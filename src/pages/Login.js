@@ -8,7 +8,7 @@ import { Link, Image } from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
 import { Link as ReactRouterLink, useNavigate } from 'react-router-dom';
 import { loginUser } from "../services/AuthService";
-import jwt_decode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -23,7 +23,7 @@ function Login() {
   const handleSubmit = async (values, actions) => {
     try {
       const token = await loginUser(values);
-      const decodedToken = jwt_decode(token.accessToken);
+      const decodedToken = jwtDecode(token.accessToken);
 
       const userPayload = JSON.stringify({
         userId: decodedToken.sub,
