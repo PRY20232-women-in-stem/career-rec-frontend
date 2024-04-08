@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import 'survey-core/defaultV2.min.css';
 import { testVocacionalJson } from "../util/TestVocacionalJson";
 import { testVocacionalTheme } from "../util/TestVocacionalTheme";
-import { Button, Card, CardBody, CardFooter, CardHeader, Flex, Heading, Highlight, Image, Stack, Text, Spinner, Skeleton } from "@chakra-ui/react";
-import PreTest from "../components/PreTest";
+import {
+  Button, Card, CardBody, CardFooter, CardHeader, Flex, Heading, Highlight, Image, Stack, Text, Spinner, Skeleton, useToast
+} from '@chakra-ui/react'
 import RegisterNowAlert from "../components/RegisterNowAlert";
-import { useNavigate } from 'react-router-dom';
-import { getStudentById } from "../services/StudentService";
 import { createVocationalTestPrediction } from "../services/VocationalTestService";
 import { updateStudentVocationalTest } from "../services/StudentService";
 
@@ -16,20 +16,13 @@ function VocationalTest() {
   const survey = new Model(testVocacionalJson); // Carga el Json de la encuesta
   survey.applyTheme(testVocacionalTheme); // Aplica el estilo personalizado
 
-  const [hasCompletedPreTest, setHasCompletedPreTest] = useState(null); // Validación del pre-test
   const [showResults, setShowResults] = useState(false); // Estado para mostrar los resultados
   const [recommendation, setRecommendation] = useState(""); // Estado para almacenar la recomendación
   const [isLoading, setIsLoading] = useState(true);
   const [showRegisterModal, setShowRegisterModal] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false)
   const navigate = useNavigate();
-
-  survey.onComplete.add((sender) => {
-    const answers = sender.data;
-    surveyOnComplete(answers);
-    setShowResults(true);
-    window.scrollTo(0, 0);
-  });
+  const toast = useToast();
 
   const fetchData = async () => {
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
@@ -37,54 +30,66 @@ function VocationalTest() {
       setTimeout(() => {
         setShowRegisterModal(true);
       }, 2000);
-    } else {
-      const userId = currentUser.userId;
-      const cachedPreTestCompl = localStorage.getItem('pre_test_compl');
-      if (cachedPreTestCompl === 'true') {
-        setHasCompletedPreTest(true);
-      } else {
-        try {
-          const response = await getStudentById(userId);
-          if (response.preTestCompl) {
-            setHasCompletedPreTest(true);
-            localStorage.setItem('pre_test_compl', 'true');
-          } else {
-            setHasCompletedPreTest(false);
-            localStorage.setItem('pre_test_compl', 'false');
-          }
-        } catch (error) {
-          console.error("Error al obtener datos del estudiante:", error);
-        }
-      }
     }
     setIsLoading(false);
   };
 
-  // Realizar la solicitud al backend para verificar si el usuario ha completado el pre-test
+  // VERIFICA SI EXISTE USUARIO LOGEADO
   useEffect(() => {
     fetchData();
   }, []);
 
-  const surveyOnComplete = async (answers) => {
+  const preventComplete = (sender, options) => {
+    options.allowComplete = false;
+    surveyOnComplete(sender);
+  }
+
+  const surveyOnComplete = async (sender) => {
+    survey.onCompleting.remove(preventComplete);
+
+    const answers = sender.data
     const answersForBackend = { ...answers };
     delete answersForBackend.question1;
 
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
     const userId = currentUser.userId;
+    try {
+      const response = await createVocationalTestPrediction(userId, answersForBackend);
+      sender.doComplete();
 
-    const response = await createVocationalTestPrediction(userId, answersForBackend);
-    setRecommendation(response);
-    localStorage.setItem('rec_career', response);
-    setIsLoaded(true);
-    await updateStudentVocationalTest(userId);
+      setRecommendation(response);
+      setIsLoaded(true);
+      await updateStudentVocationalTest(userId);
+
+      currentUser.recommendedArea = response;
+      currentUser.vocationalTestCompleted = true;
+      const updatedCurrentUserString = JSON.stringify(currentUser);
+      localStorage.setItem("current_user", updatedCurrentUserString);
+
+      setShowResults(true);
+      window.scrollTo(0, 0);
+    } catch (error) {
+      survey.onCompleting.add(preventComplete)
+      toast({
+        title: 'Error sending survey.',
+        description: "An error occurred by an external service error.",
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+        position: 'bottom-right',
+      })
+      console.error("External service error:", error);
+    }
   };
 
-  const handlePreTestComplete = async () => {
-    fetchData();
-  };
+  survey.onCompleting.add(preventComplete);
 
   const handleAcceptButtonClick = () => {
-    navigate(`/content?area=${encodeURIComponent(recommendation)}`);
+    if (recommendation === "NO") {
+      navigate(`/content?area=Ciencia`);
+    } else {
+      navigate(`/content?area=${encodeURIComponent(recommendation)}`);
+    }
   };
 
   const handleRegisterNowAlertConfirm = () => {
@@ -94,6 +99,62 @@ function VocationalTest() {
   const SurveyContainer = ({ children }) => ( // Con el propósito de alinear el contenido a la izquierda
     <div style={{ textAlign: "left" }}>{children}</div>
   );
+
+  const STEMResults = () => {
+    return (
+      <>
+        <Heading fontSize={"4xl"} color={"purple.700"}>
+          Resultado
+        </Heading>
+        <Card>
+          <CardHeader>
+            <Heading fontSize={["2xl"]} color={'purple.700'}>
+              ¡Felicitaciones!
+            </Heading>
+          </CardHeader>
+          <CardBody>
+            <Image borderRadius='full' src='WomenInStem1.png' mb={5} />
+            <Text fontSize={["md", "lg"]} color={'purple.700'} mb={5}>
+              De acuerdo a sus intereses y preferencias evaluados en el Test Vocacional, te recomendamos esta área STEM:
+            </Text>
+            <Skeleton isLoaded={isLoaded}>
+              <Heading fontSize={"2xl"} color={'purple.700'}>{recommendation}</Heading>
+            </Skeleton>
+          </CardBody>
+          <CardFooter justifyContent={"center"}>
+            <Button onClick={handleAcceptButtonClick} colorScheme="purple">Continuar</Button>
+          </CardFooter>
+        </Card>
+      </>
+    );
+  }
+
+  const notSTEMResults = () => {
+    return (
+      <>
+        <Heading fontSize={"4xl"} color={"purple.700"}>
+          Resultado
+        </Heading>
+        <Card>
+          <CardHeader>
+            <Heading fontSize={["2xl"]} color={'purple.700'}>
+              ¡Oh que sorpresa, pero no te desanimes! 💜
+            </Heading>
+          </CardHeader>
+          <CardBody>
+            <Image borderRadius='full' src='WomenInStem1.png' mb={8} />
+            <Text fontSize={"lg"} color={'purple.700'}>
+              ¡Oh, parece que por ahora tu pasión no está en el área STEM en base a tus respuestas!
+              Pero no te preocupes en absoluto, ¡sigue disfrutando del contenido con entusiasmo y sigue explorando nuevas cosas!"
+            </Text>
+          </CardBody>
+          <CardFooter justifyContent={"center"}>
+            <Button onClick={handleAcceptButtonClick} colorScheme="purple">Continuar</Button>
+          </CardFooter>
+        </Card>
+      </>
+    );
+  }
 
   const renderResults = () => {
     if (!showResults) {
@@ -121,32 +182,11 @@ function VocationalTest() {
         </>
       );
     } else {
-      return (
-        <>
-          <Heading fontSize={"4xl"} color={"purple.700"}>
-            Resultado
-          </Heading>
-          <Card>
-            <CardHeader>
-              <Heading fontSize={["2xl"]} color={'purple.700'}>
-                ¡Felicitaciones!
-              </Heading>
-            </CardHeader>
-            <CardBody>
-              <Image borderRadius='full' src='WomenInStem1.png' mb={5} />
-              <Text fontSize={["md", "lg"]} color={'purple.700'} mb={5}>
-                De acuerdo a sus intereses y preferencias evaluados en el Test Vocacional, podemos recomendarle la siguiente area STEM:
-              </Text>
-              <Skeleton isLoaded={isLoaded}>
-                <Heading fontSize={"2xl"} color={'purple.700'}>{recommendation}</Heading>
-              </Skeleton>
-            </CardBody>
-            <CardFooter justifyContent={"center"}>
-              <Button onClick={handleAcceptButtonClick} colorScheme="purple">Continuar</Button>
-            </CardFooter>
-          </Card>
-        </>
-      );
+      if (recommendation !== 'NO') {
+        return STEMResults();
+      } else {
+        return notSTEMResults();
+      }
     }
   };
 
@@ -155,11 +195,7 @@ function VocationalTest() {
       <Flex minH={"100vh"} justify={"center"} bg={"purple.100"}>
         <Stack spacing={4} mx={"auto"} my={isLoading ? "auto" : undefined} maxW={{ base: "lg", lg: "100%" }} py={12} px={6}>
           {!isLoading ? (
-            hasCompletedPreTest ? (
-              renderResults()
-            ) : (
-              <PreTest onPreTestComplete={handlePreTestComplete} />
-            )
+            renderResults()
           ) : (
             <Spinner size="xl" color="purple.700" speed="0.65s" />
           )}

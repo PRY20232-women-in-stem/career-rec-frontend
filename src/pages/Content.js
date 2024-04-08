@@ -1,11 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   Stack, Flex
 } from '@chakra-ui/react';
-import { useLocation } from 'react-router-dom';
 import PopUpButton from '../components/PopUpButton';
-import PostTest from '../components/PostTest';
-import { getStudentById } from "../services/StudentService";
 import EngineeringContent from '../components/EngineeringContent';
 import ScienceContent from '../components/ScienceContent';
 import TechnologyContent from '../components/TechnologyContent';
@@ -21,13 +18,13 @@ function ContentWrapper({ children }) {
   );
 }
 
-function ContentView({ onConfirm, showFinishedPopUp }) {
+function ContentView() {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const area = searchParams.get("area");
   return (
     <ContentWrapper>
-      <PopUpButton onConfirm={onConfirm} showFinishedPopUp={showFinishedPopUp} />
+      <PopUpButton />
       {area === "Ingenieria" ? <EngineeringContent /> : null}
       {area === "Ciencia" ? <ScienceContent /> : null}
       {area === "Tecnologia" ? <TechnologyContent /> : null}
@@ -37,49 +34,9 @@ function ContentView({ onConfirm, showFinishedPopUp }) {
 }
 
 function Content() {
-  const [showPostTest, setShowPostTest] = useState(false);
-  const [showFinishedPopUp, setShowFinishedPopUp] = useState(false);
-
-  useEffect(() => {
-    const currentUser = JSON.parse(localStorage.getItem("current_user"));
-    const cachedPostTestStatus = localStorage.getItem('post_test_compl');
-
-    if (cachedPostTestStatus === 'true') {
-      setShowFinishedPopUp(true);
-    } else {
-      const fetchStudentData = async () => {
-        if (currentUser) {
-          const userId = currentUser.userId;
-          try {
-            const response = await getStudentById(userId);
-            if (response.postTestCompl) {
-              setShowFinishedPopUp(true);
-              localStorage.setItem('post_test_compl', 'true');
-            } else {
-              localStorage.setItem('post_test_compl', 'false');
-            }
-          } catch (error) {
-            console.error("Error al obtener datos del estudiante:", error);
-          }
-        }
-      };
-      fetchStudentData();
-    }
-  }, []);
-
-  const handlePopUpButtonConfirm = () => {
-    setShowPostTest(true);
-  };
-
   return (
     <>
-      {showPostTest ? (
-        <ContentWrapper>
-          <PostTest onClose={() => setShowPostTest(false)} />
-        </ContentWrapper>
-      ) : (
-        <ContentView onConfirm={handlePopUpButtonConfirm} showFinishedPopUp={showFinishedPopUp} />
-      )}
+      <ContentView />
     </>
   );
 }

@@ -1,20 +1,18 @@
-import YouTube from 'react-youtube';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
-function YouTubeVideo({ width, height, videoUrl }) {
+function YouTubeVideo({ videoUrl, title }) {
   const videoId = getYouTubeVideoIdFromUrl(videoUrl);
-
-  const opts = {
-    height: height,
-    width: width,
-    playerVars: {
-      autoplay: 0, // Cambiar a 1 si deseas que el video se reproduzca automáticamente
-      origin: window.location.host,
-    },
-  };
 
   return (
     <div>
-      <YouTube videoId={videoId} opts={opts} />
+      <LiteYouTubeEmbed
+        id={videoId}
+        title={title}
+        poster="maxresdefault"
+        adNetwork={true}
+        noCookie={true}
+      />
     </div>
   );
 }

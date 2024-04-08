@@ -140,7 +140,7 @@ function renderCareerVideos(careerData) {
           )}
           {video.videoUrl !== "" && (
             <Box pb="20px">
-              <YouTubeVideo width="100%" height="100%" videoUrl={video.videoUrl} />
+              <YouTubeVideo videoUrl={video.videoUrl} title={video.title} />
             </Box>
           )}
         </Card>

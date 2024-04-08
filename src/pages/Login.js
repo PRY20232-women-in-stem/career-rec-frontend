@@ -30,6 +30,8 @@ function Login() {
         email: decodedToken.email,
         firstName: decodedToken.firstName,
         lastName: decodedToken.lastName,
+        vocationalTestCompleted: decodedToken.vocationalTestCompleted,
+        recommendedArea: decodedToken.recommendedArea
       });
 
       localStorage.setItem("access_token", token.accessToken);

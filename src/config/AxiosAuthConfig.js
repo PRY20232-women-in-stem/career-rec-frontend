@@ -34,10 +34,6 @@ axiosInstance.interceptors.response.use(
             // Token inválido o caducado, eliminarlo del localStorage con todo el contenido almacenado.
             localStorage.removeItem('access_token');
             localStorage.removeItem('current_user');
-            localStorage.removeItem('vocational_test_compl');
-            localStorage.removeItem('pre_test_compl');
-            localStorage.removeItem('post_test_compl');
-            localStorage.removeItem('rec_career');
 
             if (error.config.url !== '/auth/login') {
                 window.location.href = '/login';

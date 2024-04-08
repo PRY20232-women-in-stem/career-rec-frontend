@@ -122,24 +122,26 @@ function renderCareerVideos(careerData) {
   return (
     <Stack mb={4} spacing={4}>
       {careerData.videos.map((video, index) => (
-        <Card key={index}>
-          <CardBody>
-            <Stack spacing={3}>
-              {video.title !== "" && (
-                <Heading fontSize="xl">
-                  {video.title}
-                </Heading>
-              )}
-              {video.videoUrl !== "" && (
-                <YouTubeVideo width="100%" height="100%" videoUrl={video.videoUrl} />
-              )}
-              {video.description !== "" && (
-                <Text fontSize={["md", "lg"]}>
-                  {video.description}
-                </Text>
-              )}
-            </Stack>
-          </CardBody>
+        <Card key={index} maxW='md'>
+          {video.title !== "" && (
+            <CardHeader>
+              <Heading fontSize="xl">
+                {video.title}
+              </Heading>
+            </CardHeader>
+          )}
+          {video.description !== "" && (
+            <CardBody>
+              <Text fontSize={["md", "lg"]}>
+                {video.description}
+              </Text>
+            </CardBody>
+          )}
+          {video.videoUrl !== "" && (
+            <Box pb="20px">
+              <YouTubeVideo videoUrl={video.videoUrl} title={video.title} />
+            </Box>
+          )}
         </Card>
       ))}
     </Stack>

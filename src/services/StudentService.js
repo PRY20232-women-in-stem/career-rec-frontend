@@ -36,24 +36,6 @@ export async function updateStudentPassword(email, updatePasswordData) {
     }
 }
 
-export async function updateStudentPreTest(studentId) {
-    try {
-        const response = await axiosInstance.patch(`/students/${studentId}/pre-test`);
-        return response.data;
-    } catch (error) {
-        throw error;
-    }
-}
-
-export async function updateStudentPostTest(studentId) {
-    try {
-        const response = await axiosInstance.patch(`/students/${studentId}/post-test`);
-        return response.data;
-    } catch (error) {
-        throw error;
-    }
-}
-
 export async function updateStudentVocationalTest(studentId) {
     try {
         const response = await axiosInstance.patch(`/students/${studentId}/vocational-test`);
