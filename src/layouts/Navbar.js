@@ -2,21 +2,25 @@ import { useState, useEffect } from 'react';
 import { Link as ReactRouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
-  Box, Collapse, Divider, Flex, HStack, Highlight, IconButton, Image, Link, Stack, Text,
-  useDisclosure
+  Box, Collapse, Divider, Flex, HStack, IconButton, Image, Link, Stack, Text, Center, useDisclosure, Container
 } from '@chakra-ui/react';
 import LogoutAlert from '../components/LogoutAlert';
 
-const NavLink = ({ to, children, onClose }) => (
-  <Box fontWeight='semibold' px={2} py={1} rounded={'md'} w={{ base: "100%", md: "auto" }} textAlign={{ base: "left", md: "center" }}
-    _hover={{ textDecoration: 'none', bg: 'purple.400' }} color={'white'}>
-    <ReactRouterLink to={to} onClick={onClose} >{children}</ReactRouterLink>
-  </Box>
-);
+function NavLink({ to, children, onClose, bg, border }) {
+  return (
+    <ReactRouterLink to={to} onClick={onClose} >
+      <Box fontWeight='semibold' px={2} py={1} rounded={'md'} w={{ base: "100%", md: "auto" }} textAlign={{ base: "left", md: "center" }}
+        _hover={{ textDecoration: 'none', bg: 'purple.400' }} color={'white'} bg={bg} fontSize={15}>
+        {children}
+      </Box>
+    </ReactRouterLink>
+  );
+}
 
 function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showLogoutAlert, setShowLogoutAlert] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -27,11 +31,13 @@ function Navbar() {
   useEffect(() => {
     const token = localStorage.getItem('access_token');
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
+    const contentRegex = /^\/content(?:\?|$)/;
 
     if (token) {
       setIsLoggedIn(true);
     }
-    if (!token && location.pathname === "/content") {
+
+    if (!token && contentRegex.test(location.pathname)) {
       navigate('/login');
     }
 
@@ -57,102 +63,111 @@ function Navbar() {
   const handleLogoutAlertConfirm = () => {
     setIsLoggedIn(false);
     setShowLogoutAlert(false); // Cerrar el modal de alerta
+    onClose();
   };
 
   const handleLogoutAlertCancel = () => {
     setShowLogoutAlert(false); // Cerrar el modal de alerta
   };
 
-  return (
-    <>
+  const areasSTEM = [
+    { name: 'Ciencias', route: '/content?area=Ciencia' },
+    { name: 'Tecnologia', route: '/content?area=Tecnologia' },
+    { name: 'Ingenieria', route: '/content?area=Ingenieria' },
+    { name: 'Matematica', route: '/content?area=Matematica' }
+  ];
+
+  const renderSTEMLinks = (isMobile) => {
+    if (!isVocTestCompleted || isLoggedIn === false) return null;
+
+    return areasSTEM.map(area => {
+      const navLinkProps = {
+        key: area.name,
+        to: area.route,
+        bg: recArea === area.name ? 'purple.500' : undefined,
+        onClose: isMobile ? onClose : undefined
+      };
+
+      return <NavLink {...navLinkProps}>{area.name}</NavLink>;
+    });
+  };
+
+  const renderAuthLinks = () => {
+    if (isLoggedIn) {
+      return (
+        <NavLink onClose={handleLogoutClick}>Cerrar sesión</NavLink>
+      );
+    } else {
+      return (
+        <>
+          <NavLink to='/register' onClose={onClose} bg={'purple.500'}>Registrarse</NavLink>
+          <NavLink to='/login' onClose={onClose} >Iniciar sesión</NavLink>
+        </>
+      );
+    }
+  };
+
+  const renderWebOrMobile = () => {
+    return (
       <Box bg={'purple.300'} px={4} position="sticky" top={0} zIndex={1000}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <IconButton size={'md'} icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen} />
+
+        {/* VERSION WEB DEL NAVBAR */}
+        <Container as={Stack} maxW={{ md: '6xl' }} display={{ base: 'none', md: 'flex' }}>
+          <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+            <HStack alignItems={'center'} justifyContent={'space-between'} w={{ md: '100%' }}>
+              <Link as={ReactRouterLink} to='/' _hover={{ textDecoration: 'none' }}>
+                <HStack alignItems={'center'}>
+                  <Image borderRadius='full' boxSize='50px' src='WomenInStem1.png' />
+                  <Text fontWeight='semibold' fontSize={'lg'} color={'white'}>Girls in STEM</Text>
+                </HStack>
+              </Link>
+              <Flex alignItems={'center'}>
+                <HStack as={'nav'} spacing={2}>
+                  {/*<NavLink to='/about-us'>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
+                  <NavLink to='/' >Aprendamos de STEM</NavLink>
+                  <NavLink to='/vocational-test' >Test vocacional</NavLink>
+                  {renderSTEMLinks(false)}
+                  <Center height='30px'>
+                    <Divider orientation='vertical' borderWidth="1px" rounded="1px" />
+                  </Center>
+                  {renderAuthLinks()}
+                </HStack>
+              </Flex>
+            </HStack>
+          </Flex>
+        </Container>
+
+        {/* VERSION DEL NAVBAR MOBILE */}
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'} display={{ base: 'flex', md: 'none' }}>
+          <IconButton size={'md'} icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />} onClick={isOpen ? onClose : onOpen} />
           <HStack alignItems={'center'} justifyContent={'space-between'} w={{ md: '100%' }}>
             <Link as={ReactRouterLink} to='/' _hover={{ textDecoration: 'none' }}>
               <HStack alignItems={'center'}>
                 <Image borderRadius='full' boxSize='50px' src='WomenInStem1.png' />
-                <Text fontSize={'lg'} color={'white'}>Girls in STEM</Text>
+                <Text fontWeight='semibold' fontSize={'lg'} color={'white'}>Girls in STEM</Text>
               </HStack>
             </Link>
-            <Flex alignItems={'center'}>
-              <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
-                {/*<NavLink to='/about-us'>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
-                <NavLink to='/' >Aprendamos de STEM</NavLink>
-                <NavLink to='/vocational-test' >Test vocacional</NavLink>
-                {isVocTestCompleted && <NavLink to='/content' >Contenido STEM</NavLink>}
-              </HStack>
-            </Flex>
           </HStack>
         </Flex>
-
-        {/* VERSION MOBILE DEL NAVBAR */}
-        <Collapse in={isOpen} animateOpacity style={{ position: "absolute", left: 0, width: '100%' }}>
+        {/* PANEL PARA MOBILE DEL NAVBAR */}
+        <Collapse in={isOpen} animateOpacity style={{ position: "absolute", left: 0, width: '100%' }} display={{ base: 'flex', md: 'none' }}>
           <Stack px={4} pb={2} bg={'purple.300'} align={'start'}>
             {/*<NavLink to='/about-us' onClose={onClose}>Nosotras</NavLink> // Se ha decidido quitar esta sección */}
             <NavLink to='/' onClose={onClose}>Aprendamos de STEM</NavLink>
             <NavLink to='/vocational-test' onClose={onClose}>Test vocacional</NavLink>
-
-            {isVocTestCompleted &&
-              <NavLink to="/content?area=Ciencia" onClose={onClose}>
-                {recArea === 'Ciencia' ? (
-                  <Highlight query={['Ciencias']} styles={{ px: '3', py: '1', rounded: 'full', bg: 'purple.500', color: 'white' }}>
-                    Ciencias
-                  </Highlight>
-                ) : (
-                  'Ciencias'
-                )}
-              </NavLink>
-            }
-            {isVocTestCompleted &&
-              <NavLink to="/content?area=Tecnologia" onClose={onClose}>
-                {recArea === 'Tecnologia' ? (
-                  <Highlight query={['Tecnología']} styles={{ px: '3', py: '1', rounded: 'full', bg: 'purple.500', color: 'white' }}>
-                    Tecnología
-                  </Highlight>
-                ) : (
-                  'Tecnología'
-                )}
-              </NavLink>
-            }
-            {isVocTestCompleted &&
-              <NavLink to="/content?area=Ingenieria" onClose={onClose}>
-                {recArea === 'Ingenieria' ? (
-                  <Highlight query={['Ingeniería']} styles={{ px: '3', py: '1', rounded: 'full', bg: 'purple.500', color: 'white' }}>
-                    Ingeniería
-                  </Highlight>
-                ) : (
-                  'Ingeniería'
-                )}
-              </NavLink>
-            }
-            {isVocTestCompleted &&
-              <NavLink to="/content?area=Matematica" onClose={onClose}>
-                {recArea === 'Matematica' ? (
-                  <Highlight query={['Matemáticas']} styles={{ px: '3', py: '1', rounded: 'full', bg: 'purple.500', color: 'white' }}>
-                    Matemáticas
-                  </Highlight>
-                ) : (
-                  'Matemáticas'
-                )}
-              </NavLink>
-            }
+            {renderSTEMLinks(true)}
             <Divider />
-            {isLoggedIn ? (
-              <Box fontWeight='semibold' px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: 'purple.400' }} color='white' onClick={handleLogoutClick}>
-                Cerrar sesión
-              </Box>
-            ) : (
-              <>
-                <NavLink to='/register' onClose={onClose}>Registrarse</NavLink>
-                <NavLink to='/login' onClose={onClose}>Iniciar sesión</NavLink>
-              </>
-            )}
+            {renderAuthLinks()}
           </Stack>
         </Collapse>
+      </Box >
+    );
+  }
 
-        <LogoutAlert isOpen={showLogoutAlert} onConfirm={handleLogoutAlertConfirm} onCancel={handleLogoutAlertCancel} />
-      </Box>
+  return (
+    <>
+      {renderWebOrMobile()}
+      <LogoutAlert isOpen={showLogoutAlert} onConfirm={handleLogoutAlertConfirm} onCancel={handleLogoutAlertCancel} />
     </>
   )
 }

@@ -10,6 +10,7 @@ import {
   Heading,
 } from '@chakra-ui/react';
 import { EmailIcon } from '@chakra-ui/icons';
+import { FaXTwitter, FaInstagram, FaYoutube, FaLinkedin, FaDiscord } from 'react-icons/fa6';
 
 function Footer() {
   return (
@@ -27,17 +28,26 @@ function Footer() {
               <Text fontSize={'sm'} textAlign={'left'}>
                 © 2023 Bambu Consulting. All rights reserved
               </Text>
-              {/*<Stack direction={'row'} spacing={6}>  // Botones de redes sociales
-                <SocialButton label={'Twitter'} href={'#'}>
-                  <FaTwitter />
-                </SocialButton>
-                <SocialButton label={'YouTube'} href={'#'}>
+              <Stack direction={'row'} spacing={3}>
+                <Box as='a' fontSize={20} href='https://twitter.com/' target='_blank'>
+                  <FaXTwitter />
+                </Box>
+                <Box as='a' fontSize={20} href='https://discord.com/' target='_blank'>
+                  <FaDiscord />
+                </Box>
+                <Box as='a' fontSize={20} href='https://www.linkedin.com/' target='_blank'>
+                  <FaLinkedin />
+                </Box>
+                <Box as='a' fontSize={20} href='https://www.youtube.com/' target='_blank'>
                   <FaYoutube />
-                </SocialButton>
-                <SocialButton label={'Instagram'} href={'#'}>
+                </Box>
+                <Box as='a' fontSize={20} href='https://www.instagram.com/' target='_blank'>
                   <FaInstagram />
-                </SocialButton>
-              </Stack>*/}
+                </Box>
+              </Stack>
+              <Stack align={'flex-start'}>
+                <Text>Made with ❤️ in 🇵🇪</Text>
+              </Stack>
             </Stack>
             <Stack align={'flex-start'}>
               <Heading fontSize={'lg'} mb={2}>
@@ -65,13 +75,10 @@ function Footer() {
               <Heading fontSize={'lg'} mb={2}>
                 Mantengase actualizado
               </Heading>
-              <Stack direction={'row'}>
+              <Stack direction={'row'} ml={0.5}>
                 <Input placeholder={'Dirección email'} variant='filled' focusBorderColor='purple.400' />
                 <IconButton bg={'purple.300'} color={'white'} _hover={{ bg: 'purple.400', }} icon={<EmailIcon />} />
               </Stack>
-            </Stack>
-            <Stack align={'flex-start'}>
-              <Text>Made with ❤️ in 🇵🇪</Text>
             </Stack>
           </SimpleGrid>
         </Container>

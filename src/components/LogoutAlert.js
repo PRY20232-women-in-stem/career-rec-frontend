@@ -21,7 +21,7 @@ function LogoutAlert({ isOpen, onConfirm, onCancel }) {
     localStorage.removeItem('access_token');
     localStorage.removeItem('current_user');
     onConfirm(); // Cerrar el modal de cierre de sesión
-    navigate('/login');
+    navigate('/');
   };
 
   const handleLogoutAlertCancel = () => {
