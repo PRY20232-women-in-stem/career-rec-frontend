@@ -1,5 +1,6 @@
-{
-  "biomedic": {
+[
+  {
+    "name": "Ingeniería Biomédica",
     "information": [
       {
         "id": 1,
@@ -133,7 +134,8 @@
       }
     ]
   },
-  "mining": {
+  {
+    "name": "Ingeniería de Gestión Minera",
     "information": [
       {
         "id": 1,
@@ -219,7 +221,8 @@
       }
     ]
   },
-  "enviromental": {
+  {
+    "name": "Ingeniería Ambiental",
     "information": [
       {
         "id": 1,
@@ -305,7 +308,8 @@
       }
     ]
   },
-  "industrial": {
+  {
+    "name": "Ingeniería Industrial",
     "information": [
       {
         "id": 1,
@@ -421,7 +425,8 @@
       }
     ]
   },
-  "civil": {
+  {
+    "name": "Ingeniería Civil",
     "information": [
       {
         "id": 1,
@@ -507,4 +512,4 @@
       }
     ]
   }
-}
+]

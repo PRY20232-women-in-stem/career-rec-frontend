@@ -1,5 +1,6 @@
-{
-  "system": {
+[
+  {
+    "name": "Ingeniería de Sistemas/ Ingeniería de Software",
     "information": [
       {
         "id": 1,
@@ -76,7 +77,8 @@
       }
     ]
   },
-  "electronic": {
+  {
+    "name": "Ingeniería Electrónica",
     "information": [
       {
         "id": 1,
@@ -164,7 +166,8 @@
       }
     ]
   },
-  "mecatronic": {
+  {
+    "name": "Ingeniería Mecatrónica",
     "information": [
       {
         "id": 1,
@@ -245,7 +248,8 @@
       }
     ]
   },
-  "telecom": {
+  {
+    "name": "Ingeniería de Telecomunicaciones",
     "information": [
       {
         "id": 1,
@@ -327,7 +331,8 @@
       }
     ]
   },
-  "computer": {
+  {
+    "name": "Ciencias de la Computación",
     "information": [
       {
         "id": 1,
@@ -403,4 +408,4 @@
       }
     ]
   }
-}
+]

@@ -1,5 +1,6 @@
-{
-  "medicine": {
+[
+  {
+    "name": "Medicina",
     "information": [
       {
         "id": 1,
@@ -85,7 +86,8 @@
       }
     ]
   },
-  "biology": {
+  {
+    "name": "Biología",
     "information": [
       {
         "id": 1,
@@ -219,7 +221,8 @@
       }
     ]
   },
-  "chemistry": {
+  {
+    "name": "Química Industrial",
     "information": [
       {
         "id": 1,
@@ -347,7 +350,8 @@
       }
     ]
   },
-  "microParasi": {
+  {
+    "name": "Microbiología y Parasitología",
     "information": [
       {
         "id": 1,
@@ -451,7 +455,8 @@
       }
     ]
   },
-  "pharmaBioche": {
+  {
+    "name": "Farmacia y Bioquímica",
     "information": [
       {
         "id": 1,
@@ -543,4 +548,4 @@
       }
     ]
   }
-}
+]

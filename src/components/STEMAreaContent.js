@@ -1,95 +1,60 @@
 import {
   Stack, Heading, Text, Image, Card, CardBody, CardHeader, Tabs, Tab, TabList, TabPanel, TabPanels, Box, IconButton
 } from '@chakra-ui/react';
-import { BsLinkedin } from 'react-icons/bs';
+import { FaLinkedin } from 'react-icons/fa6';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import YouTubeVideo from './YoutubeVideo';
-import scienceData from '../resources/ScienceContent';
 
-function ScienceContent() {
+function STEMAreaContent({ areaName, areaData }) {
+
+  const areaTextDescription = {
+    "Ingenieria": "La ingeniería estudia las disciplinas que combinan las habilidades científicas y técnicas para el diseño y/o construcción de sistemas, máquinas, infraestructuras, entre otros. Las carreras que encontrarás en esta sección son: Ingeniería Biomédica, Ingeniería de Gestión Minera, Ingeniería Ambiental, Ingeniería Industrial e Ingeniería Civil.",
+    "Tecnologia": "La tecnología es un pilar esencial en la era actual, impulsando la innovación, el diseño, la creación y la aplicación de sistemas tecnológicos. Algunas de las carreras emocionantes en el ámbito tecnológico son Ingeniería de Sistemas/Software, Ingeniería Electrónica, Ingeniería Mecatrónica, Ingeniería de Telecomunicaciones y Ciencias de la Computación.",
+    "Matematica": "Las Matemáticas ocupan un lugar fundamental en el campo STEM. Aquí, te adentrarás en disciplinas que se basan en el razonamiento lógico y el rigor matemático. Explorarás teorías abstractas y aplicaciones prácticas. Algunas de las carreras que encontrarás en esta área son Matemática Pura, Economía, Estadística, Contabilidad y Finanzas.",
+    "Ciencia": "La ciencia estudia los fenómenos naturales y sociales de la realidad. Además, las ciencias realizan procesos de experimentación y demostración. Las carreras que encontrarás en esta sección son: Medicina General, Biología, Química Industrial, Microbiología y Parasitología y Farmacia y Bioquímica."
+  };
 
   return (
     <>
       {/* INTRODUCCION */}
       <Heading fontSize={"4xl"} color="purple.700">
-        Ciencias
+        {areaName}
       </Heading>
       <Text fontSize={["md", "lg"]} color="purple.700" mb={4}>
-        La ciencia estudia los fenómenos naturales y sociales de la realidad. Además, las ciencias realizan procesos de experimentación y demostración.
-        Las carreras que encontrarás en esta sección son: Medicina General, Biología, Química Industrial, Microbiología y Parasitología y Farmacia y Bioquímica.
+        {areaTextDescription[areaName]}
       </Text>
 
       <Tabs variant='soft-rounded' colorScheme='green' size='lg' isFitted>
         <TabList>
-          <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Ciencias</Tab>
+          <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Contenido</Tab>
           <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Destacado</Tab>
         </TabList>
         <TabPanels>
           {/* CONTENIDO SELECCIONADO */}
           <TabPanel>
-            <Heading fontSize="xl" color="purple.700" mb={3} mt={3}>
-              Medicina
-            </Heading>
-            {renderCareerInfo(scienceData.medicine)}
-            {renderCareerVideos(scienceData.medicine)}
-            {renderCareerPhotos(scienceData.medicine)}
-
-            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-              Biología
-            </Heading>
-            {renderCareerInfo(scienceData.biology)}
-            {renderCareerVideos(scienceData.biology)}
-            {renderCareerPhotos(scienceData.biology)}
-
-            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-              Química Industrial
-            </Heading>
-            {renderCareerInfo(scienceData.chemistry)}
-            {renderCareerVideos(scienceData.chemistry)}
-            {renderCareerPhotos(scienceData.chemistry)}
-
-            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-              Microbiología y Parasitología
-            </Heading>
-            {renderCareerInfo(scienceData.microParasi)}
-            {renderCareerVideos(scienceData.microParasi)}
-            {renderCareerPhotos(scienceData.microParasi)}
-
-            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-              Farmacia y Bioquímica
-            </Heading>
-            {renderCareerInfo(scienceData.pharmaBioche)}
-            {renderCareerVideos(scienceData.pharmaBioche)}
-            {renderCareerPhotos(scienceData.pharmaBioche)}
+            {areaData.map((area, index) => (
+              <div key={index}>
+                <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+                  {area.name}
+                </Heading>
+                {renderCareerInfo(area)}
+                {renderCareerVideos(area)}
+                {renderCareerPhotos(area)}
+              </div>
+            ))}
           </TabPanel>
 
           {/* CONTENIDO DE MUJERES SELECCIONADO */}
           <TabPanel>
-            <Heading fontSize="xl" color="purple.700" mb={3} mt={3}>
-              Medicina
-            </Heading>
-            {renderWomenProfiles(scienceData.medicine)}
-
-            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-              Biología
-            </Heading>
-            {renderWomenProfiles(scienceData.biology)}
-
-            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-              Química
-            </Heading>
-            {renderWomenProfiles(scienceData.chemistry)}
-
-            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-              Microbiología y Parasitología
-            </Heading>
-            {renderWomenProfiles(scienceData.microParasi)}
-
-            <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-              Farmacología y Bioquímica
-            </Heading>
-            {renderWomenProfiles(scienceData.pharmaBioche)}
+            {areaData.map((area, index) => (
+              <div key={index}>
+                <Heading fontSize="xl" color="purple.700" mb={3} mt={3}>
+                  {area.name}
+                </Heading>
+                {renderWomenProfiles(area)}
+              </div>
+            ))}
           </TabPanel>
         </TabPanels>
       </Tabs>
@@ -97,7 +62,7 @@ function ScienceContent() {
   );
 }
 
-export default ScienceContent;
+export default STEMAreaContent;
 
 function renderCareerInfo(careerData) {
   return careerData.information.map((info, index) => (
@@ -197,11 +162,13 @@ function renderWomenProfiles(careerData) {
           )}
           <CardBody>
             {woman.linkedin && woman.linkedin !== "" && (
-              <IconButton
-                variant='ghost'
-                colorScheme='blue'
-                icon={<BsLinkedin />}
-              />
+              <Box as='a' href={woman.linkedin} target='_blank'>
+                <IconButton
+                  variant='ghost'
+                  colorScheme='blue'
+                  icon={<FaLinkedin />}
+                />
+              </Box>
             )}
             {woman.description !== "" && (
               <Text fontSize={["md", "lg"]}>

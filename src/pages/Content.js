@@ -3,10 +3,18 @@ import {
   Stack, Flex
 } from '@chakra-ui/react';
 import PopUpButton from '../components/PopUpButton';
-import EngineeringContent from '../components/EngineeringContent';
-import ScienceContent from '../components/ScienceContent';
-import TechnologyContent from '../components/TechnologyContent';
-import MathematicsContent from '../components/MathematicsContent';
+import STEMAreaContent from '../components/STEMAreaContent';
+import engineeringData from '../resources/EngineeringContent';
+import technologyData from '../resources/TechnologyContent';
+import mathematicsData from '../resources/MathematicsContent';
+import scienceData from '../resources/ScienceContent';
+
+const areaDataMap = {
+  "Ingenieria": engineeringData,
+  "Ciencia": scienceData,
+  "Tecnologia": technologyData,
+  "Matematica": mathematicsData
+};
 
 function ContentWrapper({ children }) {
   return (
@@ -22,13 +30,13 @@ function ContentView() {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const area = searchParams.get("area");
+
+  const areaData = areaDataMap[area];
+
   return (
     <ContentWrapper>
       <PopUpButton />
-      {area === "Ingenieria" ? <EngineeringContent /> : null}
-      {area === "Ciencia" ? <ScienceContent /> : null}
-      {area === "Tecnologia" ? <TechnologyContent /> : null}
-      {area === "Matematica" ? <MathematicsContent /> : null}
+      {area && <STEMAreaContent areaName={area} areaData={areaData} />}
     </ContentWrapper >
   );
 }

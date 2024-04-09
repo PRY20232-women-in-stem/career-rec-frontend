@@ -1,5 +1,6 @@
-{
-  "matemathics": {
+[
+  {
+    "name": "Matemática pura",
     "information": [
       {
         "id": 1,
@@ -84,7 +85,8 @@
       }
     ]
   },
-  "economy": {
+  {
+    "name": "Economía",
     "information": [
       {
         "id": 1,
@@ -171,7 +173,8 @@
       }
     ]
   },
-  "stadistic": {
+  {
+    "name": "Estadística",
     "information": [
       {
         "id": 1,
@@ -248,7 +251,8 @@
       }
     ]
   },
-  "accounting": {
+  {
+    "name": "Contabilidad",
     "information": [
       {
         "id": 1,
@@ -334,7 +338,8 @@
       }
     ]
   },
-  "finance": {
+  {
+    "name": "Finanzas",
     "information": [
       {
         "id": 1,
@@ -410,4 +415,4 @@
       }
     ]
   }
-}
+]
