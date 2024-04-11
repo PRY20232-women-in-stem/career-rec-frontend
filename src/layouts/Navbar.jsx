@@ -117,7 +117,7 @@ function Navbar() {
             <HStack alignItems={'center'} justifyContent={'space-between'} w={{ md: '100%' }}>
               <Link as={ReactRouterLink} to='/' _hover={{ textDecoration: 'none' }}>
                 <HStack alignItems={'center'}>
-                  <Image borderRadius='full' boxSize='50px' src='WomenInStem1.png' />
+                  <Image borderRadius='full' boxSize='50px' src='src/assets/WomenInStem1.png' />
                   <Text fontWeight='semibold' fontSize={'lg'} color={'white'}>Girls in STEM</Text>
                 </HStack>
               </Link>
@@ -143,7 +143,7 @@ function Navbar() {
           <HStack alignItems={'center'} justifyContent={'space-between'} w={{ md: '100%' }}>
             <Link as={ReactRouterLink} to='/' _hover={{ textDecoration: 'none' }}>
               <HStack alignItems={'center'}>
-                <Image borderRadius='full' boxSize='50px' src='WomenInStem1.png' />
+                <Image borderRadius='full' boxSize='50px' src='src/assets/WomenInStem1.png' />
                 <Text fontWeight='semibold' fontSize={'lg'} color={'white'}>Girls in STEM</Text>
               </HStack>
             </Link>

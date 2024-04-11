@@ -49,7 +49,7 @@ function PopUpButton({ onConfirm }) {
             isRound={true}
             bg='purple.200'
             sx={{ _hover: { backgroundColor: 'purple.200' }, w: '65px', h: '65px' }}
-            icon={<Image src='/imgPrac.png' w='55px' h='60px' />}
+            icon={<Image src='src/assets/imgPrac.png' w='55px' h='60px' />}
             onClick={() => setLocalIsOpen(!localIsOpen)}
           />
         </PopoverTrigger>

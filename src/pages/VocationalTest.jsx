@@ -114,7 +114,7 @@ function VocationalTest() {
               </Heading>
             </CardHeader>
             <CardBody>
-              <Image src='WomenCelebrating.jpg' mb={5} mx="auto" h='300px' />
+              <Image src='src/assets/WomenCelebrating.jpg' mb={5} mx="auto" h='300px' />
               <Text fontSize={["md", "lg"]} color={'purple.700'} mb={5} fontWeight='semibold'>
                 De acuerdo a sus intereses y preferencias evaluadas en el Test Vocacional, te recomendamos la siguiente área STEM:
               </Text>
@@ -145,7 +145,7 @@ function VocationalTest() {
               </Heading>
             </CardHeader>
             <CardBody>
-              <Image src='WomenCharming.jpg' mb={5} mx="auto" h='300px' />
+              <Image src='src/assets/WomenCharming.jpg' mb={5} mx="auto" h='300px' />
               <Text fontSize={["md", "lg"]} color={'purple.700'} mb={5} fontWeight='semibold'>
                 Parece que por ahora tu pasión no está en el área STEM en base a tus respuestas
                 ¡Pero no te preocupes!, sigue disfrutando del contenido con entusiasmo y sigue explorando nuevas cosas!"

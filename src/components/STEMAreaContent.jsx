@@ -1,5 +1,5 @@
 import {
-  Stack, Heading, Text, Image, Card, CardBody, CardHeader, Tabs, Tab, TabList, TabPanel, TabPanels, Box, IconButton
+  Stack, Heading, Text, Image, Card, CardBody, CardHeader, Tabs, Tab, TabList, TabPanel, TabPanels, Box, IconButton, Container, Grid, GridItem
 } from '@chakra-ui/react';
 import { FaLinkedin } from 'react-icons/fa6';
 import Zoom from 'react-medium-image-zoom'
@@ -17,47 +17,93 @@ function STEMAreaContent({ areaName, areaData }) {
 
   return (
     <>
-      {/* INTRODUCCION */}
-      <Heading fontSize={"4xl"} color="purple.700">
-        {areaName}
-      </Heading>
-      <Text fontSize={["md", "lg"]} color="purple.700" mb={4}>
-        {areaTextDescription[areaName]}
-      </Text>
+      {/* VISTA WEB */}
+      <Container as={Stack} maxW={{ md: '6xl' }} display={{ base: 'none', md: 'block' }}>
+        <Heading fontSize={"4xl"} color="purple.700" mb={6}>
+          {areaName}
+        </Heading>
+        <Text fontSize={["md", "lg"]} color="purple.700" mb={8}>
+          {areaTextDescription[areaName]}
+        </Text>
 
-      <Tabs variant='soft-rounded' colorScheme='green' size='lg' isFitted>
-        <TabList>
-          <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Contenido</Tab>
-          <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Destacado</Tab>
-        </TabList>
-        <TabPanels>
-          {/* CONTENIDO SELECCIONADO */}
-          <TabPanel>
-            {areaData.map((area, index) => (
-              <div key={index}>
-                <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-                  {area.name}
-                </Heading>
-                {renderCareerInfo(area)}
-                {renderCareerVideos(area)}
-                {renderCareerPhotos(area)}
-              </div>
-            ))}
-          </TabPanel>
+        <Tabs variant='soft-rounded' colorScheme='green' size='lg' isFitted>
+          <TabList>
+            <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Contenido</Tab>
+            <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Destacado</Tab>
+          </TabList>
+          <TabPanels>
+            {/* CONTENIDO SELECCIONADO */}
+            <TabPanel>
+              {areaData.map((area, index) => (
+                <div key={index}>
+                  <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+                    {area.name}
+                  </Heading>
+                  {renderCareerInfo(area)}
+                  {renderCareerVideos(area)}
+                  {renderCareerPhotos(area)}
+                </div>
+              ))}
+            </TabPanel>
 
-          {/* CONTENIDO DE MUJERES SELECCIONADO */}
-          <TabPanel>
-            {areaData.map((area, index) => (
-              <div key={index}>
-                <Heading fontSize="xl" color="purple.700" mb={3} mt={3}>
-                  {area.name}
-                </Heading>
-                {renderWomenProfiles(area)}
-              </div>
-            ))}
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
+            {/* CONTENIDO DE MUJERES SELECCIONADO */}
+            <TabPanel>
+              {areaData.map((area, index) => (
+                <div key={index}>
+                  <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+                    {area.name}
+                  </Heading>
+                  {renderWomenProfiles(area)}
+                </div>
+              ))}
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+      </Container >
+
+      {/* VISTA MOBILE */}
+      <Box display={{ base: 'block', md: 'none' }}>
+        < Heading fontSize={"4xl"} color="purple.700" >
+          {areaName}
+        </Heading >
+        <Text fontSize={["md", "lg"]} color="purple.700" mb={4}>
+          {areaTextDescription[areaName]}
+        </Text>
+
+        <Tabs variant='soft-rounded' colorScheme='green' size='lg' isFitted>
+          <TabList>
+            <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Contenido</Tab>
+            <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Destacado</Tab>
+          </TabList>
+          <TabPanels>
+            {/* CONTENIDO SELECCIONADO */}
+            <TabPanel>
+              {areaData.map((area, index) => (
+                <div key={index}>
+                  <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+                    {area.name}
+                  </Heading>
+                  {renderCareerInfo(area)}
+                  {renderCareerVideos(area)}
+                  {renderCareerPhotos(area)}
+                </div>
+              ))}
+            </TabPanel>
+
+            {/* CONTENIDO DE MUJERES SELECCIONADO */}
+            <TabPanel>
+              {areaData.map((area, index) => (
+                <div key={index}>
+                  <Heading fontSize="xl" color="purple.700" mb={3} mt={3}>
+                    {area.name}
+                  </Heading>
+                  {renderWomenProfiles(area)}
+                </div>
+              ))}
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+      </Box>
     </>
   );
 }

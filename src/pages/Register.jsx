@@ -58,7 +58,7 @@ function Register() {
           <Flex minH={"100vh"} align={"center"} justify={"center"} bg={"purple.300"}>
             <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
               <Stack align={"center"}>
-                <Image borderRadius='full' boxSize='150px' src='WomenInStem1.png' /> {/* CAMBIAR IMAGEN LUEGO */}
+                <Image borderRadius='full' boxSize='150px' src='src/assets/WomenInStem1.png' /> {/* CAMBIAR IMAGEN LUEGO */}
                 <Heading fontSize={"4xl"} textAlign={"center"} color={"white"}>
                   Registrarse
                 </Heading>
