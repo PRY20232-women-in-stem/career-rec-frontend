@@ -114,7 +114,7 @@ function VocationalTest() {
               </Heading>
             </CardHeader>
             <CardBody>
-              <Image src='Womencelebrating.jpg' mb={5} mx="auto" h='300px' />
+              <Image src='WomenCelebrating.jpg' mb={5} mx="auto" h='300px' />
               <Text fontSize={["md", "lg"]} color={'purple.700'} mb={5} fontWeight='semibold'>
                 De acuerdo a sus intereses y preferencias evaluadas en el Test Vocacional, te recomendamos la siguiente área STEM:
               </Text>
