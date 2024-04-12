@@ -14,7 +14,6 @@ function Register() {
   const [showPassword, setShowPassword] = useState(false);
   const [showRegisterAlert, setShowRegisterAlert] = useState(false);
   const [error, setError] = useState("");
-  const toast = useToast();
 
   const validationSchema = {
     firstName: (value) => (!value ? "Campo requerido" : ""),
