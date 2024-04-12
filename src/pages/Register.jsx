@@ -4,7 +4,7 @@ import { FormControl, FormErrorMessage, FormLabel } from "@chakra-ui/form-contro
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
 import { Box, Flex, HStack, Heading, Stack, Text } from "@chakra-ui/layout";
-import { Link, Image, useToast } from "@chakra-ui/react";
+import { Link, Image } from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
 import { Link as ReactRouterLink } from 'react-router-dom';
 import RegisterSuccessfulAlert from "../components/RegisterSuccessfulAlert";
@@ -29,14 +29,6 @@ function Register() {
       handleRegisterAlertAppear();
       actions.setSubmitting(false);
     } catch (error) {
-      toast({
-        title: 'Error sending request.',
-        description: "Please check your internet connection.",
-        status: 'error',
-        duration: 3000,
-        isClosable: true,
-        position: 'bottom-right',
-      })
       console.error("Error al registrar estudiante", error);
       if (error.response.status === 400) {
         setError("El email ya está registrado.");

@@ -29,7 +29,7 @@ function RegisterNowAlert({ isOpen, onConfirm }) {
           <Heading textAlign={"center"} color={"purple.700"}>¡Hola!</Heading>
         </AlertDialogHeader>
         <AlertDialogBody>
-          <Text textAlign={"center"}>Parece que no tienes una cuenta, registrate para realizar el test.😊</Text>
+          <Text textAlign={"center"}>Parece que no haz iniciado sesión, hazlo para realizar el test. 😊</Text>
         </AlertDialogBody>
         <AlertDialogFooter justifyContent="center">
           <Button bg={'purple.400'} color={'white'} onClick={handleRegisterModalConfirm}>Ir ahora</Button>
