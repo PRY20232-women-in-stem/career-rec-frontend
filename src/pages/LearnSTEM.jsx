@@ -70,7 +70,7 @@ function LearnSTEM() {
                   Realizar test vocacional
                 </Button>
               </VStack>
-              <Image objectFit='cover' src='src/assets/WomenInStem2.png' h={{ md: '400px' }} w={{ md: '400px' }} />
+              <Image objectFit='cover' src='WomenInStem2.png' h={{ md: '400px' }} w={{ md: '400px' }} />
             </HStack>
             <VStack spacing={8}>
               <Heading textAlign={"center"} color={"purple.700"}>
@@ -79,7 +79,7 @@ function LearnSTEM() {
               <Card >
                 <CardBody>
                   <HStack>
-                    <Image objectFit='cover' src='src/assets/WomenStem.gif' h={{ md: '400px' }} w={{ md: '400px' }} m={4} />
+                    <Image objectFit='cover' src='WomenStem.gif' h={{ md: '400px' }} w={{ md: '400px' }} m={4} />
                     <Text fontSize={["2xl"]} textAlign={"center"} m={4}>
                       Las carreras STEM están relacionadas con la innovación, el desarrollo de tecnologías y el crecimiento de las empresas,
                       lo que contribuye a la mejora de la economía. Los profesionales que se dedican a estas áreas ayudan a mejorar la competitividad
@@ -117,7 +117,7 @@ function LearnSTEM() {
             <Heading fontSize={"4xl"} textAlign={"center"} color={"purple.700"}>
               ¡Descubre tu futuro en STEM!
             </Heading>
-            <Image objectFit='cover' src='src/assets/WomenInStem2.png' h={{ md: '400px' }} w={{ md: '400px' }} />
+            <Image objectFit='cover' src='WomenInStem2.png' h={{ md: '400px' }} w={{ md: '400px' }} />
             <Text fontSize={["2xl"]} textAlign={"left"} m={4} color={'purple.700'}>
               ¿Te apasiona la ciencia, la tecnología, la ingeniería o las matemáticas? Las carreras STEM ofrecen oportunidades emocionantes y desafiantes.
               Descubre cómo puedes ser parte de la innovación y el progreso.
@@ -132,7 +132,7 @@ function LearnSTEM() {
             </Heading>
             <Card >
               <CardBody>
-                <Image objectFit='cover' src='src/assets/WomenStem.gif' h={{ md: '400px' }} w={{ md: '400px' }} />
+                <Image objectFit='cover' src='WomenStem.gif' h={{ md: '400px' }} w={{ md: '400px' }} />
                 <Text fontSize={["md", "lg"]} textAlign={"center"}>
                   Las carreras STEM están relacionadas con la innovación, el desarrollo de tecnologías y el crecimiento de las empresas,
                   lo que contribuye a la mejora de la economía. Los profesionales que se dedican a estas áreas ayudan a mejorar la competitividad
