@@ -71,8 +71,8 @@ function VocationalTest() {
     } catch (error) {
       survey.onCompleting.add(preventComplete)
       toast({
-        title: 'Error sending survey.',
-        description: "An error occurred by an external service error.",
+        title: 'Error sending request.',
+        description: "Please check your internet connection.",
         status: 'error',
         duration: 3000,
         isClosable: true,
