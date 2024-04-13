@@ -1,19 +1,22 @@
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+import YouTube from 'react-youtube';
 
-function YouTubeVideo({ videoUrl, title }) {
+function YouTubeVideo({ width, height, videoUrl }) {
   const videoId = getYouTubeVideoIdFromUrl(videoUrl);
 
+  const opts = {
+    height: height,
+    width: width,
+    playerVars: {
+      autoplay: 0,
+      origin: window.location.href,
+    },
+  };
+
   return (
-    <div>
-      <LiteYouTubeEmbed
-        id={videoId}
-        title={title}
-        poster="maxresdefault"
-        adNetwork={true}
-        noCookie={true}
-      />
-    </div>
+    <>
+      <YouTube
+        videoId={videoId} opts={opts} />
+    </>
   );
 }
 

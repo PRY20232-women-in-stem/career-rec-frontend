@@ -72,9 +72,9 @@ function Navbar() {
 
   const areasSTEM = [
     { name: 'Ciencias', route: '/content?area=Ciencia' },
-    { name: 'Tecnologia', route: '/content?area=Tecnologia' },
-    { name: 'Ingenieria', route: '/content?area=Ingenieria' },
-    { name: 'Matematica', route: '/content?area=Matematica' }
+    { name: 'Tecnología', route: '/content?area=Tecnologia' },
+    { name: 'Ingeniería', route: '/content?area=Ingenieria' },
+    { name: 'Matemática', route: '/content?area=Matematica' }
   ];
 
   const renderSTEMLinks = (isMobile) => {

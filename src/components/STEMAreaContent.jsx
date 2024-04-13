@@ -1,5 +1,5 @@
 import {
-  Stack, Heading, Text, Image, Card, CardBody, CardHeader, Tabs, Tab, TabList, TabPanel, TabPanels, Box, IconButton, Container, Grid, GridItem
+  Stack, Heading, Text, Image, Card, CardBody, CardHeader, Tabs, Tab, TabList, TabPanel, TabPanels, Box, IconButton, Container, VStack, SimpleGrid
 } from '@chakra-ui/react';
 import { FaLinkedin } from 'react-icons/fa6';
 import Zoom from 'react-medium-image-zoom'
@@ -22,6 +22,58 @@ function STEMAreaContent({ areaName, areaData }) {
         <Heading fontSize={"4xl"} color="purple.700" mb={6}>
           {areaName}
         </Heading>
+        <Text fontSize={"xl"} color="purple.700" mb={8}>
+          {areaTextDescription[areaName]}
+        </Text>
+
+        <Tabs variant='soft-rounded' colorScheme='green' size='lg' isFitted>
+          <TabList>
+            <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Contenido</Tab>
+            <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Destacado</Tab>
+          </TabList>
+          <TabPanels>
+            {/* CONTENIDO SELECCIONADO */}
+            <TabPanel>
+              {areaData.map((area, index) => (
+                <div key={index}>
+                  <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+                    {area.name}
+                  </Heading>
+                  <SimpleGrid minChildWidth='120px' spacing={6}>
+                    {renderCareerInfo(area)}
+                  </SimpleGrid>
+                  <SimpleGrid minChildWidth='300px' spacing={6}>
+                    {renderCareerVideos(area)}
+                  </SimpleGrid>
+                  <SimpleGrid minChildWidth='300px' spacing={6}>
+                    {renderCareerPhotos(area)}
+                  </SimpleGrid>
+                </div>
+              ))}
+            </TabPanel>
+
+            {/* CONTENIDO DE MUJERES SELECCIONADO */}
+            <TabPanel>
+              {areaData.map((area, index) => (
+                <div key={index}>
+                  <Heading fontSize="2xl" color="purple.700" mb={6} mt={6}>
+                    {area.name}
+                  </Heading>
+                  <SimpleGrid minChildWidth='120px' spacing={6}>
+                    {renderWomenProfiles(area)}
+                  </SimpleGrid>
+                </div>
+              ))}
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+      </Container >
+
+      {/* VISTA MOBILE */}
+      <Box display={{ base: 'block', md: 'none' }}>
+        < Heading fontSize={"4xl"} color="purple.700" mb={4}>
+          {areaName}
+        </Heading >
         <Text fontSize={["md", "lg"]} color="purple.700" mb={8}>
           {areaTextDescription[areaName]}
         </Text>
@@ -36,51 +88,7 @@ function STEMAreaContent({ areaName, areaData }) {
             <TabPanel>
               {areaData.map((area, index) => (
                 <div key={index}>
-                  <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-                    {area.name}
-                  </Heading>
-                  {renderCareerInfo(area)}
-                  {renderCareerVideos(area)}
-                  {renderCareerPhotos(area)}
-                </div>
-              ))}
-            </TabPanel>
-
-            {/* CONTENIDO DE MUJERES SELECCIONADO */}
-            <TabPanel>
-              {areaData.map((area, index) => (
-                <div key={index}>
-                  <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
-                    {area.name}
-                  </Heading>
-                  {renderWomenProfiles(area)}
-                </div>
-              ))}
-            </TabPanel>
-          </TabPanels>
-        </Tabs>
-      </Container >
-
-      {/* VISTA MOBILE */}
-      <Box display={{ base: 'block', md: 'none' }}>
-        < Heading fontSize={"4xl"} color="purple.700" >
-          {areaName}
-        </Heading >
-        <Text fontSize={["md", "lg"]} color="purple.700" mb={4}>
-          {areaTextDescription[areaName]}
-        </Text>
-
-        <Tabs variant='soft-rounded' colorScheme='green' size='lg' isFitted>
-          <TabList>
-            <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Contenido</Tab>
-            <Tab color={'purple.500'} _selected={{ color: 'white', bg: 'purple.500' }}>Destacado</Tab>
-          </TabList>
-          <TabPanels>
-            {/* CONTENIDO SELECCIONADO */}
-            <TabPanel>
-              {areaData.map((area, index) => (
-                <div key={index}>
-                  <Heading fontSize="xl" color="purple.700" mb={3} mt={6}>
+                  <Heading fontSize="xl" color="purple.700" mb={3} mt={3}>
                     {area.name}
                   </Heading>
                   {renderCareerInfo(area)}
@@ -111,29 +119,33 @@ function STEMAreaContent({ areaName, areaData }) {
 export default STEMAreaContent;
 
 function renderCareerInfo(careerData) {
-  return careerData.information.map((info, index) => (
-    <Card key={index} mb={4}>
-      <CardBody>
-        <Stack spacing={3}>
-          <Heading fontSize="xl">
-            {info.title}
-          </Heading>
-          {info.content !== "" && (
-            <Text fontSize={["md", "lg"]}>
-              {info.content}
-            </Text>
-          )}
-        </Stack>
-      </CardBody>
-    </Card>
-  ));
+  return (
+    <>
+      {careerData.information.map((info, index) => (
+        <Card key={index} mb={4}>
+          <CardBody>
+            <Stack spacing={3}>
+              <Heading fontSize="xl">
+                {info.title}
+              </Heading>
+              {info.content !== "" && (
+                <Text fontSize={["md", "lg"]}>
+                  {info.content}
+                </Text>
+              )}
+            </Stack>
+          </CardBody>
+        </Card>
+      ))}
+    </>
+  );
 }
 
 function renderCareerVideos(careerData) {
   return (
-    <Stack mb={4} spacing={4}>
+    <>
       {careerData.videos.map((video, index) => (
-        <Card key={index} maxW='md'>
+        <Card key={index} maxW='md' mb={4}>
           {video.title !== "" && (
             <CardHeader>
               <Heading fontSize="xl">
@@ -150,20 +162,20 @@ function renderCareerVideos(careerData) {
           )}
           {video.videoUrl !== "" && (
             <Box pb="20px">
-              <YouTubeVideo videoUrl={video.videoUrl} title={video.title} />
+              <YouTubeVideo width="100%" height="100%" videoUrl={video.videoUrl} />
             </Box>
           )}
         </Card>
       ))}
-    </Stack>
+    </>
   );
 }
 
 function renderCareerPhotos(careerData) {
   return (
-    <Stack spacing={4}>
+    <>
       {careerData.photos.map((photo, index) => (
-        <Card key={index} maxW='md'>
+        <Card key={index} maxW='md' mb={4}>
           {photo.title !== "" && (
             <CardHeader>
               <Heading fontSize="xl">
@@ -185,22 +197,20 @@ function renderCareerPhotos(careerData) {
           )}
         </Card>
       ))}
-    </Stack>
+    </>
   );
 }
 
 function renderWomenProfiles(careerData) {
   return (
-    <Stack spacing={4}>
+    <>
       {careerData.women.map((woman, index) => (
-        <Card key={index} maxW='md'>
-          {woman.name !== "" && (
-            <CardHeader>
-              <Heading fontSize="xl">
-                {woman.name}
-              </Heading>
-            </CardHeader>
-          )}
+        <Card key={index} maxW={{ base: 'md', md: 'none' }} mb={4}>
+          <CardHeader>
+            <Heading fontSize="xl">
+              {woman.name}
+            </Heading>
+          </CardHeader>
           {woman.photo !== "" && (
             <Box mx="auto">
               <Image maxW="200px" objectFit="cover" src={woman.photo} />
@@ -229,6 +239,6 @@ function renderWomenProfiles(careerData) {
           </CardBody>
         </Card>
       ))}
-    </Stack>
+    </>
   );
 }
