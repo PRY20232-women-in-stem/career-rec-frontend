@@ -55,7 +55,7 @@
       {
         "id": 4,
         "title": "Dia de la Ingenieria de sistemas",
-        "imageUrl": "https://scontent.flim19-1.fna.fbcdn.net/v/t1.6435-9/162851181_779588326019152_286519339782861158_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=R5NueiVETVcAX8jHxS9&_nc_ht=scontent.flim19-1.fna&oh=00_AfA5gXUohBy8YCtTUM1wflpeIi7q8gYUQROnQXw8r7UCpQ&oe=65596B52",
+        "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t39.30808-6/317079667_5858299797549151_4818180906056391153_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=YOfW5R2nIS0Ab7MFPrU&_nc_ht=scontent.flim2-1.fna&cb_e2o_trans=q&oh=00_AfByJdEho3IS7OBzCSi9BZS_pffwuMZozE6t6SZhsuUHQA&oe=6620B144",
         "description": ""
       }
     ],
@@ -120,7 +120,7 @@
       {
         "id": 1,
         "title": "Dia del Ingeniero Electrónico",
-        "imageUrl": "https://scontent.flim19-1.fna.fbcdn.net/v/t1.6435-9/167719248_281617036900308_6316381453792753838_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=8Op36lV-f8oAX8wizHB&_nc_ht=scontent.flim19-1.fna&oh=00_AfAGa30uYgo_bNdBu2gJseXAV8q85pDlrQRG9oeDCPD8Iw&oe=655960C9",
+        "imageUrl": "https://pbs.twimg.com/media/EUiDDNCXkAEWMEZ.jpg",
         "description": ""
       },
       {
@@ -133,7 +133,7 @@
         "id": 3,
         "title": "Diferencias entre Ingeniería Eléctrica e Ingeniería Electrónica ",
         "imageUrl": "https://images.ctfassets.net/szez98lehkfm/1W0JDq6QwZYh78V32llKuj/cbb6c5d97f8f2885d4dd31502eeb5650/MyIC_Inline_32056?fm=webp&w=490",
-        "description": "a electrónica es el campo de la ingeniería y de la física aplicada relativo al diseño y aplicación de dispositivos, por lo general circuitos electrónicos, cuyo funcionamiento depende del flujo de electrones para la generación, transmisión, recepción, almacenamiento de información, entre otros."
+        "description": "La electrónica es el campo de la ingeniería y de la física aplicada relativo al diseño y aplicación de dispositivos, por lo general circuitos electrónicos, cuyo funcionamiento depende del flujo de electrones para la generación, transmisión, recepción, almacenamiento de información, entre otros."
       },
       {
         "id": 4,
@@ -387,7 +387,7 @@
       {
         "id": 4,
         "title": "Aplicación de las ciencias de la Computación",
-        "imageUrl": "https://scontent.flim2-1.fna.fbcdn.net/v/t39.30808-6/307532392_471724324999386_3062274835235518187_n.png?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=sArB7TBsRzoAX8Gz55v&_nc_ht=scontent.flim2-1.fna&cb_e2o_trans=q&oh=00_AfCQy9CE8ZfwQFjyaNVWapFYz42axw-dNnLQhtOXdsYyyg&oe=65413DDE",
+        "imageUrl": "https://img.itch.zone/aW1hZ2UyL2phbS8zODMzODUvMTM3MTc5MDEuanBn/original/kX%2Fd9g.jpg",
         "description": "Uno de los campos de apliación con mucho interés es el desarrollo de videojuegos, la universidad UPC ha desarrollado grupos de estudios especializados en desarrollar estas habilidades."
       }
     ],

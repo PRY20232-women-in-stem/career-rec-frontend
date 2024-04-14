@@ -2,7 +2,6 @@ import { useLocation } from 'react-router-dom';
 import {
   Stack, Flex
 } from '@chakra-ui/react';
-import PopUpButton from '../components/PopUpButton';
 import STEMAreaContent from '../components/STEMAreaContent';
 import engineeringData from '../resources/EngineeringContent';
 import technologyData from '../resources/TechnologyContent';
@@ -35,7 +34,6 @@ function ContentView() {
 
   return (
     <ContentWrapper>
-      <PopUpButton />
       {area && <STEMAreaContent areaName={area} areaData={areaData} />}
     </ContentWrapper >
   );

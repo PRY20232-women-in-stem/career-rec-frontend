@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/react';
 import LogoutAlert from '../components/LogoutAlert';
 
-function NavLink({ to, children, onClose, bg, border }) {
+function NavLink({ to, children, onClose, bg }) {
   return (
     <ReactRouterLink to={to} onClick={onClose} >
       <Box fontWeight='semibold' px={2} py={1} rounded={'md'} w={{ base: "100%", md: "auto" }} textAlign={{ base: "left", md: "center" }}
@@ -72,9 +72,9 @@ function Navbar() {
 
   const areasSTEM = [
     { name: 'Ciencias', route: '/content?area=Ciencia' },
-    { name: 'Tecnología', route: '/content?area=Tecnologia' },
-    { name: 'Ingeniería', route: '/content?area=Ingenieria' },
-    { name: 'Matemática', route: '/content?area=Matematica' }
+    { name: 'Tecnologia', route: '/content?area=Tecnologia' },
+    { name: 'Ingenieria', route: '/content?area=Ingenieria' },
+    { name: 'Matematica', route: '/content?area=Matematica' }
   ];
 
   const renderSTEMLinks = (isMobile) => {
