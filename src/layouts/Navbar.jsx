@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link as ReactRouterLink, useLocation, useNavigate } from 'react-router-dom';
+import jwtDecode from 'jwt-decode';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box, Collapse, Divider, Flex, HStack, IconButton, Image, Link, Stack, Text, Center, useDisclosure, Container
@@ -30,6 +31,10 @@ function Navbar() {
   // Al cargar el componente, verifica si hay un token en el local storage
   useEffect(() => {
     const token = localStorage.getItem('access_token');
+    const decodedToken = jwtDecode(token);
+    const tokenExpiration = decodedToken.exp;
+    const currentTime = new Date().getTime();
+
     const currentUser = JSON.parse(localStorage.getItem("current_user"));
     const contentRegex = /^\/content(?:\?|$)/;
 
@@ -37,7 +42,7 @@ function Navbar() {
       setIsLoggedIn(true);
     }
 
-    if (!token && contentRegex.test(location.pathname)) {
+    if (!token || (!token && contentRegex.test(location.pathname)) || currentTime > parseInt(tokenExpiration)) {
       navigate('/login');
     }
 
