@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link as ReactRouterLink, useLocation, useNavigate } from 'react-router-dom';
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from "jwt-decode";
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box, Collapse, Divider, Flex, HStack, IconButton, Image, Link, Stack, Text, Center, useDisclosure, Container
