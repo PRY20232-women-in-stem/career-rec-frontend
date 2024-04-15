@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link as ReactRouterLink, useLocation, useNavigate } from 'react-router-dom';
-import { jwtDecode } from "jwt-decode";
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box, Collapse, Divider, Flex, HStack, IconButton, Image, Link, Stack, Text, Center, useDisclosure, Container
@@ -36,12 +35,6 @@ function Navbar() {
 
     if (token) {
       setIsLoggedIn(true);
-      const decodedToken = jwtDecode(token);
-      const tokenExpiration = decodedToken.exp;
-      const currentTime = new Date().getTime();
-      if ((token && currentTime > parseInt(tokenExpiration))) {
-        navigate('/login');
-      }
     }
 
     if (!token && contentRegex.test(location.pathname)) {
