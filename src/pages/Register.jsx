@@ -14,10 +14,10 @@ function Register() {
   const [error, setError] = useState("");
 
   const validationSchema = {
-    firstName: (value) => (!value ? "Campo requerido" : ""),
-    lastName: (value) => (!value ? "Campo requerido" : ""),
-    email: (value) => (!value ? "Campo requerido" : !/^\S+@\S+\.\S+$/.test(value) ? "Formato de correo inválido" : ""),
-    password: (value) => (!value ? "Campo requerido" : "")
+    firstName: (value) => (!value ? "campo vacio" : ""),
+    lastName: (value) => (!value ? "campo vacio" : ""),
+    email: (value) => (!value ? "campo vacio" : !/^\S+@\S+\.\S+$/.test(value) ? "Formato de correo inválido" : ""),
+    password: (value) => (!value ? "campo vacio" : "")
   };
 
   const handleSubmit = async (values, actions) => {
