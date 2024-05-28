@@ -104,19 +104,19 @@ function Footer() {
                 © 2023 Bambu Consulting. All rights reserved
               </Text>
               <Stack direction={'row'} spacing={3}>
-                <Box as='a' fontSize={20} href='https://twitter.com/' target='_blank'>
+                <Box as='a' fontSize={20} href='https://twitter.com/girlsinstemorg' target='_blank'>
                   <FaXTwitter />
                 </Box>
-                <Box as='a' fontSize={20} href='https://discord.com/' target='_blank'>
+                <Box as='a' fontSize={20} href='https://discord.com/invite/worldofwomen' target='_blank'>
                   <FaDiscord />
                 </Box>
-                <Box as='a' fontSize={20} href='https://www.linkedin.com/' target='_blank'>
+                <Box as='a' fontSize={20} href='https://www.linkedin.com/company/girlsinstemorg/?originalSubdomain=es' target='_blank'>
                   <FaLinkedin />
                 </Box>
-                <Box as='a' fontSize={20} href='https://www.youtube.com/' target='_blank'>
+                <Box as='a' fontSize={20} href='https://www.youtube.com/user/STEMWomen' target='_blank'>
                   <FaYoutube />
                 </Box>
-                <Box as='a' fontSize={20} href='https://www.instagram.com/' target='_blank'>
+                <Box as='a' fontSize={20} href='https://www.instagram.com/girlsinstem_/?hl=es' target='_blank'>
                   <FaInstagram />
                 </Box>
               </Stack>
