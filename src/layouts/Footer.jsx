@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Box,
   Container,
@@ -8,11 +9,85 @@ import {
   IconButton,
   Image,
   Heading,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
 } from '@chakra-ui/react';
+import { useToast } from '@chakra-ui/react'
 import { EmailIcon } from '@chakra-ui/icons';
 import { FaXTwitter, FaInstagram, FaYoutube, FaLinkedin, FaDiscord } from 'react-icons/fa6';
+import { isDisabled } from '@testing-library/user-event/dist/cjs/utils/index.js';
 
 function Footer() {
+  const [email, setEmail] = useState('');
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const toast = useToast()
+
+  const handleSubmit = () => {
+    if (validateEmail(email)) {
+      setIsButtonDisabled(true);
+      toast({
+        position: 'bottom-right',
+        duration: 3000,
+        render: () => (
+          <Alert
+            status='success'
+            variant='subtle'
+            flexDirection='column'
+            alignItems='center'
+            justifyContent='center'
+            textAlign='center'
+            height='200px'
+            mt={5}
+            position='relative'
+            rounded='10px'
+          >
+            <AlertIcon boxSize='40px' mr={0} />
+            <AlertTitle mt={4} mb={1} fontSize='lg'>
+              ¡Correo registrado!
+            </AlertTitle>
+            <AlertDescription maxWidth='sm'>
+              Gracias por suscribirse a nuestras actualizaciones. Pronto recibirá noticias de nosotros.
+            </AlertDescription>
+          </Alert>
+        ),
+      });
+    } else {
+      toast({
+        position: 'bottom-right',
+        duration: 3000,
+        render: () => (
+          <Alert
+            status='error'
+            variant='subtle'
+            flexDirection='column'
+            alignItems='center'
+            justifyContent='center'
+            textAlign='center'
+            height='200px'
+            mt={5}
+            position='relative'
+            rounded='10px'
+          >
+            <AlertIcon boxSize='40px' mr={0} />
+            <AlertTitle mt={4} mb={1} fontSize='lg'>
+              Error
+            </AlertTitle>
+            <AlertDescription maxWidth='sm'>
+              Por favor, ingrese una dirección de correo electrónico válida.
+            </AlertDescription>
+          </Alert>
+        ),
+      });
+    }
+  };
+
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
   return (
     <>
       <Box bg={'gray.50'} color={'gray.700'}>
@@ -53,10 +128,10 @@ function Footer() {
               <Heading fontSize={'lg'} mb={2}>
                 Compañía
               </Heading>
-              <Box as="a" href={'#'}>
+              <Box as="a" href='https://www.canva.com/design/DAGGeyih3c8/mZl0mKMyCMXiR3nWeAqSLg/edit?utm_content=DAGGeyih3c8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'>
                 Quienes somos
               </Box>
-              <Box as="a" href={'#'}>
+              <Box as="a" href='https://www.linkedin.com/in/johana-campos-davila/'>
                 Contáctanos
               </Box>
             </Stack>
@@ -64,10 +139,10 @@ function Footer() {
               <Heading fontSize={'lg'} mb={2}>
                 Soporte
               </Heading>
-              <Box as="a" href={'#'}>
+              <Box as="a" href='https://docs.google.com/document/d/186knsaGKYS896iw1ZR8UFLcMI1mae9v7NJs9fbL5zzo/edit?usp=drive_link'>
                 Términos de servicio
               </Box>
-              <Box as="a" href='https://www.privacypolicies.com/live/2d7ff2cb-c9ef-4df8-8c88-c79b67d87d72' target='_blank'>
+              <Box as="a" href='https://docs.google.com/document/d/1Owy1GlL13LXzbvrgoTs2mc7Xx3bbwtaSj77dJsp-a6g/edit?usp=sharing' target='_blank'>
                 Política de privacidad
               </Box>
             </Stack>
@@ -76,8 +151,10 @@ function Footer() {
                 Mantengase actualizado
               </Heading>
               <Stack direction={'row'} ml={0.5}>
-                <Input placeholder={'Dirección email'} variant='filled' focusBorderColor='purple.400' />
-                <IconButton bg={'purple.300'} color={'white'} _hover={{ bg: 'purple.400', }} icon={<EmailIcon />} />
+                <Input placeholder={'Dirección email'} variant='filled' focusBorderColor='purple.400' value={email} onChange={(e) => setEmail(e.target.value)} />
+                <IconButton bg={'purple.300'} color={'white'} _hover={{ bg: 'purple.400', }} icon={<EmailIcon />}
+                  disabled={isButtonDisabled}
+                  onClick={handleSubmit} />
               </Stack>
             </Stack>
           </SimpleGrid>

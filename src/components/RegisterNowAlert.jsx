@@ -18,7 +18,7 @@ function RegisterNowAlert({ isOpen, onConfirm }) {
 
   const handleRegisterModalConfirm = () => {
     onConfirm(); // Cerrar el modal de registro
-    navigate('/register'); // Redirigir al login después de confirmar
+    navigate('/login'); // Redirigir al login después de confirmar
   };
 
   return (
