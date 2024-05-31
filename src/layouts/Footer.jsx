@@ -128,10 +128,10 @@ function Footer() {
               <Heading fontSize={'lg'} mb={2}>
                 Compañía
               </Heading>
-              <Box as="a" href='https://www.canva.com/design/DAGGeyih3c8/mZl0mKMyCMXiR3nWeAqSLg/edit?utm_content=DAGGeyih3c8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'>
+              <Box as="a" target='_blank' href='https://www.canva.com/design/DAGGeyih3c8/mZl0mKMyCMXiR3nWeAqSLg/edit?utm_content=DAGGeyih3c8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'>
                 Quienes somos
               </Box>
-              <Box as="a" href='https://www.linkedin.com/in/johana-campos-davila/'>
+              <Box as="a" target='_blank' href='https://www.linkedin.com/in/johana-campos-davila/'>
                 Contáctanos
               </Box>
             </Stack>
@@ -139,10 +139,10 @@ function Footer() {
               <Heading fontSize={'lg'} mb={2}>
                 Soporte
               </Heading>
-              <Box as="a" href='https://docs.google.com/document/d/186knsaGKYS896iw1ZR8UFLcMI1mae9v7NJs9fbL5zzo/edit?usp=drive_link'>
+              <Box as="a" target='_blank' href='https://docs.google.com/document/d/186knsaGKYS896iw1ZR8UFLcMI1mae9v7NJs9fbL5zzo/edit?usp=drive_link'>
                 Términos de servicio
               </Box>
-              <Box as="a" href='https://docs.google.com/document/d/1Owy1GlL13LXzbvrgoTs2mc7Xx3bbwtaSj77dJsp-a6g/edit?usp=sharing' target='_blank'>
+              <Box as="a" target='_blank' href='https://docs.google.com/document/d/1Owy1GlL13LXzbvrgoTs2mc7Xx3bbwtaSj77dJsp-a6g/edit?usp=sharing'>
                 Política de privacidad
               </Box>
             </Stack>
