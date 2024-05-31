@@ -13,6 +13,7 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
+  Button,
 } from '@chakra-ui/react';
 import { useToast } from '@chakra-ui/react'
 import { EmailIcon } from '@chakra-ui/icons';
@@ -152,9 +153,13 @@ function Footer() {
               </Heading>
               <Stack direction={'row'} ml={0.5}>
                 <Input placeholder={'Dirección email'} variant='filled' focusBorderColor='purple.400' value={email} onChange={(e) => setEmail(e.target.value)} />
-                <IconButton bg={'purple.300'} color={'white'} _hover={{ bg: 'purple.400', }} icon={<EmailIcon />}
+                {/*<IconButton bg={'purple.300'} color={'white'} _hover={{ bg: 'purple.400', }} icon={<EmailIcon />}
                   disabled={isButtonDisabled}
-                  onClick={handleSubmit} />
+                  onClick={handleSubmit} />*/}
+                <Button bg={'purple.300'} color={'white'} _hover={{ bg: 'purple.400', }} fontSize={14} disabled={isButtonDisabled}
+                  onClick={handleSubmit} >
+                  Enviar
+                </Button>
               </Stack>
             </Stack>
           </SimpleGrid>
